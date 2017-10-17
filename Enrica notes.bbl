@@ -1,0 +1,810 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{AbramovichChenMarcusEtAl2015}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {{Abramovich}}{A.}%
+     {D.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Chen}}{C.}%
+     {Q.}{Q.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Marcus}}{M.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Ulirsch}}{U.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Wise}}{W.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Baker}{B.}%
+     {Matthew}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Payne}{P.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer International Publishing}%
+  }
+  \strng{namehash}{ADCQMSUMWJ1}
+  \strng{fullhash}{ADCQMSUMWJ1}
+  \field{labelalpha}{ACMUW15}
+  \field{sortinit}{A}
+  \field{booktitle}{Nonarchimedean and Tropical Geometry}
+  \field{title}{Skeletons and fans of logarithmic structures}
+  \verb{file}
+  \verb :AbramovichChenMarcusEtAl2015 - Skeletons and fans of logarithmic struc
+  \verb tures.pdf:PDF
+  \endverb
+  \field{year}{2015}
+\endentry
+
+\entry{AbramovichCaporasoPayne}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Abramovich}{A.}%
+     {Dan}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Caporaso}{C.}%
+     {Lucia}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Payne}{P.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ADCLPS1}
+  \strng{fullhash}{ADCLPS1}
+  \field{labelalpha}{ACP15}
+  \field{sortinit}{A}
+  \verb{doi}
+  \verb 10.24033/asens.2258
+  \endverb
+  \field{issn}{0012-9593}
+  \field{number}{4}
+  \field{pages}{765\bibrangedash 809}
+  \field{title}{The tropicalization of the moduli space of curves}
+  \verb{url}
+  \verb http://dx.doi.org/10.24033/asens.2258
+  \endverb
+  \field{volume}{48}
+  \verb{file}
+  \verb :AbramovichCaporasoPayne - The tropicalization of the moduli space of c
+  \verb urves.pdf:PDF
+  \endverb
+  \field{journaltitle}{Ann. Sci. \'Ec. Norm. Sup\'er. (4)}
+  \field{year}{2015}
+\endentry
+
+\entry{BakerRabinoff}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Baker}{B.}%
+     {Matthew}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rabinoff}{R.}%
+     {Joseph}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BMRJ1}
+  \strng{fullhash}{BMRJ1}
+  \field{labelalpha}{BR15}
+  \field{sortinit}{B}
+  \verb{doi}
+  \verb 10.1093/imrn/rnu168
+  \endverb
+  \field{issn}{1073-7928}
+  \field{number}{16}
+  \field{pages}{7436\bibrangedash 7472}
+  \field{title}{The skeleton of the {J}acobian, the {J}acobian of the skeleton,
+  and lifting meromorphic functions from tropical to algebraic curves}
+  \verb{url}
+  \verb http://dx.doi.org/10.1093/imrn/rnu168
+  \endverb
+  \verb{file}
+  \verb :BakerRabinoff - The skeleton of the Jacobian, the Jacobian of the skel
+  \verb eton, and lifting meromorphic functions from tropical to algebraic curv
+  \verb es.pdf:PDF
+  \endverb
+  \field{journaltitle}{Int. Math. Res. Not. IMRN}
+  \field{year}{2015}
+\endentry
+
+\entry{Berkovich1990}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Berkovich}{B.}%
+     {Vladimir~G.}{V.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {American Mathematical Society, Providence, RI}%
+  }
+  \strng{namehash}{BVG1}
+  \strng{fullhash}{BVG1}
+  \field{labelalpha}{Ber90}
+  \field{sortinit}{B}
+  \field{isbn}{0-8218-1534-2}
+  \field{pages}{x+169}
+  \field{series}{Mathematical Surveys and Monographs}
+  \field{title}{Spectral theory and analytic geometry over non-{A}rchimedean
+  fields}
+  \field{volume}{33}
+  \verb{file}
+  \verb :Berkovich1990 - Spectral theory and analytic geometry over non-Archime
+  \verb dean fields.djvu:Djvu
+  \endverb
+  \field{year}{1990}
+\endentry
+
+\entry{Berkovich1993}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Berkovich}{B.}%
+     {Vladimir~G.}{V.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {eng}%
+  }
+  \list{publisher}{1}{%
+    {Institut des Hautes Études Scientifiques}%
+  }
+  \keyw{étale cohomology; compact support; analytic spaces; morphisms;
+  sheaves; rigid spaces}
+  \strng{namehash}{BVG1}
+  \strng{fullhash}{BVG1}
+  \field{labelalpha}{Ber93}
+  \field{sortinit}{B}
+  \field{pages}{5\bibrangedash 161}
+  \field{title}{Etale cohomology for non-Archimedean analytic spaces}
+  \verb{url}
+  \verb http://eudml.org/doc/104093
+  \endverb
+  \field{volume}{78}
+  \verb{file}
+  \verb :Berkovich1993 - Étale cohomology for non-Archimedean analytic spaces.
+  \verb pdf:PDF
+  \endverb
+  \field{journaltitle}{Publications Mathématiques de l'IHÉS}
+  \field{year}{1993}
+\endentry
+
+\entry{Bultot2015}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Bultot}}{B.}%
+     {E.}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry}
+  \strng{namehash}{BE1}
+  \strng{fullhash}{BE1}
+  \field{labelalpha}{{Bul}15}
+  \field{sortinit}{B}
+  \verb{eprint}
+  \verb 1505.05688
+  \endverb
+  \field{title}{Motivic Integration and Logarithmic Geometry}
+  \verb{file}
+  \verb :Bultot2015 - Motivic Integration and Logarithmic Geometry.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{05}
+  \field{year}{2015}
+\endentry
+
+\entry{deFernexKollarXu2012}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {{de Fernex}}{d.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Koll{\'a}r}}{K.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Xu}}{X.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry}
+  \strng{namehash}{dTKJXC1}
+  \strng{fullhash}{dTKJXC1}
+  \field{labelalpha}{dKX12}
+  \field{sortinit}{D}
+  \verb{eprint}
+  \verb 1212.1675
+  \endverb
+  \field{title}{The dual complex of singularities}
+  \verb{file}
+  \verb :deFernexKollarXu2012 - The dual complex of singularities.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{12}
+  \field{year}{2012}
+\endentry
+
+\entry{Fogarty}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Fogarty}{F.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Johns Hopkins University Press}%
+  }
+  \strng{namehash}{FJ1}
+  \strng{fullhash}{FJ1}
+  \field{labelalpha}{Fog68}
+  \field{sortinit}{F}
+  \field{issn}{00029327, 10806377}
+  \field{number}{2}
+  \field{pages}{511\bibrangedash 521}
+  \field{title}{Algebraic Families on an Algebraic Surface}
+  \verb{url}
+  \verb http://www.jstor.org/stable/2373541
+  \endverb
+  \field{volume}{90}
+  \verb{file}
+  \verb :Fogarty - Algebraic Families on an Algebraic Surface.pdf:PDF
+  \endverb
+  \field{journaltitle}{American Journal of Mathematics}
+  \field{year}{1968}
+\endentry
+
+\entry{GabberRamero}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {{Gabber}}{G.}%
+     {O.}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Ramero}}{R.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry, Mathematics - Number Theory, 14F20,
+  14B15, 14A05, 11G25}
+  \strng{namehash}{GORL1}
+  \strng{fullhash}{GORL1}
+  \field{labelalpha}{GR04}
+  \field{sortinit}{G}
+  \verb{eprint}
+  \verb math/0409584
+  \endverb
+  \field{title}{Foundations for almost ring theory -- Release 6.95}
+  \verb{file}
+  \verb :GabberRamero - Foundations for almost ring theory -- Release 6.95.pdf:
+  \verb PDF
+  \endverb
+  \field{journaltitle}{ArXiv Mathematics e-prints}
+  \field{month}{09}
+  \field{year}{2004}
+\endentry
+
+\entry{GulbrandsenHalleHulek2016}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {{Gulbrandsen}}{G.}%
+     {M.~G.}{M.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Halle}}{H.}%
+     {L.~H.}{L.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Hulek}}{H.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry, 14D06 (Primary), 14C05, 14L24, 14D23
+  (Secondary)}
+  \strng{namehash}{GMGHLHHK1}
+  \strng{fullhash}{GMGHLHHK1}
+  \field{labelalpha}{GHH16}
+  \field{sortinit}{G}
+  \verb{eprint}
+  \verb 1604.00215
+  \endverb
+  \field{title}{A GIT construction of degenerations of Hilbert schemes of
+  points}
+  \verb{file}
+  \verb :GulbrandsenHalleHulek2016 - A GIT construction of degenerations of Hil
+  \verb bert schemes of points.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{04}
+  \field{year}{2016}
+\endentry
+
+\entry{GulbrandsenHalleHulek}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Gulbrandsen}{G.}%
+     {Martin~G.}{M.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Halle}{H.}%
+     {Lars~H.}{L.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hulek}{H.}%
+     {Klaus}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GMGHLHHK2}
+  \strng{fullhash}{GMGHLHHK2}
+  \field{labelalpha}{GHH15}
+  \field{sortinit}{G}
+  \verb{doi}
+  \verb 10.1007/s00229-015-0744-8
+  \endverb
+  \field{issn}{0025-2611}
+  \field{number}{3-4}
+  \field{pages}{283\bibrangedash 301}
+  \field{title}{A relative {H}ilbert-{M}umford criterion}
+  \verb{url}
+  \verb http://dx.doi.org/10.1007/s00229-015-0744-8
+  \endverb
+  \field{volume}{148}
+  \verb{file}
+  \verb :GulbrandsenHalleHulek - A relative Hilbert-Mumford criterion.pdf:PDF
+  \endverb
+  \field{journaltitle}{Manuscripta Math.}
+  \field{year}{2015}
+\endentry
+
+\entry{Kato1989}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kato}{K.}%
+     {Kazuya}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Johns Hopkins Univ. Press, Baltimore, MD}%
+  }
+  \strng{namehash}{KK1}
+  \strng{fullhash}{KK1}
+  \field{labelalpha}{Kat89}
+  \field{sortinit}{K}
+  \field{booktitle}{Algebraic analysis, geometry, and number theory
+  ({B}altimore, {MD}, 1988)}
+  \field{pages}{191\bibrangedash 224}
+  \field{title}{Logarithmic structures of {F}ontaine-{I}llusie}
+  \verb{file}
+  \verb :Kato1989 - Logarithmic structures of Fontaine-Illusie.pdf:PDF
+  \endverb
+  \field{year}{1989}
+\endentry
+
+\entry{Kato1994a}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kato}{K.}%
+     {Kazuya}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KK1}
+  \strng{fullhash}{KK1}
+  \field{labelalpha}{Kat94}
+  \field{sortinit}{K}
+  \verb{doi}
+  \verb 10.2307/2374941
+  \endverb
+  \field{issn}{0002-9327}
+  \field{number}{5}
+  \field{pages}{1073\bibrangedash 1099}
+  \field{title}{Toric singularities}
+  \verb{url}
+  \verb http://dx.doi.org/10.2307/2374941
+  \endverb
+  \field{volume}{116}
+  \verb{file}
+  \verb :Kato1994a - Toric singularities.pdf:PDF
+  \endverb
+  \field{journaltitle}{Amer. J. Math.}
+  \field{year}{1994}
+\endentry
+
+\entry{KempfKnudsenMumfordEtAl1973}{book}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Kempf}{K.}%
+     {G.}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Knudsen}{K.}%
+     {Finn~Faye}{F.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mumford}{M.}%
+     {D.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Saint-Donat}{S.-D.}%
+     {B.}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag, Berlin-New York}%
+  }
+  \strng{namehash}{KGKFFMDSDB1}
+  \strng{fullhash}{KGKFFMDSDB1}
+  \field{labelalpha}{KKMSD73}
+  \field{sortinit}{K}
+  \field{pages}{viii+209}
+  \field{series}{Lecture Notes in Mathematics, Vol. 339}
+  \field{title}{Toroidal embeddings. {I}}
+  \verb{file}
+  \verb :KempfKnudsenMumfordEtAl1973 - Toroidal embeddings. I.djvu:Djvu
+  \endverb
+  \field{year}{1973}
+\endentry
+
+\entry{Li}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Li}{L.}%
+     {Jun}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Lehigh University}%
+  }
+  \strng{namehash}{LJ1}
+  \strng{fullhash}{LJ1}
+  \field{labelalpha}{Li01}
+  \field{sortinit}{L}
+  \verb{doi}
+  \verb 10.4310/jdg/1090348132
+  \endverb
+  \field{number}{3}
+  \field{pages}{509\bibrangedash 578}
+  \field{title}{Stable Morphisms to Singular Schemes and Relative Stable
+  Morphisms}
+  \verb{url}
+  \verb http://dx.doi.org/10.4310/jdg/1090348132
+  \endverb
+  \field{volume}{57}
+  \field{journaltitle}{J. Differential Geom.}
+  \field{month}{03}
+  \field{year}{2001}
+\endentry
+
+\entry{Liu2002}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Liu}{L.}%
+     {Qing}{Q.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oxford University Press, Oxford}%
+  }
+  \strng{namehash}{LQ1}
+  \strng{fullhash}{LQ1}
+  \field{labelalpha}{Liu02}
+  \field{sortinit}{L}
+  \field{isbn}{0-19-850284-2}
+  \field{note}{Translated from the French by Reinie Ern{\'e}, Oxford Science
+  Publications}
+  \field{pages}{xvi+576}
+  \field{series}{Oxford Graduate Texts in Mathematics}
+  \field{title}{Algebraic geometry and arithmetic curves}
+  \field{volume}{6}
+  \verb{file}
+  \verb :Liu2002 - Algebraic geometry and arithmetic curves.djvu:Djvu
+  \endverb
+  \field{year}{2002}
+\endentry
+
+\entry{MustataNicaise}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Mustata}{M.}%
+     {Mircea}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nicaise}{N.}%
+     {Johannes}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MMNJ1}
+  \strng{fullhash}{MMNJ1}
+  \field{labelalpha}{MN15}
+  \field{sortinit}{M}
+  \verb{doi}
+  \verb 10.14231/AG-2015-016
+  \endverb
+  \field{issn}{2214-2584}
+  \field{number}{3}
+  \field{pages}{365\bibrangedash 404}
+  \field{title}{Weight functions on non-{A}rchimedean analytic spaces and the
+  {K}ontsevich-{S}oibelman skeleton}
+  \verb{url}
+  \verb http://dx.doi.org/10.14231/AG-2015-016
+  \endverb
+  \field{volume}{2}
+  \verb{file}
+  \verb :MustataNicaise - Weight functions on non-Archimedean analytic spaces a
+  \verb nd the Kontsevich-Soibelman skeleton.pdf:PDF
+  \endverb
+  \field{journaltitle}{Algebr. Geom.}
+  \field{year}{2015}
+\endentry
+
+\entry{NicaiseXu}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Nicaise}{N.}%
+     {Johannes}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xu}{X.}%
+     {Chenyang}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NJXC1}
+  \strng{fullhash}{NJXC1}
+  \field{labelalpha}{NX16}
+  \field{sortinit}{N}
+  \verb{doi}
+  \verb 10.1353/ajm.2016.0049
+  \endverb
+  \field{issn}{0002-9327}
+  \field{number}{6}
+  \field{pages}{1645\bibrangedash 1667}
+  \field{title}{The essential skeleton of a degeneration of algebraic
+  varieties}
+  \verb{url}
+  \verb http://dx.doi.org/10.1353/ajm.2016.0049
+  \endverb
+  \field{volume}{138}
+  \verb{file}
+  \verb :NicaiseXu - The essential skeleton of a degeneration of algebraic vari
+  \verb eties.pdf:PDF
+  \endverb
+  \field{journaltitle}{Amer. J. Math.}
+  \field{year}{2016}
+\endentry
+
+\entry{Niziol2006}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nizio\l}{N.}%
+     {Wies\l~awa}{W.~a.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NWa1}
+  \strng{fullhash}{NWa1}
+  \field{labelalpha}{Niz06}
+  \field{sortinit}{N}
+  \verb{doi}
+  \verb 10.1090/S1056-3911-05-00409-1
+  \endverb
+  \field{issn}{1056-3911}
+  \field{number}{1}
+  \field{pages}{1\bibrangedash 29}
+  \field{title}{Toric singularities: log-blow-ups and global resolutions}
+  \verb{url}
+  \verb http://dx.doi.org/10.1090/S1056-3911-05-00409-1
+  \endverb
+  \field{volume}{15}
+  \verb{file}
+  \verb :Niziol2006 - Toric singularities_ log-blow-ups and global resolutions.
+  \verb pdf:PDF
+  \endverb
+  \field{journaltitle}{J. Algebraic Geom.}
+  \field{year}{2006}
+\endentry
+
+\entry{Nowak}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nowak}{N.}%
+     {Krzysztof~Jan}{K.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NKJ1}
+  \strng{fullhash}{NKJ1}
+  \field{labelalpha}{Now97}
+  \field{sortinit}{N}
+  \field{issn}{0083-4386}
+  \field{number}{35}
+  \field{pages}{243\bibrangedash 246}
+  \field{title}{Flat morphisms between regular varieties}
+  \verb{file}
+  \verb :Nowak - Flat morphisms between regular varieties.pdf:PDF
+  \endverb
+  \field{journaltitle}{Univ. Iagel. Acta Math.}
+  \field{year}{1997}
+\endentry
+
+\entry{Saito2004}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Saito}{S.}%
+     {Takeshi}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ST1}
+  \strng{fullhash}{ST1}
+  \field{labelalpha}{Sai04}
+  \field{sortinit}{S}
+  \verb{doi}
+  \verb 10.1090/S1056-3911-03-00338-2
+  \endverb
+  \field{issn}{1056-3911}
+  \field{number}{2}
+  \field{pages}{287\bibrangedash 321}
+  \field{title}{Log smooth extension of a family of curves and semi-stable
+  reduction}
+  \verb{url}
+  \verb http://dx.doi.org/10.1090/S1056-3911-03-00338-2
+  \endverb
+  \field{volume}{13}
+  \verb{file}
+  \verb :Saito2004 - Log smooth extension of a family of curves and semi-stable
+  \verb  reduction.pdf:PDF
+  \endverb
+  \field{journaltitle}{J. Algebraic Geom.}
+  \field{year}{2004}
+\endentry
+
+\entry{Ulirsch2013}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Ulirsch}}{U.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry, 14T05, 32P05, 20M14}
+  \strng{namehash}{UM1}
+  \strng{fullhash}{UM1}
+  \field{labelalpha}{{Uli}13}
+  \field{sortinit}{U}
+  \verb{eprint}
+  \verb 1310.6269
+  \endverb
+  \field{title}{Functorial tropicalization of logarithmic schemes: The case of
+  constant coefficients}
+  \verb{file}
+  \verb :Ulirsch2013 - Functorial tropicalization of logarithmic schemes_ The c
+  \verb ase of constant coefficients.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{10}
+  \field{year}{2013}
+\endentry
+
+\entry{Ulirsch2016}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Ulirsch}}{U.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry, 14T05, 14A20, 32P05}
+  \strng{namehash}{UM1}
+  \strng{fullhash}{UM1}
+  \field{labelalpha}{{Uli}16}
+  \field{sortinit}{U}
+  \verb{eprint}
+  \verb 1603.07589
+  \endverb
+  \field{title}{Non-Archimedean geometry of Artin fans}
+  \verb{file}
+  \verb :Ulirsch2016 - Non-Archimedean geometry of Artin fans.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{03}
+  \field{year}{2016}
+\endentry
+
+\entry{Vidal}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vidal}{V.}%
+     {Isabelle}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{VI1}
+  \strng{fullhash}{VI1}
+  \field{labelalpha}{Vid04}
+  \field{sortinit}{V}
+  \field{booktitle}{Geometric aspects of {D}work theory. {V}ol. {I}, {II}}
+  \field{title}{Monodromie locale et fonctions zeta des log sch\'emas.}
+  \field{year}{2004}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

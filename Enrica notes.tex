@@ -1,0 +1,1299 @@
+\documentclass{amsart}%kh
+%\usepackage{makeidx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mwe}
+\usepackage{tikz}
+\usepackage{pstool}
+\usepackage{psfrag}
+\usepackage{epstopdf}
+\usepackage{pstricks}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+%\usepackage[T1]{fontenc}
+\usepackage{textcomp}     % for \textquotesingle macro
+%\usepackage{mathptmx}
+ 
+\usetikzlibrary{matrix,arrows}
+\usepackage{todonotes}
+\usepackage{marginnote}
+\usepackage{lettrine}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[all]{xy}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{eepic}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{pst-node}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = black, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+
+\usepackage{amscd}
+%\usepackage{eufrak}
+%\usepackage{drftcite}y
+\usepackage{mathrsfs}
+\usepackage[english]{babel}
+%\usepackage[all,cmtip]{xy}
+
+
+\usepackage[%
+    style=alphabetic,sorting=nyt,
+    maxnames=10,
+    sortcites=true,doi=false,
+    firstinits=true,hyperref,backend=bibtex]{biblatex}
+    \renewbibmacro{in:}{%
+      \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+\usepackage[babel]{csquotes}
+\usepackage{guit}
+\addbibresource{References.bib}
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {title}{{#1\isdot}}
+\DeclareFieldFormat{pages}{#1}
+%\DefineBibliographyStrings{english}{andothers={}}
+
+\usepackage{cancel}
+\AtEveryBibitem{%
+\ifentrytype{book}{
+    \clearfield{url}%
+    \clearfield{pages}
+    \clearfield{isbn}
+    \clearfield{urldate}%
+    \clearfield{review}%
+    \clearfield{series}%%
+}{}
+\ifentrytype{article}{
+    \clearfield{url}%
+    %\clearfield{pages}
+    \clearfield{issn}
+    \clearfield{doi}
+    \clearfield{isbn}
+    \clearfield{urldate}%
+    \clearfield{review}%
+    %\clearfield{series}%%
+}{}
+\ifentrytype{collection}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+    \clearfield{review}%
+    \clearfield{series}%%
+}{}
+\ifentrytype{incollection}{
+    \clearfield{url}%
+    \clearfield{urldate}%
+    \clearfield{review}%
+    \clearfield{series}%%
+}{}
+}
+ \renewcommand*{\bibfont}{\small}
+
+
+% better loking hyperref
+% IMPORTANT: if writing math in titles, need to add "\texorpdfstring" !!
+%\usepackage{hyperref}
+%\hypersetup{
+%   colorlinks   = true,          %Colours links instead of ugly boxes
+%   urlcolor     = blue,          %Colour for external hyperlinks
+%   linkcolor    = blue,          %Colour of internal links
+%   citecolor   = red             %Colour of citations
+%}
+
+
+\numberwithin{equation}{subsection}
+
+%
+% THEOREMSTYLES, NEWTHEOREMS
+%
+% about theoremstyles can read here: http://en.wikibooks.org/wiki/LaTeX/Theorems
+
+
+% Theorems, propositions, corollaries, lemmas
+\newtheoremstyle{plain2}    % to uniformize styles with the paragraphs
+   {}            % ABOVESPACE (empty value is the same as default value)
+   {}            % BELOWSPACE (empty value is the same as degfault value)
+   {\itshape}    % BODYFONT  (\itshape, \bfseries, \normalfont)
+   {}            % INDENT (empty value is the same as 0pt, \parindent is the same as the standard indent for new paragraphs)
+   {\bfseries}   % HEADFONT
+   {.}           % HEADPUNCT
+   {5pt plus 1pt minus 1pt}  % HEADSPACE (leave 5pt plus 1pt minus 1pt)
+   {{\thmnumber{#1} \thmname{#2}{\thmnote{ (#3)}}}}          %CUSTOM-HEAD-SPEC
+\theoremstyle{plain2}
+
+\newcounter{thmc}[subsection]
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+
+
+
+% Definitions, remarks, examples, claims
+\newtheoremstyle{definition2}    % to uniformize styles with the paragraphs
+   {}
+   {}
+   {\normalfont}
+   {}
+   {\bfseries}
+   {.}
+   {5pt plus 1pt minus 1pt}
+   {{\thmnumber{#1} \thmname{#2}{\thmnote{#3}}}}
+\theoremstyle{definition2}
+\newtheorem{defi}[equation]{Definition}
+\newtheorem{rem}[equation]{Remark}
+\newtheorem{ex}[equation]{Example}
+\newtheorem{example}[equation]{Example}
+\newtheorem{cl}[equation]{Claim}
+\newtheorem{cla}[equation]{Claim}
+
+
+
+% steps (in proofs)
+\newcounter{stepcounter}[subsection]
+\newtheoremstyle{stepstyle}
+   {}     {}
+   {\normalfont}
+   {\parindent}
+   {\itshape}
+   {}
+   {5pt plus 1pt minus 1pt}
+   {{\thmname{#1} \thmnumber{#2}:{\thmnote{#3}}}}
+\theoremstyle{stepstyle}
+\newtheorem{step}[stepcounter]{Step}
+
+
+
+% points (look like definitions etc.)
+\newtheoremstyle{point}
+   {}     {}
+   {\normalfont}
+   {}
+   {\bfseries}
+   {}
+   {5pt plus 1pt minus 1pt}
+   {{\thmname{#1}(\thmnumber{#2})\thmnote{ #3.}}}
+\theoremstyle{point}
+\newtheorem{point}[equation]{}%[section]
+
+\newcommand{\pa}[1]{\begin{point}#1\end{point}}              % shortcut
+\newcommand{\Pa}[2]{\begin{point}[#1]#2\end{point}}          % To add a title. (It will look like definitions and so on)
+
+
+
+% subpoints (look like equations)
+
+
+\newtheoremstyle{subpoint}
+   {}     {}            % maybe leave less space above and under?
+   {\normalfont}
+   {}                   % maybe add indent?
+   {\normalfont}
+   {}
+   {5pt plus 1pt minus 1pt}
+   {{\thmname{#1}{\bf (\thmnumber{#2})}\thmnote{ #3.}}}
+\theoremstyle{subpoint}
+\newtheorem{subpoint}[equation]{}%[section]
+
+\newcommand{\spa}[1]{\begin{subpoint}#1\end{subpoint}}           % shortcut
+\newcommand{\Spa}[2]{\begin{subpoint}[#1]#2\end{subpoint}}   % To add a title.
+
+
+\newcommand{\llbracket}{[\negthinspace[}
+\newcommand{\rrbracket}{]\negthinspace]}
+
+
+\newcommand{\llpar}{(\negthinspace(}
+\newcommand{\rrpar}{)\negthinspace)}
+
+
+
+\newcommand{\LL}{\ensuremath{\mathbb{L}}}
+\newcommand{\mL}{\ensuremath{\mathscr{L}}}
+\newcommand{\mLL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Ar}{\ensuremath{\mathscr{A}r}}
+\newcommand{\Aa}{\ensuremath{\mathscr{A}}}
+\newcommand{\Lm}{\ensuremath{\mathscr{L}}}
+\newcommand{\OO}{\widehat{\mathscr{O}}}
+\newcommand{\Pro}{\ensuremath{\mathbb{P}}}
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\GG}{\ensuremath{\mathbb{G}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\G}{\ensuremath{\mathbb{G}}}
+\newcommand{\X}{\ensuremath{\mathscr{X}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\cX}{\ensuremath{\mathscr{X}}}
+\newcommand{\mX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\mY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\mK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\mW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\mH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\mT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\mm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\fp}{\ensuremath{\mathfrak{p}}}
+
+\newcommand{\caM}{\ensuremath{\mathcal{M}}}
+\newcommand{\caC}{\ensuremath{\mathcal{C}}}
+\newcommand{\caO}{\ensuremath{\mathcal{O}}}
+\newcommand{\caI}{\ensuremath{\mathcal{I}}}
+
+\newcommand{\cA}{\ensuremath{\mathscr{A}}}
+\newcommand{\cC}{\ensuremath{\mathscr{C}}}
+\newcommand{\cF}{\ensuremath{\mathscr{F}}}
+\newcommand{\cG}{\ensuremath{\mathscr{G}}}
+\newcommand{\cH}{\ensuremath{\mathscr{H}}}
+\newcommand{\cJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\cK}{\ensuremath{\mathscr{K}}}
+\newcommand{\cL}{\ensuremath{\mathscr{L}}}
+\newcommand{\cM}{\ensuremath{\mathscr{M}}}
+\newcommand{\cP}{\ensuremath{\mathscr{P}}}
+\newcommand{\cT}{\ensuremath{\mathscr{T}}}
+\newcommand{\cU}{\ensuremath{\mathscr{U}}}
+\newcommand{\cV}{\ensuremath{\mathscr{V}}}
+\newcommand{\cY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\cZ}{\ensuremath{\mathscr{Z}}}
+
+
+%\renewcommand{\exp}{\ensuremath{\mathscr{E}\mathrm{xp}}}
+%\renewcommand{\log}{\ensuremath{\mathscr{L}\mathrm{og}}}
+\renewcommand{\F}{\ensuremath{\mathbb{F}}}
+\renewcommand{\R}{\ensuremath{\mathbb{R}}}
+\renewcommand{\C}{\ensuremath{\mathbb{C}}}
+\renewcommand{\Pro}{\ensuremath{\mathbb{P}}}
+\renewcommand{\A}{\ensuremath{\mathbb{A}}}
+\renewcommand{\X}{\ensuremath{\mathfrak{X}}}
+%\renewcommand{\cX}{\ensuremath{\mathscr{X}}}
+%\renewcommand{\mX}{\ensuremath{X_\infty}}
+\renewcommand{\mY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\mZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\mU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\mV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\mE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\mF}{\ensuremath{\mathfrak{F}}}
+\renewcommand{\mK}{\ensuremath{K_\infty}}
+\renewcommand{\cA}{\ensuremath{\mathscr{A}}}
+\renewcommand{\cM}{\ensuremath{\mathscr{M}}}
+\renewcommand{\cH}{\ensuremath{\mathscr{H}}}
+\renewcommand{\cU}{\ensuremath{\mathscr{U}}}
+\renewcommand{\cF}{\ensuremath{\mathscr{F}}}
+\renewcommand{\cJ}{\ensuremath{\mathscr{J}}}
+\renewcommand{\cZ}{\ensuremath{\mathscr{Z}}}
+\renewcommand{\cY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\J}{\ensuremath{\mathscr{J}}}
+\newcommand{\K}{\ensuremath{\mathscr{K}}}
+\newcommand{\cR}{\ensuremath{\mathscr{R}}}
+
+\newcommand{\Hilb}{\ensuremath{\mathrm{Hilb}}}
+\newcommand{\Spec}{\ensuremath{\mathrm{Spec}\,}}
+\newcommand{\Spf}{\ensuremath{\mathrm{Spf}\,}}
+\newcommand{\Sp}{\ensuremath{\mathrm{Sp}\,}}
+\newcommand{\Proj}{\ensuremath{\mathbb{P}}}
+\newcommand{\Ima}{\mathrm{Im}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\Pic}{\mathrm{Pic}}
+\newcommand{\ord}{\mathrm{ord}}
+\newcommand{\redu}{\mathrm{red}}
+\newcommand{\pr}{\mathrm{pr}}
+\newcommand{\mult}{\mathrm{mult}}
+%\newcommand{\gcd}{\mathrm{gcd}}
+\newcommand{\nor}{\mathrm{nor}}
+\newcommand{\prin}{\mathrm{prin}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\tame}{\mathrm{tame}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\coker}{\mathrm{coker}}
+\newcommand{\an}{\mathrm{an}}
+\newcommand{\sm}{\mathrm{sm}}
+\newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\Gr}{\mathrm{Gr}}
+\newcommand{\Art}{\mathrm{Art}}
+\newcommand{\Sw}{\mathrm{Sw}}
+\newcommand{\pot}{\mathrm{pot}}
+\newcommand{\length}{\mathrm{length}}
+
+\newcommand{\divisor}{\mathrm{div}}
+\newcommand{\weight}{\mathrm{wt}}
+\newcommand{\lift}{\mathrm{lift}}
+\newcommand{\spl}{\mathrm{spl}}
+\newcommand{\free}{\mathrm{free}}
+\newcommand{\tors}{\mathrm{tors}}
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\tor}{\mathrm{tor}}
+%\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\sh}{\mathrm{sh}}
+%\newcommand{\sm}{\mathrm{sm}}
+\newcommand{\qc}{\mathrm{qc}}
+\newcommand{\ur}{\mathrm{ur}}
+\newcommand{\rank}{\mathrm{rank}}
+%\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\Trace}{\mathrm{Trace}}
+\newcommand{\ess}{\mathrm{ess}}
+\newcommand{\lct}{\mathrm{lct}}
+\newcommand{\Sk}{\mathrm{Sk}}
+\newcommand{\gp}{\mathrm{gp}}
+
+\def\trank#1{t(#1)}
+\def\ttame#1{t_{\tame}(#1)}
+\def\tpot#1{t_{\pot}(#1)}
+\def\comp#1{\phi(#1)}
+\def\Comp#1{\Phi(#1)}
+\def \degree{\colon\!}
+\def\dgr#1#2{\mbox{$[#1\degree #2]$}}
+\def\CompS#1{S^{\Phi}_{#1}}
+
+
+
+\hyphenpenalty=6000 \tolerance=10000
+
+
+\title{TITLE}
+\author{Enrica Mazzon}
+\date{}
+
+
+\begin{document}
+\maketitle
+%\textcolor{green}{to do: STRUCTURE, ACKNOWLEDGEMENTS}
+\begin{abstract}
+Given a variety $X$ over a complete discretely valued field, we define the skeleta associated to log-regular models of $X$. Their construction relies on the notion of the Kato fan, determines simplicial subsets of the Berkovich space $X^\an$ and generalises the Berkovich skeleta introduced by Musta\c{t}\u{a} and Nicaise.
+
+Combining the logarithmic framework with the properties of the weight function, we study the skeleta of products and symmetric quotients of varieties. As an application, we show that, if $X$ is a $\text{K}3$ surface admitting a log-regular model with reduced special fibre, then the essential skeleton of $\Hilb^n(X)$ coincides with the $n$-symmetric product of the essential skeleton of $X$.
+\end{abstract}
+
+
+\section{Introduction}
+
+\subsection{Berkovich skeleta.} Let $R$ be a complete discrete valuation ring, with residue field $k$ and quotient field $K$. Let $X$ be a smooth and proper $K$-variety. In \cite{Berkovich1990}, Berkovich developed a theory of analytic geometry over $K$. He associated a $K$-analytic space to $X$; each point corresponds to a real valuation on the residue field of a point of $X$, extending the discrete valuation on $K$. This space, denoted by $X^\an$, is called the Berkovich space associated to $X$.
+
+In order to construct points in the Berkovich space, we consider the geometry of models of $X$. An \textit{snc} model $\cX$ of $X$ is a regular flat separated scheme of finite type over $R$, such that the generic fibre $\cX_K$ is isomorphic to $X$ and the special fibre $\cX_k$ is a strict normal crossing divisor. By strict normal crossing, we mean that its irreducible components are regular and intersect transversally, but the divisor is not necessarily reduced. From any snc model $\cX$ of $X$ one can construct a subspace of $X^\an$, called the Berkovich skeleton of $\cX$ and denoted by $\Sk(\cX)$: it is homeomorphic to the dual intersection complex of the divisor $\cX_k$ \cite{MustataNicaise}.
+
+The Berkovich skeleta turn out to be relevant in the study of the topology of $X^\an$. Firstly, they shape the Berkovich space, as $X^\an$ is homeomorphic to the inverse limit $\underleftarrow{\lim}\Sk(\cX)$ where $\cX$ runs through all snc models of $X$. Secondly, the homotopy type of $X^\an$ is determined by any snc model $\cX$: indeed, Berkovich and Thuiller proved that $\Sk(\cX)$ is a strong deformation retract of $X^\an$.
+
+\subsection{The skeleton of a log-regular model.} In this paper we define a logarithmic version of the Berkovich skeleton by considering log-regular models of $X$. More precisely, let $\cX$ be an integral flat separated scheme of finite type over $R$ such that the logarithmic scheme $\cX^+$, endowed with the divisorial structure induced by the special fibre, is a log-regular log scheme. Roughly speaking, this amounts to imposing a weaker condition on the special fibre $\cX_k$ than being strict normal crossing: it expresses that the pair $(\cX,\cX_k)$ has a toroidal structure.
+
+To any such log scheme $\cX^+$, in \cite{Kato1994a} Kato attached a combinatorial structure $F_\cX$ called a \emph{fan}: it consists of the set of the generic points of intersections of irreducible components of $\cX_k$ equipped with a sheaf of monoids. In particular, the theory of Kato fans provides a suitable framework to encode toroidal modifications of $\cX$ in terms of subdivisions of the Kato fan $F_\cX$.
+
+Any log-regular model $\cX^+$ of $X$ gives rise to a polyhedral complex in $X^\an$, whose faces correspond to the points of the Kato fan $F_\cX$: it is again called the skeleton $\Sk(\cX^+)$. As one would expect, this construction coincides with the previous definition of skeleton in the case of an snc model. Many of the properties that hold true for skeleta of snc models continue to hold in the more general case of log-regular models.
+
+The significance of having this generalisation is that some of the tools to study the Berkovich skeleta can be conveniently interpreted in logarithmic terms. For example, in \cite{MustataNicaise} Musta\c{t}\u{a} and Nicaise defined the \textit{weight function} $\weight_{\omega}$ on $X^\an$ associated to a pluricanonical form $\omega$ on $X$; its value at points of the skeleton of an snc model of $X$ can be computed by means of an explicit and more manageable formula using logarithmic differential forms. Moreover, in the following we prove that the formula expressed in the logarithmic language can be also generalised to the skeleton of a log-regular model (Proposition \ref{prop weight function log formula}).
+
+\subsection{The essential skeleton.}It is natural to ask if, among all the Berkovich skeleta, we can construct a \textit{canonical} skeleton that is uniquely determined and that, at the same time, captures as much information as possible about the geometry of $X^\an$. In \cite{MustataNicaise}, Musta\c{t}\u{a} and Nicaise gave a positive answer to the question by defining the \textit{essential skeleton} $\Sk(X)$ of $X$: it is a finite simplicial complex in $X^\an$, depends only on the variety $X$ and constitutes a new birational invariant of $X$.
+
+The definition of the essential skeleton is based on the weight functions $\weight_{\omega}$ on $X^\an$. Indeed, given any snc model $\cX$ of $X$, the points of $\Sk(\cX)$ where $\weight_{\omega}$ reaches its minimal value single out certain faces of $\Sk(\cX)$ that only depend on $X$ and $\omega$. The essential skeleton $\Sk(X)$ is defined as the union of these minimizing loci over all the non-zero pluricanonical forms $\omega$ of $X$.
+
+One may wonder if the essential skeleton may be realised as the skeleton of a distinguished model of $X$. It was proved in \cite{NicaiseXu} that, when the canonical line bundle of $X$ is semi-ample, the essential skeleton can be identified with the dual intersection complex of the special fibre of any minimal \textit{dlt} model of $X$. This means that, up to enlarging the class of models and admitting mild singularities, the essential skeleton is still the skeleton of a model of $X$. The main advantage of this second approach relies on the possibility of applying results from the birational geometry of minimal dlt models. In particular, taking advantage of the techniques of the Minimal Model Program and following \cite{deFernexKollarXu2012}, one can conclude that the essential skeleton is a strong deformation retract of $X^\an$ \cite{NicaiseXu}.
+
+While the importance of the essential skeleton in the pursuit of a canonical and geometrically significant skeleton was emphasised already in previous works, at least two interesting aspects have yet to be explored. Firstly, whether it is feasible to find alternative proofs of existing results or to determine further properties of the essential skeleton, adopting the ``weight function approach'' and only relying on the geometric structure of $X^\an$ instead of the geometry of minimal dlt models. Secondly, it would be interesting to explore more the relation between the variety $X$ and the essential skeleton $\Sk(X)$, to identify the information about $X$ that is encoded in $\Sk(X)$.
+
+In the present work, we will prove results in both of these directions when X is a Hilbert scheme of points on a $\text{K}3$ surface.
+
+\subsection{The essential skeleton of the Hilbert scheme of $n$ points on a $\text{K3}$ surface.} Our main theorem asserts that the essential skeleton of the Hilbert scheme of $n$ points on a $\text{K}3$ surface $S$ is homeomorphic to the $n$-th symmetric product of the essential skeleton of $S$, i.e. $\Sk(\Hilb^n(S)) \simeq S^n(\Sk(S))$, assuming that $S$ admits a log-regular model with reduced special fibre and that $k$ is algebraically closed (Theorem \ref{thm essential skeleton hilb}).
+
+It has been observed that many natural operations in algebraic geometry commute with passing to the skeleton (or tropicalization). Typical examples include the results that the skeleton of a moduli space of curves is the moduli space of the corresponding tropical curves \cite{AbramovichCaporasoPayne} and the skeleton of the Jacobian of a curve is the tropical Jacobian of the skeleton of the curve \cite{BakerRabinoff}. Our main theorem can be interpreted as a new instance of this phenomenon (since skeleta have no infinitesimal structure, their ``Hilbert schemes of points'' are simply given by their symmetric powers). 
+
+The main inspiration for Theorem \ref{thm essential skeleton hilb} is an ongoing project by Gulbrandsen, Halle, Hulek and Zhang, following \cite{GulbrandsenHalleHulek} and \cite{GulbrandsenHalleHulek2016}. Their investigation focuses on the degenerations of Hilbert schemes of points and provides, as an application, an analogue result about the essential skeleton of Hilbert schemes, but only in the particular case of type II degeneration of $K3$ surfaces. The techniques involved differ a lot. Indeed, their approach is based on the method of \textit{expanded degenerations}, which first appeared in \cite{Li}, and on the construction of suitable GIT quotients. Furthermore, to perform this construction on a variety, they need a combinatorial assumption on the special fibre of a model of the variety.
+
+In particular, in the case of a $\text{K}3$ surface $S$ over $K$, the GIT quotient they form turns out to be a minimial dlt model of the Hilbert scheme of $n$ points on $S$. We recall that, by \cite{NicaiseXu}, the essential skeleton of a variety can be identified with the dual complex of any minimal dlt model of the variety. Hence, it follows that the GIT quotient they construct provides a description of the essential skeleton of $\Hilb^n(X)$. Finally, in accord with our result, they also conclude that the dual complex in question is the $n$-th symmetric product of the essential skeleton of $S$.
+%One can extend the notion of essential skeleta to singular varieties as follows: it is defined as the essential skeleton of any resolution of singularities. This is well-defined by the birational invariance of the essential skeleton. Combining this with the fact that $\Hilb^n(X)$ is a desingularisation of the $n$-th symmetric product $S^n(X)$ (\cite{Fogarty}), we see that the essential skeleton of $\Hilb^n(X)$ can be identified with the essential skeleton of $S^n(X)$. Therefore, our claim is that $\Sk(S^n(X))$ is homeomorphic to $S^n(\Sk(X))$. This means that the operation of quotienting the product structure by the action of the symmetric group $S_n$ is compatible with passing to the essential skeleton. This provides evidence that, in the case of a $\text{K}3$ surface and its Hilbert scheme, the essential skeleta are related in the same way as the varieties themselves are related.
+
+\subsection{A sketch of the proof.} Let us now briefly indicate the main ideas of the proof. The arguments only rely on the properties of the weight function and the notion of skeleta for log-regular models. In particular, minimal dlt models do not play a role in our proof. 
+
+By the birational invariance of the essential skeleton, we are reduced to studying the essential skeleton of $S^n(S)$. Hence, we want to study its behaviour when we consider products and symmetric quotients.
+
+The first part of the proof consists in showing that the essential skeleton of the product may be identified with the product of the essential skeleta, i.e. $\Sk(X^n) \simeq (\Sk(X))^n$ (Corollary \ref{cor semistability and essential skeleta}). This result holds for every Calabi-Yau variety X over $K$ with a log-regular model with reduced special fibre.
+
+We start by studying the relation between the skeleton of a product of two such varieties $X$ and $Y$ with the product of the corresponding skeleta. The logarithmic setting turns out to be the most suitable. Firstly, the product of log-regular models $\cX^+$ and $\cY^+$ of $X$ and $Y$ is a log-regular model $\cZ^+$ of $Z=X\times_K Y$. So we can consider the skeleta of all three of these log-regular models and compare them. Secondly, let $\omega_{X}$ and $\omega_Y$ be canonical forms on $X$ and $Y$. Thanks to the weight function formula in terms of logarithmic differentials, we are able to relate the points in $\Sk(\cZ^+)$ that minimise the weight function $\weight_{\pr_X^*\omega_K \otimes \pr_Y^*\omega_Y}$ to pairs of points in $\Sk(\cX^+)$ and $\Sk(\cY^+)$ that minimise respectively $\weight_{\omega_X}$ and $\weight_{\omega_Y}$ (Paragraph \ref{paragraph weight function product}). The technical requirements of the algebraic closedness of $k$ and the existence of a log-regular model with reduced special fibre guarantee a good understanding of the product in the category of log schemes (Proposition \ref{prop semistability and skeleta}).
+
+The second part of the proof focuses on the $n$-th symmetric product of $X$: we conclude that the essential skeleton of the $n$-th symmetric product of $X$ may be identified with the quotient of the product of $n$ copies of the essential skeleton, i.e. $\Sk(X^n/S_n) \simeq (\Sk(X))^n / S_n$ (Corollary \ref{cor semistability and essential skeleta quotient}). Let $\omega$ be a canonical form on $X^n$ invariant under $S_n$, so that it induces a canonical form on the quotient $X^n/S_n$. The main technical results involved in this second part state that not only the minimal values attained by $\weight_{\omega}$ on $(X^n)^\an$ and $(X^n/S_n)^\an$ coincide (see (\ref{equ equality weight})), but also that the set of points on $(X^n/S_n)^\an$ of minimal weight is equal to the image via $(X^n)^\an \rightarrow (X^n/S_n)^\an$ of the points of minimal weight on $(X^n)^\an$ (Proposition \ref{prop KS of quotient}). This leads to the expected explicit description of the essential skeleton of the quotient $S^n/S_n$, hence of $\Hilb^n(S)$ by birational invariance of the essential skeleton.
+
+%\subsection{Structure of the paper.} To conclude this introduction, we give a brief overview of the structure of the paper. In Section \ref{sect fs product} we recall the definition of fine and saturated products in the category of log schemes. In Section \ref{sect kato fan} we explain the construction of the Kato fan associated  to a log-regular log scheme, as proposed in \cite{Kato1994a}, and we provide a description of the Kato fan of a product of log-regular log schemes. In Section \ref{sect skeleton log} we introduce the technical core of the paper, the notion of the skeleton associated to a log-regular model. We show that it is a simplicial subset of the Berkovich space and generalises the Berkovich skeleta in \cite{MustataNicaise}.
+%
+%The applications of this construction are discussed in the second half of the paper. In Section \ref{sect wt log} we study the properties of the weight function in connection with the skeleta of log-regular models. In Section \ref{sect an of symm product} we focus on the symmetric product of a variety, proving that its essential skeleton is related to the essential skeleton of the standard product. Our main result is discussed in Section \ref{sect essential sk Hilb}, where we give a precise characterization of the essential skeleton of the Hilbert scheme of points on a $\text{K}3$ surface. 
+%
+%\subsection{Acknowledgements.}
+
+\subsection{Notation.}
+\spa{ Let $R$ be a complete discrete
+valuation ring with maximal ideal $\mm$, residue field
+$k=R/\mm$ and quotient field $K$. We assume that the valuation $v_K$ is normalized. We define by $|\cdot|_K= \exp(- v_K(\cdot))$ the absolute value on $K$ corresponding to $v_K$; this turns $K$ into a non-archimedean
+complete valued field.}
+\spa{ We write $S=\Spec R$ and we
+denote by $s$ the closed point of $S$. Let $\cX$ be an $R$-scheme of finite type. We will denote by
+$\cX_k$ the special fiber of $\cX$ and by $\cX_K$ the generic
+fiber. Moreover, we will denote by $\widehat{\cX}$ the
+$\mm$-adic completion of $\cX$ and by $\widehat{\cX}_\eta$
+the generic fiber of $\widehat{\cX}$ in the category of
+$K$-analytic spaces.}
+
+\spa{Let $X$ be a proper $K$-scheme. A model for $X$ over $R$ is a flat separated $R$-scheme $\cX$ of finite type endowed with an isomorphism of $K$-schemes $\cX_K \rightarrow X$. If $X$ is smooth over $K$,
+we say that $\cX$ is an snc model for $X$ if it is regular over $R$, and the
+special fiber $\cX_k$ is a strict normal crossings divisor on $\cX$. Such a model always exists, by Hironaka's resolution of singularities.}
+
+\spa{ \label{sss-log} All log schemes in this paper are defined with respect to the Zariski topology. We denote a log scheme by $\cX^+=(\cX,\caM_{\cX})$, where $\caM_{\cX}$ is the structural sheaf of monoids. We denote by $$\mathcal{C}_{\cX}=\mathcal{M}_{\cX}/\mathcal{O}_{\cX}^{\times}$$
+the characteristic sheaf of $\cX^+$. The sheaf $\mathcal{C}_{\cX}$
+is a Zariski sheaf on $\cX^+$, supported on $\cX_k$; if $\cX^+$ is log-regular, then $\caC_{\cX}$ is a constructible sheaf.
+For every point $x$ of $\cX_k$, we denote by $\mathcal{I}_{\cX,x}$
+the ideal in $\mathcal{O}_{\cX,x}$ generated by
+$$\mathcal{M}_{\cX,x}\setminus \mathcal{O}_{\cX,x}^{\times}.$$ We denote
+by $S^+$ the scheme $S$ endowed with the standard log structure
+(the divisorial log structure induced by $s$). If an $R$-scheme $\cX$ is given, we will always denote by $\cX^+$ the log scheme over $S^+$ that we obtain by endowing $\cX$ with the divisorial log structure associated with
+$\cX_k$. Indeed, if $\cX^+$ is a log-regular log scheme over $S^+$ such that the log structure on $\cX_K$ is trivial, then the log structure on $\cX^+$ is the divisorial log structure induced by $\cX_k$ by \cite{Kato1994a}, Theorem 11.6.
+
+%We denote by $j$  the natural open immersion $\cX_K\to
+%\cX$, by
+%$$\mathcal{M}_{\cX}=j_*\mathcal{O}^{\times}_{\cX_K}\cap
+%\mathcal{O}_{\cX}$$ the structural sheaf of monoids on $\cX^+$ and
+%by
+%$$\mathcal{C}_{\cX}=\mathcal{M}_{\cX}/\mathcal{O}_{\cX}^{\times}$$
+%the characteristic sheaf of $\cX^+$. The sheaf $\mathcal{C}_{\cX}$
+%is a Zariski sheaf on $\cX$, supported on $\cX_k$; if $\cX$ is not too singular, then $\caC_{\cX}$ is a constructible sheaf.
+%For every point $x$ of $\cX_k$, we denote by $\mathcal{I}_{\cX,x}$
+%the ideal in $\mathcal{O}_{\cX,x}$ generated by
+%$$\mathcal{M}_{\cX,x}\setminus \mathcal{O}_{\cX,x}^{\times}.$$
+}
+
+\spa{We say that a proper $K$-variety X has semistable reduction if it admits an $R$-model $\cX$ such that $\cX^+$ is log-smooth over $S^+$, with reduced special fiber; such a model is called a semistable model of $X$. This is a weaker notion than requiring the existence of an snc-model with reduced special fibre.}
+
+\spa{We denote by $(\cdot)^{\an}$ the analytification functor from the category of $K$-schemes of finite type to Berkovich's category of $K$-analytic spaces. For every $K$-scheme of finite type $X$, as a set, $X^{\an}$ consists of the pairs $x=(\xi_x,|\cdot|_x)$ where $\xi_x$ is a point of $X$ and $|\cdot|_x$ is an absolute value on the residue field $\kappa(\xi_x)$ of $X$ at $\xi_x$ extending the absolute value $|\cdot|_K$ on $K$. We endow $X^{\an}$ with the Berkovich topology, i.e. the weakest one such that \begin{itemize}
+\item[(i)] the forgetful map $\phi: X^{\an} \rightarrow X$, defined as $(\xi_x,|\cdot|_x) \mapsto \xi_x$, is continuous,
+\item[(ii)] for any Zariski open subset $U$ of $X$ and any regular function $f$ on $U$ the map $|f|:\phi^{-1}(U) \rightarrow \R$ defined by $|f|(\xi_x,|\cdot|_x)=|f(\xi_x)|$ is continuous. 
+\end{itemize}}
+
+\section{The Kato fan of a log-regular log scheme} \label{sect kato fan}
+
+\subsection{Some reminders about the fibred product of \textit{fs} log schemes} \label{sect fs product}
+\spa{Given morphisms of fine and saturated (\emph{fs}) log schemes $f_1: \cX_1^+ \rightarrow \cY^+$ and $f_2: \cX_2^+ \rightarrow \cY^+$, their fibred product exists in the category of log schemes. It is obtained by endowing the usual fibred product of schemes
+\begin{equation} \label{fibered product diagram}
+\begin{gathered}
+\xymatrixcolsep{3pc} \xymatrix{
+  \cX_1\times_{\cY} \cX_2 \ar[r]^-{p_1} \ar[dr]^-{p_{\cY}} \ar[d]^-{p_2} & \cX_1 \ar[d]^{f_1}\\
+  \cX_2 \ar[r]^{f_2}   & \cY
+}
+\end{gathered}
+\end{equation}
+with the log structure associated to $p_1^{-1}\caM_{\cX_1} \oplus_{p_{\cY}^{-1}\caM_{\cY}} p_2^{-1}\caM_{\cX_2}$. If $u_1:P \rightarrow Q_1$ and $u_2:P \rightarrow Q_2$ are charts for the morphisms $f_1$ and $f_2$ respectively, then the induced morphism $\cX_1\times_{\cY} \cX_2 \rightarrow \Spec \Z[Q_1 \oplus_P Q_2]$ is a chart for $\cX_1^+\times_{\cY^+} \cX_2^+$. }
+
+\spa{In general, the fibred product is not $fs$, but the category of $fs$ log schemes also admits fibred products. Keeping the same notations, the following is a chart of the fibred product in the category of fine and saturated log schemes $$\cX_1^+\times_{\cY^+}^{\text{fs}} \cX_2^+ = (\cX_1^+\times_{\cY^+} \cX_2^+) \times_{\Z[Q_1 \oplus_P Q_2]} \Z[(Q_1 \oplus_P Q_2)^{\text{sat}}]$$(\cite{Bultot2015}, 3.6.16). We remark that the two fibre products above may not only have different log structures, but also the underlying schemes may differ.}
+
+\spa{Log smoothness is preserved under fs base change and composition (\cite{GabberRamero}, Proposition 12.3.24). In particular, if $f_1: \cX_1^+ \rightarrow \cY^+$ is log-smooth and $\cX_2^+$ is log-regular, then $\cX_1^+\times^{\text{fs}}_{\cY^+} \cX_2^+$ is log-regular, by \cite{Kato1994a}, Theorem 8.2.
+
+%\subsection{Log smoothness and log-regularity of \textit{fs} fibred products.}
+%\begin{prop} \label{reg of fibred product}\item \begin{enumerate}
+%\item (\cite{GabberRamero}, Proposition 12.3.24) Log smooth and log \'{e}tale morphisms are stable under composition and base change.
+%\item (\cite{Ogus2017}, Corollary 3.1.11, page 410) \textcolor{green}{REPLACE OGUS REFERENCE} The canonical morphisms ${\cX}^\text{int} \rightarrow \cX$ and ${\cX}^{\text{sat}} \rightarrow \cX$ induced by integration and saturation of a log scheme are log \'{e}tale morphisms.
+%\item (\cite{Kato1994a}, Thm 8.2) If $f:\cX \rightarrow \cY$ is a log-smooth morphism between $fs$ log schemes and $\cY$ is a log-regular log scheme, then $\cX$ is also a log-regular log scheme.
+%\end{enumerate} 
+%\end{prop}
+%
+%\spa{Combining the results in Proposition \ref{reg of fibred product} and the construction of $fs$ fibred product, we obtain the following properties. If the morphisms $f_1$ and $f_2$ are log-smooth over $\cY$, then the canonical projections $\cX_1\times_{\cY} \cX_2 \rightarrow \cX_i$ and $\cX_1\times_{\cY} \cX_2 \rightarrow \cY$ are log-smooth. In particular, if $\cX$ is an $R$-scheme such that $\cX^+$ is log-regular and $\cX^+ \rightarrow S^+$ is log-smooth, then the $n$-th fibred product $(\cX^+)^n$ over $S^+$ is log-regular for any positive integer $n$ and every canonical projection is log-smooth.}
+%
+%\subsection{Canonical bundles of \textit{fs} fibred products.}
+%\begin{prop} \label{can bundle of fibred product}\item
+%\begin{enumerate}
+%\item (\cite{Kato1994a}, Proposition 3.10) If $f:\cX \rightarrow \cY$ is a log-smooth morphism of $fs$ log schemes, then the $\caO_{\cX}$-module of logarithmic differentials $\Omega^{\log}_{\cX/\cY}$ is locally free of finite rank.
+%\item (\cite{GabberRamero}, Proposition 12.3.13) Given a commutative diagram of $fs$ log schemes \begin{center}
+%\begin{tikzpicture}[scale=1.2]
+%\node (A) at (0,1) {$\cZ$};
+%\node (B) at (1.6,1) {$\cX_1$};
+%\node (C) at (0,0) {$\cX_2$};
+%\node (D) at (1.6,0) {$\cY$};
+%\path[->,font=\scriptsize,>=angle 90]
+%(A) edge node[above]{$p_1$} (B)
+%(A) edge node[right]{$p_2$} (C)
+%(B) edge node[right]{$f_1$} (D)
+%(C) edge node[above]{$f_2$} (D);
+%\end{tikzpicture}
+%\end{center} the sheaves of logarithmic differentials are related by the following isomorphism $$p_1^* \Omega^{\log}_{\cX_1/\cY} \oplus p_2^* \Omega^{\log}_{\cX_2/ \cY} \simeq \Omega^{\log}_{\cZ/\cY}.$$
+%\item (\cite{Kato1994a}, Proposition 3.12) Let $\cZ \xrightarrow{f} \cX \xrightarrow{g} \cY$ be morphisms of $fs$ log schemes and let $$f^*\Omega^{\log}_{\cX/\cY} \xrightarrow{\lambda} \Omega^{\log}_{\cZ/\cY} \rightarrow \Omega^{\log}_{\cZ/\cX} \rightarrow 0$$ be the associated exact sequence. If $f$ is log-smooth, then $\lambda$ is injective. Moreover, if $f$ is log \'{e}tale, then $\lambda$ is an isomorphism.
+%\end{enumerate}
+%\end{prop}
+
+Consider log-smooth morphisms of fs log schemes $\cX_1^+ \rightarrow \cY^+$ and $\cX_2^+ \rightarrow \cY^+$. The sheaves of logarithmic differentials are related by the following isomorphism \begin{equation} \label{equ kahler diff product}
+p_1^* \Omega^{\log}_{\cX_1^+/\cY^+} \oplus p_2^* \Omega^{\log}_{\cX_2^+/ \cY^+} \simeq \Omega^{\log}_{\cX_1^+\times^{\text{fs}}_{\cY^+} \cX_2^+ /\cY^+}\end{equation} by \cite{GabberRamero}, Proposition 12.3.13. Furthermore, by assumption of log-smoothness over $S^+$ the logarithmic differential sheaves are locally free of finite rank (\cite{Kato1994a}, Proposition 3.10) and we can consider their determinants; they are called log canonical bundles and denoted by $\omega^{\log}$. The following isomorphism is a direct consequence of (\ref{equ kahler diff product}) \begin{equation} \label{equ log can bundles}
+p_1^* \omega^{\log}_{\cX_1^+/\cY^+} \otimes p_2^* \omega^{\log}_{\cX_2^+/ \cY^+} \simeq \omega^{\log}_{\cX_1^+\times^{\text{fs}}_{\cY^+} \cX_2^+ /\cY^+}.\end{equation} }
+
+
+\subsection{Definition of Kato fans.}
+\spa{ According to \cite{Kato1994a}, Definition 9.1, a monoidal space $(T, \caM_T)$ is a topological space $T$ endowed with a sharp sheaf of monoids $\caM_T$, where \textit{sharp} means that $\caM_{T,t}^\times = \{1\}$ for every $t \in T$. A morphism of monoidal spaces is a pair $(f,\varphi):(T,\caM) \rightarrow (T',\caM')$  such that $f:T \rightarrow T'$ is a continuous function of topological spaces and $\varphi: f^{-1}(\caM) \rightarrow \caM'$ is a sheaf homomorphism such that $\varphi_{t}^{-1}(\{1\})=\{1\}$ for every $t \in T$.}
+
+\begin{example}
+If $\cX^+$ is a log scheme then the Zariski topological space of $\cX$ is equipped with a sheaf of sharp monoids $\caC_{\cX}$, the characteristic sheaf of $\cX^+$. Thus $(\cX,\caC_{\cX})$ is a monoidal space. Moreover, morphisms of log schemes
+induce morphisms of characteristic sheaves, hence morphism of monoidal spaces. We therefore obtain a functor from the category of log schemes to the category of monoidal spaces.
+\end{example}
+
+\begin{example}
+Given a monoid $P$, we may associate to it a monoidal space called the spectrum of $P$. As a set, $\Spec P$ is the set of all prime ideals of $P$. The topology is characterized by the basis open sets $D(f)= \{ \fp \in \Spec P | f \notin \fp \}$ for any $f \in P$. The monoidal sheaf is defined by $$\caM_{\Spec P} (D(f))= S^{-1}P / (S^{-1}P)^{\times}$$ where $S=\{f^n | n \geqslant 0\}$.
+\end{example}
+
+\spa{A monoidal space isomorphic to the monoidal space $\Spec P$ for some monoid $P$ is called an affine Kato fan. A monoidal space is called a Kato fan if it has an open covering consisting of affine Kato fans. In particular, we call a Kato fan integral, saturated, of finite type or $fs$ if it admits a cover by the spectra of monoids with the respective properties.}
+
+\spa{A morphism of fs Kato fans $F' \rightarrow F$ is called a \emph{subdivision} if it has finite fibres and the morphism $$\Hom(\Spec \N, F') \rightarrow \Hom (\Spec \N, F)$$ is a bijection. Allowing subdivisions a Kato fan might take the following shape.
+\begin{prop} \label{kato subdivision}(\cite{Kato1994a}, Proposition 9.8)
+Let $F$ be a $fs$ Kato fan. Then there is a subdivision $F' \rightarrow F$ such that $F'$ has an open cover $\{U'_i\}$ by Kato cones with $U'_i \simeq \Spec \N^{r_i}$. 
+\end{prop}
+The strategy of the proof of Proposition \ref{kato subdivision} goes back to \cite{KempfKnudsenMumfordEtAl1973} and relies on a sequence of particular subdivisions of the Kato fan, the so-called star and barycentric subdivisions (\cite{AbramovichChenMarcusEtAl2015}, Example 4.10).}
+
+\subsection{Kato fans associated to log-regular log schemes.}
+\begin{thm}\label{kato fan associated} (\cite{Kato1994a}, Proposition 10.2)
+Let $\cX^+$ be a log-regular log scheme. Then there is an initial strict morphism $(\cX, \caC_{\cX}) \rightarrow F$ to a Kato fan in the category of monoidal spaces. Explicitly, there exist a Kato fan $F$ and a morphism $\pi: (\cX, \caC_{\cX}) \rightarrow F$ such that $\pi^{-1}(\caM_{F}) \simeq \caC_{\cX}$ and any other morphism to a Kato fan factors through $\pi$.
+\end{thm}
+The Kato fan $F$ in Theorem \ref{kato fan associated} is called the Kato fan associated to $\cX^+$; it is the topological subspace of
+$\cX$ consisting of the points $x$ such that the maximal ideal $\mathfrak{m}_x$ of
+$\mathcal{O}_{\cX,x}$ is equal to $\mathcal{I}_{\cX,x}$, and
+$\mathcal{M}_F$ is the inverse image of $\mathcal{C}_{\cX}$ on
+$F$, henceforth we write $\caC_F$ for $\caM_F$.
+
+\begin{example} \label{example kato fan regular model}
+Assume that $\cX$ is regular, of finite type over $S$ and $\cX_k$ is a divisor with strict
+normal crossings. Then $\cX^+$ is log-regular and $F$ is the set
+of generic points of intersections of irreducible components of
+$\cX_k$. For each point $x$ of $F$, the stalk of $\mathcal{C}_F$
+is isomorphic to $(\N^r,+)$, with $r$ the number of irreducible
+components of $\cX_k$ that pass through $x$.
+\end{example}
+
+This example admits the following partial generalisation.
+
+\begin{lemma} \label{lemma points Kato fan}
+Let $\cX^+$ be a log-regular log scheme over $S^+$. Denote by $D$ the divisor where the log structure is non-trivial. Then the fan $F$ consists of the generic points of intersections of irreducible components of $D$.
+\end{lemma}
+\begin{proof}
+First, we show that every such generic point is a point of $F$. Let $E_1,\ldots,E_r$ be irreducible components of $D$ and let $x$ be a generic point of the intersection $E_1\cap\ldots\cap E_r$. We set $d=\dim \mathcal{O}_{\cX,x}$. Since $\cX^+$ is log-regular, we know that $\mathcal{O}_{\cX,x}/\mathcal{I}_{\cX,x}$ is regular and that \begin{equation} \label{equ log regularity}
+d=\dim \mathcal{O}_{\cX,x}/\mathcal{I}_{\cX,x}+\mathrm{rank}\,\mathcal{C}^{\gp}_{\cX,x}.\end{equation} We denote by $V(\caI_{\cX,x})$ the vanishing locus of the ideal $\caI_{\cX,x}$ in $\cX$.
+We want to prove that $\caI_{\cX,x}= \mathfrak{m}_x$. We assume the contrary, hence that $\caI_{\cX,x} \subsetneq \mathfrak{m}_x$. This assumption implies that there exists $j$ such that $V(\caI_{\cX,x}) \nsubseteq E_j$: indeed, if the vanishing locus is contained in each irreducible component $E_i$, i.e. $$V(\caI_{\cX,x}) \subseteq E_1 \cap \ldots \cap E_r \subseteq \overline{\{x\}},$$ then $\caI_{\cX,x} \supseteq \mathfrak{m}_x$. From the assumption of log-regularity it follows that the vanishing locus $V(\caI_{\cX,x})$ is a regular subscheme, and moreover that $\cX^+$ is Cohen-Macaulay by \cite{Kato1994a}, Theorem 4.1. Thus, there exists a regular sequence $(f_1,\ldots,f_l)$ in $\caI_{\cX,x}$ where $l$ is the codimension of $V(\caI_{\cX,x})$, i.e. $$ \dim \mathcal{O}_{\cX,x}/\mathcal{I}_{\cX,x} = d-l.$$ Moreover by the equality (\ref{equ log regularity}), $\mathrm{rank}\,\mathcal{C}^{\gp}_{\cX,x} = l$.
+%Thus
+% it suffices to prove that
+% $$\mathrm{rank}\,\mathcal{C}^{\gp}_{\cX^+,x}\geq d,$$ since every
+% reduced local ring of dimension zero is a field.
+%
+% By \cite{GabberRamero}, Corollary 12.5.29, the local ring $\caO_{\cX,x}$ is Cohen-Macaulay. Thus, there exists a regular sequence $(f_1,\ldots,f_d)$ in $\caO_{\cX,x}$ whose length is equal to the dimension $d$. For any element $f_i$ of such a sequence, the vanishing locus $V(f_i)$ is contained in the special fibre $\cX_k$, hence $f_i$ is an element of the monoid $\caM_{\cX^+,x}$. Moreover, being part of a regular sequence, $f_i$ is necessarily not invertible, so $f_i \in \caM_{\cX^+,x} \setminus \caO_{\cX,x}^\times$. It follows that, up to renumbering the $E_i$ if necessary, we can find a regular sequence $(f_1,\ldots,f_d)$ in
+% $\mathcal{O}_{\cX,x}$ such that each $f_i$ belongs to $\mathcal{I}_{\cX,x}$ and vanishes along
+% $E_i$.
+ 
+We claim that the residue classes of these elements $f_i$ in $\mathcal{C}_{\cX,x}^{\gp}$ are linearly independent. Assume the contrary. Then, up to renumbering the $f_i$, there exist an  integer $e$ with $1< e< l$, non-negative integers $a_1,\ldots,a_l$, not all zero, and a unit $u$ in $\mathcal{O}_{\cX,x}$ such that $$f_1^{a_1}\cdot \ldots \cdot f_{e-1}^{a_{e-1}}=u\cdot f_e^{a_e}\cdot \ldots \cdot f_l^{a_l}.$$ This contradicts the fact that $(f_1,\ldots,f_l)$ is a regular sequence in $\mathcal{I}_{\cX,x}$. Thus, the classes $\overline{f_1}, \ldots,\overline{f_l}$ are independent in $\caC_{\cX,x}^\gp$. As we also have the equality $\mathrm{rank}\,\mathcal{C}^{\gp}_{\cX,x}=l$, it follows that these classes generate $\caC_{\cX,x}^\gp \otimes_{\Z} \Q$.
+
+Let $g_j$ be a non-zero element of the ideal $\caI_{\cX,x}$ that vanishes along $E_j$: it necessarily exists as otherwise $E_j$ is not a component of the divisor $D$. Then $g_j$ satisfies $$g_{j}^N = v \cdot f_1^{b_1} \cdot \ldots \cdot f_l^{b_l}$$ with $b_i \in \Z$, $v$ a unit in $\caO_{\cX,x}$ and $N$ a positive integer. As $g_j$ vanishes along the irreducible component $E_j$, at least one of the functions $f_1,\ldots,f_l$ has to vanish along $E_j$: assume that is $f_1$.
+
+On the one hand, as $f_1$ is identically zero on $E_j$, the trace of $E_j$ on $V(\caI_{\cX,x})$ has at most codimension $l-1$ in $E_j$ at the point $x$. On the other hand, we assumed that $V(\caI_{\cX,x})$ is not contained in $E_j$ and it has codimension $l$ in $\caO_{\cX,x}$. Then, the trace of $E_j$ on $V(\caI_{\cX,x})$ has codimension $l$ in $E_j$ at $x$. This is a contradiction. We conclude that the ideal $\caI_{\cX,x}$ is equal to the maximal ideal $\mathfrak{m}_x$, therefore $x$ is a point of $F$.
+
+It remains to prove the converse implication: every point $x$ of the fan $F$ must be a generic point of an intersection of irreducible components of $D$. Let $x$ be a point of $F$: by construction of Kato fan $F$, the maximal ideal of $\mathcal{O}_{\cX,x}$ is equal to $\mathcal{I}_{\cX,x}$, thus it is generated by elements in $\mathcal{M}_{\cX,x}$. The zero locus of such an element is contained in $D$ by definition of the logarithmic structure on $\cX^+$. Therefore, the zero locus is a union of irreducible components of the trace of $D$ on $\Spec \mathcal{O}_{\cX,x}$ and $x$ is a generic point of the intersection of all such irreducible components.
+\end{proof}
+
+Moreover, the example \ref{example kato fan regular model} also leads to the following characterization.
+
+\begin{prop} \label{resolution log scheme kato fan} (\cite{GabberRamero}, Corollary 12.5.35)
+Let $\cX^+$ be a $fs$ log-regular log scheme over $S^+$ and $F$ its associated Kato fan. The following are equivalent: \begin{enumerate}
+\item for every $x \in F$, $M_{F,x} \simeq \N^{r(x)}$,
+\item the underlying scheme $\cX$ is regular.
+\end{enumerate}
+If this is the case, then the special fibre $\cX_k$ is a strict normal crossing divisor.
+\end{prop}
+
+\subsection{Functoriality and fibred products of associated Kato fans.}
+\spa{The construction of the Kato fan of a log scheme defines a functor from the category of log-regular log schemes to the category of Kato fans. Indeed, given a morphism of log schemes $\cX^+ \rightarrow \cY^+$, we consider the embedding of the associated Kato fan $F_{\cX}$ in $\cX^+$ and the canonical morphism $\cY^+ \rightarrow F_{\cY}$: their composition functorially induces a map between associated Kato fans. Moreover, this association preserves strict morphisms (\cite{Ulirsch2013}, Lemma 4.9).}
+\spa{Similarly to the construction of fibred products of $fs$ log schemes, the category of $fs$ Kato fans admits fibred products: on affine Kato fans $F=\Spec P$ and $G=\Spec Q$ over $H=\Spec T$, $F\times_{H}G$ is the spectrum of the amalgamated sum $(P \oplus_T Q)^{\text{sat}}$ in the category of $fs$ monoids (\cite{Ulirsch2016}, Proposition 2.4) and on the underlying topological spaces, this coincides with the usual fibred product.}
+\spa{Given $\mathscr{T}^+$ a log-regular log scheme, let $\cX^+$ and $\cY^+$ be log-regular log schemes log-smooth over $\mathscr{T}^+$. We denote by $\cZ^+$ the $fs$ fibred product $\cX^+\times^{\text{fs}}_{\mathscr{T}^+} \cY^+$. We seek to compare the Kato fan associated to the fibred product with the fibred product of associated Kato fans.
+\begin{prop} \label{local isomo kato fan product}(\cite{Saito2004}, Lemma 2.8) Under the above notations, the natural morphisms $F_{\cZ}\to F_{\cX}$ and $F_{\cZ}\to F_{\cY}$ induce a morphism of Kato fans $$F_{\cZ} \rightarrow F_{\cX} \times_{F_{\mathscr{T}}} F_{\cY}$$ that is locally an isomorphism.
+\end{prop}}
+
+\subsection{Resolutions of log schemes via Kato fan subdivisions.} \label{section resolution via kato subd}
+\begin{prop} (\cite{Kato1994a}, Proposition 9.9) \label{prop morphism induced by subdivision kato fan}
+Let $\cX^+$ be a $fs$ log-regular log scheme and let $F$ be its associated Kato fan. Let $F' \rightarrow F$ be a subdivision of fans. Then there exist a log scheme ${\cX'}^+$, a morphism of log schemes ${\cX'}^+ \rightarrow \cX^+$ and a commutative diagram
+\begin{center}
+$\begin{gathered}
+\xymatrixcolsep{2pc} \xymatrix{
+  (\cX', \caC_{\cX'}) \ar[r]^-{p} \ar[d]^{} & F' \ar[d]^{}\\
+  (\cX, \caC_{\cX}) \ar[r]^-{\pi_{\cX}}   & F
+}
+\end{gathered}$\end{center}such that $p^{-1}(\caM_{F'}) \simeq \caC_{\cX'}$, they define a final object in the category of such diagrams and the refinement $F'\to F$ is induced by the morphism of log-regular log schemes $\cX'^+ \rightarrow \cX^+$.
+\end{prop}
+
+\spa{\label{rem resolution via subd}
+It follows that given any subdivision $F' \rightarrow F$ of the Kato fan F associated with a log regular log scheme $\cX^+$, we can construct a log scheme over $\cX^+$ with prescribed associated Kato fan $F'$. Combining this fact with Proposition \ref{kato subdivision} and properties of Proposition \ref{resolution log scheme kato fan} yields to the construction of resolutions of log schemes in the following sense: for any log-regular log scheme over $S^+$ we can find a birational modification by a regular log scheme with strict normal special fibre. Moreover, the morphism of log schemes ${\cX'}^+ \rightarrow \cX^+$ is obtained by a log blow-up  (\cite{Niziol2006}, Theorem 5.8).} 
+
+
+
+\subsection{Semistability and Kato fans associated to the fibred products.} 
+\spa{We investigate a sufficient condition to turn the local isomorphism of Proposition \ref{local isomo kato fan product} into an isomorphism: it concerns the notion of semistability for $R$-models of a variety. We recall that an $R$-model $\cX^+$ is said to be semistable if it is log-smooth over $S^+$ and the divisor $D_{\cX}$, where the log structure is non-trivial, is reduced.
+
+In order to see the relevance of the assumption of semistability, we need some results on saturated morphism of log schemes. We recall that, locally around a point $x$ of the divisor $D_{\cX}$, the morphism of characteristic monoids $\N \rightarrow \caC_{\cX,x}$ is a saturated morphism of monoids if, for any morphism $u: \N \rightarrow P$ of $fs$ monoids, the amalgamated sum $\caC_{\cX,x} \oplus_{\N} P$ is still saturated.
+
+Following the work by T. Tsuji in an unpublished 1997 preprint, Vidal in \cite{Vidal} defines the saturation index of a morphism of \emph{fs} monoids. In the case of log-regular scheme over $S^+$ it can be easily computed: it is the least common multiple of the multiplicities of the prime components of the divisor $D_{\cX}$. The following criterion holds.
+\begin{lemma} \label{lemma criterion saturation}(\cite{Vidal}, Section 1.3)
+A morphism of fs monoids is saturated if and only if the saturation index is equal to 1.
+\end{lemma}}
+
+%In particular, if $\cX^+$ is a semistable regular model, then it has characteristic monoids $\caC_{\cX,x} \simeq \N^{r(x)}$, locally around $x$ the morphism of log schemes $\cX^+ \rightarrow S^+$ induces a morphism of characteristic monoids $$\N \rightarrow \N^{r(x)} \quad 1 \mapsto (1,\ldots,1)$$
+%and for any positive $r$ the diagonal embedding $\N \rightarrow \N^r$ is indeed a saturated morphism of monoids.
+%}
+
+\begin{prop} \label{prop semistability and iso Kato fans}
+Assume that the residue field $k$ is algebraically closed. Let $\cX^+$ and $\cY^+$ be log-smooth over $S^+$. Let $\cZ^+$ be their $fs$ fibred product. If $\cX^+$ is semistable, then the morphism $$F_{\cZ}\xrightarrow{} F_{\cX} \times F_{\cY},$$ induced by the projections $\cZ^+ \rightarrow \cX^+$ and $\cZ^+ \rightarrow \cY^+$, is an isomorphism of Kato fans.
+\end{prop}
+
+\begin{proof}
+By hypothesis, $\cX^+$ is a semistable log-regular log scheme over $S^+$, hence the saturation index of $\cX^+ \rightarrow S^+$ is 1. Thus, by Lemma \ref{lemma criterion saturation} the morphism of log schemes $\cX^+ \rightarrow S^+$ induces a saturated morphism of characteristic monoids at every point of $\cX^+$. The saturation condition implies that the fibred product in the category of log schemes coincides with the fibred product in the category of $fs$ log schemes. In particular, the underlying scheme of $\cZ^+$ coincides with the usual schematic fibred product, hence its points are characterized as follows:$$z=(x,y,s,\fp) \text{ and } \caO_{\cZ,z}=(\caO_{\cX,x} \otimes_R \caO_{\cY,y})_{\fp}$$ where $x$ and $y$ are points of $\cX^+$ and $\cY^+$ both mapped to the same point $s$ of $S$, while $\fp$ is a prime ideal of the tensor product of residue fields $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$. We look for a characterization of points $z$ in $\cZ^+$ that lie in the Kato fan $F_{\cZ}$.
+
+If the point $z$ lies in $F_{\cZ}$, then the maximal ideal $\mathfrak{m}_z$ is equal to the ideal $\caI_{\cZ,z}$ by definition. By the flatness of the models $\cX^+$ and $\cY^+$ over $S^+$, the morphisms of local rings $\caO_{\cX,x} \rightarrow \caO_{\cZ,z}$ and $\caO_{\cY,y} \rightarrow \caO_{\cZ,z}$ are injective. Hence, the equalities $\mathfrak{m}_x= \caI_{\cX,x}$ and $\mathfrak{m}_y= \caI_{\cY,y}$ hold. Thus, the points $z$ in $\cZ^+$ that lie in the Kato fan $F_{\cZ}$ are necessarily points such that the projections $x$ and $y$ to $\cX^+$ and $\cY^+$ lie in their associated Kato fans. Therefore, we may assume $x \in F_{\cX}$, $y \in F_{\cY}$, and it remains to characterize the prime ideals $\fp$ such that $z=(x,y,s,\fp) \in F_{\cZ}$.
+
+By log-regularity of $\cZ^+$, the point $z$ lies in the associated Kato fan if and only if $\dim \caO_{\cZ,z}= \rank \caC_{\cZ,z}^{\text{gp}}$. At the level of characteristic sheaves it holds that $$\rank \caC_{\cZ,z}^{\text{gp}}= \rank \caC_{\cX,x}^{\text{gp}} + \rank \caC_{\cY,y}^{\text{gp}} - 1.$$ Since $x$ and $y$ are both assumed to be points in the associated Kato fans, the equality between dimension of local rings and rank of the groupifications of characteristic sheaves lead to the equivalence \begin{align*}
+z \in F_{\cZ}  \Leftrightarrow \dim \caO_{\cZ,z} & = \rank \caC_{\cZ,z}^{\text{gp}} \\&= \rank \caC_{\cX,x}^{\text{gp}} + \rank \caC_{\cY,y}^{\text{gp}} - 1 \\
+& = \dim \caO_{\cX,x} +  \dim \caO_{\cY,y} -1.
+\end{align*}
+By log-regularity of $\cZ^+$, it holds that $\dim \caO_{\cZ,z} \geqslant \rank \caC_{\cZ,z}^{\text{gp}}$, thus the inequality $$\dim \caO_{\cZ,z} \geqslant \dim \caO_{\cX,x} +  \dim \caO_{\cY,y} -1$$ is always true and equality holds only for minimal prime ideals $\fp$ of $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$. Therefore, in order to conclude that there exists a unique point $z$ whose projections are the points $x$ and $y$ and that lies in the Kato fan $F_{\cZ}$, we need to prove the following property: the tensor product $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$ has a unique minimal prime ideal. 
+
+If $s$ is the closed point of $S$, then its residue field is the algebraically closed field $k$. It follows that the tensor product $\kappa(x) \otimes_{k} \kappa(y)$ is a domanin, hence it has a unique minimal prime ideal, namely $0$. 
+
+Otherwise, we denote by $\mathscr{V}$ the closure of $x$ in $\cX^+$: it is still a log-smooth scheme over $S^+$ with reduced special fibre $\mathscr{V}_k$. We denote by $L$ the separable closure of $\kappa(s)$ in $\kappa(x)$ and by $O_L$ its valuation ring. Let $\mathscr{V}_{O_L}$ be the base change of $\mathscr{V}$ to $\Spec(O_L)$: the generic fibre $\mathscr{V}_L$ is normal, as normality is preserved under separable field extension,
+%lemma 32.10.6 Stack project % 
+and the special fibre is still reduced. By \cite{Liu2002}, Lemma 4.1.18, it follows that $\mathscr{V}_{O_L}$ is normal. Since $\mathscr{V}_{O_L}$ is normal and proper with reduced special fibre, $\mathscr{V}_L$ is connected.
+%lemma 36.26.7 Stack project %
+We deduce that $\kappa(s)$ is separably algebraically closed in $\kappa(x)$. Finally by , Proposition 4.3.2, the tensor product $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$ has a unique minimal prime ideal.
+\end{proof}
+
+\section{The skeleton of a log-regular log scheme} \label{sect skeleton log}
+\subsection{Construction of the skeleton of a log-regular log scheme.}
+
+\spa{Let $\cX$ be an integral flat separated $S$-scheme such that $\cX^+$ is log-regular. Let $x$ be a point of the associated Kato fan $F$. Denote by $F(x)$ the set of points
+$y$ of $F$ such that $x$ lies in the closure of $\{y\}$, and by
+$\mathcal{C}_{F(x)}$ the restriction of $\mathcal{C}_F$ to $F(x)$.
+Denote
+ by $\Spec \mathcal{C}_{\cX,x}$ the spectrum of the monoid
+$\mathcal{C}_{\cX,x}=\mathcal{C}_{F,x}$. Then there exists a
+canonical isomorphism of
+ monoid spaces
+$$(F(x),\mathcal{C}_{F(x)})\to \Spec \mathcal{C}_{\cX,x}:y\mapsto \{s\in \mathcal{C}_{\cX,x}\,|\,s(y)= 0\}$$
+ where the expression $s(y)= 0$ means that $s'(y)= 0$ for any representative $s'$ of $s$ in $\mathcal{M}_{\cX,x}$.
+   In particular, we obtain a bijective correspondence between the
+ faces of the monoid $\mathcal{C}_{\cX,x}$ and the points of $F(x)$,
+ and for every point $y$ of $F(x)$, a surjective cospecialization morphism of monoids
+$$\tau_{x,y}:\mathcal{C}_{\cX,x}\to \mathcal{C}_{\cX,y}$$ which
+induces an isomorphism of monoids
+ $$S^{-1}\mathcal{C}_{\cX,x}/(S^{-1}\mathcal{C}_{\cX,x})^{\times}\cong \mathcal{C}_{\cX,x}/S \xrightarrow{\sim}
+ \mathcal{C}_{\cX,y}$$ where $S$ denotes the monoid of elements $s$
+ in $\mathcal{C}_{\cX,x}$ such that $s(y)\neq 0$.}
+% whose image is the face of $\mathcal{C}_{\cX,x}$
+% corresponding to $y$. If $z$ is a point of $F_y$, then
+% $\tau_{z,x}=\tau_{y,x}\circ \tau_{z,y}$.
+\spa{For each point $x$ in $F$, we denote by $\sigma_x$ the set
+of morphisms of monoids
+ $$\alpha:\mathcal{C}_{\cX,x}\to (\R_{\geq 0},+)$$ such that
+ $\alpha(\pi)=1$ for every uniformizer $\pi$ in $R$.
+ We endow $\sigma_x$ with the topology of
+ pointwise covergence, where $\R_{\geq 0}$ carries the usual Euclidean
+ topology. Note that $\sigma_x$ is a polygon in the real affine
+ space
+$$\{\alpha:\mathcal{C}^{\gp}_{\cX,x}\to (\R,+)\,|\,\alpha(\pi)=1\mbox{ for every uniformizer }\pi\mbox{ in
+}R\}.$$ If $y$ is a point of $F(x)$, then the surjective
+cospecialization morphism $\tau_{x,y}$ induces a topological
+embedding $\sigma_y\to \sigma_x$ that identifies $\sigma_y$ with a
+face of $\sigma_x$.}
+
+\spa{  We denote by $T$ the disjoint union of the topological
+spaces
+ $\sigma_x$ with $x$ in $F$. On the topological space $T$,
+ we consider the equivalence relation $\sim$ generated by couples
+ of the form $(\alpha,\alpha\circ \tau_{x,y})$ where $x$ and $y$
+ are points in $F$ such that $x$ lies in the closure of $\{y\}$
+ and $\alpha$ is a point of $\sigma_y$.
+%  such that $\alpha(u)=0$ for
+% all $u$ in $$\mathcal{C}_{\cX,x}\setminus
+% \tau_{y,x}(\mathcal{C}_{\cX,x}).$$
+ The skeleton of $\cX^+$ is
+ defined as the quotient of the topological space $T$ by the equivalence relation
+ $\sim$. We denote this skeleton by $\Sk(\cX^+)$. It is clear that $\Sk(\cX^+)$ has the structure of a polyhedral
+ complex with closed cells $\{\sigma_x,\,x\in F\}$ and that the faces of
+ a cell $\sigma_x$ are precisely the cells $\sigma_y$ with $y$ in
+ $F(x)$. 
+ % The skeleton $\Sk(\cX)$ is a subspace of the conical polyhedral complex $\Delta_F$ of \cite[p.299]{saito}, cut out by the condition $\alpha(\pi)=1$.
+ }
+ 
+\subsection{Embedding the skeleton in the non-archimedean generic fiber.}
+\spa{Let $\cX$ be an integral flat separated $S$-scheme of finite type such that $\cX^+$ is log-regular. Let $x$ be a point of $\cX$. As the log structure on $\cX^+$ is of finite type, the characteristic monoid $\caC_{\cX,x}$ is of finite type too, and thus $\caC_{\cX,x}^\gp$ is a free abelian group of finite rank. Hence there exists a section $$\zeta: \caM_{\cX,x}^\gp / \caM_{\cX,x}^\times \rightarrow \caM_{\cX,x}^\gp.$$ The section $\zeta$ restricts to $\caC_{\cX,x} \rightarrow \caM_{\cX,x}$; indeed, if $x \in \caM_{\cX,x}$ then $\zeta(\overline{x})-x \in \caM_{\cX,x}^\times$. Therefore we may choose a section \begin{equation}\label{eq:sect}\mathcal{C}_{\cX,x}\to
+\mathcal{M}_{\cX,x}\end{equation} of the projection homomorphism
+$$\mathcal{M}_{\cX,x}\to \mathcal{C}_{\cX,x}$$ and use this section to view $\mathcal{C}_{\cX,x}$ as a submonoid of $\mathcal{M}_{\cX,x}$. Note that $\mathcal{C}_{\cX,x}\setminus \{0\}$ generates the ideal $\caI_{\cX,x}$ of $\mathcal{O}_{\cX,x}$.
+\\
+
+We propose a generalisation of \cite{MustataNicaise}, Lemma 2.4.4. \begin{lemma} \label{lemma admissible expansion} Let $A$ be a Noetherian ring, let $I$ be an ideal of $A$ and let $(y_1,\ldots,y_m)$ be a system of generators for $I$. We denote by $\hat{A}$ the $I$-adic completion of $A$. Let $B$ be a subring of $A$ such that the elements $y_1,\ldots,y_m$ belong to $B$ and generate the ideal $B \cap I$ in $B$. Then, in the ring $\hat{A}$, every element $f$ of $B$ can be written as \begin{equation} \label{equ lemma admiss form}
+f=\sum_{\beta \in \Z^m_{\geqslant 0}} c_\beta y^\beta
+\end{equation} where the coefficients $c_\beta$ belong to $((A\setminus I) \cap B) \cup \{0\}$.
+%Let $A$ be a Noetherian local ring with maximal ideal $\mathfrak{m}_A$ and let $(y_1,\ldots,y_m)$ be a system of generators for $\mathfrak{m}_A$. We denote by $\hat{A}$ the $\mathfrak{m}_A$-adic completion of $A$. Let $B$ be a subring of $A$ such that the elements $y_1,\ldots,y_m$ belong to $B$ and generate the ideal $B \cap \mathfrak{m}_A$ in $B$. Then, in the ring $\hat{A}$, every element $f$ of $B$ can be written as $$f=\sum_{\beta \in \Z^m_{\geqslant 0}} c_\beta y^\beta$$ where the coefficients $c_\beta$ belong to $(A^\times \cap B) \cup \{0\}$.
+\end{lemma} 
+\begin{proof}
+Let $f$ be an element of $B$, we construct an expansion for $f$ of the form (\ref{equ lemma admiss form}) by induction. If $f$ belongs to the complement of $I$, the conclusion trivially holds. Otherwise, $f$ belongs to $I$ and we can write $f$ as a linear combination of the elements $y_1,\ldots,y_m$ with coefficients in $B$: $$f= \sum_{j=1}^{m} b_j y_j, \quad b_j \in B.$$
+
+By induction hypothesis, we suppose that $i$ is a positive integer and that we can write every $f$ in $B$ as a sum of an element $f_i$ of the form (\ref{equ lemma admiss form}) and a linear combination of degree $i$ monomials in the elements $y_1,\ldots, y_m$ with coefficients in $B$. We apply this assumption to the coefficients $b_j$, hence
+$$b_j=b_{j,i} + \sum_{\substack{\beta \in \Z^m_{\geqslant 0} \\|\beta|=i}} b_{j,\beta} y^\beta, \quad b_{j, \beta} \in B.$$ Then we can write $f$ as a sum of an element $f_{i+1}$ of the form (\ref{equ lemma admiss form}) and a linear combination of degree $i+1$ monomials in the elements $y_1,\ldots,y_m$ with coefficients in $B$
+$$ f=\underbrace{\sum_{j=1}^{m} b_{j,i} y_j}_{f_{i+1}} + \sum_{j=1}^{m}\Big( \sum_{\substack{\beta \in \Z^m_{\geqslant 0} \\|\beta|=i}} b_{j,\beta} y^\beta \Big) y_j$$ such that $f_i$ and $f_{i+1}$ have the same coefficients in degree $i < 0$. Iterating this construction we finally find an expansion of $f$ of the required form.
+\end{proof}}
+
+\spa{ \label{paragr admissible expansion}Let $f$ be an element of $\mathcal{O}_{\cX,x}$. Considering $A=B=\caO_{\cX,x}$, $I=\mathfrak{m}_x$ and a system of generators for $\mathfrak{m}_x$ in $\caC_{\cX,x} \setminus \{1\}$, by Lemma \ref{lemma admissible expansion} we can write $f$ as a formal power series
+\begin{equation}\label{eq-adm}
+f=\sum_{\gamma \in \mathcal{C}_{\cX,x}}c_{\gamma}\gamma
+\end{equation}
+ in
+$\widehat{\mathcal{O}}_{\cX,x}$, where each coefficient $c_\gamma$
+ is either zero or a unit in $\mathcal{O}_{\cX,x}$. We call this formal series an \textit{admissible expansion} of $f$. We set
+ \begin{equation}\label{equ def S}
+S=\{\gamma\in\mathcal{C}_{\cX,x}\,|\,c_\gamma\neq 0\}
+ \end{equation} and we denote by $\Gamma$ the set of
+ elements of $S$ that lie on a compact face of the convex hull of
+$S+ \mathcal{C}_{\cX,x}$ in
+$\mathcal{C}^{\gp}_{\cX,x}\otimes_{\Z}\R$.}
+%For each $\gamma\in
+%\Gamma$ we set
+%$$d_{\gamma}=\sum_{\beta\in \N^r,\,\overline{z}^{\beta}=\gamma}
+% c_\beta(x)\quad \in k(x)^{\times}.$$ Note that this is a finite sum.
+
+\begin{prop}\label{prop-init}\item
+\begin{enumerate}
+\item \label{it:indep1} The element
+$$f_x=\sum_{\gamma\in \Gamma}c_\gamma(x) \gamma\quad \in k(x)[\mathcal{C}_{\cX,x}]$$ depends on the choice of the section
+\eqref{eq:sect}, but not on the expansion \eqref{eq-adm}. \item
+\label{it:indep2} The subset $\Gamma$ of $\mathcal{C}_{\cX,x}$
+only depends on $f$ and $x$, and not on the choice of the section
+\eqref{eq:sect} or the expansion \eqref{eq-adm}.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+If we denote by $I$ the ideal of $k(x)[\mathcal{C}_{\cX,x}]$ generated by $\mathcal{C}_{\cX,x}\setminus \{1\}$, then it follows from \cite{Kato1994a} that there exists an isomorphism of $k(x)$-algebras \begin{equation} \label{equ isomo graded algebras}
+\mathrm{gr}_I \,k(x)[\mathcal{C}_{\cX,x}]\to \mathrm{gr}_{\mathfrak{m}_x}\, \mathcal{O}_{\cX,x}.
+\end{equation}
+Using this result and following the argument of  \cite{MustataNicaise} Proposition 2.4.6, we show that $f_x$ does not depend on the expansion of $f$. Let $$f=\sum_{\gamma \in \mathcal{C}_{\cX,x}}c'_{\gamma}\gamma$$ be another admissible expansion of $f$ with associated set $\Gamma'$ and element $f'_x$. Then $$0=\sum_{\gamma \in \mathcal{C}_{\cX,x}}(c_{\gamma}- c'_\gamma)\gamma =\sum_{\gamma \in \mathcal{C}_{\cX,x}}d_{\gamma}\gamma$$ where the right hand side is an admissible expansion obtained by choosing admissible expansions for the elements $c_\gamma-c'_\gamma$ that do not lie in $\caO_{\cX,x}^\times \cup \{0\}$. In particular $d_\gamma(x)= c_\gamma(x)-c'_\gamma(x)$ for any $\gamma$ in $ \Gamma_x \cup \Gamma'_x$. The isomorphism of graded algebras in (\ref{equ isomo graded algebras}) implies that the elements $d_\gamma$ must all vanish, hence $\Gamma_x = \Gamma'_x$ and $f_x=f'_x$.  
+
+Point\eqref{it:indep2} follows from the fact that the coefficients $c_\gamma$ of $f_x$ are independent of the chosen section up to multiplication by a unit in $\mathcal{O}_{\cX,x}$, so that the support $\Gamma$ of $f_x$ only depends on $f$ and $x$.
+\end{proof}
+
+\spa{ We will denote the subset $\Gamma$ of $\mathcal{C}_{\cX,x}$
+by $\Gamma_x(f)$ and call it the {\em initial support} of $f$ at
+$x$.}
+
+
+\begin{prop}\label{prop-val}
+Let $x$ be a point of $F$ and let
+$$\alpha:\mathcal{C}_{\cX,x}\to (\R_{\geq 0},+)$$ be an element of $\sigma_x$.
+% such that $\alpha^{-1}(0)=\{1\}$.
+ Then there exists a unique minimal real valuation
+ $$v:\mathcal{O}_{\cX,x} \setminus \{0\}\to \R_{\geq 0}$$ such that
+  $v(m)=\alpha(\overline{m})$ for each element $m$ of
+ $\mathcal{M}_{\cX,x}$.
+ \end{prop}
+ \begin{proof}
+ We will prove that the map
+\begin{equation}\label{eq:val}
+v:\mathcal{O}_{\cX,x} \setminus \{0\}\to \R:f\mapsto
+\min\{\alpha(\gamma)\,|\,\gamma\in \Gamma_x(f)\}\end{equation}
+satisfies the requirements in the statement.
+ We fix a section
+ $$\mathcal{C}_{\cX,x}\to \mathcal{M}_{\cX,x}.$$
+ It is straightforward to
+ check that $(f\cdot g)_x=f_x\cdot g_x$ for all $f$ and $g$ in
+ $\mathcal{O}_{\cX,x}$.
+ This implies that $v$ is a valuation. It is obvious that
+$v(m)=\alpha(\overline{m})$ for all $m$ in $\mathcal{M}_{\cX,x}$,
+since we can write $m$ as the product of an element of
+$\mathcal{C}_{\cX,x}$ and a unit in $\mathcal{O}_{\cX,x}$.
+
+ Now we prove minimality.
+ Consider any real valuation
+ $$w:\mathcal{O}_{\cX,x}\to \R$$ such that
+  $w(f)=\alpha(\overline{m})$ for each element $m$ of
+ $\mathcal{M}_{\cX,x}$, and let $f$ be an element of
+ $\mathcal{O}_{\cX,x}$. We must show that $w(f)\geq v(f)$.
+
+We set $$C_{\alpha}=\mathcal{C}_{\cX,x}\setminus \alpha^{-1}(0).$$ We denote by $I$ the ideal in $\mathcal{O}_{\cX,x}$ generated by $C_{\alpha}$ and by $A$ the $I$-adic completion of $\mathcal{O}_{\cX,x}$. By Lemma \ref{lemma admissible expansion}, we see that we can write $f$ in $A$ as \begin{equation} \label{equ expasion wrt I}
+\sum_{\beta \in C_{\alpha}\cup\{1\}}d_\beta \beta
+\end{equation} where $d_\beta$ is either zero or contained in the complement of $I$ in $\mathcal{O}_{\cX,x}$.
+
+Since $\alpha(\beta)>0$ for every $\beta\in C_{\alpha}$, we can find an integer $N>0$ such that $w(g)>w(f)$ for every element $g$ in  $I^N$. Since $w(\beta)=\alpha(\beta)$ for all $\beta$ in $\mathcal{C}_{\cX,x}$, we can write $$w(f)\geq \min \{\alpha(\beta)\,|\,d_\beta \neq 0\}.$$
+
+We consider the coefficients in the expansion (\ref{equ expasion wrt I}) of $f$. Applying Lemma \ref{lemma admissible expansion} as in paragraph (\ref{paragr admissible expansion}), we can write admissible expansions of these coefficients in $\widehat{\mathcal{O}}_{\cX,x}$ as $$d_\beta = \sum_{\gamma \in \caC_{\cX,x}}c_{\gamma, \beta} \gamma, \quad c_{\gamma, \beta} \in \caO_{\cX,x}^\times \cup \{0\},$$ with $\alpha(\gamma)=0$ in the expansions of $d_\beta$ that belong to $\mathfrak{m}_x \setminus I$. 
+
+Therefore we obtain an admissible expansion of $f$ $$f = \sum_{\substack{\beta \in C_\alpha \cup \{1\} \\ \gamma \in \caC_{\cX,x}}}c_{\gamma, \beta}\, \gamma\beta $$ and we have  
+\begin{eqnarray*}
+v(f) 
+& = & \min\{\alpha(\gamma \beta)\,|\,c_{\gamma, \beta}\neq 0\} \\
+&=& \min\{\alpha(\beta)\,|\,d_{\beta}\neq 0\} \\
+&\geq& w(f).
+ \end{eqnarray*} \end{proof}
+ 
+\begin{rem} \label{rem def-val}
+In the definition (\ref{eq:val}) of the valuation $v$, we compute the minimum over the terms in the initial support of $f$: these elements are a finite number and they only depends on $x$ and $f$ by Proposition \ref{prop-init}. Therefore, this minimum provides a well-defined function on $\caO_{\cX,x} \setminus \{0\}$. Nevertheless, it is equivalent to consider the minimum over all the terms of an admissible expansion of $f$, i.e. for any admissible expansion $f=\sum_{\gamma \in \mathcal{C}_{\cX,x}}c_{\gamma}\gamma$ $$\min\{\alpha(\gamma)\,|\,\gamma\in \Gamma_x(f)\} = \min\{\alpha(\gamma)\,|\,\gamma\in S\},$$ where $S=\{\gamma\in\mathcal{C}_{\cX,x}\,|\,c_\gamma\neq 0\}$ as in (\ref{equ def S}). Indeed, any element that belongs to $S$ can be written as a sum of an element of the initial support of $f$ and an element of $\caC_{\cX,x}$. Since the morphism $\alpha$ is additive and takes positive real values, then the minimum is necessarily attained by the elements in the initial support.
+\end{rem}
+
+\spa{ We will denote the valuation $v$ from Proposition
+\ref{prop-val} by $v_{x,\alpha}$. Since $v_{x,\alpha}$ induces a
+real valuation on the function field of $\cX_K$ that extends the
+discrete valuation $v_K$ on $K$, it defines a point of the
+$K$-analytic space $\widehat{\cX}_\eta$, which we will denote by
+the same symbol $v_{x,\alpha}$.
+% Note that $x$ is the center of $v_{x,\alpha}$, so
+%that $\red_{\cX}(v_{x,\alpha})=x$.
+We now show that the characterization of $v_{x,\alpha}$ in Proposition \ref{prop-val} implies that $$v_{y,\alpha'}=v_{x,\alpha'\circ \tau_{x,y}}$$ for every $y$ in $F(x)$ and every $\alpha'$ in $\sigma_y$.
+
+Firstly we note that  $\mathcal{O}_{\cX,y}$ is the localization of $\mathcal{O}_{\cX,x}$ with respect to the elements of $m\in \mathcal{M}_{\cX,x}$ in the kernel of $\tau_{x,y}$.
+Indeed, by construction of $\tau_{x,y}$, the kernel is given by $$\ker (\tau_{x,y})= \{s \in \caC_{\cX,x} | s(y) \neq 0 \};$$ to obtain $\mathcal{O}_{\cX,y}$ from $\mathcal{O}_{\cX,x}$, we localize  by $$S=\{a \in \mathcal{O}_{\cX,x} | a(y) \neq 0 \};$$ therefore we can identify the set of elements in $\caM_{\cX,x}$ in $\ker(\tau_{x,y})$ with the set $S$, recalling that for points in the Kato fan $\mathcal{C}_{\cX,x}\setminus \{1\}$ generates the maximal ideal of $\mathcal{O}_{\cX,x}$. Therefore we are dealing with these two morphisms:
+$$\caO_{\cX,x} \hookrightarrow S^{-1}\caO_{\cX,x}=\caO_{\cX,y},$$
+$$ \caC_{\cX,x} \twoheadrightarrow \caC_{\cX,x}/S = \caC_{\cX,y}.$$
+
+Let $f$ be an element of $ \caO_{\cX,x}$. Under the notations of Lemma \ref{lemma admissible expansion}, we apply the lemma to $A= \caO_{\cX,y}$ and $B=\caO_{\cX,x}$, choosing a system of generators of $\mathfrak{m}_y$ in $\caC_{\cX,x}$: we can find an admissible expansion of $f$ of the form $$f=\sum_{\delta \in \mathcal{C}_{\cX,y}}d_{\delta}\delta \quad \text{ with }d_\delta \in (\caO_{\cX,x} \cap \caO_{\cX,y}^\times) \cup \{0\}.$$ Admissible expansions of coefficients $d_\delta$ induce an admissible expansion for $f$ by $$f=\sum_{\delta \in \mathcal{C}_{\cX,y}}\big( \sum_{\gamma \in S} c_{\gamma \delta} \gamma \big)\delta \quad \text{ with }c_{\gamma \delta} \in \caO_{\cX,x}^\times \cup \{0\},$$ where $\gamma$ runs through the set $S$ since $d_\delta \in \caO_{\cX,y}^\times$. Thus we have \begin{align*}
+v_{y,\alpha'}(f) &= \min\{\alpha'(\delta)\,|\,\delta\in \Gamma_y(f)\}\\
+& = \min\{\alpha' \circ \tau_{x,y}( \gamma \delta)\,|\,\delta\in \Gamma_y(f), \gamma \in S\}\\
+& = \min\{\alpha' \circ \tau_{x,y}( \gamma \delta)\,|\,\gamma\delta\in \Gamma_x(f)\}\\
+& = v_{x,\alpha' \circ \tau_{x,y}}(f).
+\end{align*}
+Hence, we obtain a well-defined map $$\iota:\Sk(\cX^+)\to \widehat{\cX}_\eta$$ by sending $\alpha$ to $v_{x,\alpha}$ for every point $x$ of $F$ and every $\alpha\in \sigma_x$.}
+
+\begin{prop}\label{prop-embed}
+The map
+$$\iota:\Sk(\cX^+)\to \widehat{\cX}_\eta$$  is a
+topological embedding.
+\end{prop}
+\begin{proof}
+First, we show that $\iota$ is injective. Let $x$ be a point of
+$F$ and $\alpha$ an element of $\sigma_x$. Let $y$ be the point of
+$F(x)$ corresponding to the face $\mathcal{C}_{\cX,x}\setminus
+\alpha^{-1}(0)$ of $\mathcal{C}_{\cX,x}$. Then $\alpha$ factors
+through an element
+$$\alpha':\mathcal{C}_{\cX,y}\to \R_{\geq 0}$$ of $\sigma_y$.  Note that $\alpha=\alpha'$ in $\Sk(\cX^+)$ because
+ $\alpha=\alpha'\circ \tau_{x,y}$.
+ Moreover, since
+$(\alpha')^{-1}(0)=\{1\}$, the center of the valuation
+$v_{y,\alpha'}$ is the point $y$, so that
+$\redu_{\cX}(v_{y,\alpha'})=y$. Thus we can recover $y$ from
+$v_{y,\alpha'}$. Then we can also reconstruct $\alpha'$ by
+ looking at the values of $v_{y,\alpha'}$ at the elements of
+ $\mathcal{M}_{\cX,y}$. We conclude that $\iota$ is injective.
+
+ Now, we show that $\iota$ is a homeomorphism onto its image. Since $\Sk(\cX^+)$ is compact and $\widehat{\cX}_\eta$ is Hausdorff,
+it suffices to show that $\iota$ is continuous. The family
+$\{\sigma_x,\,x\in F\}$ is a cover of $\Sk(\cX^+)$ by closed
+subsets, so that we only have to prove that the restriction of
+$\iota$ to $\sigma_x$ is continuous, for every $x\in F$. By
+definition of the Berkovich topology, it is enough to prove that
+the map
+$$\sigma_x\to \R:\alpha\mapsto v_{x,\alpha}(f)$$ is continuous for
+every $f$ in $\mathcal{O}_{\cX,x}$. This is obvious from the
+formula \eqref{eq:val}.
+\end{proof}
+
+\spa{ From now on, we will view $\Sk(\cX^+)$ as a topological
+subspace of $\cX_K^{\an}$ by means of the embedding $\iota$ in
+Proposition \ref{prop-embed}. If $\cX$ is regular and $\cX_k$ is a
+divisor with strict normal crossings, the skeleton $\Sk(\cX^+)$ was
+described in \cite{MustataNicaise}, Section 3.1.}
+
+\subsection{Contracting the generic fibre to the skeleton.}
+\spa{The inclusion $\iota: \Sk(\cX^+) \rightarrow \widehat{\cX_{\eta}}$ admits a continuous retraction $$\rho_\cX: \widehat{\cX_{\eta}} \rightarrow \Sk(\cX^+)$$ constructed as follows. Let $x$ be a point of $\widehat{\cX_{\eta}}$ and consider the reduction map $$\redu_{\cX}:\widehat{\cX_{\eta}} \rightarrow \cX_k.$$ Let $E_1, \ldots, E_r$ be the irreducible components of $\cX_k$ passing through the point $\redu_\cX(x)$. We denote by $\xi$ the generic point of the connected component of $E_1 \cap \ldots \cap E_r$ that contains $\redu_\cX(x)$. By Lemma \ref{lemma points Kato fan}, $\xi$ is a point in the associated Kato fan $F$. We set $\alpha$ to be the morphism of monoids $$\alpha: \caC_{\cX,\xi} \rightarrow \R_{\geqslant 0 }$$ such that $\alpha(\overline{m}) = v_x(m)$ for any element $m$ of $\caM_{\cX,\xi}$. In particular $\alpha(\pi)= v_x(\pi)=1$ as we assumed the normalization of all valuations in the Berkovich space. Then $\rho_\cX(x)$ is the point of $\Sk(\cX^+)$ corresponding to the couple $(\xi,\alpha)$. By construction $\rho_\cX$ is continuous and right inverse to the inclusion $\iota$. 
+}
+
+\spa{Given a morphism $f: \cX^+ \rightarrow \cY^+$ of integral flat separated log-regular $S$-schemes, we can employ the retraction $\rho$ to define a map of skeleta as follows
+\begin{center}
+$\begin{gathered}
+\xymatrixcolsep{2pc} \xymatrix{
+ \widehat{\cX_{\eta}} \ar[r]^-{\widehat{f}} \ar[d]_{\rho_\cX} & \widehat{\cY_{\eta}} \ar[d]^{\rho_\cY}\\
+  \Sk(\cX^+) \ar@{.>}[r]^{} \ar@/_/[u]_-{\iota_\cY}  & \Sk(\cY^+).
+}
+\end{gathered}$\end{center} This association makes the skeleton construction $\Sk(\cX^+)$ functorial in $\cX^+$.
+}
+
+\subsection{Skeleton of a $fs$ fibred product.}
+\spa{Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Let $$\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$$ be the continuous map of skeleta functorially associated to the projections $\pr_{\cX}:\cZ^+ \rightarrow \cX^+$ and $\pr_{\cY}:\cZ^+ \rightarrow \cY^+$. We denote this map by $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$ and we recall that it is constructed considering the diagram
+\begin{equation} \label{diagram map on skeleta funct induced}
+\begin{gathered}
+\xymatrixcolsep{6pc} \xymatrix{
+ \widehat{\cZ_{\eta}} \ar[r]^-{(\widehat{\pr_{\cX}}, \widehat{\pr_{\cY}})} \ar[d]_{\rho_\cZ} & \widehat{\cX_{\eta}} \times \widehat{\cY_{\eta}} \ar[d]^{(\rho_\cX, \rho_\cX)}\\
+  \Sk(\cZ^+) \ar[r]^-{(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)})} \ar@/_/[u]_-{\iota_\cZ}  & \Sk(\cX^+) \times \Sk(\cY^+).
+}
+\end{gathered}\end{equation}
+}
+
+\begin{prop}  \label{prop semistability and skeleta}
+Assume that the residue field $k$ is algebraically closed.  If $\cX^+$ is semistable, then the map $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$ is a homeomorphism.
+\end{prop}
+\begin{proof}
+The surjectivity of the map $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$ follows from the commutativity of the diagram (\ref{diagram map on skeleta funct induced}) and the surjectivity of $(\rho_\cX, \rho_\cX) \circ (\widehat{\pr_{\cX}}, \widehat{\pr_{\cY}})$. To prove the injectivity of $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$, we provide an explicit description of the map $\pr_{\Sk(\cX)}$.
+
+We recall that the projection $\widehat{\pr_{\cX}}$ is such that a valuation $v$ on the function field $K(\cZ_K)$ maps to the composition $v \circ i$ where $i:K(\cX_K) \hookrightarrow K(\cZ_K)$.
+
+Let $v_{z,\varepsilon}$ be the valuation in $\Sk(\cZ^+)$ corresponding to a couple $(z,\varepsilon)$ with $z \in F_{\cZ}$ and $\varepsilon \in \sigma_z$. We consider the morphism of associated Kato fans $$F_{\cZ} \rightarrow F_{\cX} \times F_{\cY}$$ as established in Proposition \ref{local isomo kato fan product}. We denote respectively by $\pr_{F_\cX}$ and $\pr_{F_\cY}$ the projection to the first and second factor. Then $\pr_{F_{\cX}}(z)$ is a point in the associated Kato fan $F_{\cX}$, that we denote by $x$. We consider the morphism of monoids $$i_x: \caC_{\cX,x} \rightarrow \caC_{\cZ,z}$$ and the composition \begin{center}
+$\begin{gathered}
+\xymatrixcolsep{1pc} \xymatrixrowsep{0pc} \xymatrix{
+    \pr_{\cX}(\varepsilon): & \caC_{\cX,x} \ar[r]^-{i_x} & \caC_{\cZ,z}= (\caC_{\cX,x} \oplus_{\N} \caC_{\cY,y})^{\text{sat}} \ar[r]^-{\varepsilon} & \R_{\geq 0} \\
+   & a \ar@{|->}[r] & [a,1] \ar@{|->}[r] & \varepsilon([a,1]). \\
+}
+\end{gathered}$\end{center} It trivially satisfies $\varepsilon \circ i_x(\pi)=1$. In order to conclude that it correctly defines a point in the skeleton $\Sk(\cX^+)$, we need to check the compatibility with respect to the equivalence relation $\sim$. Indeed, suppose that $\varepsilon = \varepsilon' \circ \tau_{z,z'}$ for some $z' \in \overline{\{z\}}$. We denote by $x'$ the projection of $z'$ under the local isomorphism of associated Kato fans. The diagram
+\begin{center}
+$\begin{gathered}
+\xymatrixcolsep{2pc} \xymatrixrowsep{0pc} \xymatrix{
+    \caC_{\cX,x} \ar[r]^-{i_x} \ar[dd]^{\tau_{x,x'}} & \caC_{\cZ,z} \ar[rd]^-{\varepsilon} \ar[dd]^{\tau_{z,z'}} & \\
+    & & \R_{\geq 0} \\
+    \caC_{\cX,x'} \ar[r]^-{i_{x'}} & \caC_{\cZ,z'} \ar[ru]_-{\varepsilon'} &  \\
+}
+\end{gathered}$\end{center} is commutative as made up by a commutative square and a commutative triangle of arrows. Therefore, by commutativity $$\pr_{\cX}(\varepsilon)= \pr_{\cX}(\varepsilon') \circ \tau_{x,x'}$$ and this implies that $\pr_{\cX}(\varepsilon)$ defines a well-defined point $v_{x,\pr_{\cX}(\varepsilon)}$ of $\Sk(\cX^+)$.
+
+We claim that $v_{x, \pr_{\cX}(\varepsilon)}$ is indeed the image of $v_{z,\varepsilon}$ under the map $\pr_{\Sk(\cX)}$, hence that the equality in the following inner diagram holds
+\begin{center} 
+$\begin{gathered}
+\xymatrixcolsep{0.8pc}\xymatrixrowsep{0.4pc} \xymatrix{
+ \widehat{\cZ_{\eta}} \ar[rrr]^-{\widehat{\pr_{\cX}}} \ar[dddd]_{\rho_\cZ} & & & \widehat{\cX_{\eta}}\ar[dddd]^{\rho_\cX}\\
+ \footnotesize & v_{z,\varepsilon} \ar@{|->}[r] &  v_{z,\varepsilon} \circ i\ar@{|->}[dd] & \\
+ & & & \\
+ & v_{z,\varepsilon} \ar@{|->}[uu] \ar@{|->}[r] & \rho_\cX(v_{z,\varepsilon} \circ i) = v_{x, \pr_{\cX}(\varepsilon)}& \\
+ \normalsize \Sk(\cZ^+) \ar[rrr]^-{\pr_{\Sk(\cX)}} \ar@/_/[uuuu]_-{\iota_\cZ}  & & & \Sk(\cX^+).
+}
+\end{gathered}$\end{center} We denote $\rho_\cX(v_{z,\varepsilon} \circ i)$ by $(x,\alpha)$ as a point of $\Sk(\cX^+)$. By definition of the retraction $\rho_\cX$, the morphism $\alpha$ is characterized by the fact that $\alpha(\overline{m})= (v_{z,\varepsilon} \circ i )(m)$ for any $m$ in $\caM_{\cX,x}$ and then we have $$\alpha(\overline{m})= (v_{z,\varepsilon} \circ i )(m) = v_{z,\varepsilon}(m)= \varepsilon(\overline{m}).$$ On the other hand, for any $m$ in $\caM_{\cX,x}$ $$v_{x,\pr_{\cX}(\varepsilon)}(m)= \pr_{\cX}(\varepsilon) (\overline{m}) = \varepsilon(\overline{m})$$ hence we obtain that $\alpha$ coincide with the morphism $\pr_{\cX}(\varepsilon)$. It means that their associated points $\rho_\cX(v_{z,\varepsilon} \circ i)$ and $v_{x, \pr_{\cX}(\varepsilon)}$ coincide.
+
+Given a pair of points in $\Sk(\cX^+) \times \Sk(\cY^+)$, we know by surjectivity of $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$  that they are of the form $$(v_{x, \pr_{\cX}(\varepsilon)}, v_{y, \pr_{\cY}(\varepsilon)}).$$ The assumption of semistability of $\cX^+$ guarantees that there is a unique $z$ in $F_\cZ$ in the fibre of $x$ and $y$, by Proposition \ref{prop semistability and iso Kato fans}. Moreover, we can uniquely reconstruct $\varepsilon$ by looking at the values of $v_{x, \pr_{\cX}(\varepsilon)}$ at the elements of $\caM_{\cX,x}$ and respectively of $v_{y, \pr_{\cY}(\varepsilon)}$ at the elements of $\caM_{\cY,y}$. We conclude that $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$  is injective.
+\end{proof}
+
+%\begin{prop}  \label{prop semistability and skeleta 2}
+%Assume that the residue field $k$ is algebraically closed. Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. If $\cX^+$ is semistable, then there exists an isomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+).$$ 
+%\end{prop}
+%\begin{proof}
+%Thank to Proposition \ref{prop map of skeleta compatible}, it suffices to construct an inverse map to $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$. Let $x \in F_{\cX^+}$ and $y \in F_{\cY^+}$ bijectively corresponding to $z \in F_{\cZ^+}$. We consider $\alpha \in \sigma_x$ and $\beta \in \sigma_y$. The morphism $(\alpha + \beta)(a,b)= \alpha(a) + \beta(b)$ is well-defined on $\caC_{\cX^+} \oplus \caC_{\cY^+}$ and it maps the uniformizer $\pi$ to 1.
+%
+%We show that the morphism $\alpha+ \beta$ factors though $\caC_{\cZ^+,z}$ \begin{center}
+%$\begin{gathered}
+%\xymatrixcolsep{1pc} \xymatrixrowsep{1.5pc} \xymatrix{
+%    \caC_{\cX^+,x} \oplus \caC_{\cY^+,y} \ar[r] \ar[rd]_{\alpha+\beta}& (\caC_{\cX^+,x} \oplus_{\N} \caC_{\cY^+,y})^{\text{sat}} = \caC_{\cZ^+,z} \ar@{.>}[d] \\ 
+%    &  \R_{\geq 0} \\
+%}
+%\end{gathered}$\end{center} to conclude that it defines a morphism in $\sigma_z$. Recalling that morphisms of monoids preserve the identity element (i.e., $\alpha(1)=0=\beta(1)$) and from the assumption of $\alpha(\pi)=1=\beta(\pi)$, we compute that $$(\alpha+\beta)(u_{\cX^+}(n),1) = \alpha(\pi^n)= n \alpha(\pi)= n \beta(\pi)= (\alpha + \beta)(1,u_{\cY^+}(n))$$ for any $n \in \N$, where $u_{\cX^+}: \N \rightarrow \caC_{\cX^+,x}$ and  $u_{\cY^+}: \N \rightarrow \caC_{\cY^+,y}$. This implies that $\alpha+\beta$ is well-defined on the amalgamated sum $\caC_{\cX^+,x} \oplus_{\N} \caC_{\cY^+,y}$. We reduce to prove that invertible elements of $\caC_{\cX^+,x} \oplus \caC_{\cY^+,y}$ are mapped to $0$ via $\alpha+ \beta$. Let $(a,b) \in (\caC_{\cX^+,x} \oplus \caC_{\cY^+,y})^\times$ be invertible with inverse element $(a',b')$. Then $$0 = (\alpha + \beta)(1,1) = (\alpha + \beta)((a,b)(a',b'))=\alpha(a) + \beta(b) + \alpha(a') + \beta(b'),$$ so by positivity of $\alpha$ and $\beta$ we necessarily have $(\alpha+\beta)(a,b)=0$. Finally $\alpha+\beta$ defines a point in $\sigma_z$ denoted by $\varepsilon_{\alpha,\beta}$.
+%
+%It remains to show compatibility with the equivalence relation. Suppose that $\alpha=\alpha' \circ \tau_{x,x'}$ and $\beta= \beta' \circ \tau_{y,y'}$ with $x' \in F(x)$ and $y' \in F_y$. We denote by $z' \in F_z$ a point corresponding to $(x',y')$ under the local isomorphism  $F_{\cZ^+} \rightarrow F_{\cX^+} \times F_{\cY^+}.$ In the diagram below
+%\begin{center}
+%$\begin{gathered}
+%\xymatrixcolsep{1.8pc} \xymatrixrowsep{0.8pc} \xymatrix{
+%   \caC_{\cX^+,x} \oplus \caC_{\cY^+,y} \ar[dd]^{(\tau_{x,x'}, \tau_{y,y'})} \ar[rrrd]_{\alpha+\beta} \ar[r] &  
+%   \caC_{\cZ^+,z} \ar[rrd]^{\varepsilon_{\alpha,\beta}}& & \\
+%   & &  &\R_{\geq 0} \\
+%    \caC_{\cX^+,x'} \oplus \caC_{\cY^+,y'} \ar[r] \ar[rrru]^{\alpha+\beta'} & 
+%   \caC_{\cZ^+,z'} \ar[urr]_{\varepsilon_{\alpha',\beta'}} & &\\    
+%   }
+%\end{gathered}$
+%\end{center} the inner triangle is commutative by assumption, the two external triangles are commutative by construction of $\varepsilon_{\alpha,\beta}$ and $\varepsilon_{\alpha', \beta'}$. Hence, the external pentagonal diagram is also commutative. It is enough to prove that $\tau_{z,z'}$ completes the diagram and defines a commutative square \begin{center}
+%$\begin{gathered}
+%\xymatrixcolsep{1.8pc} \xymatrixrowsep{0.8pc} \xymatrix{
+%   \caC_{\cX^+,x} \oplus \caC_{\cY^+,y} \ar[dd]^{(\tau_{x,x'}, \tau_{y,y'})} \ar[r] &  
+%   \caC_{\cZ^+,z} \ar[rrd]^{\varepsilon_{\alpha,\beta}} \ar@{.>}[dd]^{\tau_{z,z'}} & & \\
+%   & &  &\R_{\geq 0} \\
+%    \caC_{\cX^+,x'} \oplus \caC_{\cY^+,y'} \ar[r]  & 
+%   \caC_{\cZ^+,z'} \ar[urr]_{\varepsilon_{\alpha',\beta'}} & &\\    
+%}
+%\end{gathered}$
+%\end{center} to conclude that $\varepsilon_{\alpha, \beta}= \varepsilon_{\alpha', \beta'} \circ \tau_{z,z'}$. Indeed, $(\tau_{x,x'}, \tau_{y,y'})$ is well-defined on the amalgamated sums as \begin{align*}
+%(\tau_{x,x'}, & \tau_{y,y'})(u_{\cX^+}(n), 1)= (\tau_{x,x'} \circ u_{\cX^+}(n), 1) = (u'_{\cX^+}(n),1) \\& = (1,u'_{\cY^+}(n))= 
+% (1, \tau_{y,y'} \circ u_{\cY^+}(n)) = (\tau_{x,x'}, \tau_{y,y'})(1, u_{\cY^+}(n))
+%\end{align*} where we have commutativity of the diagram below \begin{center}
+%$\begin{gathered}
+%\xymatrixcolsep{2.5pc} \xymatrixrowsep{1pc} \xymatrix{
+%\N \ar[r]^-{u_{\cX^+}} \ar[rd]_-{u'_{\cX^+}} & \caC_{\cX^+,x} \ar[d]^-{\tau_{x,x'}} \\ 
+%&    \caC_{\cX^+,x'} \\
+%}
+%\end{gathered}$
+%\end{center}and similarly for $\cY^+$.
+%
+%The construction we described determines an inverse of the projection map $$\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$$ and we conclude the proof. 
+%\end{proof}
+
+%Assuming that the associated Kato fan $F_{\cZ^+}$ is globally isomorphic to $F_{\cX^+} \times F_{\cY^+}$, then it induces also isomorphism of skeleta. Thus, recalling Proposition \ref{prop semistability and iso Kato fans}, we have the following result.
+%\begin{prop}  \label{prop semistability and skeleta}
+%Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Assume that $\cX^+$ is semistable and the residue field $k$ is algebraically closed. Then there exists an isomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+).$$ 
+%\end{prop}
+
+\section{The weight function on a log-regular log scheme} \label{sect wt log}
+\subsection{Weight function on log-regular skeleta.}
+\spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-smooth model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in \widehat{\cX_{\eta}}$ and for any divisor $D$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that, locally at $\redu_{\cX}(x)$, we have $D= \divisor(f)$.}
+
+\spa{Let $\omega$ be a canonical form on $X$ and let $x$ be a divisorial point in $X^{\text{an}}$. In order to compute the weight $\weight_{\omega}(x)$, we can consider a snc model $\cY$ of $X$ such that $x \in \Sk(\cY^+)$. Then according to \cite{NicaiseXu}, Section 3.2.2 we have \begin{equation} \label{equ def weight function}
+\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1,
+\end{equation} where we denote by $\divisor_{\cY^+}(\omega)$ the divisor on $\cY$ associated to $\omega$ viewed as a rational section of the line bundle $\omega_{\cY^+/ S^+}^{\text{log}}.$
+The following proposition shows that this formula can be applied, more generally, to log-smooth models.}
+
+\begin{prop} \label{prop weight function log formula}
+Let $\cX^+$ be a log-smooth log scheme over $S^+$ such that $x$ lies in $\Sk(\cX^+)$. Then the weight of $\omega$ at $x$ is given by $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +1.$$
+\end{prop}
+\begin{proof}
+As we noticed in Remark \ref{rem resolution via subd}, we can obtain an snc model $\cY$ adapted to $x$ by means of a log blow-up $h: \cY^+ \rightarrow \cX^+$ of $\cX^+$ (Propositions \ref{resolution log scheme kato fan} and \ref{prop morphism induced by subdivision kato fan}). Moreover, the corresponding skeleton $\Sk(\cY^+)$ is given by a subdivision of $\Sk(\cX^+)$ (Proposition \ref{kato subdivision}).
+
+Log blow-ups are log \'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log \'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY^+)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$ We conclude that $\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1 =   v_x(\divisor_{\cX^+}(\omega)) +1$.
+\end{proof}
+
+\subsection{Weight function on skeleta associated to \textit{fs} fibred products.} \label{paragraph weight function product}
+\spa{Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. By the universal property of the fibred products, it results that $\cZ_K \simeq \cX_K \times_K \cY_K$. Therefore, given $\omega_{\cX_K}$ and $\omega_{\cY_K}$ canonical forms on $\cX_K$ and $\cY_K$ respectively, the form $$\varpi=\pr_{\cX}^* \,\omega_{\cX_K} \otimes \pr_{\cY}^* \,\omega_{\cY_K}$$ is a canonical form on $\cZ_K$. Viewing these forms as rational sections of log canonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\divisor_{\cZ^+}( \pr_{\cX}^* \,\omega_{\cX_K} \otimes \pr_{\cY}^* \,\omega_{\cY_K})$ according to (\ref{equ log can bundles}).}
+
+\spa{Let $z$ be a point of $F_{\cZ}$; as before, we denote by $x$ and $y$ the images of $z$ under the local isomorphism $F_{\cZ} \rightarrow F_{\cX} \times F_{\cY}$. Any morphism $\varepsilon \in \sigma_z$ defines a point $v_{z,\varepsilon}$ in $\Sk(\cZ^+)$. For the sake of convenience, we simply denote the valuation by the corresponding morphism and we denote $\alpha= \pr_{\cX}(\varepsilon)$ and $\beta=\pr_{\cY}(\varepsilon)$. We aim to relate the valuation $v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)$ to the values $$v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K}\big)) \text{ , } v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big).$$}
+
+\spa{Let $f_x \in \caO_{\cX,x}$ be a local equation of $\divisor_{\cX^+}(\omega_{\cX_K})$ around $x$. In order to evaluate $v_{x,\alpha}$ on $f_x$, we consider an admissible expansion of $f_x$ as in (\ref{eq-adm}) $$f_x=\sum_{\gamma\in \caC_{\cX,x}}c_\gamma \gamma.$$ Furthermore, this expansion induces also an expansion of $\pr_{\cX}^*(f_x)$ by  $$\pr_{\cX}^*(f_x)=\sum_{\gamma\in \caC_{\cX,x} }\pr^*_{\cX}(c_\gamma) \gamma$$ as formal power series in $\widehat{\caO}_{\cZ,z}$, since the morphism of characteristic sheaves $\mathcal{C}_{\cX,x} \hookrightarrow \mathcal{C}_{\cZ,z}$ is injective. Following the same procedure for a local equation $f_y \in \caO_{\cY,y}$ of $\divisor_{\cY^+}(\omega_{\cY_K})$ around $y$, we get an expansion of $f_y$ that extends to $\pr_{\cY}^*(f_y)$: 
+$$f_y=\sum_{\delta\in \caC_{\cY,y}}d_\delta \delta.$$}
+
+\spa{A local equation of $\varpi$ around $z$ is determined by $\pr_{\cX}^*(f_x)\,\,\pr_{\cY}^*(f_y)$. Thus $$v_{\varepsilon}(\divisor_{\cZ^+}(\varpi))
+= v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big)$$ and by multiplicativity of the valuation $v_{\varepsilon}$ $$v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big) = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big).$$ Recalling Remark \ref{rem def-val}, the valuation can be computed as follows $$ v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) = \min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\};$$ as the elements $\gamma$ belong to $\caC_{\cX,x}$ and $\alpha$ is defined to be $\pr_{\cX}(\varepsilon)$ $$\min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\} = \min\{\alpha(\gamma)\,|\,c_\gamma \neq 0\} =  v_{x,\alpha}(f_x).$$ Hence, we conclude that \begin{align*}
+v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
+& = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big)\\
+& = v_{\alpha}(f_x) + v_{\beta}(f_y) \\
+& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big).
+\end{align*}
+
+%\begin{align*}
+%v_{\varepsilon}(\divisor_{\cZ^+}(\varpi))
+%& = v_{\varepsilon}(p_{\cX^+}^*(f_x) \,\,p_{\cY^+}^*(f_y)) \\
+%& = v_{\varepsilon}(p_{\cX^+}^*(f_x)) + v_{\varepsilon}(p_{\cY^+}^*(f_y)) \quad \text{by multiplicativity of the valuation}\\
+%& = \min\{\varepsilon(\gamma)\,|\,\gamma\in \Gamma_z(p_{\cX^+}^*(f_x))\} + \min\{\varepsilon(\delta)\,|\,\delta\in \Gamma_z(p_{\cY^+}^*(f_y))\}. 
+%\end{align*}Identifying $\caC_{\cX,x}$ with its image inside $\caC_{\cZ,z}$ under the injection  $\mathcal{C}_{\cX,x} \hookrightarrow \mathcal{C}_{\cZ,z}$, we see that $\varepsilon(\gamma)= \alpha(\gamma)$ for any $\gamma \in \caC_{\cX,x}$, and similarly it holds that $\varepsilon(\delta)= \beta(\delta)$ for any $\delta \in \caC_{\cY,y}$. Thus, we are left to establish a relation between the initial supports $\Gamma_z(p_{\cX^+}^*(f_x))$ and $\Gamma_x(f_x)$, and respectively $\Gamma_z(p_{\cY^+}^*(f_y))$ and $\Gamma_y(f_y)$. }
+%
+%\spa{We recall some definitions and fix some further notations:  \begin{align*}
+%& S_x = \{\gamma\in\mathcal{C}_{\cX,x}\,|\,c_\gamma\neq 0 \text{ in }f_x\}, \\
+%& \Delta_x \text{ the convex hull of } S_x+ \mathcal{C}_{\cX,x} \text{ in }
+%\mathcal{C}^{\gp}_{\cX,x}\otimes_{\Z}\R, \\
+%& \Gamma_x(f_x)=\{\gamma\in S_x\,|\, \gamma \text{ lies on a  compact face of }\Delta_x\}.
+%\end{align*} We consider also the analogous notions $S_z, \Delta_z, \Gamma_z(p_{\cX^+}^*(f_x))$ for $p_{\cX^+}^*(f_x)$. We note that $S_z= S_x$, hence we denote it simply by $S$. 
+%
+%The injective morphism of monoids $\mathcal{C}_{\cX,x} \hookrightarrow \mathcal{C}_{\cZ,z}$ induces an injection of $\R$-vector spaces $$\mathcal{C}_{\cX,x}^{\text{gp}} \otimes_\Z \R \hookrightarrow \mathcal{C}_{\cZ,z}^{\text{gp}} \otimes_\Z \R$$ respectively of dimension $d_x$ and $d_z$. Furthermore, we may choose basis such that \begin{itemize}
+%\item[-]\hspace{-3pt}$\mathcal{C}_{\cX,x}^{\text{gp}} \otimes_\Z \R$ is identified with $\R^{d_x} \times \{\vec{0}\}$ inside $\R^{d_z} \simeq \mathcal{C}_{\cZ,z}^{\text{gp}} \otimes_\Z \R$, 
+%\item[-]\hspace{-3pt}elements of $\caC_{\cX,x}$ are characterized by tuples $(r_1,\ldots,r_{d_x})$ in $\R^{d_x}$ with $r_i \geqslant 0$.
+%\end{itemize} It follows that the convex hulls $\Delta_x$ and $\Delta_z$ are included in $(\R_{\geqslant 0})^{d_x}$ and $(\R_{\geqslant 0 })^{d_z}$.}
+%
+%\spa{Once we fix such basis, we compare compact faces of $\Delta_x$ to those of $\Delta_z$ and viceversa.
+%
+%Let $F$ be a face of $\Delta_x$, so there exists a linear form $l$ on $\R^{d_x}$ such that it takes positive values on $\Delta_x$ and it vanishes on $F$, i.e. $F= \Delta_x \cap l^{\perp}$. We consider the linear form $$l'=l + x_{d_x+1} + \ldots + x_{d_z}$$ on $\R^{d_z}.$ We point out that $l'$ is positive on $\Delta_z$ and it vanishes if and only if both $l$ and all $x_i$'s for $i=d_x+1, \ldots, d_z$ vanish, i.e. $\Delta_z \cap (l')^\perp = \Delta_x \cap l^\perp$. We surmise that any face of $\Delta_x$ determines a face of $\Delta_z$ and in particular any compact face of $\Delta_x$ is also a compact face of $\Delta_z$.
+%
+%Conversely, let $F'$ be a face of $\Delta_z$ corresponding to the linear form $l'$ on $\R^{d_z}$. The restriction $l$ of $l'$ to $\R^{d_x}$ specifies a linear form such that it is positive on $\Delta_x$ by inclusion of $\Delta_x$ in $\Delta_z$, and such that $$F' \cap \Delta_x = \Delta_z \cap (l')^\perp \cap \Delta_x = \Delta_x \cap l^\perp$$ is indeed a face of $\Delta_x$. Thus, any face of $\Delta_z$ determines by restriction a face of $\Delta_x$ and in particular compact faces are preserved.
+%
+%Finally, the set of $\gamma \in S$ that lie on a compact face of $\Delta_x$ coincides with the set of those lying on a compact face of $\Delta_z$, in other words $\Gamma_x(f_x)=\Gamma_z(p_{\cX^+}^*(f_x))$. A similar result also holds for $f_y$.}
+%
+%\spa{Therefore, we conclude that \begin{align*}
+%v_{\varepsilon}(\divisor_{\cZ^+}(\varpi))
+%& = \min\{\varepsilon(\gamma)\,|\,\gamma\in \Gamma_z(p_{\cX^+}^*(f_x))\} + \min\{\varepsilon(\delta)\,|\,\delta\in \Gamma_z(p_{\cY^+}^*(f_y))\}\\
+%&  = \min\{\alpha(\gamma)\,|\,\gamma\in \Gamma_x(f_x)\} + \min\{\beta(\delta)\,|\,\delta\in \Gamma_y(f_y)\} \\
+%& = v_{\alpha}(f_x) + v_{\beta}(f_y) \\
+%& = v_{\alpha}(\divisor_{\cX^+}(\omega_{\cX_K})) + v_{\beta}(\divisor_{\cY^+}(\omega_{\cY_K})).
+%\end{align*}
+}
+\spa{This result turns out to be advantageous to compute the weight function $\weight_\varpi$ on divisorial points of $\Sk(\cZ^+)$: 
+\begin{align} \label{equ weight function product}
+\begin{split}
+\weight_\varpi(\varepsilon)
+& = v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big) +1 \\
+& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big) + 1 \\
+& = \weight_{\omega_{\cX_K}}(\alpha) + \weight_{\omega_{\cY_K}}(\beta) - 1.
+\end{split}
+\end{align}
+}
+
+\subsection{Kontsevich-Soibelman skeleta of \textit{fs} fibred products.}
+\spa{In \cite{MustataNicaise}, Section 4.5 the Kontsevich-Soibelman skeleton $\Sk(\cZ_K, \varpi)$ is defined as the closure of the set of divisorial points of $\cZ_K^\text{an}$ where the weight function $\weight_\varpi$ reaches its minimal value $\weight_{\varpi}(\cZ_K)$. Our computations lead to the following result.
+\begin{thm}
+%Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. The isomoprhism $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$ of skeleta induces a map of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \rightarrow \Sk(\cX_K,\omega_{\cX_K}) \times \Sk(\cY_K, \omega_{\cX_K}).$$
+%\end{thm}
+%
+%Assuming that the local isomorphism of skeleta $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$ is actually a global isomorphism, then it induces an isomorphism of Kontsevich-Soibelman skeleta. Thus, recalling Proposition \ref{prop semistability and iso Kato fans}, we have the following result.
+%\begin{cor}  
+\label{thm semistability and KS skeleta}
+Assume that the residue field $k$ is algebraically closed. Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Suppose that $\cX^+$ is semistable. Then, given $\omega_{\cX_K}$ and $\omega_{\cY_K}$ canonical forms on $\cX_K$ and $\cY_K$ respectively, the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \xrightarrow{\sim} \Sk(\cX_K, \omega_{\cX_K}) \times \Sk(\cY_K, \omega_{\cY_K}).$$ 
+\end{thm}
+\begin{proof}
+This follows immediately from the equality (\ref{equ weight function product}) that shows that a point in $\Sk(\cZ^+)$ has minimal value $\weight_{\varpi}(\cZ_K)$ if and only if its projections have minimal value $\weight_{\omega_{\cX_K}}(\cX_K)$ and $\weight_{\omega_{\cY_K}}(\cY_K)$.
+\end{proof}
+}
+
+\subsection{Essential skeleta of products of CY varieties.}
+
+\spa{Let $X$ be a smooth $K$-variety with trivial canonical sheaf, i.e. a Calabi-Yau variety. The essential skeleton of $X$ is defined in \cite{MustataNicaise}, Definition 4.6.2 as $$\Sk(X):=\bigcup_{\omega} \Sk(X, \omega) \quad \subseteq X^{\text{an}}$$ where $\omega$ runs through the set of non-zero regular pluricanonical forms on $X$. Under the assumption of triviality of the canonical bundle, the essential skeleton of a Calabi-Yau variety is reduced to the Kontsevich-Soibelman skeleton of any non-zero canonical form.}
+
+\spa{We characterize the essential skeleton of a fibred product of Calabi-Yau varieties with semistable reduction.
+\begin{cor}  \label{cor semistability and essential skeleta}
+Assume that the residue field $k$ is algebraically closed. Let $X$ and $Y$ be smooth Calabi-Yau varieties over $K$ and denote by $Z$ the fibred product $X\times_K Y$. Suppose that $X$ has semistable reduction. Given $\cX^+$ a semistable log-smooth model of $X$ and $\cY^+$ a log-smooth model of $Y$, we denote by $\cZ^+$ their $fs$ fibred product. Then the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of essential skeleta $$\Sk(Z) \xrightarrow{\sim} \Sk(X) \times \Sk(Y).$$ 
+\end{cor}
+\begin{proof}
+This follows immediately from Theorem \ref{thm semistability and KS skeleta}.
+\end{proof}
+}
+ 
+\section{The analytification of the \textit{n}-th symmetric product.} \label{sect an of symm product}
+\subsection{Analytification of the quotient.}
+\spa{Let $X$ be a smooth $K$-variety and let $S_n$ be $n$-th symmetric group. We describe an action of $S_n$ on the $n$-fold fibred product $X^n$. Any point $x$ of $X^n$ is characterized as a tuple $x=(x_1,\ldots,x_n, s, \fp)$ where $s$ is the image of any of $x_i$'s and $\fp$ is a prime ideal of the tensor algebra of residue fields $\kappa(x_1) \otimes \ldots \otimes \kappa(x_n)$. Given  a permutation $\sigma$ of $n$ elements, it induces an isomorphism of tensor algebras  $k(x_1) \otimes \ldots \otimes k(x_n) \simeq  k(x_{\sigma(1)}) \otimes \ldots \otimes k(x_{\sigma(n)})$ still denoted by $\sigma$. Then the action of $S^n$ on $X^n$ is given by $$\sigma \ldotp x = (x_{\sigma(1)}, \ldots, x_{\sigma(n)}, s, \sigma(\fp)).$$
+
+Let $(X^n)^{\an}$ be the analytification of $X^n$. We recall that any point of $(X^n)^{\an}$ is a pair $(x,|\cdot|_x)$ with $x \in X^n$ and $|\cdot|_x$ an absolute value on the residue field $\kappa(x)$ extending the absolute value on $K$. The action of $S_n$ extends to $(X^n)^\an$ by $$\sigma \ldotp (x,|\cdot|_x) = (x_{\sigma(1)}, \ldots, x_{\sigma(n)}, s, \sigma(\fp), |\cdot|_x \circ \sigma^{-1}).$$}
+
+\spa{By functoriality of the Berkovich analytification, the morphism of schemes $f: X^n \rightarrow Y=X^n/S_n$ to the $n$-th symmetric product of $X$ induces a surjective morphism of Berkovich spaces $f^\an: (X^n)^\an \rightarrow Y^\an$ and the image of a point $(x,|\cdot|_x)$ is $$f^\an(x,|\cdot|_x)= ([x], |\cdot|_{[x]}),$$ with $[x]=([(x_i)],s,[\fp]) \in X^n/S_n$ and $|\cdot|_{[x]}$ an absolute value on $k(x)^{S_n}$, the field of $S_n$-invariant elements of $k(x)$. Two points $(x,|\cdot|_{x})$ and $(x',|\cdot|_{x'})$ have the same image if and only if there exists $\sigma \in S_n$ such that $\sigma \ldotp x = x'$ and $|\cdot|_x \circ \sigma^{-1}= |\cdot|_{x'}$.
+
+This implies that $f^\an$ factors uniquely through the quotient map $\pi: (X^n)^\an \rightarrow (X^n)^\an/S_n$. So we may draw the diagram below \begin{center}
+$\begin{gathered}
+\xymatrix{ (X^n)^\an \ar[rd]^-{\pi} \ar@{->>}[r]^-{f^\an} & Y^\an & \\  & (X^n)^\an/S_n \ar[u]_{\sim} \ar[r]^{\sim}& (X^\an)^n/S_n \\
+}
+\end{gathered}$ \end{center} reminding that the analytification functor commutes with fibred products (\cite{Berkovich1993}, Proposition 2.6.1), hence $(X^n)^\an \simeq (X^\an)^n$.}
+
+\subsection{Representation of divisorial points of the quotient.}
+\spa{We keep the notation of the previous paragraph. Let $y$ be a divisorial point of $Y^\an$ and consider a regular snc $R$-model $\cY$ of $Y$ adapted to $y$, i.e. such that $y$ is the divisorial point associated to $(\cY, E)$ for some irreducible component $E$ of $\cY_k$. We denote by $\cX$ the normalization of $\cY$ inside $K(X^n) $, where $K(\cY)=K(Y)=K(X^n)^{S_n} \hookrightarrow K(X^n)$.}
+
+\spa{We check that $\cX$ is an $R$-model of $X^n$; it is enough to show that the base change $\cX_K$ is isomorphic to $X^n$. We consider the following commutative diagram
+\begin{center}$
+\begin{gathered}
+\xymatrixrowsep{1pc}
+\xymatrixcolsep{1pc}\xymatrix{ 
+\cX_K \ar[drr] \ar[dddr] & & \\
+& X^n \ar@{.>}[r] \ar@{.>}[ul]\ar[d]^{f} & \cX \ar[d] \\
+& Y \ar[r] \ar[d] & \cY  \ar[d]\\
+& \Spec K \ar[r] & S \\
+}
+\end{gathered}$
+\end{center} As the $n$-fold product $X^n$ is a normal variety endowed with a morphism $X^n \rightarrow \cY$, by universal property of normalization, it factors uniquely through $\cX$ and the diagram is still commutative. Then by universal property of fibred product, there exists a morphism $X^n \rightarrow \cX_K$. Therefore, it suffices to prove that $$[K(X^n):K(\cX_K)]=1.$$ Indeed, if this is the case, then $X^n \rightarrow \cX_K$ is a finite birational morphism between normal varietes, hence an isomorphism.}
+
+\spa{The degree of the extension $[K(X^n):K(\cX_K)]$ may be computed on an affine open, so we assume that $\cY$ is an affine scheme with associated ring $K[\cY]$. Then we consider the diagram of inclusions
+\begin{center} 
+$ \xymatrixcolsep{-1pc} \xymatrixrowsep{1.5pc}\xymatrix{ 
+& K(\cX)=K(\cX_K) \ar[dr] & \\
+\widehat{K[\cY]}=K[\cX] \ar[rr] \ar[ru] & & K(X^n)\\
+K[\cY] \ar[u] \ar[rr]& & K(\cY)=K(Y)=K(X^n)^{S_n} \ar[u]^{\text{finite} \deg} \\
+}$
+\end{center} As $K(X^n)$ is finite field extension of $K(\cY)$ and $K[\cX]$ the integral closure of $K[\cY]$ in $K(X^n)$, then $K(X^n)$ is the fraction field of $K[\cX]$. Thus, $K(\cX) = \text{Frac}(K[\cX])=K(X^n)$ and in particular we conclude that $[K(X^n):K(\cX_K)]=1.$
+}
+
+\begin{rem} \label{rem divi repre quotient}
+This procedure of normalization illustrates a way to start with a regular snc $R$-model $\cY$ of $Y$ adapted to a point $y \in \text{Div}(Y)$ and construct an $R$-model $\cX$ of $X^n$ that, by normality, is regular at generic points of the special fibre $\cX_k$. 
+\end{rem}
+
+\subsection{Weight function values along fibres of the quotient.} \label{paragraph weight values on fibres}
+\spa{As before, let $y \in \text{Div}(Y)$ and let $\cY$ be a regular snc $R$-model with divisorial representation $(\cY,E)$ of $y$. % We denote by $\xi_E$ the generic point of $E$ and by $N_E$ the multiplicity of $E$ in $\cY_k$.
+Let $\cX$ be the normalization of $\cY$ in $K(X^n)$: as we observed in Remark \ref{rem divi repre quotient}, it is an $R$-model of $X^n$, regular at generic points of the special fibre $\cX_k$.
+
+The preimage of $E$ coincides with the pull-back of the Cartier divisor $E$ on $\cX$, hence $f^{-1}(E)$ still defines a codimension one subset on $\cX$. We denote by $F_i$ the irreducible components of $f^{-1}(E)$ %, by $N_i$ their multiplicities in $\cX_k$ and by $\xi_{F_i}$ their generic points. 
+and we associate to $F_i$'s their corresponding divisorial valuations $x_i=(\cX,F_i)$.
+}
+
+\spa{Let $\omega_X$ be a canonical form on $X$ and let $\pr_j:X^n \rightarrow X$ be the $j$-th canonical projection. We consider $$\omega= \bigwedge_{1\leqslant j \leqslant n} \pr_j^*\omega_X.$$ It is a canonical form on $X^n$ and moreover it is invariant under the action of $S_n$. Thus, $\omega$ induces a canonical form on the $n$-th symmetric product $Y$.
+
+%\textcolor{red}{Assume that $\cX$ and $\cY$ are semistable models, i.e. $N_i=N=1$. Indeed
+%\begin{itemize}
+%\item[-] assume $X$ has a semistable model (we need this hypothesis also for isomorphism on product of Kato fans)
+%\item[-] by \cite{Hartl2001}, we may construct a semistable model of the product $X^n$
+%\item[-] the model $\cX$ is regular locally around $\xi_{F_i}$, hence the morphism $\cX \rightarrow \cY$ is locally a morphism between regular varieties, hence flat (see qu 1a mathoverflow) 
+%\item[-] locally the preimage of $E$ is a strict normal crossing (in the sense of stacks project definition, hence also reduced), i.e. $F_i$ is still a reduced divisor (see qu 1b stack project) 
+%\end{itemize}}
+
+We compare the values at $y$ and $x_i$ of weight functions attached to $\omega$:
+$$\weight_{\omega}(x_i)=v_{x_i}(\divisor_{\cX^+}(\omega)) +1 $$
+$$\weight_{\omega}(y)=v_{y}(\divisor_{\cY^+}(\omega)) +1. $$ We recall that for log \'{e}tale morphisms the sheaves of logarithmic differentials are isomorphic (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log \'{e}tale morphism of divisorial log structures, to conclude that the weight function values coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
+}
+
+\spa{We denote by $\xi_{F_i}$ the generic point of $F_i$ and by $\xi_E$ the generic point of $E$. The divisorial log structures on $\cX^+$ and $\cY^+$ have charts $\N$ at $\xi_{F_i}$ and $\xi_E$. In the \'{e}tale topology, the normalization morphism $\cX^+ \rightarrow \cY^+$ admits a chart induced by $t:\N \rightarrow \N$ where $1 \mapsto m$ for some positive integer $m$:
+\begin{center}
+$\xymatrix{
+\Spec \caO_{\cX, \xi_{F_i}} \ar[d] \ar[r] & \Spec \Z[\N] \ar[d] \\
+\Spec \caO_{\cY, \xi_{E}}  \ar[r] & \Spec \Z[\N] 
+}$
+\end{center} Firstly, by the universal property of the fibre product, we have a morphism $$\Spec \caO_{\cX, \xi_{F_i}} \rightarrow \Spec \caO_{\cY, \xi_{E}} \times_{\Spec \Z[\N] } \Spec \Z[\N]$$ and it corresponds to $$ \caO_{\cY, \xi_{E}}  \otimes_{\Z[\N]} \Z[\N] \rightarrow\caO_{\cX, \xi_{F_i}}.$$ This is a morphism of finite type with finite fibres between regular rings and by \cite{Liu2002}, Lemma 4.3.20 and \cite{Nowak} it is flat and unramified, hence \'{e}tale. One of the two conditions in Kato's criterion for log \'{e}taleness is then fulfilled. Secondly, the chart $t:\N \mapsto \N$ induces a group homomorphism $t^{\text{gp}}: \Z \mapsto \Z$; in particular, it is injective and it has finite cokernel. Then $t$ satisfies the second condition of Kato's criterion for log \'{e}taleness. Therefore we conclude that $\weight_\omega(y)=\weight_\omega(x_i)$.}
+
+
+\begin{rem} \label{rem construction div points}
+Given a divisorial point $y$, this construction provides a divisorial point $x \in (X^n)^\an$ such that $f^\an(x)=y$ and with the property that they have the same weight function value with respect to an $S_n$-invariant canonical form $\omega$.
+\end{rem}
+
+\subsection{Kontsevich-Soibelman skeleta of the quotient.}
+\spa{Let $\omega_X$ be a canonical form on $X$ and $\omega= \bigwedge_{1\leqslant j \leqslant n} \pr_j^*\omega_X$ the induced $S_n$-invariant canonical form on $X^n$ that passes to the quotient $Y$. We claim that the minimal values of the weight functions $\weight_\omega$ on $X^n$ and $Y$ coincide, i.e. $\weight_\omega(X^n)= \weight_\omega(Y)$ according to the notation of \cite{MustataNicaise}. The key arguments to prove the claim are:\begin{enumerate}
+\item \label{argument 1}the Kontsevich-Soibelman skeleton $\Sk(X^n,\omega)$ of the $n$-fold fibred product is invariant under the $S_n$-action, as a consequence of Theorem \ref{thm semistability and KS skeleta};
+\item \label{argument 2} given a divisorial point $y$, we may construct a divisorial point $x \in (X^n)^\an$ such that $f^\an(x)=y$ and $\weight_{\omega}(y)= \weight_{\omega}(x)$, as showed in Remark \ref{rem construction div points}.
+\end{enumerate}
+}
+
+\spa{By the argument in (\ref{argument 2}), the following inclusion is true $$\{ \weight_{\omega}(y) \,|\, y \in \text{Div}(Y)\} \subseteq \{ \weight_{\omega}(x) \,|\, x \in \text{Div}(X^n)\},$$ so $\weight_{\omega}(X^n)= \inf \{\weight_{\omega}(x) \,|\, x \in \text{Div}(X^n)\} \leqslant \inf \{ \weight_{\omega}(y) \,|\, y \in \text{Div}(Y)\}=\weight_{\omega}(Y)$. 
+
+Conversely, let $x \in \text{Div}(X^n)$ such that $\weight_{\omega}(x)=\weight_{\omega}(X^n)$. Consider $y:=f^{\an}(x)$; it is a divisorial valuation since it is induced by restriction of $v_x$ to $K(Y) \hookrightarrow K(X^n) \xrightarrow{v_x} \R$ and its image is contained in the discrete image of $v_x$ in $\R$, hence it is discrete too. Applying the construction of (\ref{argument 2}), we obtain $x' \in \text{Div}(X^n)$ such that $f^{\an}(x')=y$ and $\weight_{\omega}(x')=\weight_{\omega}(y)$. This means that $x$ and $x'$ are in the same $S_n$-class; since the $S_n$-action preserves the Kontsevich-Soibelman skeleton $\Sk(X^n,\omega)$ by (\ref{argument 1}) and $x \in \Sk(X^n, \omega)$, thus $x' \in \Sk(X^n, \omega)$. Therefore $$\weight_{\omega}(y)=\weight_{\omega}(x')=\weight_{\omega}(X^n),$$ so $\weight_{\omega}(Y)= \inf \{\weight_{\omega}(y) \,|\, y \in \text{Div}(Y)\} \leqslant \weight_{\omega}(X^n)$. Finally, we have equality of weights of $X^n$ and $Y$ with respect to $\omega$:\begin{equation} \label{equ equality weight}
+\weight_{\omega}(X^n)= \weight_{\omega}(Y).
+\end{equation}
+}
+
+\spa{The equality of minimal weights leads to the main results of this paragraph.
+\begin{prop} \label{prop KS of quotient}
+Let $X$ be a smooth $K$-variety and let $Y=X^n/S_n$ be the $n$-th symmetric product of $X$ with $f:X^n \rightarrow Y$. Let $\omega_X$ be a canonical form on $X$ and $\omega= \bigwedge_{1\leqslant j \leqslant n} \pr_j^*\omega_X$ the induced canonical form on $X^n$ and $Y$. Then the Kontsevich-Soibelman skeleton $\Sk(Y,\omega)$ is the image under $f^\an$ of the Kontsevich-Soibelman skeleton $\Sk(X^n,\omega)$. 
+\end{prop}
+\begin{proof}
+We characterize divisorial points in the Kontsevich-Soibelman skeleton $\Sk(Y,\omega)$ in term of their preimages in $X^{\an}$ as follows: given $y \in \text{Div}(Y)$, $$y \in \Sk(Y,\omega) \Leftrightarrow \text{ for some/any } x \in (f^\an)^{-1}(y) \quad \weight_{\omega}(x)=\weight_{\omega}(X^n).$$
+Indeed, if $y \in \Sk(Y,\omega)$, we may construct $ x$ such that $ f^\an(x)=y$ and $ \weight_{\omega}(x)=\weight_{\omega}(y)$, i.e. a divisorial point $x \in (f^\an)^{-1}(y)$ such that $\weight_{\omega}(x)=\weight_{\omega}(y)=\weight_{\omega}(Y)=\weight_{\omega}(X^n)$ by the equality (\ref{equ equality weight}). By argument (\ref{argument 1}), this holds for any point in the preimage of $y$.
+
+Conversely, suppose that for all $x \in (f^\an)^{-1}(y)$ we have $\weight_{\omega}(x)= \weight_{\omega}(X^n)$. Then, this holds in particular for a divisorial point $\tilde{x}$ constructed as in (\ref{argument 2}). Therefore $\weight_{\omega}(y)=\weight_{\omega}(\tilde{x})=\weight_{\omega}(X^n)= \weight_{\omega}(Y)$ again by equation (\ref{equ equality weight}); this means that $y \in \Sk(Y, \omega)$.
+\end{proof}
+
+\begin{cor}  \label{cor semistability and KS skeleta quotient}
+Assume that the residue field $k$ is algebraically closed. Let $X$ be a smooth $K$-variety and let $\omega_X$ be a canonical form on $X$. If $X$ has semistable reduction, then the Kontsevich-Soibelman skeleton of the $n$-th symmetric product of $X$ is isomorphic to the $n$-th symmetric product of the Kontsevich-Soibelman skeleton of $X$ $$\Sk(X^n/S_n,\omega) \xrightarrow{\sim} S^n(\Sk(X,\omega_X)).$$
+\end{cor}
+\begin{proof}
+Iterating the result of Theorem \ref{thm semistability and KS skeleta}, we have that the projection map defines an isomorphism of Kontsevich-Soibelman skeleta $$\Sk(X^n, \omega) \xrightarrow{\sim} \Sk(X,\omega_X) \times  \ldots \times \Sk(X,\omega_X).$$ Hence, by Proposition \ref{prop KS of quotient}, the diagram \begin{center}$
+\xymatrixrowsep{0.5pc}\xymatrix{
+(X^n)^\an \ar[r]^-{f^\an} & Y^\an \simeq (X^\an)^n/S_n \\
+\Sk(X^n,\omega) \ar@{|->}[r] \ar@{=}[d] & \Sk(Y,\omega) \ar@{=}[d]  \\
+\Sk(X,\omega_X) \times  \ldots \times \Sk(X,\omega_X) \ar@{|->}[r]& S^n (\Sk(X^n,\omega))\\
+}
+$
+\end{center}gives a concrete description of the Kontsevich-Soibelman skeleta of the quotient $Y$ in terms of the Kontsevich-Soibelman skeleton of $X$ as required.
+\end{proof}
+}
+
+\subsection{Essential skeleton of the \textit{n}-th symmetric product of a CY variety.}
+\spa{These results on Kontsevich-Soibelman skeleta of the $n$-th symmetric products translate into properties of essential skeleta when we are dealing with Calabi-Yau varieties.
+
+\begin{cor}  \label{cor semistability and essential skeleta quotient}
+Let $X$ be a smooth Calabi-Yau variety over $K$. Assume that $X$ has semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the $n$-th symmetric product of $X$ is isomorphic to the $n$-th symmetric product of the essential skeleton of $X$ $$\Sk(X^n/S_n) \xrightarrow{\sim} S^n(\Sk(X)).$$ 
+\end{cor} 
+\begin{proof}
+This follows immediately from Corollary \ref{cor semistability and KS skeleta quotient}.
+\end{proof}
+}
+
+\section{The essential skeleton of the Hilbert scheme of a $\text{K3}$ surface} \label{sect essential sk Hilb}
+
+\spa{Let $S$ be a $\text{K}3$ surface over $K$ (i.e. $S$ is a complete non-singular variety of dimension two such that $\Omega_{S/K}^2 \simeq \caO_S \text{ and } H^1(S,\caO_S) = 0$). In particular $S$ is a Calabi-Yau variety.
+
+We consider $\Hilb^n(S)$ the Hilbert scheme of $n$ points on $S$; a concrete way to construct it is by first taking the $n$-th symmetric product of $S$, and by then resolving its singularities:
+\begin{center}
+$ \xymatrix{
+& S^n \ar[d]^{f} \\
+\Hilb^n(S) \ar[r]^{\rho} & S^n/S_n\\
+}$
+\end{center} Indeed, the $n$-th symmetric product $S^n/S_n$ has quotient singularities along the images via $f$ of the loci $$\Delta_{ij}= \{(x_1,\ldots,x_n) \in S^n \,|\, x_i=x_j\},$$ which are precisely the fixed loci of the $S_n$-action on $S^n$. Then the morphism $\rho: \Hilb^n(S) \rightarrow S^n/S_n$ is a resolution of singularities and it can be seen explicitly as the map sending a zero-dimensional scheme $Z \subseteq S$ to its associated zero-cycle $\text{supp}(Z)$. We refer to the morphism $\rho$ as the Hilbert-Chow morphism. It follows that the Hilbert scheme of $n$ points on $S$ is birational to the $n$-th symmetric product of $S$ \cite{Fogarty}. 
+}
+
+\spa{We can finally illustrate the essential skeleton of the $n$-th Hilbert scheme of a $\text{K}3$ surface with semistable reduction.
+\begin{thm}  \label{thm essential skeleton hilb}
+Let $S$ be a $\text{K}3$ surface over $K$. Assume that $S$ has  semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the Hilbert scheme of $n$ points on $S$ is isomorphic to the $n$-th symmetric product of the essential skeleton of $S$ $$\Sk(\Hilb^n(S)) \xrightarrow{\sim} S^n(\Sk(S)).$$ 
+\end{thm}
+\begin{proof}
+In \cite{MustataNicaise}, Proposition 4.6.3, Mustata and Nicaise proved that the essential skeleton of a variety is a birational invariant. Therefore, the description of the essential skeleton of the $n$-th symmetric product of $S$ in Corollary \ref{cor semistability and essential skeleta quotient} entails a description of the essential skeleton of the Hilbert scheme of $n$ points on $S$.
+\end{proof}
+%\begin{rem}
+%The main inspiration for Theorem \ref{thm essential skeleton hilb} is an ongoing project by Gulbrandsen, Halle, Hulek and Zhang, following \cite{GulbrandsenHalleHulek} and \cite{GulbrandsenHalleHulek2016}. Their investigation focuses on the degenerations of Hilbert schemes of points and provides, as an application, an analogue result about the essential skeleton of Hilbert schemes, but only in the particular case of type II degeneration of $K3$ surfaces. The techniques involved differ a lot. Indeed, their approach is based on the method of \textit{expanded degenerations}, which first appeared in \cite{Li}, and on the construction of suitable GIT quotients. Furthermore, to perform this construction on a variety, they need a combinatorial assumption on the special fibre of a model of the variety.
+%
+%In particular, in the case of a $\text{K}3$ surface $S$ over $K$, the GIT quotient they form turns out to be a minimial dlt model of the Hilbert scheme of $n$ points on $S$. We recall that, by \cite{NicaiseXu}, the essential skeleton of a variety can be identified with the dual complex of any minimal dlt model of the variety. Hence, it follows that the GIT quotient they construct provides a description of the essential skeleton of $\Hilb^n(X)$. Finally, in accord with our result, they also conclude that the dual complex in question is the $n$-th symmetric product of the essential skeleton of $S$.
+%\end{rem}
+}
+
+\printbibliography
+\end{document}
