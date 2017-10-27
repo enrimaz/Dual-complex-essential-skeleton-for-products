@@ -605,8 +605,8 @@ with the log structure associated to $p_1^{-1}\caM_{\cX_1} \oplus_{p_{\cY}^{-1}\
 
 %\subsection{Log smoothness and log-regularity of \textit{fs} fibred products.}
 %\begin{prop} \label{reg of fibred product}\item \begin{enumerate}
-%\item (\cite{GabberRamero}, Proposition 12.3.24) Log smooth and log \'{e}tale morphisms are stable under composition and base change.
-%\item (\cite{Ogus2017}, Corollary 3.1.11, page 410) \textcolor{green}{REPLACE OGUS REFERENCE} The canonical morphisms ${\cX}^\text{int} \rightarrow \cX$ and ${\cX}^{\text{sat}} \rightarrow \cX$ induced by integration and saturation of a log scheme are log \'{e}tale morphisms.
+%\item (\cite{GabberRamero}, Proposition 12.3.24) Log smooth and log-\'{e}tale morphisms are stable under composition and base change.
+%\item (\cite{Ogus2017}, Corollary 3.1.11, page 410) \textcolor{green}{REPLACE OGUS REFERENCE} The canonical morphisms ${\cX}^\text{int} \rightarrow \cX$ and ${\cX}^{\text{sat}} \rightarrow \cX$ induced by integration and saturation of a log scheme are log-\'{e}tale morphisms.
 %\item (\cite{Kato1994a}, Thm 8.2) If $f:\cX \rightarrow \cY$ is a log-smooth morphism between $fs$ log schemes and $\cY$ is a log-regular log scheme, then $\cX$ is also a log-regular log scheme.
 %\end{enumerate} 
 %\end{prop}
@@ -630,7 +630,7 @@ with the log structure associated to $p_1^{-1}\caM_{\cX_1} \oplus_{p_{\cY}^{-1}\
 %(C) edge node[above]{$f_2$} (D);
 %\end{tikzpicture}
 %\end{center} the sheaves of logarithmic differentials are related by the following isomorphism $$p_1^* \Omega^{\log}_{\cX_1/\cY} \oplus p_2^* \Omega^{\log}_{\cX_2/ \cY} \simeq \Omega^{\log}_{\cZ/\cY}.$$
-%\item (\cite{Kato1994a}, Proposition 3.12) Let $\cZ \xrightarrow{f} \cX \xrightarrow{g} \cY$ be morphisms of $fs$ log schemes and let $$f^*\Omega^{\log}_{\cX/\cY} \xrightarrow{\lambda} \Omega^{\log}_{\cZ/\cY} \rightarrow \Omega^{\log}_{\cZ/\cX} \rightarrow 0$$ be the associated exact sequence. If $f$ is log-smooth, then $\lambda$ is injective. Moreover, if $f$ is log \'{e}tale, then $\lambda$ is an isomorphism.
+%\item (\cite{Kato1994a}, Proposition 3.12) Let $\cZ \xrightarrow{f} \cX \xrightarrow{g} \cY$ be morphisms of $fs$ log schemes and let $$f^*\Omega^{\log}_{\cX/\cY} \xrightarrow{\lambda} \Omega^{\log}_{\cZ/\cY} \rightarrow \Omega^{\log}_{\cZ/\cX} \rightarrow 0$$ be the associated exact sequence. If $f$ is log-smooth, then $\lambda$ is injective. Moreover, if $f$ is log-\'{e}tale, then $\lambda$ is an isomorphism.
 %\end{enumerate}
 %\end{prop}
 
@@ -1029,35 +1029,29 @@ Given a connected, smooth and proper $K$-variety $X$, in \cite{MustataNicaise} M
 
 \spa{Let $(X,\Delta)$ be a pair with log-regular log scheme $X^+=(X,\Delta)$ over $K$. Let $\omega$ be a logarithmic $m$-pluricanonical form on $X^+$. For each log-regular model $\cX^+$ of $X^+$, the form $\omega$ defines a divisor $\divisor_{\cX^+}(\omega)$ on $\cX^+$. For any point $x$ in $\Sk(\cX^+)$ that is associated to an irreducible component of $\cX_k$, the value \begin{equation} \label{equ:weight value for divisorial point}
 v_x(\divisor_{\cX^+}(\omega)) +m
-\end{equation} does not depend on the choice of the model $\cX^+$; indeed, this follows from the same arguments of \cite{MustataNicaise}, Proposition 4.2.4. We denote this value by $\weight_{\omega}(x)$ and call it the weight of $x$ with respect to $\omega$. Since any snc model $\cX$ of $X$ can be turned by resolution of singularities into a log-regular model of $X^+$, we can compute the weight with respect to $\omega$ of any divisorial point of $X^\an$. Thus, we obtain a function $$\weight_{\omega}: X^{\divisor} \rightarrow \Q, \quad x \mapsto \weight_{\omega}(x)$$ on the set of divisorial points, called the weight function associated to $\omega$. We prove that the formula \ref{equ:weight value for divisorial point} expresses the weight of any divisorial point in $\Sk(\cX^+)$.
+\end{equation} does not depend on the choice of the model $\cX^+$; indeed, this follows from the same arguments of \cite{MustataNicaise}, Proposition 4.2.4. We denote this value by $\weight_{\omega}(x)$ and call it the weight of $x$ with respect to $\omega$. Since any snc model $\cX$ of $X$ can be turned by resolution of singularities into a log-regular model of $X^+$, we can compute the weight with respect to $\omega$ of any divisorial point of $X^\an$. Thus, we obtain a function $$\weight_{\omega}: \text{Div}(X) \rightarrow \Q, \quad x \mapsto \weight_{\omega}(x)$$ on the set of divisorial points, called the weight function associated to $\omega$. We prove that the formula \ref{equ:weight value for divisorial point} expresses the weight of any divisorial point in $\Sk(\cX^+)$.
 
 \begin{prop} \label{prop weight function on log regular model}
 If $x$ is a divisorial point in $\Sk(\cX^+)$, then $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m.$$
 \end{prop}
 \begin{proof}
-If the point $x$ is associated to an irreducible component of the special fibre, then the equality holds by definition. As in \cite{MustataNicaise}, Proposition 2.4.11, any divisorial point can be reduced to such a presentation by a finite sequence of blow-ups of strata of $D_\cX$. Therefore, it suffices to consider one blow-up morphism $h:\cY \rightarrow \cX$ of a stratum $Z$ of $D_\cX$ and check that $$v_x(\divisor_{\cX^+}(\omega)) +m=v_x(\divisor_{\cY^+}(\omega)) +m,$$ where $\cY^+$ is the log-regular log scheme with $D_\cY$ equals to the sum of the closure of the strict trasform $\Delta_Y$ of $\Delta_X$ and the special fibre $\cY_k$.
+If the point $x$ is associated to an irreducible component of the special fibre, then the equality holds by definition. As in \cite{MustataNicaise}, Proposition 2.4.11, any divisorial point can be reduced to such a representation by a finite sequence of blow-ups of strata of $D_\cX$. Therefore, it suffices to consider one blow-up morphism $h:\cY \rightarrow \cX$ of a stratum $Z$ of $D_\cX$ and check that $$v_x(\divisor_{\cX^+}(\omega)) +m=v_x(\divisor_{\cY^+}(\omega)) +m,$$ where $\cY^+$ is the log-regular log scheme with $D_\cY$ equals to the sum of the closure of the strict trasform $\Delta_Y$ of $\Delta_X$ and the special fibre $\cY_k$.
 
-We denote by $E$ the exceptional divisor of the blow-up $h$, by $r=r_h +r_v$ the codimension of $Z$ in $\cX$, where $r_h$ and $r_v$ are the number of irreducible components of $\overline{\Delta_X}$ and respectively of the special fibre $\cX_k$, containing $Z$. We denote the projections onto $S^+$ by $s_{\cX}:\cX^+\rightarrow S^+$ and $s_{\cY}:\cY^+ \rightarrow S^+$. We have that
+We denote by $E$ the exceptional divisor of the blow-up $h$, by $r=r_h +r_v$ the codimension of $Z$ in $\cX$, where $r_h$ and $r_v$ are the number of irreducible components of $\overline{\Delta_X}$ and respectively of the special fibre $\cX_k$, containing $Z$. We denote the projections onto $S^+$ by $s_{\cX}:\cX^+\rightarrow S^+$ and $s_{\cY}:\cY^+ \rightarrow S^+$ and by $\pi$ a uniformizer in $R$. Then we have that
 \begin{align*}
-h^*&(\omega^{\log}_{\cX^+/S^+})\\ 
-& = h^* \big(\omega_{\cX/R} \otimes \caO_{\cX}(\overline{\Delta_X}_{,\redu} + \cX_{k,\redu} - s_\cX^*(t)) \big) \\
-& = \omega_{\cY/R}\otimes \caO_{\cY}((1-r)E) \otimes \caO_{\cY}(\overline{\Delta_Y}_{,\redu} + r_hE+ \cY_{k,\redu} + (r_v-1)E - s_\cY^*(t))\\
-& = \omega_{\cY/R} \otimes \caO_{\cY}(\overline{\Delta_Y}_{,\redu} + \cY_{k,\redu} - s_\cY^*(t))\\
-& = \omega^{\log}_{\cY^+/S^+}.
+h^*&(\omega^{\log}_{\cX^+/S^+}) = h^* \big(\omega_{\cX/R} \otimes \caO_{\cX}(\overline{\Delta_X}_{,\redu} + \cX_{k,\redu} - s_\cX^*(\pi)) \big) \\
+& = \omega_{\cY/R}\otimes \caO_{\cY}((1-r)E) \otimes \caO_{\cY}(\overline{\Delta_Y}_{,\redu} + r_hE+ \cY_{k,\redu} + (r_v-1)E - s_\cY^*(\pi))\\
+& = \omega_{\cY/R} \otimes \caO_{\cY}(\overline{\Delta_Y}_{,\redu} + \cY_{k,\redu} - s_\cY^*(\pi)) = \omega^{\log}_{\cY^+/S^+}.
 \end{align*} This implies that
-\begin{align*}
-v_x(\divisor_{\cX^+}(\omega)) +m
-& = v_x\big(h^*(\divisor_{\cX^+}(\omega))\big) + m \\
-& = v_x(\divisor_{\cY^+}(\omega)) +m
-\end{align*} and concludes the proof.
+$$v_x(\divisor_{\cX^+}(\omega)) +m = v_x\big(h^*(\divisor_{\cX^+}(\omega))\big) + m \\= v_x(\divisor_{\cY^+}(\omega)) +m$$ and concludes the proof.
 \end{proof}
 }
 
-\spa{We define a function $$\weight_{\cX^+,\omega}: \Sk(\cX^+) \rightarrow \R, \quad x \mapsto v_x(\divisor_{\cX^+}(\omega)) +m$$ on the skeleton associated to a log-regular model $\cX^+$ and we call it the weight function associated to $\omega$ and $\cX^+$. By Proposition \ref{prop weight function on log regular model}, if $x$ is a divisorial point of $\Sk(\cX^+)$, then the weight at $x$ associated to $\omega$ and $\cX^+$ is actually independent on the choice of the model and equal to $\weight_{\omega}(x)$. Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNicaise}, we can prove that there exists a unique function on the set of birational points of $X^\an$ $$\weight_{\omega}: X^{\text{bir}} \rightarrow \R, \text{ such that }\weight_{\omega}(x)= \weight_{\cX^+,\omega}(x)$$ for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. Moreover, after the arguments of Proposition 4.4.5 in \cite{MustataNicaise}, we obtain a function on the Berkovich space $X^\an$ by setting $$\weight_{\omega}(x) = \sup_{\cX^+} \{ \weight_{\omega}(\rho_\cX (x))\}$$ where $\cX^+$ runs through the set of all log-regular model $\cX^+$ of $X^+$. We have that \begin{equation} \label{equ:weight function formula} \weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m
+\spa{We define a function $$\weight_{\cX^+,\omega}: \Sk(\cX^+) \rightarrow \R, \quad x \mapsto v_x(\divisor_{\cX^+}(\omega)) +m$$ on the skeleton associated to a log-regular model $\cX^+$ and we call it the weight function associated to $\omega$ and $\cX^+$. By Proposition \ref{prop weight function on log regular model}, if $x$ is a divisorial point of $\Sk(\cX^+)$, then the weight at $x$ associated to $\omega$ and $\cX^+$ is actually independent on the choice of the model and equal to $\weight_{\omega}(x)$. Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNicaise}, we can prove that there exists a unique function on the set of birational points of $X^\an$ $$\weight_{\omega}: \text{Bir}(X) \rightarrow \R, \text{ such that }\weight_{\omega}(x)= \weight_{\cX^+,\omega}(x)$$ for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. Moreover, after the arguments of Proposition 4.4.5 in \cite{MustataNicaise}, we obtain a function on the Berkovich space $X^\an$ by setting $$\weight_{\omega}(x) = \sup_{\cX^+} \{ \weight_{\omega}(\rho_\cX (x))\}$$ where $\cX^+$ runs through the set of all log-regular model $\cX^+$ of $X^+$. We have that \begin{equation} \label{equ:weight function formula} \weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m
 \end{equation}for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. We call it the weight function associated to $\omega$.}
 
 \subsection{Weight function for log-regular models.}
-\spa{In case the divisor $\Delta$ is empty, the forms we considered in the previous paragraph to construct the weight functions are simply the sections of the $m$-pluricanonical line bundle $\omega_{X/K}^{\otimes m}$ on $X$, for some $m>0$. Given a $m$-pluricanonical form $\omega$ on $X$, we check that the weight function $\weight_{\omega}$ defined as in (\ref{equ:weight function formula}) coincides with the definition of the weight function associated to $\omega$ according to \cite{MustataNicaise}. This results in a generalized formula for the usual weight of $\omega$ at the birational points, in terms of their presentations in skeleta associated to log-regular models of $X$.}
+\spa{In case the divisor $\Delta$ is empty, the forms we considered in the previous paragraph to construct the weight functions are simply the sections of the $m$-pluricanonical line bundle $\omega_{X/K}^{\otimes m}$ on $X$, for some $m>0$. Given a $m$-pluricanonical form $\omega$ on $X$, we check that the weight function $\weight_{\omega}$ defined as in (\ref{equ:weight function formula}) coincides with the definition of the weight function associated to $\omega$ according to \cite{MustataNicaise}. This results in a generalized formula for the usual weight of $\omega$ at the birational points, in terms of their representations in skeleta associated to log-regular models of $X$.}
 %\spa{a log-regular model In order to compute the weight $\weight_{\omega}(x)$, we can consider a snc model $\cY$ of $X$ such that $x \in \Sk(\cY^+)$. Then according to \cite{NicaiseXu}, Section 3.2.2 we have \begin{equation} \label{equ def weight function}
 %\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1,
 %\end{equation} where we denote by $\divisor_{\cY^+}(\omega)$ the divisor on $\cY$ associated to $\omega$ viewed as a rational section of the line bundle $\omega_{\cY^+/ S^+}^{\text{log}}.$
@@ -1073,7 +1067,7 @@ Let $\cX$ be a model of $X$ over $R$ such that $\cX^+$ is log-regular over $S^+$
 In order to compute the weight of $\omega$ at $x$ according to the definition in \cite{MustataNicaise}, we can consider any snc model $\cY$ of $X$ such that $x$ is a point of $\Sk(\cY)$. Then, by \cite{NicaiseXu}, Section 3.2.2, the weight is given by $$v_x(\divisor_{\cY^+}(\omega))+m.$$
 As we noticed in Remark \ref{rem resolution via subd}, we can obtain an snc model $\cY$ adapted to $x$ by means of a log blow-up $h: \cY^+ \rightarrow \cX^+$ of $\cX^+$ (Propositions \ref{resolution log scheme kato fan} and \ref{prop morphism induced by subdivision kato fan}). Moreover, the corresponding skeleton $\Sk(\cY^+)$ is given by a subdivision of $\Sk(\cX^+)$ (Proposition \ref{kato subdivision}) and coincides with $\Sk(\cY)$. Therefore it suffices to prove that $v_x(\divisor_{\cY^+}(\omega)) =   v_x(\divisor_{\cX^+}(\omega))$ for such a model $\cY^+$.
 
-Log blow-ups are log \'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log \'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$
+Log blow-ups are log-\'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log-\'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$
 \end{proof}
 
 \subsection{Weight function on skeleta associated to \textit{fs} fibred products.} \label{paragraph weight function product}
@@ -1150,30 +1144,49 @@ This follows immediately from the equality (\ref{equ weight function product}) t
 \end{proof}
 }
 
-\section{Essential skeleton of products}
-\subsection{Essential skeleta of products of CY varieties.}
+\section{The essential skeleton of a product}
+%\subsection{Essential skeleta of products of CY varieties.}
+%
+%\spa{Let $X$ be a smooth $K$-variety with trivial canonical sheaf, i.e. a Calabi-Yau variety. The essential skeleton of $X$ is defined in \cite{MustataNicaise}, Definition 4.6.2 as $$\Sk(X):=\bigcup_{\omega} \Sk(X, \omega) \quad \subseteq X^{\text{an}}$$ where $\omega$ runs through the set of non-zero regular pluricanonical forms on $X$. Under the assumption of triviality of the canonical bundle, the essential skeleton of a Calabi-Yau variety is reduced to the Kontsevich-Soibelman skeleton of any non-zero canonical form.}
+%
+%\spa{We characterize the essential skeleton of a fibred product of Calabi-Yau varieties with semistable reduction.
+%\begin{cor}  \label{cor semistability and essential skeleta}
+%Assume that the residue field $k$ is algebraically closed. Let $X$ and $Y$ be smooth Calabi-Yau varieties over $K$ and denote by $Z$ the fibred product $X\times_K Y$. Suppose that $X$ has semistable reduction. Given $\cX^+$ a semistable log-smooth model of $X$ and $\cY^+$ a log-smooth model of $Y$, we denote by $\cZ^+$ their $fs$ fibred product. Then the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of essential skeleta $$\Sk(Z) \xrightarrow{\sim} \Sk(X) \times \Sk(Y).$$ 
+%\end{cor}
+%\begin{proof}
+%This follows immediately from Theorem \ref{thm semistability and KS skeleta}.
+%\end{proof}
+%}
 
-\spa{Let $X$ be a smooth $K$-variety with trivial canonical sheaf, i.e. a Calabi-Yau variety. The essential skeleton of $X$ is defined in \cite{MustataNicaise}, Definition 4.6.2 as $$\Sk(X):=\bigcup_{\omega} \Sk(X, \omega) \quad \subseteq X^{\text{an}}$$ where $\omega$ runs through the set of non-zero regular pluricanonical forms on $X$. Under the assumption of triviality of the canonical bundle, the essential skeleton of a Calabi-Yau variety is reduced to the Kontsevich-Soibelman skeleton of any non-zero canonical form.}
+\section{Applications}
 
-\spa{We characterize the essential skeleton of a fibred product of Calabi-Yau varieties with semistable reduction.
-\begin{cor}  \label{cor semistability and essential skeleta}
-Assume that the residue field $k$ is algebraically closed. Let $X$ and $Y$ be smooth Calabi-Yau varieties over $K$ and denote by $Z$ the fibred product $X\times_K Y$. Suppose that $X$ has semistable reduction. Given $\cX^+$ a semistable log-smooth model of $X$ and $\cY^+$ a log-smooth model of $Y$, we denote by $\cZ^+$ their $fs$ fibred product. Then the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of essential skeleta $$\Sk(Z) \xrightarrow{\sim} \Sk(X) \times \Sk(Y).$$ 
+\subsection{Title}
+\spa{Let $X$ be a connected, smooth  and proper $K$-variety and let $G$ be a group acting on $X$. Let $X^{\an}$ be the analytification of $X$. We recall that any point of $X^{\an}$ is a pair $(x,|\cdot|_x)$ with $x \in X$ and $|\cdot|_x$ an absolute value on the residue field $\kappa(x)$ extending the absolute value on $K$. For any point $x$ of $X$, an element $g$ of the group $G$ induces an isomorphism between the residue fields $\kappa(x)$ and $\kappa(g \ldotp x)$, that we still denote by $g$. Then, the action of $G$ extends to $X^\an$ in the following way $$g \ldotp (x,|\cdot|_x) = ( g \ldotp x,  |\cdot|_x \circ g^{-1}).$$ In particular the action preserves the sets of divisorial and birational points of $X$. Let $f: X \rightarrow Y=X/G$ be the quotient map of $K$-schemes, let $f^\an: X^\an \rightarrow Y^\an$ be the map of Berkovich spaces induced by functoriality and let $\tilde{f}: X^\an \rightarrow X^\an/G$ be the quotient map of topological spaces.
+\begin{prop} (\cite{Berkovich}, Corollary 5)
+Under the above notations, there is a canonical homeomorphism between $X^\an/G $ and $Y^\an$ such that $\tilde{f}$ and $f^\an$ are identified.
+\end{prop}
+\begin{lemma} \label{lemma G invariant forms and weight function}
+Let $\omega$ be a $m$-pluricanonical form on $X$. If $\omega$ is $G$-invariant, then the weight function associated to $\omega$ on the set of birational points factors through the quotient by the action of $G$. 
+\end{lemma}
+\begin{proof}
+Let $x$ be a birational point of $X$ and $g$ an element of $G$. There exist snc models $\cX$ and $\cX'$ over $R$ such that $x \in \Sk(\cX)$ and $g \ldotp x \in \Sk(\cX')$. By replacing them by an snc model $\cY$ that dominates both $\cX$ and $\cX'$, we can assume that both points lies in $\Sk(\cY)$. The weights of $\omega$ at $x$ and $g \ldotp x$ can be computed using the formula \ref{equ:weight function formula}, so \begin{align*} \weight_{\omega}(g \ldotp x)& = v_{g \ldotp x}(\divisor_{\cY^+}(\omega)) + m  = v_{x}((g^{-1})^*\divisor_{\cY^+}(\omega)) + m  \\ & = v_{x}(\divisor_{\cY^+}(\omega)) + m = \weight_{\omega}(x) \end{align*} as $\omega$ is a $G$-invariant form. Thus we see that birational points in the same $G$-orbit have the same weight with respect to $\omega$. 
+\end{proof}
+\begin{cor}
+If $\omega$ is a $G$-invariant pluricanonical form on $X$, then the Kontsevich-Soibelman skeleton $\Sk(X,\omega)$ is stable under the action of $G$.
 \end{cor}
 \begin{proof}
-This follows immediately from Theorem \ref{thm semistability and KS skeleta}.
+This follows immediately from Lemma \ref{lemma G invariant forms and weight function}.
 \end{proof}
 }
 
-\section{Applications}
-%\subsection{The analytification of the \textit{n}-th symmetric product.} \label{sect an of symm product}
 \subsection{Analytification of the quotient.}
 \spa{Let $X$ be a smooth $K$-variety and let $S_n$ be $n$-th symmetric group. We describe an action of $S_n$ on the $n$-fold fibred product $X^n$. Any point $x$ of $X^n$ is characterized as a tuple $x=(x_1,\ldots,x_n, s, \fp)$ where $s$ is the image of any of $x_i$'s and $\fp$ is a prime ideal of the tensor algebra of residue fields $\kappa(x_1) \otimes \ldots \otimes \kappa(x_n)$. Given  a permutation $\sigma$ of $n$ elements, it induces an isomorphism of tensor algebras  $k(x_1) \otimes \ldots \otimes k(x_n) \simeq  k(x_{\sigma(1)}) \otimes \ldots \otimes k(x_{\sigma(n)})$ still denoted by $\sigma$. Then the action of $S^n$ on $X^n$ is given by $$\sigma \ldotp x = (x_{\sigma(1)}, \ldots, x_{\sigma(n)}, s, \sigma(\fp)).$$
 
 Let $(X^n)^{\an}$ be the analytification of $X^n$. We recall that any point of $(X^n)^{\an}$ is a pair $(x,|\cdot|_x)$ with $x \in X^n$ and $|\cdot|_x$ an absolute value on the residue field $\kappa(x)$ extending the absolute value on $K$. The action of $S_n$ extends to $(X^n)^\an$ by $$\sigma \ldotp (x,|\cdot|_x) = (x_{\sigma(1)}, \ldots, x_{\sigma(n)}, s, \sigma(\fp), |\cdot|_x \circ \sigma^{-1}).$$}
 
-\spa{By functoriality of the Berkovich analytification, the morphism of schemes $f: X^n \rightarrow Y=X^n/S_n$ to the $n$-th symmetric product of $X$ induces a surjective morphism of Berkovich spaces $f^\an: (X^n)^\an \rightarrow Y^\an$ and the image of a point $(x,|\cdot|_x)$ is $$f^\an(x,|\cdot|_x)= ([x], |\cdot|_{[x]}),$$ with $[x]=([(x_i)],s,[\fp]) \in X^n/S_n$ and $|\cdot|_{[x]}$ an absolute value on $k(x)^{S_n}$, the field of $S_n$-invariant elements of $k(x)$. Two points $(x,|\cdot|_{x})$ and $(x',|\cdot|_{x'})$ have the same image if and only if there exists $\sigma \in S_n$ such that $\sigma \ldotp x = x'$ and $|\cdot|_x \circ \sigma^{-1}= |\cdot|_{x'}$.
+\spa{By functoriality of the Berkovich analytification, the morphism of schemes $f: X^n \rightarrow Y=X^n/S_n$ to the $n$-th symmetric product of $X$ induces a surjective morphism of Berkovich spaces $f^\an: (X^n)^\an \rightarrow Y^\an$ and the image of a point $(x,|\cdot|_x)$ is $$f^\an(x,|\cdot|_x)= ([x], |\cdot|_{[x]}),$$ with $[x]=([(x_i)],s,[\fp]) \in X^n/S_n$ and $|\cdot|_{[x]}$ is an absolute value on $k(x)^{S_n}$, the field of $S_n$-invariant elements of $k(x)$. Two points $(x,|\cdot|_{x})$ and $(x',|\cdot|_{x'})$ have the same image if and only if there exists $\sigma \in S_n$ such that $\sigma \ldotp x = x'$ and $|\cdot|_x \circ \sigma^{-1}= |\cdot|_{x'}$.
 
-This implies that $f^\an$ factors uniquely through the quotient map $\pi: (X^n)^\an \rightarrow (X^n)^\an/S_n$. So we may draw the diagram below \begin{center}
+This implies that $f^\an$ factors uniquely through the quotient map $\pi: (X^n)^\an \rightarrow (X^n)^\an/S_n$. So we can draw the diagram below \begin{center}
 $\begin{gathered}
 \xymatrix{ (X^n)^\an \ar[rd]^-{\pi} \ar@{->>}[r]^-{f^\an} & Y^\an & \\  & (X^n)^\an/S_n \ar[u]_{\sim} \ar[r]^{\sim}& (X^\an)^n/S_n \\
 }
@@ -1204,7 +1217,6 @@ K[\cY] \ar[u] \ar[rr]& & K(\cY)=K(Y)=K(X^n)^{S_n} \ar[u]^{\text{finite} \deg} \\
 }$
 \end{center} As $K(X^n)$ is finite field extension of $K(\cY)$ and $K[\cX]$ the integral closure of $K[\cY]$ in $K(X^n)$, then $K(X^n)$ is the fraction field of $K[\cX]$. Thus, $K(\cX) = \text{Frac}(K[\cX])=K(X^n)$ and in particular we conclude that $[K(X^n):K(\cX_K)]=1.$
 }
-
 \begin{rem} \label{rem divi repre quotient}
 This procedure of normalization illustrates a way to start with a regular snc $R$-model $\cY$ of $Y$ adapted to a point $y \in \text{Div}(Y)$ and construct an $R$-model $\cX$ of $X^n$ that, by normality, is regular at generic points of the special fibre $\cX_k$. 
 \end{rem}
@@ -1229,7 +1241,7 @@ and we associate to $F_i$'s their corresponding divisorial valuations $x_i=(\cX,
 
 We compare the values at $y$ and $x_i$ of weight functions attached to $\omega$:
 $$\weight_{\omega}(x_i)=v_{x_i}(\divisor_{\cX^+}(\omega)) +1 $$
-$$\weight_{\omega}(y)=v_{y}(\divisor_{\cY^+}(\omega)) +1. $$ We recall that for log \'{e}tale morphisms the sheaves of logarithmic differentials are isomorphic (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log \'{e}tale morphism of divisorial log structures, to conclude that the weight function values coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
+$$\weight_{\omega}(y)=v_{y}(\divisor_{\cY^+}(\omega)) +1. $$ We recall that for log-\'{e}tale morphisms the sheaves of logarithmic differentials are stable under pull-back (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log-\'{e}tale morphism of divisorial log structures, to conclude that the weights coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
 }
 
 \spa{We denote by $\xi_{F_i}$ the generic point of $F_i$ and by $\xi_E$ the generic point of $E$. The divisorial log structures on $\cX^+$ and $\cY^+$ have charts $\N$ at $\xi_{F_i}$ and $\xi_E$. In the \'{e}tale topology, the normalization morphism $\cX^+ \rightarrow \cY^+$ admits a chart induced by $t:\N \rightarrow \N$ where $1 \mapsto m$ for some positive integer $m$:
@@ -1240,13 +1252,13 @@ $\xymatrix{
 }$
 \end{center} Firstly, by the universal property of the fibre product, we have a morphism $$\Spec \caO_{\cX, \xi_{F_i}} \rightarrow \Spec \caO_{\cY, \xi_{E}} \times_{\Spec \Z[\N] } \Spec \Z[\N]$$ and it corresponds to $$ \caO_{\cY, \xi_{E}}  \otimes_{\Z[\N]} \Z[\N] \rightarrow\caO_{\cX, \xi_{F_i}}.$$ This is a morphism of finite type with finite fibres between regular rings and by \cite{Liu2002}, Lemma 4.3.20 and \cite{Nowak} it is flat and unramified, hence \'{e}tale. One of the two conditions in Kato's criterion for log \'{e}taleness is then fulfilled. Secondly, the chart $t:\N \mapsto \N$ induces a group homomorphism $t^{\text{gp}}: \Z \mapsto \Z$; in particular, it is injective and it has finite cokernel. Then $t$ satisfies the second condition of Kato's criterion for log \'{e}taleness. Therefore we conclude that $\weight_\omega(y)=\weight_\omega(x_i)$.}
 
-
 \begin{rem} \label{rem construction div points}
-Given a divisorial point $y$, this construction provides a divisorial point $x \in (X^n)^\an$ such that $f^\an(x)=y$ and with the property that they have the same weight function value with respect to an $S_n$-invariant canonical form $\omega$.
+Given a divisorial point $y$, this construction provides a divisorial point $x \in (X^n)^\an$ such that $f^\an(x)=y$ and with the property that they have the same weight with respect to an $S_n$-invariant canonical form $\omega$.
 \end{rem}
 
 \subsection{Kontsevich-Soibelman skeleta of the quotient.}
-\spa{Let $\omega_X$ be a canonical form on $X$ and $\omega= \bigwedge_{1\leqslant j \leqslant n} \pr_j^*\omega_X$ the induced $S_n$-invariant canonical form on $X^n$ that passes to the quotient $Y$. We claim that the minimal values of the weight functions $\weight_\omega$ on $X^n$ and $Y$ coincide, i.e. $\weight_\omega(X^n)= \weight_\omega(Y)$ according to the notation of \cite{MustataNicaise}. The key arguments to prove the claim are:\begin{enumerate}
+\spa{Let $\omega_X$ be a canonical form on $X$ and $\omega= \bigwedge_{1\leqslant j \leqslant n} \pr_j^*\omega_X$ the induced $S_n$-invariant canonical form on $X^n$ that passes to the quotient $Y$. We claim that the minimal values of the weight functions $\weight_\omega$ on $X^n$ and $Y$ coincide, denoted by $\weight_\omega(X^n)$ and $ \weight_\omega(Y)$ respectively. 
+The key arguments to prove the claim are:\begin{enumerate}
 \item \label{argument 1}the Kontsevich-Soibelman skeleton $\Sk(X^n,\omega)$ of the $n$-fold fibred product is invariant under the $S_n$-action, as a consequence of Theorem \ref{thm semistability and KS skeleta};
 \item \label{argument 2} given a divisorial point $y$, we may construct a divisorial point $x \in (X^n)^\an$ such that $f^\an(x)=y$ and $\weight_{\omega}(y)= \weight_{\omega}(x)$, as showed in Remark \ref{rem construction div points}.
 \end{enumerate}
@@ -1322,6 +1334,5 @@ In \cite{MustataNicaise}, Proposition 4.6.3, Mustata and Nicaise proved that the
 %In particular, in the case of a $\text{K}3$ surface $S$ over $K$, the GIT quotient they form turns out to be a minimial dlt model of the Hilbert scheme of $n$ points on $S$. We recall that, by \cite{NicaiseXu}, the essential skeleton of a variety can be identified with the dual complex of any minimal dlt model of the variety. Hence, it follows that the GIT quotient they construct provides a description of the essential skeleton of $\Hilb^n(X)$. Finally, in accord with our result, they also conclude that the dual complex in question is the $n$-th symmetric product of the essential skeleton of $S$.
 %\end{rem}
 }
-
-\printbibliography
+%\printbibliography
 \end{document}

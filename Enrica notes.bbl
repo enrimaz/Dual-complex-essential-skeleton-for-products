@@ -72,112 +72,6 @@
   \field{year}{2015}
 \endentry
 
-\entry{AbramovichCaporasoPayne}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Abramovich}{A.}%
-     {Dan}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Caporaso}{C.}%
-     {Lucia}{L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Payne}{P.}%
-     {Sam}{S.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{ADCLPS1}
-  \strng{fullhash}{ADCLPS1}
-  \field{labelalpha}{ACP15}
-  \field{sortinit}{A}
-  \verb{doi}
-  \verb 10.24033/asens.2258
-  \endverb
-  \field{issn}{0012-9593}
-  \field{number}{4}
-  \field{pages}{765\bibrangedash 809}
-  \field{title}{The tropicalization of the moduli space of curves}
-  \verb{url}
-  \verb http://dx.doi.org/10.24033/asens.2258
-  \endverb
-  \field{volume}{48}
-  \verb{file}
-  \verb :AbramovichCaporasoPayne - The tropicalization of the moduli space of c
-  \verb urves.pdf:PDF
-  \endverb
-  \field{journaltitle}{Ann. Sci. \'Ec. Norm. Sup\'er. (4)}
-  \field{year}{2015}
-\endentry
-
-\entry{BakerRabinoff}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Baker}{B.}%
-     {Matthew}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Rabinoff}{R.}%
-     {Joseph}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BMRJ1}
-  \strng{fullhash}{BMRJ1}
-  \field{labelalpha}{BR15}
-  \field{sortinit}{B}
-  \verb{doi}
-  \verb 10.1093/imrn/rnu168
-  \endverb
-  \field{issn}{1073-7928}
-  \field{number}{16}
-  \field{pages}{7436\bibrangedash 7472}
-  \field{title}{The skeleton of the {J}acobian, the {J}acobian of the skeleton,
-  and lifting meromorphic functions from tropical to algebraic curves}
-  \verb{url}
-  \verb http://dx.doi.org/10.1093/imrn/rnu168
-  \endverb
-  \verb{file}
-  \verb :BakerRabinoff - The skeleton of the Jacobian, the Jacobian of the skel
-  \verb eton, and lifting meromorphic functions from tropical to algebraic curv
-  \verb es.pdf:PDF
-  \endverb
-  \field{journaltitle}{Int. Math. Res. Not. IMRN}
-  \field{year}{2015}
-\endentry
-
-\entry{Berkovich1990}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Berkovich}{B.}%
-     {Vladimir~G.}{V.~G.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {American Mathematical Society, Providence, RI}%
-  }
-  \strng{namehash}{BVG1}
-  \strng{fullhash}{BVG1}
-  \field{labelalpha}{Ber90}
-  \field{sortinit}{B}
-  \field{isbn}{0-8218-1534-2}
-  \field{pages}{x+169}
-  \field{series}{Mathematical Surveys and Monographs}
-  \field{title}{Spectral theory and analytic geometry over non-{A}rchimedean
-  fields}
-  \field{volume}{33}
-  \verb{file}
-  \verb :Berkovich1990 - Spectral theory and analytic geometry over non-Archime
-  \verb dean fields.djvu:Djvu
-  \endverb
-  \field{year}{1990}
-\endentry
-
 \entry{Berkovich1993}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -212,6 +106,31 @@
   \field{year}{1993}
 \endentry
 
+\entry{Berkovich}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Berkovich}{B.}%
+     {Vladimir~G.}{V.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BVG1}
+  \strng{fullhash}{BVG1}
+  \field{labelalpha}{Ber95}
+  \field{sortinit}{B}
+  \field{issn}{0764-4442}
+  \field{number}{9}
+  \field{pages}{1127\bibrangedash 1132}
+  \field{title}{The automorphism group of the {D}rinfel\cprime d half-plane}
+  \field{volume}{321}
+  \verb{file}
+  \verb :Berkovich - The automorphism group of the Drinfel_cprime d half-plane.
+  \verb pdf:PDF
+  \endverb
+  \field{journaltitle}{C. R. Acad. Sci. Paris S\'er. I Math.}
+  \field{year}{1995}
+\endentry
+
 \entry{Bultot2015}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -237,43 +156,6 @@
   \field{eprintclass}{math.AG}
   \field{month}{05}
   \field{year}{2015}
-\endentry
-
-\entry{deFernexKollarXu2012}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {{de Fernex}}{d.}%
-     {T.}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{Koll{\'a}r}}{K.}%
-     {J.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{Xu}}{X.}%
-     {C.}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Mathematics - Algebraic Geometry}
-  \strng{namehash}{dTKJXC1}
-  \strng{fullhash}{dTKJXC1}
-  \field{labelalpha}{dKX12}
-  \field{sortinit}{D}
-  \verb{eprint}
-  \verb 1212.1675
-  \endverb
-  \field{title}{The dual complex of singularities}
-  \verb{file}
-  \verb :deFernexKollarXu2012 - The dual complex of singularities.pdf:PDF
-  \endverb
-  \field{journaltitle}{ArXiv e-prints}
-  \field{eprinttype}{arXiv}
-  \field{eprintclass}{math.AG}
-  \field{month}{12}
-  \field{year}{2012}
 \endentry
 
 \entry{Fogarty}{article}{}
@@ -336,86 +218,6 @@
   \field{journaltitle}{ArXiv Mathematics e-prints}
   \field{month}{09}
   \field{year}{2004}
-\endentry
-
-\entry{GulbrandsenHalleHulek2016}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {{Gulbrandsen}}{G.}%
-     {M.~G.}{M.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{Halle}}{H.}%
-     {L.~H.}{L.~H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{Hulek}}{H.}%
-     {K.}{K.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Mathematics - Algebraic Geometry, 14D06 (Primary), 14C05, 14L24, 14D23
-  (Secondary)}
-  \strng{namehash}{GMGHLHHK1}
-  \strng{fullhash}{GMGHLHHK1}
-  \field{labelalpha}{GHH16}
-  \field{sortinit}{G}
-  \verb{eprint}
-  \verb 1604.00215
-  \endverb
-  \field{title}{A GIT construction of degenerations of Hilbert schemes of
-  points}
-  \verb{file}
-  \verb :GulbrandsenHalleHulek2016 - A GIT construction of degenerations of Hil
-  \verb bert schemes of points.pdf:PDF
-  \endverb
-  \field{journaltitle}{ArXiv e-prints}
-  \field{eprinttype}{arXiv}
-  \field{eprintclass}{math.AG}
-  \field{month}{04}
-  \field{year}{2016}
-\endentry
-
-\entry{GulbrandsenHalleHulek}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Gulbrandsen}{G.}%
-     {Martin~G.}{M.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Halle}{H.}%
-     {Lars~H.}{L.~H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hulek}{H.}%
-     {Klaus}{K.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{GMGHLHHK2}
-  \strng{fullhash}{GMGHLHHK2}
-  \field{labelalpha}{GHH15}
-  \field{sortinit}{G}
-  \verb{doi}
-  \verb 10.1007/s00229-015-0744-8
-  \endverb
-  \field{issn}{0025-2611}
-  \field{number}{3-4}
-  \field{pages}{283\bibrangedash 301}
-  \field{title}{A relative {H}ilbert-{M}umford criterion}
-  \verb{url}
-  \verb http://dx.doi.org/10.1007/s00229-015-0744-8
-  \endverb
-  \field{volume}{148}
-  \verb{file}
-  \verb :GulbrandsenHalleHulek - A relative Hilbert-Mumford criterion.pdf:PDF
-  \endverb
-  \field{journaltitle}{Manuscripta Math.}
-  \field{year}{2015}
 \endentry
 
 \entry{Kato1989}{incollection}{}
@@ -510,37 +312,6 @@
   \verb :KempfKnudsenMumfordEtAl1973 - Toroidal embeddings. I.djvu:Djvu
   \endverb
   \field{year}{1973}
-\endentry
-
-\entry{Li}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Li}{L.}%
-     {Jun}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Lehigh University}%
-  }
-  \strng{namehash}{LJ1}
-  \strng{fullhash}{LJ1}
-  \field{labelalpha}{Li01}
-  \field{sortinit}{L}
-  \verb{doi}
-  \verb 10.4310/jdg/1090348132
-  \endverb
-  \field{number}{3}
-  \field{pages}{509\bibrangedash 578}
-  \field{title}{Stable Morphisms to Singular Schemes and Relative Stable
-  Morphisms}
-  \verb{url}
-  \verb http://dx.doi.org/10.4310/jdg/1090348132
-  \endverb
-  \field{volume}{57}
-  \field{journaltitle}{J. Differential Geom.}
-  \field{month}{03}
-  \field{year}{2001}
 \endentry
 
 \entry{Liu2002}{book}{}
