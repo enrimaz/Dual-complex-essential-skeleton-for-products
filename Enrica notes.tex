@@ -480,6 +480,8 @@ If $\cX^+$ is a log-regular log scheme over $S^+$, then the locus where the log 
 %$$\mathcal{M}_{\cX,x}\setminus \mathcal{O}_{\cX,x}^{\times}.$$
 }
 
+\spa{Let $(X,\Delta)$ be a pair where $X$ is a proper $K$-scheme, $\Delta$ is a divisor and $X^+=(X,\Delta)$ is a log-regular log scheme over $K$. A log-regular log scheme over $S^+$ is a model for $(X,\Delta)$ over $S^+$ if $\cX$ is a model of $X$ over $R$, the closure $\overline{\Delta}$ of $\Delta$ in $\cX$ has non-empty intersection with $\cX_k$, and $D_\cX = \overline{\Delta} + \cX_k$. }
+
 \spa{We say that a log-regular log scheme $\cX^+$ over $S^+$ is semistable if the divisor $D_\cX$ is reduced. We say that a proper $K$-variety X has semistable reduction if it admits an $R$-model $\cX$ such that $\cX^+$ is log-smooth over $S^+$, with reduced special fiber; such a model is called a semistable model of $X$. This is a weaker notion than requiring the existence of an snc-model with reduced special fibre.}
 
 \spa{We denote by $(\cdot)^{\an}$ the analytification functor from the category of $K$-schemes of finite type to Berkovich's category of $K$-analytic spaces. For every $K$-scheme of finite type $X$, as a set, $X^{\an}$ consists of the pairs $x=(\xi_x,|\cdot|_x)$ where $\xi_x$ is a point of $X$ and $|\cdot|_x$ is an absolute value on the residue field $\kappa(\xi_x)$ of $X$ at $\xi_x$ extending the absolute value $|\cdot|_K$ on $K$. We endow $X^{\an}$ with the Berkovich topology, i.e. the weakest one such that \begin{itemize}
@@ -1017,30 +1019,55 @@ Given a pair of points in $\Sk(\cX^+) \times \Sk(\cY^+)$, we know by surjectivit
 %Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Assume that $\cX^+$ is semistable and the residue field $k$ is algebraically closed. Then there exists an isomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+).$$ 
 %\end{prop}
 
-\section{The weight function on a log-regular log scheme} \label{sect wt log}
-\subsection{Weight function on log-regular skeleta.}
-\spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-smooth model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in \widehat{\cX_{\eta}}$ and for any divisor $D$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that, locally at $\redu_{\cX}(x)$, we have $D= \divisor(f)$.}
+\section{The weight function for pairs} \label{sect wt log}
 
-\spa{Let $\omega$ be a canonical form on $X$ and let $x$ be a divisorial point in $X^{\text{an}}$. In order to compute the weight $\weight_{\omega}(x)$, we can consider a snc model $\cY$ of $X$ such that $x \in \Sk(\cY^+)$. Then according to \cite{NicaiseXu}, Section 3.2.2 we have \begin{equation} \label{equ def weight function}
-\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1,
-\end{equation} where we denote by $\divisor_{\cY^+}(\omega)$ the divisor on $\cY$ associated to $\omega$ viewed as a rational section of the line bundle $\omega_{\cY^+/ S^+}^{\text{log}}.$
-The following proposition shows that this formula can be applied, more generally, to log-smooth models.}
+Given a connected, smooth and proper $K$-variety $X$, in \cite{MustataNicaise} Musta\c{t}\u{a} and Nicaise define the \textit{weight function} $\weight_{\omega}$ on $X^\an$ associated to a pluricanonical form $\omega$ on $X$. Following the arguments of Section 4 in \cite{MustataNicaise}, we will extend the construction of weight functions to pairs $(X,\Delta)$ with log-regular log scheme $X^+=(X,\Delta)$ induced by $\Delta$, and to sections of the logarithmic pluricanonical line bundle $(\omega^{\log}_{X^+/K})^{\otimes m}$ on $X^+$, for some $m>0$.
+%Its value at points of the skeleton of an snc model of $X$ can be computed by means of an explicit and more manageable formula using logarithmic differential forms. Moreover, in the following we prove that the formula expressed in the logarithmic language can be also generalised to the skeleton of a log-regular model.
 
-\begin{prop} \label{prop weight function log formula}
-Let $\cX^+$ be a log-smooth log scheme over $S^+$ such that $x$ lies in $\Sk(\cX^+)$. Then the weight of $\omega$ at $x$ is given by $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +1.$$
+\subsection{Weight function associated to a logarithmic pluricanonical form.}
+\spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-regular model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in \widehat{\cX_{\eta}}$ and for any divisor $D$ on $\cX^+$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that $D= \divisor(f)$ locally at $\redu_{\cX}(x)$.}
+
+\spa{Let $(X,\Delta)$ be a pair with log-regular log scheme $X^+=(X,\Delta)$ over $K$. Let $\omega$ be a logarithmic $m$-pluricanonical form on $X^+$. For each log-regular model $\cX^+$ of $X^+$, the form $\omega$ defines a divisor $\divisor_{\cX^+}(\omega)$ on $\cX^+$. For any point $x$ in $\Sk(\cX^+)$ that is associated to an irreducible component of $\cX_k$, the value \begin{equation} \label{equ:weight value for divisorial point}
+v_x(\divisor_{\cX^+}(\omega)) +m
+\end{equation} does not depend on the choice of the model $\cX^+$; indeed, this follows from a similar argument to \cite{MustataNicaise}, Proposition 4.2.4. We denote this value by $\weight_{\omega}(x)$ and call it the weight of $x$ with respect to $\omega$. Since any snc model $\cX$ of $X$ can be turned by resolution of singularities into a log-regular model of $X^+$, we can compute the weight of any divisorial point of $X^\an$. Thus, we obtain a function $$\weight_{\omega}: X^{\divisor} \rightarrow \Q, \quad x \mapsto \weight_{\omega}(x)$$ on the set of divisorial points, called the weight function associated to $\omega$. We prove that the formula \ref{equ:weight value for divisorial point} expresses the weight of any divisorial point in $\Sk(\cX^+)$.
+
+\begin{prop} \label{prop weight function on log regular model}
+If $x$ is a divisorial point in $\Sk(\cX^+)$, then $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m.$$
 \end{prop}
 \begin{proof}
-As we noticed in Remark \ref{rem resolution via subd}, we can obtain an snc model $\cY$ adapted to $x$ by means of a log blow-up $h: \cY^+ \rightarrow \cX^+$ of $\cX^+$ (Propositions \ref{resolution log scheme kato fan} and \ref{prop morphism induced by subdivision kato fan}). Moreover, the corresponding skeleton $\Sk(\cY^+)$ is given by a subdivision of $\Sk(\cX^+)$ (Proposition \ref{kato subdivision}).
 
-Log blow-ups are log \'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log \'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY^+)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$ We conclude that $\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1 =   v_x(\divisor_{\cX^+}(\omega)) +1$.
+\end{proof}
+}
+
+\spa{We define a function $$\weight_{\cX^+,\omega}: \Sk(\cX^+) \rightarrow \R, \quad x \mapsto v_x(\divisor_{\cX^+}(\omega)) +m$$ on the skeleton associated to a log-regular model $\cX^+$ and we call it the weight function associated to $\omega$ and $\cX^+$. By Proposition \ref{prop weight function on log regular model}, if $x$ is a divisorial point of $\Sk(\cX^+)$, then the weight at $x$ associated to $\omega$ and $\cX^+$ is actually independent on the choice of the model and equal to $\weight_{\omega}(x)$. Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNicaise}, we can prove that there exists a unique function on the set of birational points of $X^\an$ $$\weight_{\omega}: X^{\text{bir}} \rightarrow \R, \text{ such that }\weight_{\omega}(x)= \weight_{\cX^+,\omega}(x)$$ for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. Moreover, after the arguments of Proposition 4.4.5 in \cite{MustataNicaise}, we obtain a function on the Berkovich space $X^\an$ by setting $$\weight_{\omega}(x) = \sup_{\cX^+} \{ \weight_{\omega}(\rho_\cX (x))\}$$ where $\cX^+$ runs through the set of all log-regular model $\cX^+$ of $X^+$. We have that \begin{equation} \label{equ:weight function formula} \weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m
+\end{equation}for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$.}
+
+\subsection{Weight function for log-regular models.}
+\spa{In case the divisor $\Delta$ is empty, the forms we considered in the previous paragraph to construct the weight functions are simply the sections of the $m$-pluricanonical line bundle $\omega_{X/K}^{\otimes m}$ on $X$. Given a $m$-pluricanonical form $\omega$ on $X$, we check that the weight function $\weight_{\omega}$ defined as in (\ref{equ:weight function formula}) coincides with the definition of the weight function associated to $\omega$ according to \cite{MustataNicaise}. This results in a generalized formula for the usual weight of $\omega$ at the birational points, in terms of their presentations in skeleta associated to log-regular models of $X$.}
+%\spa{a log-regular model In order to compute the weight $\weight_{\omega}(x)$, we can consider a snc model $\cY$ of $X$ such that $x \in \Sk(\cY^+)$. Then according to \cite{NicaiseXu}, Section 3.2.2 we have \begin{equation} \label{equ def weight function}
+%\weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1,
+%\end{equation} where we denote by $\divisor_{\cY^+}(\omega)$ the divisor on $\cY$ associated to $\omega$ viewed as a rational section of the line bundle $\omega_{\cY^+/ S^+}^{\text{log}}.$
+%The following proposition shows that this formula can be applied, more generally, to log-regular models.}
+
+%Let and let $x$ be a divisorial point in $X^{\text{an}}$. In order to compute the weight $\weight_{\omega}(x)$, we can consider a snc model $\cY$ of $X$ such that $x \in \Sk(\cY^+)$. Then according to \cite{NicaiseXu}, Section 3.2.2 we have \begin{equation} \label{equ def weight function} \weight_{\omega}(x)=v_x(\divisor_{\cY^+}(\omega)) +1,\end{equation} where we denote by $\divisor_{\cY^+}(\omega)$ the divisor on $\cY$ associated to $\omega$ viewed as a rational section of the line bundle $\omega_{\cY^+/ S^+}^{\text{log}}.$
+%The following proposition shows that this formula can be applied, more generally, to log-regular models.}
+
+\begin{prop} \label{prop weight function log formula}
+Let $\cX$ be a model of $X$ over $R$ such that $\cX^+$ is log-regular over $S^+$. If $x$ is a point of $\Sk(\cX^+)$, then the weight of $\omega$ at $x$ as in \cite{MustataNicaise} is given by $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m.$$
+\end{prop}
+\begin{proof}
+In order to compute the weight of $\omega$ at $x$ according to the definition in \cite{MustataNicaise}, we can consider any snc model $\cY$ of $X$ such that $x$ is a point of $\Sk(\cY)$. Then, by \cite{NicaiseXu}, Section 3.2.2, the weight is given by $$v_x(\divisor_{\cY^+}(\omega))+m.$$
+As we noticed in Remark \ref{rem resolution via subd}, we can obtain an snc model $\cY$ adapted to $x$ by means of a log blow-up $h: \cY^+ \rightarrow \cX^+$ of $\cX^+$ (Propositions \ref{resolution log scheme kato fan} and \ref{prop morphism induced by subdivision kato fan}). Moreover, the corresponding skeleton $\Sk(\cY^+)$ is given by a subdivision of $\Sk(\cX^+)$ (Proposition \ref{kato subdivision}) and coincides with $\Sk(\cY)$. Therefore it suffices to prove that $v_x(\divisor_{\cY^+}(\omega)) =   v_x(\divisor_{\cX^+}(\omega))$ for such a model $\cY^+$.
+
+Log blow-ups are log \'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log \'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY^+)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$
 \end{proof}
 
 \subsection{Weight function on skeleta associated to \textit{fs} fibred products.} \label{paragraph weight function product}
-\spa{Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. By the universal property of the fibred products, it results that $\cZ_K \simeq \cX_K \times_K \cY_K$. Therefore, given $\omega_{\cX_K}$ and $\omega_{\cY_K}$ canonical forms on $\cX_K$ and $\cY_K$ respectively, the form $$\varpi=\pr_{\cX}^* \,\omega_{\cX_K} \otimes \pr_{\cY}^* \,\omega_{\cY_K}$$ is a canonical form on $\cZ_K$. Viewing these forms as rational sections of log canonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\divisor_{\cZ^+}( \pr_{\cX}^* \,\omega_{\cX_K} \otimes \pr_{\cY}^* \,\omega_{\cY_K})$ according to (\ref{equ log can bundles}).}
+\spa{Let $\cX^+$ and $\cY^+$ be log-smooth models over $S^+$ of $X^+=(X,\Delta_X)$ and $Y^+=(Y,\Delta_Y)$ respectively. Then, the $fs$ fibred product $\cZ^+=\cX^+  \times^{\text{fs}}_{S^+} \cY^+$ is a log-regular model of $Z^+:=X^+ \times^{\text{fs}}_K Y^+$. Therefore, given $\omega_{X^+}$ and $\omega_{Y^+}$ logarithmic pluricanonical forms on $X^+$ and $Y^+$ respectively, the form $$\varpi=\pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+}$$ is a logarithmic pluricanonical form on $Z^+$. Viewing these forms as rational sections of log canonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\divisor_{\cZ^+}( \pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+})$ according to (\ref{equ log can bundles}).}
 
-\spa{Let $z$ be a point of $F_{\cZ}$; as before, we denote by $x$ and $y$ the images of $z$ under the local isomorphism $F_{\cZ} \rightarrow F_{\cX} \times F_{\cY}$. Any morphism $\varepsilon \in \sigma_z$ defines a point $v_{z,\varepsilon}$ in $\Sk(\cZ^+)$. For the sake of convenience, we simply denote the valuation by the corresponding morphism and we denote $\alpha= \pr_{\cX}(\varepsilon)$ and $\beta=\pr_{\cY}(\varepsilon)$. We aim to relate the valuation $v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)$ to the values $$v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K}\big)) \text{ , } v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big).$$}
+\spa{Let $z$ be a point of $F_{\cZ}$; as before, we denote by $x$ and $y$ the images of $z$ under the local isomorphism $F_{\cZ} \rightarrow F_{\cX} \times F_{\cY}$. Any morphism $\varepsilon \in \sigma_z$ defines a point $v_{z,\varepsilon}$ in $\Sk(\cZ^+)$. For the sake of convenience, we simply denote the valuation by the corresponding morphism and we denote $\alpha= \pr_{\cX}(\varepsilon)$ and $\beta=\pr_{\cY}(\varepsilon)$. We aim to relate the valuation $v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)$ to the values $$v_{\alpha}\big(\divisor_{\cX^+}(\omega_{X^+}\big)) \text{ , } v_{\beta}\big(\divisor_{\cY^+}(\omega_{Y^+})\big).$$}
 
-\spa{Let $f_x \in \caO_{\cX,x}$ be a local equation of $\divisor_{\cX^+}(\omega_{\cX_K})$ around $x$. In order to evaluate $v_{x,\alpha}$ on $f_x$, we consider an admissible expansion of $f_x$ as in (\ref{eq-adm}) $$f_x=\sum_{\gamma\in \caC_{\cX,x}}c_\gamma \gamma.$$ Furthermore, this expansion induces also an expansion of $\pr_{\cX}^*(f_x)$ by  $$\pr_{\cX}^*(f_x)=\sum_{\gamma\in \caC_{\cX,x} }\pr^*_{\cX}(c_\gamma) \gamma$$ as formal power series in $\widehat{\caO}_{\cZ,z}$, since the morphism of characteristic sheaves $\mathcal{C}_{\cX,x} \hookrightarrow \mathcal{C}_{\cZ,z}$ is injective. Following the same procedure for a local equation $f_y \in \caO_{\cY,y}$ of $\divisor_{\cY^+}(\omega_{\cY_K})$ around $y$, we get an expansion of $f_y$ that extends to $\pr_{\cY}^*(f_y)$: 
+\spa{Let $f_x \in \caO_{\cX,x}$ be a local equation of $\divisor_{\cX^+}(\omega_{X^+})$ around $x$. In order to evaluate $v_{x,\alpha}$ on $f_x$, we consider an admissible expansion of $f_x$ as in (\ref{eq-adm}) $$f_x=\sum_{\gamma\in \caC_{\cX,x}}c_\gamma \gamma.$$ Furthermore, this expansion induces also an expansion of $\pr_{\cX}^*(f_x)$ by  $$\pr_{\cX}^*(f_x)=\sum_{\gamma\in \caC_{\cX,x} }\pr^*_{\cX}(c_\gamma) \gamma$$ as formal power series in $\widehat{\caO}_{\cZ,z}$, since the morphism of characteristic sheaves $\mathcal{C}_{\cX,x} \hookrightarrow \mathcal{C}_{\cZ,z}$ is injective. Following the same procedure for a local equation $f_y \in \caO_{\cY,y}$ of $\divisor_{\cY^+}(\omega_{Y^+})$ around $y$, we get an expansion of $f_y$ that extends to $\pr_{\cY}^*(f_y)$: 
 $$f_y=\sum_{\delta\in \caC_{\cY,y}}d_\delta \delta.$$}
 
 \spa{A local equation of $\varpi$ around $z$ is determined by $\pr_{\cX}^*(f_x)\,\,\pr_{\cY}^*(f_y)$. Thus $$v_{\varepsilon}(\divisor_{\cZ^+}(\varpi))
@@ -1048,7 +1075,7 @@ $$f_y=\sum_{\delta\in \caC_{\cY,y}}d_\delta \delta.$$}
 v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
 & = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big)\\
 & = v_{\alpha}(f_x) + v_{\beta}(f_y) \\
-& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big).
+& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{X^+})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{Y^+})\big).
 \end{align*}
 
 %\begin{align*}
@@ -1083,7 +1110,7 @@ v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
 %& = \min\{\varepsilon(\gamma)\,|\,\gamma\in \Gamma_z(p_{\cX^+}^*(f_x))\} + \min\{\varepsilon(\delta)\,|\,\delta\in \Gamma_z(p_{\cY^+}^*(f_y))\}\\
 %&  = \min\{\alpha(\gamma)\,|\,\gamma\in \Gamma_x(f_x)\} + \min\{\beta(\delta)\,|\,\delta\in \Gamma_y(f_y)\} \\
 %& = v_{\alpha}(f_x) + v_{\beta}(f_y) \\
-%& = v_{\alpha}(\divisor_{\cX^+}(\omega_{\cX_K})) + v_{\beta}(\divisor_{\cY^+}(\omega_{\cY_K})).
+%& = v_{\alpha}(\divisor_{\cX^+}(\omega_{X^+})) + v_{\beta}(\divisor_{\cY^+}(\omega_{Y^+})).
 %\end{align*}
 }
 \spa{This result turns out to be advantageous to compute the weight function $\weight_\varpi$ on divisorial points of $\Sk(\cZ^+)$: 
@@ -1091,28 +1118,29 @@ v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
 \begin{split}
 \weight_\varpi(\varepsilon)
 & = v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big) +1 \\
-& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{\cX_K})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{\cY_K})\big) + 1 \\
-& = \weight_{\omega_{\cX_K}}(\alpha) + \weight_{\omega_{\cY_K}}(\beta) - 1.
+& = v_{\alpha}\big(\divisor_{\cX^+}(\omega_{X^+})\big) + v_{\beta}\big(\divisor_{\cY^+}(\omega_{Y^+})\big) + 1 \\
+& = \weight_{\omega_{X^+}}(\alpha) + \weight_{\omega_{Y^+}}(\beta) - 1.
 \end{split}
 \end{align}
 }
-
+\textcolor{red}{FROM HERE}
 \subsection{Kontsevich-Soibelman skeleta of \textit{fs} fibred products.}
 \spa{In \cite{MustataNicaise}, Section 4.5 the Kontsevich-Soibelman skeleton $\Sk(\cZ_K, \varpi)$ is defined as the closure of the set of divisorial points of $\cZ_K^\text{an}$ where the weight function $\weight_\varpi$ reaches its minimal value $\weight_{\varpi}(\cZ_K)$. Our computations lead to the following result.
 \begin{thm}
-%Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. The isomoprhism $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$ of skeleta induces a map of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \rightarrow \Sk(\cX_K,\omega_{\cX_K}) \times \Sk(\cY_K, \omega_{\cX_K}).$$
+%Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. The isomoprhism $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$ of skeleta induces a map of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \rightarrow \Sk(\cX_K,\omega_{X^+}) \times \Sk(\cY_K, \omega_{Y^+}).$$
 %\end{thm}
 %
 %Assuming that the local isomorphism of skeleta $\Sk(\cZ^+) \rightarrow \Sk(\cX^+) \times \Sk(\cY^+)$ is actually a global isomorphism, then it induces an isomorphism of Kontsevich-Soibelman skeleta. Thus, recalling Proposition \ref{prop semistability and iso Kato fans}, we have the following result.
 %\begin{cor}  
 \label{thm semistability and KS skeleta}
-Assume that the residue field $k$ is algebraically closed. Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Suppose that $\cX^+$ is semistable. Then, given $\omega_{\cX_K}$ and $\omega_{\cY_K}$ canonical forms on $\cX_K$ and $\cY_K$ respectively, the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \xrightarrow{\sim} \Sk(\cX_K, \omega_{\cX_K}) \times \Sk(\cY_K, \omega_{\cY_K}).$$ 
+Assume that the residue field $k$ is algebraically closed. Let $\cX^+$ and $\cY^+$ be log-smooth log schemes over $S^+$, let $\cZ^+$ be their $fs$ fibred product. Suppose that $\cX^+$ is semistable. Then, given $\omega_{X^+}$ and $\omega_{Y^+}$ canonical forms on $\cX_K$ and $\cY_K$ respectively, the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of Kontsevich-Soibelman skeleta $$\Sk(\cZ_K, \varpi) \xrightarrow{\sim} \Sk(\cX_K, \omega_{X^+}) \times \Sk(\cY_K, \omega_{Y^+}).$$ 
 \end{thm}
 \begin{proof}
-This follows immediately from the equality (\ref{equ weight function product}) that shows that a point in $\Sk(\cZ^+)$ has minimal value $\weight_{\varpi}(\cZ_K)$ if and only if its projections have minimal value $\weight_{\omega_{\cX_K}}(\cX_K)$ and $\weight_{\omega_{\cY_K}}(\cY_K)$.
+This follows immediately from the equality (\ref{equ weight function product}) that shows that a point in $\Sk(\cZ^+)$ has minimal value $\weight_{\varpi}(\cZ_K)$ if and only if its projections have minimal value $\weight_{\omega_{X^+}}(\cX_K)$ and $\weight_{\omega_{Y^+}}(\cY_K)$.
 \end{proof}
 }
 
+\section{Essential skeleton of products}
 \subsection{Essential skeleta of products of CY varieties.}
 
 \spa{Let $X$ be a smooth $K$-variety with trivial canonical sheaf, i.e. a Calabi-Yau variety. The essential skeleton of $X$ is defined in \cite{MustataNicaise}, Definition 4.6.2 as $$\Sk(X):=\bigcup_{\omega} \Sk(X, \omega) \quad \subseteq X^{\text{an}}$$ where $\omega$ runs through the set of non-zero regular pluricanonical forms on $X$. Under the assumption of triviality of the canonical bundle, the essential skeleton of a Calabi-Yau variety is reduced to the Kontsevich-Soibelman skeleton of any non-zero canonical form.}
@@ -1125,8 +1153,9 @@ Assume that the residue field $k$ is algebraically closed. Let $X$ and $Y$ be sm
 This follows immediately from Theorem \ref{thm semistability and KS skeleta}.
 \end{proof}
 }
- 
-\section{The analytification of the \textit{n}-th symmetric product.} \label{sect an of symm product}
+
+\section{Applications}
+%\subsection{The analytification of the \textit{n}-th symmetric product.} \label{sect an of symm product}
 \subsection{Analytification of the quotient.}
 \spa{Let $X$ be a smooth $K$-variety and let $S_n$ be $n$-th symmetric group. We describe an action of $S_n$ on the $n$-fold fibred product $X^n$. Any point $x$ of $X^n$ is characterized as a tuple $x=(x_1,\ldots,x_n, s, \fp)$ where $s$ is the image of any of $x_i$'s and $\fp$ is a prime ideal of the tensor algebra of residue fields $\kappa(x_1) \otimes \ldots \otimes \kappa(x_n)$. Given  a permutation $\sigma$ of $n$ elements, it induces an isomorphism of tensor algebras  $k(x_1) \otimes \ldots \otimes k(x_n) \simeq  k(x_{\sigma(1)}) \otimes \ldots \otimes k(x_{\sigma(n)})$ still denoted by $\sigma$. Then the action of $S^n$ on $X^n$ is given by $$\sigma \ldotp x = (x_{\sigma(1)}, \ldots, x_{\sigma(n)}, s, \sigma(\fp)).$$
 
@@ -1257,7 +1286,7 @@ This follows immediately from Corollary \ref{cor semistability and KS skeleta qu
 \end{proof}
 }
 
-\section{The essential skeleton of the Hilbert scheme of a $\text{K3}$ surface} \label{sect essential sk Hilb}
+\subsection{The essential skeleton of the Hilbert scheme of a $\text{K3}$ surface} \label{sect essential sk Hilb}
 
 \spa{Let $S$ be a $\text{K}3$ surface over $K$ (i.e. $S$ is a complete non-singular variety of dimension two such that $\Omega_{S/K}^2 \simeq \caO_S \text{ and } H^1(S,\caO_S) = 0$). In particular $S$ is a Calabi-Yau variety.
 
