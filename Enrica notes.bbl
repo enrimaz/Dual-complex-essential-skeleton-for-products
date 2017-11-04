@@ -72,7 +72,36 @@
   \field{year}{2015}
 \endentry
 
-\entry{Berkovich1993}{article}{}
+\entry{Beauville1983}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Beauville}{B.}%
+     {Arnaud}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BA1}
+  \strng{fullhash}{BA1}
+  \field{labelalpha}{Bea83}
+  \field{sortinit}{B}
+  \field{issn}{0022-040X}
+  \field{number}{4}
+  \field{pages}{755\bibrangedash 782 (1984)}
+  \field{title}{Vari\'et\'es {K}\"ahleriennes dont la premi\`ere classe de
+  {C}hern est nulle}
+  \verb{url}
+  \verb http://projecteuclid.org/euclid.jdg/1214438181
+  \endverb
+  \field{volume}{18}
+  \verb{file}
+  \verb :Beauville1983 - Vari_'et_'es K__ahleriennes dont la premi_`ere classe
+  \verb de Chern est nulle.pdf:PDF
+  \endverb
+  \field{journaltitle}{J. Differential Geom.}
+  \field{year}{1983}
+\endentry
+
+\entry{Berkovich1990}{book}{}
   \name{author}{1}{}{%
     {{}%
      {Berkovich}{B.}%
@@ -80,30 +109,24 @@
      {}{}%
      {}{}}%
   }
-  \list{language}{1}{%
-    {eng}%
-  }
   \list{publisher}{1}{%
-    {Institut des Hautes Études Scientifiques}%
+    {American Mathematical Society, Providence, RI}%
   }
-  \keyw{étale cohomology; compact support; analytic spaces; morphisms;
-  sheaves; rigid spaces}
   \strng{namehash}{BVG1}
   \strng{fullhash}{BVG1}
-  \field{labelalpha}{Ber93}
+  \field{labelalpha}{Ber90}
   \field{sortinit}{B}
-  \field{pages}{5\bibrangedash 161}
-  \field{title}{Etale cohomology for non-Archimedean analytic spaces}
-  \verb{url}
-  \verb http://eudml.org/doc/104093
-  \endverb
-  \field{volume}{78}
+  \field{isbn}{0-8218-1534-2}
+  \field{pages}{x+169}
+  \field{series}{Mathematical Surveys and Monographs}
+  \field{title}{Spectral theory and analytic geometry over non-{A}rchimedean
+  fields}
+  \field{volume}{33}
   \verb{file}
-  \verb :Berkovich1993 - Étale cohomology for non-Archimedean analytic spaces.
-  \verb pdf:PDF
+  \verb :Berkovich1990 - Spectral theory and analytic geometry over non-Archime
+  \verb dean fields.djvu:Djvu
   \endverb
-  \field{journaltitle}{Publications Mathématiques de l'IHÉS}
-  \field{year}{1993}
+  \field{year}{1990}
 \endentry
 
 \entry{Berkovich}{article}{}
@@ -156,6 +179,33 @@
   \field{eprintclass}{math.AG}
   \field{month}{05}
   \field{year}{2015}
+\endentry
+
+\entry{DieudonneGrothendieck}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dieudonn{\'e}}{D.}%
+     {Jean}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grothendieck}{G.}%
+     {Alexander}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJGA1}
+  \strng{fullhash}{DJGA1}
+  \field{labelalpha}{DG61}
+  \field{sortinit}{D}
+  \field{title}{\'{E}l\'ements de g\'eom\'etrie alg\'ebrique IV 2: \'{E}tude
+  locale des sch\'emas et des morphismes de sch\'emas}
+  \verb{file}
+  \verb :DieudonneGrothendieck - _'El_'ements de g_'eom_'etrie alg_'ebrique IV
+  \verb 2_ Etude locale des schemas et des morphismes de schemas.djvu:Djvu
+  \endverb
+  \field{journaltitle}{Inst. Hautes \'Etudes Sci. Publ. Math.}
+  \field{year}{1961--1967}
 \endentry
 
 \entry{Fogarty}{article}{}
@@ -218,6 +268,134 @@
   \field{journaltitle}{ArXiv Mathematics e-prints}
   \field{month}{09}
   \field{year}{2004}
+\endentry
+
+\entry{GulbrandsenHalleHulek2016}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {{Gulbrandsen}}{G.}%
+     {M.~G.}{M.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Halle}}{H.}%
+     {L.~H.}{L.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Hulek}}{H.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry, 14D06 (Primary), 14C05, 14L24, 14D23
+  (Secondary)}
+  \strng{namehash}{GMGHLHHK1}
+  \strng{fullhash}{GMGHLHHK1}
+  \field{labelalpha}{GHH16}
+  \field{sortinit}{G}
+  \verb{eprint}
+  \verb 1604.00215
+  \endverb
+  \field{title}{A GIT construction of degenerations of Hilbert schemes of
+  points}
+  \verb{file}
+  \verb :GulbrandsenHalleHulek2016 - A GIT construction of degenerations of Hil
+  \verb bert schemes of points.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{04}
+  \field{year}{2016}
+\endentry
+
+\entry{GulbrandsenHalleHulekEtAl}{unpublished}{}
+  \name{author}{4}{}{%
+    {{}%
+     {{Gulbrandsen}}{G.}%
+     {M.~G.}{M.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Halle}}{H.}%
+     {L.~H.}{L.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Hulek}}{H.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Zhang}}{Z.}%
+     {Z.}{Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GMGHLHHKZZ1}
+  \strng{fullhash}{GMGHLHHKZZ1}
+  \field{labelalpha}{GHHZ17}
+  \field{sortinit}{G}
+  \field{title}{The geometry of degenerations of Hilbert schemes of points}
+  \field{year}{2017}
+\endentry
+
+\entry{HalvardHalleNicaise2017}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {{Halvard Halle}}{H.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Nicaise}}{N.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry}
+  \strng{namehash}{HLNJ1}
+  \strng{fullhash}{HLNJ1}
+  \field{labelalpha}{HN17}
+  \field{sortinit}{H}
+  \verb{eprint}
+  \verb 1701.09155
+  \endverb
+  \field{title}{Motivic zeta functions of degenerating Calabi-Yau varieties}
+  \verb{file}
+  \verb :HalvardHalleNicaise2017 - Motivic zeta functions of degenerating Calab
+  \verb i-Yau varieties.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{01}
+  \field{year}{2017}
+\endentry
+
+\entry{Hatcher}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hatcher}{H.}%
+     {Allen}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press, Cambridge}%
+  }
+  \strng{namehash}{HA1}
+  \strng{fullhash}{HA1}
+  \field{labelalpha}{Hat02}
+  \field{sortinit}{H}
+  \field{isbn}{0-521-79160-X; 0-521-79540-0}
+  \field{pages}{xii+544}
+  \field{title}{Algebraic topology}
+  \verb{file}
+  \verb :Hatcher - Algebraic topology.pdf:PDF
+  \endverb
+  \field{year}{2002}
 \endentry
 
 \entry{Kato1989}{incollection}{}
@@ -312,6 +490,114 @@
   \verb :KempfKnudsenMumfordEtAl1973 - Toroidal embeddings. I.djvu:Djvu
   \endverb
   \field{year}{1973}
+\endentry
+
+\entry{KollarLazaSaccaEtAl2017}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {{Koll{\'a}r}}{K.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Laza}}{L.}%
+     {R.}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Sacc{\`a}}}{S.}%
+     {G.}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Voisin}}{V.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Mathematics - Algebraic Geometry}
+  \strng{namehash}{KJLRSGVC1}
+  \strng{fullhash}{KJLRSGVC1}
+  \field{labelalpha}{KLSV17}
+  \field{sortinit}{K}
+  \verb{eprint}
+  \verb 1704.02731
+  \endverb
+  \field{title}{Remarks on degenerations of hyper-K$\backslash$``ahler
+  manifolds}
+  \verb{file}
+  \verb :KollarLazaSaccaEtAl2017 - Remarks on degenerations of hyper-K$_backsla
+  \verb sh$``ahler manifolds.pdf:PDF
+  \endverb
+  \field{journaltitle}{ArXiv e-prints}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{math.AG}
+  \field{month}{04}
+  \field{year}{2017}
+\endentry
+
+\entry{Kulikov}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kulikov}{K.}%
+     {Viktor~S}{V.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KVS1}
+  \strng{fullhash}{KVS1}
+  \field{labelalpha}{Kul77}
+  \field{sortinit}{K}
+  \field{abstract}{%
+  In this paper we study good (semistable) degenerations of K 3 surfaces ( m =
+  1) and Enriques surfaces ( m = 2). We obtain a classification of such
+  degenerations under the condition that the m -canonical class is trivial. We
+  show that for each good degeneration there exists a modification satisfying
+  this condition. Bibliography: 14 titles.%
+  }
+  \field{number}{5}
+  \field{pages}{957}
+  \field{title}{Degenerations of K3 surfaces and Enriques surfaces}
+  \verb{url}
+  \verb http://stacks.iop.org/0025-5726/11/i=5/a=A03
+  \endverb
+  \field{volume}{11}
+  \verb{file}
+  \verb :Kulikov - Degenerations of K3 surfaces and Enriques surfaces.pdf:PDF
+  \endverb
+  \field{journaltitle}{Mathematics of the USSR-Izvestiya}
+  \field{year}{1977}
+\endentry
+
+\entry{Li}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Li}{L.}%
+     {Jun}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Lehigh University}%
+  }
+  \strng{namehash}{LJ1}
+  \strng{fullhash}{LJ1}
+  \field{labelalpha}{Li01}
+  \field{sortinit}{L}
+  \verb{doi}
+  \verb 10.4310/jdg/1090348132
+  \endverb
+  \field{number}{3}
+  \field{pages}{509\bibrangedash 578}
+  \field{title}{Stable Morphisms to Singular Schemes and Relative Stable
+  Morphisms}
+  \verb{url}
+  \verb http://dx.doi.org/10.4310/jdg/1090348132
+  \endverb
+  \field{volume}{57}
+  \field{journaltitle}{J. Differential Geom.}
+  \field{month}{03}
+  \field{year}{2001}
 \endentry
 
 \entry{Liu2002}{book}{}
@@ -468,6 +754,42 @@
   \endverb
   \field{journaltitle}{Univ. Iagel. Acta Math.}
   \field{year}{1997}
+\endentry
+
+\entry{PerssonPinkham1981}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Persson}{P.}%
+     {Ulf}{U.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pinkham}{P.}%
+     {Henry}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Annals of Mathematics}%
+  }
+  \strng{namehash}{PUPH1}
+  \strng{fullhash}{PUPH1}
+  \field{labelalpha}{PP81}
+  \field{sortinit}{P}
+  \field{issn}{0003486X}
+  \field{number}{1}
+  \field{pages}{45\bibrangedash 66}
+  \field{title}{Degeneration of Surfaces with Trivial Canonical Bundle}
+  \verb{url}
+  \verb http://www.jstor.org/stable/1971133
+  \endverb
+  \field{volume}{113}
+  \verb{file}
+  \verb :PerssonPinkham1981 - Degeneration of Surfaces with Trivial Canonical B
+  \verb undle.pdf:PDF
+  \endverb
+  \field{journaltitle}{Annals of Mathematics}
+  \field{year}{1981}
 \endentry
 
 \entry{Saito2004}{article}{}

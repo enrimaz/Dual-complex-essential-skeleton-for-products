@@ -231,6 +231,7 @@
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\CP}{\ensuremath{\mathbb{CP}}}
 \newcommand{\Ar}{\ensuremath{\mathscr{A}r}}
 \newcommand{\Aa}{\ensuremath{\mathscr{A}}}
 \newcommand{\Lm}{\ensuremath{\mathscr{L}}}
@@ -611,7 +612,7 @@ By hypothesis $\cX^+$ is a semistable log-regular log scheme over $S^+$, hence t
 If the point $z$ lies in $F_{\cZ}$, then the maximal ideal $\mathfrak{m}_z$ is equal to the ideal $\caI_{\cZ,z}$ by definition. By the flatness of the models $\cX^+$ and $\cY^+$ over $S^+$, the morphisms of local rings $\caO_{\cX,x} \rightarrow \caO_{\cZ,z}$ and $\caO_{\cY,y} \rightarrow \caO_{\cZ,z}$ are injective. Hence, the equalities $\mathfrak{m}_x= \caI_{\cX,x}$ and $\mathfrak{m}_y= \caI_{\cY,y}$ hold. Thus, the points $z$ in $\cZ^+$ that lie in the Kato fan $F_{\cZ}$ are necessarily points such that the projections $x$ and $y$ to $\cX^+$ and $\cY^+$ lie in their associated Kato fans. Therefore, we may assume $x \in F_{\cX}$, $y \in F_{\cY}$, and it remains to characterize the prime ideals $\fp$ such that $z=(x,y,s,\fp) \in F_{\cZ}$.
 
 By log-regularity of $\cZ^+$, the point $z$ lies in the associated Kato fan if and only if $\dim \caO_{\cZ,z}= \rank \caC_{\cZ,z}^{\text{gp}}$. At the level of characteristic sheaves it holds that $$\rank \caC_{\cZ,z}^{\text{gp}}= \rank \caC_{\cX,x}^{\text{gp}} + \rank \caC_{\cY,y}^{\text{gp}} - 1.$$ Since $x$ and $y$ are both assumed to be points in the associated Kato fans, the equality between dimension of local rings and rank of the groupifications of characteristic sheaves lead to the equivalence \begin{align*}
-z \in F_{\cZ}  \Leftrightarrow \dim \caO_{\cZ,z} & = \rank \caC_{\cZ,z}^{\text{gp}} \\&= \rank \caC_{\cX,x}^{\text{gp}} + \rank \caC_{\cY,y}^{\text{gp}} - 1 \\
+z \in F_{\cZ}  \Leftrightarrow \dim \caO_{\cZ,z} & = \rank \caC_{\cZ,z}^{\text{gp}} = \rank \caC_{\cX,x}^{\text{gp}} + \rank \caC_{\cY,y}^{\text{gp}} - 1 \\
 & = \dim \caO_{\cX,x} +  \dim \caO_{\cY,y} -1.
 \end{align*}
 By log-regularity of $\cZ^+$, it holds that $\dim \caO_{\cZ,z} \geqslant \rank \caC_{\cZ,z}^{\text{gp}}$, thus the inequality $$\dim \caO_{\cZ,z} \geqslant \dim \caO_{\cX,x} +  \dim \caO_{\cY,y} -1$$ is always true and equality holds only for minimal prime ideals $\fp$ of $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$. Therefore, in order to conclude that there exists a unique point $z$ whose projections are the points $x$ and $y$ and that lies in the Kato fan $F_{\cZ}$, we need to prove the following property: the tensor product $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$ has a unique minimal prime ideal. 
@@ -622,7 +623,7 @@ Otherwise, we denote by $\mathscr{V}$ the closure of $x$ in $\cX^+$: it is still
 %lemma 32.10.6 Stack project % 
 and the special fibre is still reduced. By \cite{Liu2002}, Lemma 4.1.18, it follows that $\mathscr{V}_{O_L}$ is normal. Since $\mathscr{V}_{O_L}$ is normal and proper with reduced special fibre, $\mathscr{V}_L$ is connected.
 %lemma 36.26.7 Stack project %
-We deduce that $\kappa(s)$ is separably algebraically closed in $\kappa(x)$. Finally by , Proposition 4.3.2, the tensor product $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$ has a unique minimal prime ideal.
+We deduce that $\kappa(s)$ is separably algebraically closed in $\kappa(x)$. Finally by \cite{DieudonneGrothendieck}, Proposition 4.3.2, the tensor product $\kappa(x) \otimes_{\kappa(s)} \kappa(y)$ has a unique minimal prime ideal.
 \end{proof}
 
 \section{The skeleton of a log-regular log scheme} \label{sect skeleton log}
@@ -725,13 +726,8 @@ Since $\alpha(\beta)>0$ for every $\beta\in C_{\alpha}$, we can find an integer 
 
 We consider the coefficients in the expansion (\ref{equ expasion wrt I}) of $f$. Applying Lemma \ref{lemma admissible expansion} as in paragraph (\ref{paragr admissible expansion}), we can write admissible expansions of these coefficients in $\widehat{\mathcal{O}}_{\cX,x}$ as $$d_\beta = \sum_{\gamma \in \caC_{\cX,x}}c_{\gamma, \beta} \gamma, \quad c_{\gamma, \beta} \in \caO_{\cX,x}^\times \cup \{0\},$$ with $\alpha(\gamma)=0$ in the expansions of $d_\beta$ that belong to $\mathfrak{m}_x \setminus I$. 
 
-Therefore we obtain an admissible expansion of $f$ $$f = \sum_{\substack{\beta \in C_\alpha \cup \{1\} \\ \gamma \in \caC_{\cX,x}}}c_{\gamma, \beta}\, \gamma\beta $$ and we have  
-\begin{eqnarray*}
-v(f) 
-& = & \min\{\alpha(\gamma \beta)\,|\,c_{\gamma, \beta}\neq 0\} \\
-&=& \min\{\alpha(\beta)\,|\,d_{\beta}\neq 0\} \\
-&\geq& w(f).
- \end{eqnarray*} \end{proof}
+Therefore we obtain an admissible expansion of $f$ $$f = \sum_{\substack{\beta \in C_\alpha \cup \{1\} \\ \gamma \in \caC_{\cX,x}}}c_{\gamma, \beta}\, \gamma\beta $$ and we have $v(f)=\min\{\alpha(\gamma \beta)\,|\,c_{\gamma, \beta}\neq 0\}=\min\{\alpha(\beta)\,|\,d_{\beta}\neq 0\} \geq w(f).$
+\end{proof}
  
 \begin{rem} \label{rem def-val}
 In the definition (\ref{eq:val}) of the valuation $v$, we compute the minimum over the terms in the initial support of $f$: these elements are a finite number and they only depends on $x$ and $f$ by Proposition \ref{prop-init}. Therefore, this minimum provides a well-defined function on $\caO_{\cX,x} \setminus \{0\}$. Nevertheless, it is equivalent to consider the minimum over all the terms of an admissible expansion of $f$, i.e. for any admissible expansion $f=\sum_{\gamma \in \mathcal{C}_{\cX,x}}c_{\gamma}\gamma$ $$\min\{\alpha(\gamma)\,|\,\gamma\in \Gamma_x(f)\} = \min\{\alpha(\gamma)\,|\,\gamma\in S\},$$ where $S=\{\gamma\in\mathcal{C}_{\cX,x}\,|\,c_\gamma\neq 0\}$ as in (\ref{equ def S}). Indeed, any element that belongs to $S$ can be written as a sum of an element of the initial support of $f$ and an element of $\caC_{\cX,x}$. Since the morphism $\alpha$ is additive and takes positive real values, then the minimum is necessarily attained by the elements in the initial support.
@@ -834,12 +830,13 @@ $\begin{gathered}
 Given a pair of points in $\Sk(\cX^+) \times \Sk(\cY^+)$, we know by surjectivity of $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$  that they are of the form $$(v_{x, \pr_{\cX}(\varepsilon)}, v_{y, \pr_{\cY}(\varepsilon)}).$$ The assumption of semistability of $\cX^+$ guarantees that there is a unique $z$ in $F_\cZ$ in the fibre of $x$ and $y$, by Proposition \ref{prop semistability and iso Kato fans}. Moreover, we can uniquely reconstruct $\varepsilon$ by looking at the values of $v_{x, \pr_{\cX}(\varepsilon)}$ at the elements of $\caM_{\cX,x}$ and respectively of $v_{y, \pr_{\cY}(\varepsilon)}$ at the elements of $\caM_{\cY,y}$. We conclude that $\big(\pr_{\Sk(\cX)}, \pr_{\Sk(\cY)}\big)$  is injective.
 \end{proof}
 
+\section{The weight function for pairs}
 \subsection{Weight function associated to a logarithmic pluricanonical form.}
 \spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-regular model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in \widehat{\cX_{\eta}}$ and for any divisor $D$ on $\cX^+$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that $D= \divisor(f)$ locally at $\redu_{\cX}(x)$.}
 
 \spa{Let $(X,\Delta)$ be a pair with log-regular log scheme $X^+=(X,\Delta)$ over $K$. Let $\omega$ be a logarithmic $m$-pluricanonical form on $X^+$. For each log-regular model $\cX^+$ of $X^+$, the form $\omega$ defines a divisor $\divisor_{\cX^+}(\omega)$ on $\cX^+$. For any point $x$ in $\Sk(\cX^+)$ that is associated to an irreducible component of $\cX_k$, the value \begin{equation} \label{equ:weight value for divisorial point}
 v_x(\divisor_{\cX^+}(\omega)) +m
-\end{equation} does not depend on the choice of the model $\cX^+$; indeed, this follows from the same arguments of \cite{MustataNicaise}, Proposition 4.2.4. We denote this value by $\weight_{\omega}(x)$ and call it the weight of $x$ with respect to $\omega$. Since any snc model $\cX$ of $X$ can be turned by resolution of singularities into a log-regular model of $X^+$, we can compute the weight with respect to $\omega$ of any divisorial point of $X^\an$. Thus, we obtain a function $$\weight_{\omega}: \text{Div}(X) \rightarrow \Q, \quad x \mapsto \weight_{\omega}(x)$$ on the set of divisorial points, called the weight function associated to $\omega$. We prove that the formula \ref{equ:weight value for divisorial point} expresses the weight of any divisorial point in $\Sk(\cX^+)$.
+\end{equation} does not depend on the choice of the model $\cX^+$; indeed, this follows from the same arguments of \cite{MustataNicaise}, Proposition 4.2.4. We denote this value by $\weight_{\omega}(x)$ and call it the weight of $x$ with respect to $\omega$. Since any snc model $\cX$ of $X$ can be turned by resolution of singularities into a log-regular model of $X^+$, the formula \ref{equ:weight value for divisorial point} computes the weight with respect to $\omega$ at every divisorial point of $X^\an$. Thus, we obtain a function $$\weight_{\omega}: \text{Div}(X) \rightarrow \Q, \quad x \mapsto \weight_{\omega}(x)$$ on the set of divisorial points, called the weight function associated to $\omega$. From the definition, we remark that for every integer $d>0$ $$ \weight_{\omega^{\otimes d} }(x)= d \cdot \weight_{\omega}(x),$$ and for every non-zero rational function $f$ on $X$ $$ \weight_{f\omega}(x)= \weight_{\omega} + v_x(f).$$ We prove that the formula \ref{equ:weight value for divisorial point} actually expresses the weight of every divisorial point in $\Sk(\cX^+)$.
 
 \begin{prop} \label{prop weight function on log regular model}
 If $x$ is a divisorial point in $\Sk(\cX^+)$, then $$\weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m.$$
@@ -857,7 +854,8 @@ $$v_x(\divisor_{\cX^+}(\omega)) +m = v_x\big(h^*(\divisor_{\cX^+}(\omega))\big) 
 \end{proof}
 }
 
-\spa{We define a function $$\weight_{\cX^+,\omega}: \Sk(\cX^+) \rightarrow \R, \quad x \mapsto v_x(\divisor_{\cX^+}(\omega)) +m$$ on the skeleton associated to a log-regular model $\cX^+$ and we call it the weight function associated to $\omega$ and $\cX^+$. By Proposition \ref{prop weight function on log regular model}, if $x$ is a divisorial point of $\Sk(\cX^+)$, then the weight at $x$ associated to $\omega$ and $\cX^+$ is actually independent on the choice of the model and equal to $\weight_{\omega}(x)$. Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNicaise}, we can prove that there exists a unique function on the set of birational points of $X^\an$ $$\weight_{\omega}: \text{Bir}(X) \rightarrow \R, \text{ such that }\weight_{\omega}(x)= \weight_{\cX^+,\omega}(x)$$ for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. Moreover, after the arguments of Proposition 4.4.5 in \cite{MustataNicaise}, we obtain a function on the Berkovich space $X^\an$ by setting $$\weight_{\omega}(x) = \sup_{\cX^+} \{ \weight_{\omega}(\rho_\cX (x))\}$$ where $\cX^+$ runs through the set of all log-regular model $\cX^+$ of $X^+$. We have that \begin{equation} \label{equ:weight function formula} \weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m
+\spa{We define a function $$\weight_{\cX^+,\omega}: \Sk(\cX^+) \rightarrow \R, \quad x \mapsto v_x(\divisor_{\cX^+}(\omega)) +m$$ on the skeleton associated to a log-regular model $\cX^+$ and we call it the weight function associated to $\omega$ and $\cX^+$. By Proposition \ref{prop weight function on log regular model}, if $x$ is a divisorial point of $\Sk(\cX^+)$, then the weight at $x$ associated to $\omega$ and $\cX^+$ is actually independent on the choice of the model and equal to $\weight_{\omega}(x)$. From the definition, we remark that for each point $x$ in $\Sk(\cX^+)$, for every integer $d>0$ $$ \weight_{\omega^{\otimes d} }(x)= d \cdot \weight_{\omega}(x),$$ and for every non-zero rational function $f$ on $X$ $$ \weight_{f\omega}(x)= \weight_{\omega} + v_x(f).$$
+Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNicaise}, we can prove that there exists a unique function on the set of birational points of $X^\an$ $$\weight_{\omega}: \text{Bir}(X) \rightarrow \R, \text{ such that }\weight_{\omega}(x)= \weight_{\cX^+,\omega}(x)$$ for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. Moreover, after the arguments of Proposition 4.4.5 in \cite{MustataNicaise}, we obtain a function on the Berkovich space $X^\an$ by setting $$\weight_{\omega}(x) = \sup_{\cX^+} \{ \weight_{\omega}(\rho_\cX (x))\} \in \R \cup \{+ \infty\}$$ where $\cX^+$ runs through the set of all log-regular model $\cX^+$ of $X^+$. We have that \begin{equation} \label{equ:weight function formula} \weight_{\omega}(x)=v_x(\divisor_{\cX^+}(\omega)) +m
 \end{equation}for every birational point $x$ and every log-regular model $\cX^+$ such that $x \in \Sk(\cX^+)$. We call it the weight function associated to $\omega$.}
 
 \subsection{Weight function for log-regular models.}
@@ -873,7 +871,7 @@ As we noticed in Remark \ref{rem resolution via subd}, we can obtain an snc mode
 Log blow-ups are log-\'{e}tale morphisms (\cite{Saito2004}, Section 2.1) and for log-\'{e}tale morphisms the sheaf of log differentials is stable under pullback (\cite{Kato1994a}, Proposition 3.12), therefore $$h^* \omega_{\cX^+/ S^+}^{\text{log}} \simeq \omega_{\cY^+/S^+}^{\text{log}}.$$ Then $\divisor_{\cY^+}(\omega)=h^* \divisor_{\cX^+}(\omega)$ and in particular for points $x$ of the skeleton $\Sk(\cX^+) = \Sk(\cY)$, it holds that $$v_{x}(\divisor_{\cY^+}(\omega))= v_{x}(h^*\divisor_{\cX^+}(\omega))= v_x(\divisor_{\cX^+}(\omega)).$$
 \end{proof}
 
-\subsection{Weight function on skeleta associated to \textit{fs} fibred products.} \label{paragraph weight function product}
+\subsection{Weight function and Kontsevich-Soibelman skeleton for products.} \label{paragraph weight function product}
 \spa{Let $\cX^+$ and $\cY^+$ be log-smooth models over $S^+$ of $X^+=(X,\Delta_X)$ and $Y^+=(Y,\Delta_Y)$ respectively. Then, the $fs$ fibred product $\cZ^+=\cX^+  \times^{\text{fs}}_{S^+} \cY^+$ is a log-regular model of $Z^+:=X^+ \times^{\text{fs}}_K Y^+$. Therefore, given $\omega_{X^+}$ and $\omega_{Y^+}$ logarithmic $m$-pluricanonical forms on $X^+$ and $Y^+$ respectively, the form $$\varpi=\pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+}$$ is a logarithmic $m$-pluricanonical form on $Z^+$. Viewing these forms as rational sections of log $m$-pluricanonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\divisor_{\cZ^+}( \pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+})$ according to (\ref{equ log can bundles}).}
 
 \spa{Let $z$ be a point of $F_{\cZ}$; as before, we denote by $x$ and $y$ the images of $z$ under the local isomorphism $F_{\cZ} \rightarrow F_{\cX} \times F_{\cY}$. Any morphism $\varepsilon \in \sigma_z$ defines a point $v_{z,\varepsilon}$ in $\Sk(\cZ^+)$. For the sake of convenience, we simply denote the valuations by the corresponding morphisms and we denote $\alpha= \pr_{\cX}(\varepsilon)$ and $\beta=\pr_{\cY}(\varepsilon)$. We aim to relate the valuation $v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)$ to the values $$v_{\alpha}\big(\divisor_{\cX^+}(\omega_{X^+}\big)) \text{ , } v_{\beta}\big(\divisor_{\cY^+}(\omega_{Y^+})\big).$$}
@@ -901,12 +899,11 @@ v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
 \end{align}
 }
 
-\subsection{Kontsevich-Soibelman skeleta of \textit{fs} fibred products.}
-\spa{Let $X^+=(X,\Delta)$ be a pair such that $X$ is a connected, smooth and proper $K$-variety and $X^+$ a log-regular log scheme over $K$. Let $\omega$ be a non-zero rational logarithmic $m$-pluricanonical form on $X^+$ for some $m>0$. Similarly to \cite{MustataNicaise}, Section 4.5, we define the Kontsevich-Soibelman skeleton $\Sk(X^+, \omega)$ as the closure of the set of divisorial points of $X^\text{an}$ where the weight function $\weight_\omega$ reaches its minimal value, denoted by $\weight_{\omega}(X^+)$.}
+\spa{Let $X^+=(X,\Delta_X)$ be a pair such that $X$ is a connected, smooth and proper $K$-variety and $X^+$ a log-regular log scheme over $K$. Let $\omega$ be a non-zero rational logarithmic $m$-pluricanonical form on $X^+$ for some $m>0$. Similarly to \cite{MustataNicaise}, Section 4.5, we define the Kontsevich-Soibelman skeleton $\Sk(X^+, \omega)$ as the closure of the set of divisorial points of $X^\text{an}$ where the weight function $\weight_\omega$ reaches its minimal value, denoted by $\weight_{\omega}(X^+)$.}
 
-\spa{Under the notations of the previous paragraph, our computations lead to the following result.
+\spa{Under the notations of the previous paragraphs, our computations lead to the following result.
 \begin{thm}  \label{thm semistability and KS skeleta}
-Let $\cX^+$ and $\cY^+$ be log-smooth models over $S^+$ of $X^+$ and $Y^+$ respectively, and let $\cZ^+$ be their $fs$ fibred product. Let $\omega_{X^+}$ and $\omega_{Y^+}$ be  $m$-pluricanonical forms on $X^+$ and $Y^+$ respectively. Suppose that the residue field $k$ is algebraically closed and that $\cX^+$ is semistable. Then, the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ given in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of Kontsevich-Soibelman skeleta $$\Sk(Z^+, \varpi) \xrightarrow{\sim} \Sk(X^+, \omega_{X^+}) \times \Sk(Y^+, \omega_{Y^+}).$$ 
+Suppose that the residue field $k$ is algebraically closed and that $\cX^+$ is semistable. Then, the homeomorphism of skeleta $$\Sk(\cZ^+) \xrightarrow{\sim} \Sk(\cX^+) \times \Sk(\cY^+)$$ given in Proposition \ref{prop semistability and skeleta} restricts to a homeomorphism of Kontsevich-Soibelman skeleta $$\Sk(Z^+, \varpi) \xrightarrow{\sim} \Sk(X^+, \omega_{X^+}) \times \Sk(Y^+, \omega_{Y^+}).$$ 
 \end{thm}
 \begin{proof}
 This follows immediately from the equality (\ref{equ weight function product}) that shows that a point in $\Sk(Z^+)$ has minimal value $\weight_{\varpi}(Z^+)$ if and only if its projections have minimal value $\weight_{\omega_{X^+}}(X^+)$ and $\weight_{\omega_{Y^+}}(Y^+)$.
@@ -955,7 +952,7 @@ We check that $\cX$ is an $R$-model of $X$; it is enough to show that the base c
 
 The degree of the extension $[K(X):K(\cX_K)]$ may be computed on an affine open, so we assume that $\cY$ is an affine scheme with associated ring $K[\cY]$. Then we consider the diagram of inclusions
 \begin{center} 
-$ \xymatrixcolsep{-1pc} \xymatrixrowsep{1.5pc}\xymatrix{ 
+$ \xymatrixcolsep{-1pc} \xymatrixrowsep{1pc}\xymatrix{ 
 & K(\cX)=K(\cX_K) \ar[dr] & \\
 \widehat{K[\cY]}=K[\cX] \ar[rr] \ar[ru] & & K(X)\\
 K[\cY] \ar[u] \ar[rr]& & K(\cY)=K(Y)=K(X)^{G} \ar[u]^{\text{finite} \deg} \\
@@ -985,8 +982,7 @@ Let $\omega$ be a $G$-invariant $m$-pluricanonical form on $X$. Let $y$ be a div
 \end{prop}
 \begin{proof}
 Let $\cY$ be a regular snc $R$-model such that $y$ has divisorial representation $(\cY,E)$. Let $\cX$ be the normalization of $\cY$ in $K(X)$: as we observed in Remark \ref{rem divisorial repre quotient}, it is an $R$-model of $X$, regular at generic points of the special fibre $\cX_k$. The preimage of $E$ coincides with the pull-back of the Cartier divisor $E$ on $\cX$, hence $f^{-1}(E)$ still defines a codimension one subset on $\cX$. We denote by $F_i$ the irreducible components of $f^{-1}(E)$ and we associate to $F_i$'s their corresponding divisorial valuations $x_i=(\cX,F_i)$. By Lemma \ref{lemma G invariant forms and weight function}, it is enough to prove the result for one of the $x_i$'s. We denote it by $x = (\cX,F)$ and we compare the weights of $\omega$ at $y$ and $x$, namely
-$$\weight_{\omega}(x)=v_{x}(\divisor_{\cX^+}(\omega)) +m $$
-$$\weight_{\omega}(y)=v_{y}(\divisor_{\cY^+}(\omega)) +m. $$ We recall that for log-\'{e}tale morphisms the sheaves of logarithmic differentials are stable under pull-back (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log-\'{e}tale morphism of divisorial log structures, to conclude that the weights coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
+$$\weight_{\omega}(x)=v_{x}(\divisor_{\cX^+}(\omega)) +m \quad \text{ and} \quad \weight_{\omega}(y)=v_{y}(\divisor_{\cY^+}(\omega)) +m. $$ We recall that for log-\'{e}tale morphisms the sheaves of logarithmic differentials are stable under pull-back (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log-\'{e}tale morphism of divisorial log structures, to conclude that the weights coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
 
 We denote by $\xi_{F}$ the generic point of $F$ and by $\xi_E$ the generic point of $E$. The divisorial log structures on $\cX^+$ and $\cY^+$ have charts $\N$ at $\xi_{F}$ and $\xi_E$. In the \'{e}tale topology, the normalization morphism $\cX^+ \rightarrow \cY^+$ admits a chart induced by $t:\N \rightarrow \N$ where $1 \mapsto m$ for some positive integer $m$:
 \begin{center}
@@ -1013,27 +1009,104 @@ Iterating the result of Theorem \textcolor{red}{reference}, we have that the pro
 \end{proof}
 }
 
-\subsection{The essential skeleton of the Hilbert scheme of a $\text{K3}$ surface} \label{sect essential sk Hilb}
+\subsection{The essential skeleton of Hilbert schemes of a $\text{K3}$ surface} \label{sect essential sk Hilb}
 
-\spa{Let $S$ be a $\text{K}3$ surface over $K$ (i.e. $S$ is a complete non-singular variety of dimension two such that $\Omega_{S/K}^2 \simeq \caO_S \text{ and } H^1(S,\caO_S) = 0$). In particular $S$ is a Calabi-Yau variety.
+\spa{Let $S$ be an irreducible regular surface. We consider $\Hilb^n(S)$ the Hilbert scheme of $n$ points on $S$: by \cite{Fogarty} it is an irreducible regular variety of dimension $2n$. Moreover, the morphism $$\rho_{HC}: \Hilb^n(S) \rightarrow S^n/\mathfrak{S}_n$$ that sends a zero-dimensional scheme $Z \subseteq S$ to its associated zero-cycle $\text{supp}(Z)$ is a birational morphism, called the Hilbert-Chow morphism.}
 
-We consider $\Hilb^n(S)$ the Hilbert scheme of $n$ points on $S$; a concrete way to construct it is by first taking the $n$-th symmetric product of $S$, and by then resolving its singularities:
-\begin{center}
-$ \xymatrix{
-& S^n \ar[d]^{f} \\
-\Hilb^n(S) \ar[r]^{\rho} & S^n/\mathfrak{S}_n\\
-}$
-\end{center} Indeed, the $n$-th symmetric product $S^n/\mathfrak{S}_n$ has quotient singularities along the images via $f$ of the loci $$\Delta_{ij}= \{(x_1,\ldots,x_n) \in S^n \,|\, x_i=x_j\},$$ which are precisely the fixed loci of the $\mathfrak{S}_n$-action on $S^n$. Then the morphism $\rho: \Hilb^n(S) \rightarrow S^n/\mathfrak{S}_n$ is a resolution of singularities and it can be seen explicitly as the map sending a zero-dimensional scheme $Z \subseteq S$ to its associated zero-cycle $\text{supp}(Z)$. We refer to the morphism $\rho$ as the Hilbert-Chow morphism. It follows that the Hilbert scheme of $n$ points on $S$ is birational to the $n$-th symmetric product of $S$ \cite{Fogarty}. 
-}
-
-\spa{We can finally illustrate the essential skeleton of the $n$-th Hilbert scheme of a $\text{K}3$ surface with semistable reduction.
-\begin{thm}  \label{thm essential skeleton hilb}
-Let $S$ be a $\text{K}3$ surface over $K$. Assume that $S$ has  semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the Hilbert scheme of $n$ points on $S$ is isomorphic to the $n$-th symmetric product of the essential skeleton of $S$ $$\Sk(\Hilb^n(S)) \xrightarrow{\sim} \text{Sym}^n(\Sk(S)).$$ 
-\end{thm}
+\spa{Let $S$ be a $\text{K}3$ surface over $K$, namely $S$ is a complete non-singular variety of dimension two such that $\Omega_{S/K}^2 \simeq \caO_S \text{ and } H^1(S,\caO_S) = 0$. In particular $S$ is a variety with trivial canonical line bundle. 
+%We consider $\Hilb^n(S)$ the Hilbert scheme of $n$ points on $S$: by \cite{Fogarty} it is birational to the $n$-th symmetric product of $S$. Explicitely, the birational morphism $\rho: \Hilb^n(S) \rightarrow S^n/\mathfrak{S}_n$ sends a zero-dimensional scheme $Z \subseteq S$ to its associated zero-cycle $\text{supp}(Z)$. We refer to the morphism $\rho$ as the Hilbert-Chow morphism. 
+% a concrete way to construct it is by first taking the $n$-th symmetric product of $S$, and by then resolving its singularities:
+%\begin{center}
+%$ \xymatrix{
+%& S^n \ar[d]^{f} \\
+%\Hilb^n(S) \ar[r]^{\rho} & S^n/\mathfrak{S}_n\\
+%}$
+%\end{center} Indeed, the $n$-th symmetric product $S^n/\mathfrak{S}_n$ has quotient singularities along the images via $f$ of the loci $$\Delta_{ij}= \{(x_1,\ldots,x_n) \in S^n \,|\, x_i=x_j\},$$ which are precisely the fixed loci of the $\mathfrak{S}_n$-action on $S^n$. Then the morphism $\rho: \Hilb^n(S) \rightarrow S^n/\mathfrak{S}_n$ is a resolution of singularities and it can be seen explicitly as the map sending a zero-dimensional scheme $Z \subseteq S$ to its associated zero-cycle $\text{supp}(Z)$. We refer to the morphism $\rho$ as the Hilbert-Chow morphism. It follows that the Hilbert scheme of $n$ points on $S$ is birational to the $n$-th symmetric product of $S$ \cite{Fogarty}. 
+%We can finally illustrate the essential skeleton of the $n$-th Hilbert scheme of a $\text{K}3$ surface with semistable reduction.
+\begin{cor}  \label{cor essential skeleton hilb}
+Assume that $S$ has  semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the Hilbert scheme of $n$ points on $S$ is isomorphic to the $n$-th symmetric product of the essential skeleton of $S$ $$\Sk(\Hilb^n(S)) \xrightarrow{\sim} \text{Sym}^n(\Sk(S)).$$ 
+\end{cor}
 \begin{proof}
-In \cite{MustataNicaise}, Proposition 4.6.3, Mustata and Nicaise proved that the essential skeleton of a variety is a birational invariant. Therefore, the description of the essential skeleton of the $n$-th symmetric product of $S$ in Corollary \ref{cor semistability and essential skeleta quotient} entails a description of the essential skeleton of the Hilbert scheme of $n$ points on $S$.
+This follows immediately from Corollary \ref{prop semistability and KS symm quotient} and the birational invariance of the essential skeleton, \cite{MustataNicaise}, Proposition 4.6.3.
 \end{proof}
+\begin{prop} \label{prop top essential skeleton Hilb}
+If the essential skeleton of $S$ is homeomorphic to a point, a closed interval or the $2$-dimensional sphere, then the essential skeleton of $\Hilb^n(S)$ is homeomorphic to a point, the standard $n$-simplex or $\CP^n$ respectively. 
+\end{prop}
+\begin{proof} Applying Corollary \ref{cor essential skeleton hilb}, we reduce to the computation of the symmetric product of a point, a closed interval or the sphere $S^2$. Then, the result follows from \cite{Hatcher}, Section 4K.
+\end{proof}
+\begin{rem}
+The motivation to consider the point, the closed interval and the sphere $S^2$ as topological realization of the essential skeleton of a semistable model of a $\text{K}3$ surface comes from the Kulikov-Persson-Pinkham Theorem (\cite{Kulikov}, \cite{PerssonPinkham1981}). They consider degenerations of $\text{K}3$ surfaces over the unit complex disk and prove that, after base change and birational transformations, any such degeneration can be arranged to be semistable with trivial canonical bundle, namely a \emph{Kulikov degeneration}. Then, they classify the possible special fibres of Kulikov degenerations according to the type of the degeneration. We recall that the monodromy operator $T$ on $\text{H}^2(X_t, \Q)$ of the fibres $X_t$ of a Kulikov degeneration is unipotent, so we denote by $\nu$ the nilpotency index of $\log(T)$, namely the positive integer such that $\log(T)^\nu=0$ and $\log(T)^{(\nu-1)} \neq 0$. The type of the Kulikov degeneration is defined as the nilpotency index $\nu$ and called type I, II or III accordingly to it. Finally, it follows from \cite{Kulikov}, Theorem II, that the dual complex of the special fibre of a Kulikov degeneration is a point, a closed interval or the sphere $S^2$ according to the respective type, and in particular its dimension is equal to $\nu-1$.
+\end{rem}
+\begin{rem}
+Hilbert schemes of a $\text{K}3$ surfaces represent a family of examples of hyper-K\"{a}hler varieties. For a degeneration of hyper-K\"{a}hler manifolds over the unit disk it is possible to define the type as the nilpotency index of the monodromy operator on the second cohomology group. It naturally extends the definition for degenerations of $\text{K}3$ surfaces.
+%In particular, the nilpotency index of the monodromy of a degeneration of a $\text{K}3$ surface coincides with the nilpotency index of the monodromy of the corresponding degeneration of the Hilbert scheme (\cite{Beauville1983}, Lemma 2), so the corresponding degenerations are of the same type.
+In \cite{KollarLazaSaccaEtAl2017}, Koll\'{a}r, Laza, Sacc\`{a} and Voisin study the essential skeleton of a degeneration of hyper-K\"{a}hler manifolds in terms of the type. More precisely, given a minimal dlt degeneration of $2n$-dimensional hyper-K\"{a}hler manifolds, firstly they prove that the dual complex of the special fibre has dimension $(\nu-1)n$, where $\nu$ denotes the type of the degeneration. Secondly, they prove that, in the type III case, the dual complex is a simply connected closed pseudo-manifold with the rational homology of $\CP^n$. From this prospective, Proposition \ref{prop top essential skeleton Hilb} confirm and strengthen their result for the specific case of Hilbert schemes.
+
+For Hilbert schemes associated to a type II degeneration of $\text{K}3$ surfaces, an alternative proof of our result is due to Gulbrandsen, Halle, Hulek and Zhang, see \cite{GulbrandsenHalleHulek2016} and \cite{GulbrandsenHalleHulekEtAl}. Their approach is based on the method of \textit{expanded degenerations}, which first appeared in \cite{Li}, and on the construction of suitable GIT quotients, in order to obtain explicit minimal dlt degeneration for the associated family of Hilbert schemes. 
+\end{rem}
 }
+
+\subsection{The essential skeleton of generalised Kummer varieties} \label{sect essential sk Kummer}
+\spa{Let $A$ be an abelian surface over $K$, namely a complete non-singular, connected group variety of dimension two. Since $A$ is a group variety, the canonical line bundle is trivial and the group structure provides a multiplication morphism $m_n: A \times A \times \ldots \times A \rightarrow A$ that is invariant under the permutation action of $\mathfrak{S}_n$, hence it induces a morphism $$\Sigma_n: \Hilb^n(A) \xrightarrow{\rho_{HC}} \text{Sym}^n(A) \rightarrow A$$ by composition with the Hilbert-Chow morphism. Then $\text{K}_n(A) = \Sigma_{n+1}^{-1}(1)$ is called the $n$-th generalised Kummer variety and is a hyper-K\"{a}hler manifold of dimension $2n$ (\cite{Beauville1983}).
+}
+\spa{In \cite{HalvardHalleNicaise2017}, Proposition 4.3.2, Halle and Nicaise prove that the essential skeleton of an abelian variety $A$ over $K$ coincides with the construction of a skeleton of $A$ done by Berkovich in \cite{Berkovich1990}, Paragraph 6.5. It follows from this identification and \cite{Berkovich1990}, Theorem 6.5.1 that the essential skeleton of $A$ has a group structure, compatible with the group structure on $A^\an$ under the retraction $\rho_A$ of $A^\an$ onto the essential skeleton, so the following diagram commutes
+\begin{center}
+$\xymatrix{
+(A^\an)^n \ar[d]_{(\rho_A)^n} \ar[r]^-{m_n^\an} & A^\an \ar[d]^{\rho_A} \\
+\Sk(A)^n \ar[r]^-{\mu_n} & \Sk(A).
+}$
+\end{center} where $\mu$ denotes the multiplication of $\Sk(A)$.
+}
+\begin{prop} \label{prop essential skeleton Kummer}
+Let $A$ be an abelian surface over $K$. Assume that $A$ has  semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the $n$-th generalised Kummer variety is isomorphic to the symmetric quotient of the kernel of the morphism $\mu$, namely $$\Sk(\text{K}_n(A)) \simeq \Sk\big(m_{n+1}^{-1}(1)/\mathfrak{S}_{n+1}\big) \simeq \mu_{n+1}^{-1}(1)/\mathfrak{S}_{n+1}.$$ 
+\end{prop}
+\begin{proof}
+The first homeomorphism follows from the birational invariance of the essential skeleton (\cite{MustataNicaise}, Proposition 4.6.3). We denote by $$L=m_{n+1}^{-1}(1) \quad \text{ and }\quad \Lambda=\mu_{n+1}^{-1}(1).$$ We consider the action of $\mathfrak{S}_{n+1}$ on $L$: for any choice of an $\mathfrak{S}_{n+1}$-invariant generating canonical form on $A$, it follows from Proposition \ref{prop:G inv and homeo KS of quotient} that $\Sk(Z/\mathfrak{S}_{n+1}) \simeq \Sk(Z)/\mathfrak{S}_{n+1}$. We reduce to study the quotients $\Sk(Z)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$.
+
+Let $\mathfrak{S}_n'$ and $\mathfrak{S}_n''$ be the subgroups of $\mathfrak{S}_{n+1}$ of the permutations that fix $n$ and $n+1$ respectively. Then $\mathfrak{S}_{n+1}$ is generated by the two subgroups, so its action on $\Sk(Z)$ and $\Lambda$ is completely determined by the actions of these subgroups. As $Z$ is isomorphic to $n$ copies of $A$, we consider the following isomorphisms 
+\begin{align*}
+f_n: &Z \xrightarrow{\sim} A^n \quad (z_1,\ldots,z_{n+1}) \mapsto (z_1,\ldots,z_{n-1},z_{n+1}) \\
+f_{n+1}: &Z \xrightarrow{\sim} A^n \quad (z_1,\ldots,z_{n+1}) \mapsto (z_1,\ldots,z_{n-1},z_{n}).
+\end{align*} The isomorphism $f_n$ is $\mathfrak{S}_n'$-equivariant, $f_{n+1}$ is $\mathfrak{S}_n''$-equivariant, the morphism $\psi$
+\begin{center}
+\xymatrixrowsep{0.1pc} $\xymatrix{
+& Z  \ar[ldd]_{f_{n+1}} \ar[ddr]^{f_n} &\\
+& & \\
+A^n \ar[rr]^{\psi}& & A^n \\
+(z_1,\ldots,z_{n-1},z_{n}) \ar@{|->}[rr]& & (z_1,\ldots, \prod_{i=1}^{n} z_i^{-1}).
+}$
+\end{center} is equivariant with respect to the action of $\mathfrak{S}_n''$ on the source and that of $\mathfrak{S}_n'$ on the target. Hence, we obtain a commutative diagram of equivariant isomorphisms. We denote by $\overline{f}_n$, $\overline{f}_{n+1}$ and $\overline{\psi}$ the isomorphisms induced on the essential skeleta. By Theorem \textcolor{red}{reference} we can identify $\Sk(A^n)$ with $\Sk(A)^n$. Thus, we have the commutative diagram
+\begin{center}
+\xymatrixrowsep{0.1pc} $\xymatrix{
+& \Sk(Z)  \ar[ldd]_{\overline{f}_{n+1}} \ar[ddr]^{\overline{f}_n} &\\
+& & \\
+\Sk(A)^n \ar[rr]^{\overline{\psi}}& & \Sk(A)^n \\
+(v_1,\ldots,v_{n-1},v_{n}) \ar@{|->}[rr]& & (v_1,\ldots, \prod_{i=1}^{n} v_i^{-1}).
+}$
+\end{center} Then the action of $\mathfrak{S}_{n+1}$ on $\Sk(Z)$ is induced by the isomorphism $\overline{f}_n$ and $\overline{f}_{n+1}$ from the actions of $\mathfrak{S}_n''$ and $\mathfrak{S}_n'$ on $\Sk(A)^n$ respectively and these are compatible as $\overline{\psi}$ is equivariant.
+
+In a similar way, $\Lambda$ is isomorphic to $n$ copies of $\Sk(A)$ and comes equipped with an action of $\mathfrak{S}_{n+1}$. So, we have equivariant projections $g_n$ and $g_{n+1}$ with respect to $\mathfrak{S}_n'$ and $\mathfrak{S}_n''$. The equivariant morphism that completes and makes the diagram commutative is $\overline{\psi}$. Finally, we have the equivariant commutative diagram
+\begin{center}
+\xymatrixrowsep{1pc}
+\xymatrixrowsep{1pc}
+$\xymatrix{
+& \Sk(Z)  \ar[ld]_{\overline{f}_{n+1}} \ar[rd]^{\overline{f}_{n}}  &\\
+\mathfrak{S}_n'' \circlearrowleft\Sk(A)^n  \ar[rr]^{\overline{\psi}}& & \Sk(A)^n\circlearrowright \mathfrak{S}_n' \\
+& \Lambda\ar[lu]^{g_{n+1}}\ar[ru]_{g_n} &
+}$
+\end{center} and we conclude that the quotients $\Sk(Z)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$ are homeomorphic.
+\end{proof}
+
+\begin{prop} \label{prop top essential skeleton Kummer}
+If the essential skeleton of $A$ is homeomorphic to a point, the $1$-dimensional sphere $S^1$ or the torus $S^1 \times S^1$, then the essential skeleton of $\text{K}_n(A)$ is homeomorphic to a point, the standard $n$-simplex or $\CP^n$ respectively. 
+\end{prop}
+\begin{proof}
+
+\end{proof}
+\begin{rem}
+
+\end{rem}
+
 
 %\printbibliography
 \end{document}
