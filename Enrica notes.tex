@@ -1040,9 +1040,13 @@ The motivation to consider the point, the closed interval and the sphere $S^2$ a
 \begin{rem}
 Hilbert schemes of a $\text{K}3$ surfaces represent a family of examples of hyper-K\"{a}hler varieties. For a degeneration of hyper-K\"{a}hler manifolds over the unit disk it is possible to define the type as the nilpotency index of the monodromy operator on the second cohomology group. It naturally extends the definition for degenerations of $\text{K}3$ surfaces.
 %In particular, the nilpotency index of the monodromy of a degeneration of a $\text{K}3$ surface coincides with the nilpotency index of the monodromy of the corresponding degeneration of the Hilbert scheme (\cite{Beauville1983}, Lemma 2), so the corresponding degenerations are of the same type.
-In \cite{KollarLazaSaccaEtAl2017}, Koll\'{a}r, Laza, Sacc\`{a} and Voisin study the essential skeleton of a degeneration of hyper-K\"{a}hler manifolds in terms of the type. More precisely, given a minimal dlt degeneration of $2n$-dimensional hyper-K\"{a}hler manifolds, firstly they prove that the dual complex of the special fibre has dimension $(\nu-1)n$, where $\nu$ denotes the type of the degeneration. Secondly, they prove that, in the type III case, the dual complex is a simply connected closed pseudo-manifold with the rational homology of $\CP^n$. From this prospective, Proposition \ref{prop top essential skeleton Hilb} confirm and strengthen their result for the specific case of Hilbert schemes.
+In \cite{KollarLazaSaccaEtAl2017}, Koll\'{a}r, Laza, Sacc\`{a} and Voisin study the essential skeleton of a degeneration of hyper-K\"{a}hler manifolds in terms of the type. More precisely, in Theorem 0.10, given a minimal dlt degeneration of $2n$-dimensional hyper-K\"{a}hler manifolds, firstly they prove that the dual complex of the special fibre has dimension $(\nu-1)n$, where $\nu$ denotes the type of the degeneration. Secondly, they prove that, in the type III case, the dual complex is a simply connected closed pseudo-manifold with the rational homology of $\CP^n$. From this prospective, Proposition \ref{prop top essential skeleton Hilb} confirm and strengthen their result for the specific case of Hilbert schemes.
 
-For Hilbert schemes associated to a type II degeneration of $\text{K}3$ surfaces, an alternative proof of our result is due to Gulbrandsen, Halle, Hulek and Zhang, see \cite{GulbrandsenHalleHulek2016} and \cite{GulbrandsenHalleHulekEtAl}. Their approach is based on the method of \textit{expanded degenerations}, which first appeared in \cite{Li}, and on the construction of suitable GIT quotients, in order to obtain explicit minimal dlt degeneration for the associated family of Hilbert schemes. 
+For Hilbert schemes associated to a type II degeneration of $\text{K}3$ surfaces, an alternative proof of our result is due to Gulbrandsen, Halle, Hulek and Zhang, see \cite{GulbrandsenHalleHulek2016} and \cite{GulbrandsenHalleHulekEtAl}. Their approach is based on the method of \textit{expanded degenerations}, which first appeared in \cite{Li}, and on the construction of suitable GIT quotients, in order to obtain an explicit minimal dlt degeneration for the associated family of Hilbert schemes. 
+\end{rem}
+
+\begin{rem}
+The structure of the essential skeleton of a degeneration of hyper-K\"{a}hler manifolds is relevant in the context of mirror symmetry and in view of the work of Kontsevich and Soibelman (\textcolor{red}{reference}, \cite{KontsevichSoibelman}). The SYZ fibration (\cite{StromingerYauZaslow}) is a conjectural geometric explanation for the phenomenon of mirror symmetry and, roughly speaking, asserts the existence of a special Lagrangian fibration, such that mirror pairs of manifolds with trivial canonical bundle should admit fibrewise dual special Lagrangian fibrations. The most relevant fact from our prospective is that Kontsevich and Soibelman predict that the basis of the Lagrangian fibration of a type III degeneration is homeomorphic to the essential skeleton. In particular our result in Proposition \ref{prop top essential skeleton Hilb} is consistent with the expectation that, for type III degenerations of $2n$-dimensional hyper-K\"{a}hler manifolds, the basis is $\CP^n$ (see for instance \cite{Hwang}).
 \end{rem}
 }
 
@@ -1053,7 +1057,7 @@ For Hilbert schemes associated to a type II degeneration of $\text{K}3$ surfaces
 \begin{center}
 $\xymatrix{
 (A^\an)^n \ar[d]_{(\rho_A)^n} \ar[r]^-{m_n^\an} & A^\an \ar[d]^{\rho_A} \\
-\Sk(A)^n \ar[r]^-{\mu_n} & \Sk(A).
+\Sk(A)^n \ar[r]^-{\mu_n} & \Sk(A)
 }$
 \end{center} where $\mu$ denotes the multiplication of $\Sk(A)$.
 }
@@ -1061,36 +1065,36 @@ $\xymatrix{
 Let $A$ be an abelian surface over $K$. Assume that $A$ has  semistable reduction and the residue field $k$ is algebraically closed. Then the essential skeleton of the $n$-th generalised Kummer variety is isomorphic to the symmetric quotient of the kernel of the morphism $\mu$, namely $$\Sk(\text{K}_n(A)) \simeq \Sk\big(m_{n+1}^{-1}(1)/\mathfrak{S}_{n+1}\big) \simeq \mu_{n+1}^{-1}(1)/\mathfrak{S}_{n+1}.$$ 
 \end{prop}
 \begin{proof}
-The first homeomorphism follows from the birational invariance of the essential skeleton (\cite{MustataNicaise}, Proposition 4.6.3). We denote by $$L=m_{n+1}^{-1}(1) \quad \text{ and }\quad \Lambda=\mu_{n+1}^{-1}(1).$$ We consider the action of $\mathfrak{S}_{n+1}$ on $L$: for any choice of an $\mathfrak{S}_{n+1}$-invariant generating canonical form on $A$, it follows from Proposition \ref{prop:G inv and homeo KS of quotient} that $\Sk(Z/\mathfrak{S}_{n+1}) \simeq \Sk(Z)/\mathfrak{S}_{n+1}$. We reduce to study the quotients $\Sk(Z)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$.
+The first homeomorphism follows from the birational invariance of the essential skeleton (\cite{MustataNicaise}, Proposition 4.6.3). We denote by $$L=m_{n+1}^{-1}(1) \quad \text{ and }\quad \Lambda=\mu_{n+1}^{-1}(1).$$ For any choice of an $\mathfrak{S}_{n+1}$-invariant generating canonical form on $A$, it follows from Proposition \ref{prop:G inv and homeo KS of quotient} that $\Sk(L/\mathfrak{S}_{n+1}) \simeq \Sk(L)/\mathfrak{S}_{n+1}$. We reduce to study the quotients $\Sk(L)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$.
 
-Let $\mathfrak{S}_n'$ and $\mathfrak{S}_n''$ be the subgroups of $\mathfrak{S}_{n+1}$ of the permutations that fix $n$ and $n+1$ respectively. Then $\mathfrak{S}_{n+1}$ is generated by the two subgroups, so its action on $\Sk(Z)$ and $\Lambda$ is completely determined by the actions of these subgroups. As $Z$ is isomorphic to $n$ copies of $A$, we consider the following isomorphisms 
+Let $\mathfrak{S}_n'$ and $\mathfrak{S}_n''$ be the subgroups of $\mathfrak{S}_{n+1}$ of the permutations that fix $n$ and $n+1$ respectively. Then $\mathfrak{S}_{n+1}$ is generated by the two subgroups, so its action on $\Sk(L)$ and $\Lambda$ is completely determined by the actions of these subgroups. We consider the following isomorphisms 
 \begin{align*}
-f_n: &Z \xrightarrow{\sim} A^n \quad (z_1,\ldots,z_{n+1}) \mapsto (z_1,\ldots,z_{n-1},z_{n+1}) \\
+f_n: &L \xrightarrow{\sim} A^n \quad (z_1,\ldots,z_{n+1}) \mapsto (z_1,\ldots,z_{n-1},z_{n+1}) \\
 f_{n+1}: &Z \xrightarrow{\sim} A^n \quad (z_1,\ldots,z_{n+1}) \mapsto (z_1,\ldots,z_{n-1},z_{n}).
-\end{align*} The isomorphism $f_n$ is $\mathfrak{S}_n'$-equivariant, $f_{n+1}$ is $\mathfrak{S}_n''$-equivariant, the morphism $\psi$
+\end{align*} Then $f_n$ is $\mathfrak{S}_n'$-equivariant, $f_{n+1}$ is $\mathfrak{S}_n''$-equivariant and the morphism $\psi$
 \begin{center}
 \xymatrixrowsep{0.1pc} $\xymatrix{
-& Z  \ar[ldd]_{f_{n+1}} \ar[ddr]^{f_n} &\\
+& L  \ar[ldd]_{f_{n+1}} \ar[ddr]^{f_n} &\\
 & & \\
 A^n \ar[rr]^{\psi}& & A^n \\
 (z_1,\ldots,z_{n-1},z_{n}) \ar@{|->}[rr]& & (z_1,\ldots, \prod_{i=1}^{n} z_i^{-1}).
 }$
-\end{center} is equivariant with respect to the action of $\mathfrak{S}_n''$ on the source and that of $\mathfrak{S}_n'$ on the target. Hence, we obtain a commutative diagram of equivariant isomorphisms. We denote by $\overline{f}_n$, $\overline{f}_{n+1}$ and $\overline{\psi}$ the isomorphisms induced on the essential skeleta. By Theorem \textcolor{red}{reference} we can identify $\Sk(A^n)$ with $\Sk(A)^n$. Thus, we have the commutative diagram
+\end{center} is equivariant with respect to the action of $\mathfrak{S}_n''$ on the source and of $\mathfrak{S}_n'$ on the target. Hence, we obtain a commutative diagram of equivariant isomorphisms. We denote by $\overline{f}_n$, $\overline{f}_{n+1}$ and $\overline{\psi}$ the isomorphisms induced on the essential skeleta. By Theorem \textcolor{red}{reference} we can identify $\Sk(A^n)$ with $\Sk(A)^n$. Thus, we have the commutative diagram
 \begin{center}
 \xymatrixrowsep{0.1pc} $\xymatrix{
-& \Sk(Z)  \ar[ldd]_{\overline{f}_{n+1}} \ar[ddr]^{\overline{f}_n} &\\
+& \Sk(L)  \ar[ldd]_{\overline{f}_{n+1}} \ar[ddr]^{\overline{f}_n} &\\
 & & \\
 \Sk(A)^n \ar[rr]^{\overline{\psi}}& & \Sk(A)^n \\
 (v_1,\ldots,v_{n-1},v_{n}) \ar@{|->}[rr]& & (v_1,\ldots, \prod_{i=1}^{n} v_i^{-1}).
 }$
-\end{center} Then the action of $\mathfrak{S}_{n+1}$ on $\Sk(Z)$ is induced by the isomorphism $\overline{f}_n$ and $\overline{f}_{n+1}$ from the actions of $\mathfrak{S}_n''$ and $\mathfrak{S}_n'$ on $\Sk(A)^n$ respectively and these are compatible as $\overline{\psi}$ is equivariant.
+\end{center} Then the action of $\mathfrak{S}_{n+1}$ on $\Sk(L)$ is induced by the isomorphisms $\overline{f}_n$ and $\overline{f}_{n+1}$ from the actions of $\mathfrak{S}_n''$ and $\mathfrak{S}_n'$ on $\Sk(A)^n$ and these actions are compatible as $\overline{\psi}$ is equivariant.
 
 In a similar way, $\Lambda$ is isomorphic to $n$ copies of $\Sk(A)$ and comes equipped with an action of $\mathfrak{S}_{n+1}$. So, we have equivariant projections $g_n$ and $g_{n+1}$ with respect to $\mathfrak{S}_n'$ and $\mathfrak{S}_n''$. The equivariant morphism that completes and makes the diagram commutative is $\overline{\psi}$. Finally, we have the equivariant commutative diagram
 \begin{center}
 \xymatrixrowsep{1pc}
 \xymatrixrowsep{1pc}
 $\xymatrix{
-& \Sk(Z)  \ar[ld]_{\overline{f}_{n+1}} \ar[rd]^{\overline{f}_{n}}  &\\
+& \Sk(L)  \ar[ld]_{\overline{f}_{n+1}} \ar[rd]^{\overline{f}_{n}}  &\\
 \mathfrak{S}_n'' \circlearrowleft\Sk(A)^n  \ar[rr]^{\overline{\psi}}& & \Sk(A)^n\circlearrowright \mathfrak{S}_n' \\
 & \Lambda\ar[lu]^{g_{n+1}}\ar[ru]_{g_n} &
 }$
@@ -1104,7 +1108,11 @@ If the essential skeleton of $A$ is homeomorphic to a point, the $1$-dimensional
 
 \end{proof}
 \begin{rem}
+The three cases considered in Proposition \ref{prop top essential skeleton Kummer} are motivated by the work of Kulikov, Persson and Pinkham: they extend the notion of Kulikov model to degenerations of surfaces such that some power of the canonical bundle is trivial, and they classify the special fibres in Kulikov models (see an overview of these results in \cite{FriedmanMorrison}). For a degeneration of abelian surfaces over the unit disk, the dual complex of the special fibre is homeomorphic to a point, the sphere $S^1$ or the torus $S^1 \times S^1$ according to the three types and the type $\nu$ also determines the dimension of the dual complex, namely $\nu-1$.
 
+Generalised Kummer varieties are the second well-known family of examples of hyper-K\"{a}hler varieties. Thus, together with the analogous result for Hilbert schemes in Proposition \ref{prop top essential skeleton Hilb}, Proposition \ref{prop top essential skeleton Kummer} proceeds the discussion of the essential skeleton of a degeneration of hyper-K\"{a}hler manifolds in terms of types. Focusing on these specific families of examples, our results confirm the computation of the dimension of the essential skeleton of \cite{KollarLazaSaccaEtAl2017}. Theorem 0.10(i), and turn the rational cohomological description of the essential skeleton (Theorem 0.10(ii)) into a topological characterization.
+
+Moreover, the outcomes on the topology of the essential skeleton match the predictions of mirror symmetry about the occurrence of $\CP^n$ in the type III case.
 \end{rem}
 
 

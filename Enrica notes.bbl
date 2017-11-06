@@ -238,6 +238,39 @@
   \field{year}{1968}
 \endentry
 
+\entry{FriedmanMorrison}{incollection}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Friedman}{F.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Morrison}{M.}%
+     {David~R.}{D.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Birkh\"auser, Boston, Mass.}%
+  }
+  \strng{namehash}{FRMDR1}
+  \strng{fullhash}{FRMDR1}
+  \field{labelalpha}{FM83}
+  \field{sortinit}{F}
+  \field{booktitle}{The birational geometry of degenerations ({C}ambridge,
+  {M}ass., 1981)}
+  \field{pages}{1\bibrangedash 32}
+  \field{series}{Progr. Math.}
+  \field{title}{The birational geometry of degenerations: an overview}
+  \field{volume}{29}
+  \verb{file}
+  \verb :FriedmanMorrison - The birational geometry of degenerations_ an overvi
+  \verb ew.djvu:Djvu
+  \endverb
+  \field{year}{1983}
+\endentry
+
 \entry{GabberRamero}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -398,6 +431,44 @@
   \field{year}{2002}
 \endentry
 
+\entry{Hwang}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hwang}{H.}%
+     {Jun-Muk}{J.-M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HJM1}
+  \strng{fullhash}{HJM1}
+  \field{labelalpha}{Hwa08}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  Given a projective irreducible symplectic manifold M of dimension 2n, a
+  projective manifold X and a surjective holomorphic map f:M{\textrightarrow}X
+  with connected fibers of positive dimension, we prove that X is biholomorphic
+  to the projective space of dimension n. The proof is obtained by exploiting
+  two geometric structures at general points of X: the affine structure arising
+  from the action variables of the Lagrangian fibration f and the structure
+  defined by the variety of minimal rational tangents on the Fano manifold X.%
+  }
+  \verb{doi}
+  \verb 10.1007/s00222-008-0143-9
+  \endverb
+  \field{issn}{1432-1297}
+  \field{number}{3}
+  \field{pages}{625\bibrangedash 644}
+  \field{title}{Base manifolds for fibrations of projective irreducible
+  symplectic manifolds}
+  \verb{url}
+  \verb https://doi.org/10.1007/s00222-008-0143-9
+  \endverb
+  \field{volume}{174}
+  \field{journaltitle}{Inventiones mathematicae}
+  \field{year}{2008}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
 \entry{Kato1989}{incollection}{}
   \name{author}{1}{}{%
     {{}%
@@ -534,6 +605,71 @@
   \field{eprintclass}{math.AG}
   \field{month}{04}
   \field{year}{2017}
+\endentry
+
+\entry{KontsevichSoibelman}{inbook}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kontsevich}{K.}%
+     {Maxim}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Soibelman}{S.}%
+     {Yan}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{3}{}{%
+    {{}%
+     {Etingof}{E.}%
+     {Pavel}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Retakh}{R.}%
+     {Vladimir}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Singer}{S.}%
+     {I.~M.}{I.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Birkh{\"a}user Boston}%
+  }
+  \strng{namehash}{KMSY1}
+  \strng{fullhash}{KMSY1}
+  \field{labelalpha}{KS06}
+  \field{sortinit}{K}
+  \field{abstract}{%
+  In this paper we propose a way to construct an analytic space over a
+  non-archimedean field, starting with a real manifold with an affine structure
+  which has integral monodromy. Our construction is motivated by the junction
+  of the Homological Mirror conjecture and the geometric Strominger-Yau-Zaslow
+  conjecture. In particular, we glue from ``flat pieces'' an analytic K3
+  surface. As a byproduct of our approach we obtain an action of an arithmetic
+  subgroup of the group SO(1, 18) by piecewise-linear transformations on the
+  two-dimensional sphere S 2 equipped with naturally defined singular affine
+  structure.%
+  }
+  \field{booktitle}{The Unity of Mathematics: In Honor of the Ninetieth
+  Birthday of I.M. Gelfand}
+  \verb{doi}
+  \verb 10.1007/0-8176-4467-9_9
+  \endverb
+  \field{isbn}{978-0-8176-4467-3}
+  \field{pages}{321\bibrangedash 385}
+  \field{title}{Affine Structures and Non-Archimedean Analytic Spaces}
+  \verb{url}
+  \verb https://doi.org/10.1007/0-8176-4467-9_9
+  \endverb
+  \list{location}{1}{%
+    {Boston, MA}%
+  }
+  \field{year}{2006}
 \endentry
 
 \entry{Kulikov}{article}{}
@@ -822,6 +958,50 @@
   \endverb
   \field{journaltitle}{J. Algebraic Geom.}
   \field{year}{2004}
+\endentry
+
+\entry{StromingerYauZaslow}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Strominger}{S.}%
+     {Andrew}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yau}{Y.}%
+     {{Shing Tung}}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zaslow}{Z.}%
+     {Eric}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \keyw{BPS, D-branes, Duality, Mirror symmetry}
+  \strng{namehash}{SAYSZE1}
+  \strng{fullhash}{SAYSZE1}
+  \field{labelalpha}{SYZ96}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  It is argued that every Calabi-Yau manifold X with a mirror Y admits a family
+  of supersymmetric toroidal 3-cycles. Moreover the moduli space of such cycles
+  together with their flat connections is precisely the space Y. The mirror
+  transformation is equivalent to T-duality on the 3-cycles. The geometry of
+  moduli space is addressed in a general framework. Several examples are
+  discussed.%
+  }
+  \field{issn}{0550-3213}
+  \field{number}{1-2}
+  \field{pages}{243\bibrangedash 259}
+  \field{title}{Mirror symmetry is T-duality}
+  \field{volume}{479}
+  \field{journaltitle}{Nuclear Physics B}
+  \field{month}{11}
+  \field{year}{1996}
 \endentry
 
 \entry{Ulirsch2013}{article}{}
