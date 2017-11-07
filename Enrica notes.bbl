@@ -181,33 +181,6 @@
   \field{year}{2015}
 \endentry
 
-\entry{DieudonneGrothendieck}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Dieudonn{\'e}}{D.}%
-     {Jean}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Grothendieck}{G.}%
-     {Alexander}{A.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{DJGA1}
-  \strng{fullhash}{DJGA1}
-  \field{labelalpha}{DG61}
-  \field{sortinit}{D}
-  \field{title}{\'{E}l\'ements de g\'eom\'etrie alg\'ebrique IV 2: \'{E}tude
-  locale des sch\'emas et des morphismes de sch\'emas}
-  \verb{file}
-  \verb :DieudonneGrothendieck - _'El_'ements de g_'eom_'etrie alg_'ebrique IV
-  \verb 2_ Etude locale des schemas et des morphismes de schemas.djvu:Djvu
-  \endverb
-  \field{journaltitle}{Inst. Hautes \'Etudes Sci. Publ. Math.}
-  \field{year}{1961--1967}
-\endentry
-
 \entry{Fogarty}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -407,6 +380,37 @@
   \field{year}{2017}
 \endentry
 
+\entry{HarrisMorrison}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Harris}{H.}%
+     {Joe}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Morrison}{M.}%
+     {Ian}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag, New York}%
+  }
+  \strng{namehash}{HJMI1}
+  \strng{fullhash}{HJMI1}
+  \field{labelalpha}{HM98}
+  \field{sortinit}{H}
+  \field{isbn}{0-387-98438-0; 0-387-98429-1}
+  \field{pages}{xiv+366}
+  \field{series}{Graduate Texts in Mathematics}
+  \field{title}{Moduli of curves}
+  \field{volume}{187}
+  \verb{file}
+  \verb :HarrisMorrison - Moduli of curves.djvu:Djvu
+  \endverb
+  \field{year}{1998}
+\endentry
+
 \entry{Hatcher}{book}{}
   \name{author}{1}{}{%
     {{}%
@@ -464,6 +468,10 @@
   \verb https://doi.org/10.1007/s00222-008-0143-9
   \endverb
   \field{volume}{174}
+  \verb{file}
+  \verb :Hwang - Base manifolds for fibrations of projective irreducible symple
+  \verb ctic manifolds.pdf:PDF
+  \endverb
   \field{journaltitle}{Inventiones mathematicae}
   \field{year}{2008}
   \warn{\item Invalid format of field 'month'}
@@ -607,6 +615,39 @@
   \field{year}{2017}
 \endentry
 
+\entry{KontsevichSoibelmana}{incollection}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kontsevich}{K.}%
+     {Maxim}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Soibelman}{S.}%
+     {Yan}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {World Sci. Publ., River Edge, NJ}%
+  }
+  \strng{namehash}{KMSY1}
+  \strng{fullhash}{KMSY1}
+  \field{labelalpha}{KS01}
+  \field{sortinit}{K}
+  \field{booktitle}{Symplectic geometry and mirror symmetry ({S}eoul, 2000)}
+  \field{pages}{203\bibrangedash 263}
+  \field{title}{Homological mirror symmetry and torus fibrations}
+  \verb{url}
+  \verb https://doi.org/10.1142/9789812799821_0007
+  \endverb
+  \verb{file}
+  \verb :KontsevichSoibelmana - Homological mirror symmetry and torus fibration
+  \verb s.pdf:PDF
+  \endverb
+  \field{year}{2001}
+\endentry
+
 \entry{KontsevichSoibelman}{inbook}{}
   \name{author}{2}{}{%
     {{}%
@@ -669,6 +710,10 @@
   \list{location}{1}{%
     {Boston, MA}%
   }
+  \verb{file}
+  \verb :KontsevichSoibelman - Affine Structures and Non-Archimedean Analytic S
+  \verb paces.pdf:PDF
+  \endverb
   \field{year}{2006}
 \endentry
 
@@ -999,6 +1044,9 @@
   \field{pages}{243\bibrangedash 259}
   \field{title}{Mirror symmetry is T-duality}
   \field{volume}{479}
+  \verb{file}
+  \verb :StromingerYauZaslow - Mirror symmetry is T-duality.pdf:PDF
+  \endverb
   \field{journaltitle}{Nuclear Physics B}
   \field{month}{11}
   \field{year}{1996}
