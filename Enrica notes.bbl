@@ -244,6 +244,39 @@
   \field{year}{1983}
 \endentry
 
+\entry{Fulton1993}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Fulton}{F.}%
+     {William}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Princeton University Press, Princeton, NJ}%
+  }
+  \strng{namehash}{FW1}
+  \strng{fullhash}{FW1}
+  \field{labelalpha}{Ful93}
+  \field{sortinit}{F}
+  \verb{doi}
+  \verb 10.1515/9781400882526
+  \endverb
+  \field{isbn}{0-691-00049-2}
+  \field{note}{The William H. Roever Lectures in Geometry}
+  \field{pages}{xii+157}
+  \field{series}{Annals of Mathematics Studies}
+  \field{title}{Introduction to toric varieties}
+  \verb{url}
+  \verb http://dx.doi.org/10.1515/9781400882526
+  \endverb
+  \field{volume}{131}
+  \verb{file}
+  \verb :Fulton1993 - Introduction to toric varieties.djvu:Djvu
+  \endverb
+  \field{year}{1993}
+\endentry
+
 \entry{GabberRamero}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -274,6 +307,48 @@
   \field{journaltitle}{ArXiv Mathematics e-prints}
   \field{month}{09}
   \field{year}{2004}
+\endentry
+
+\entry{GublerRabinoffWerner}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Gubler}{G.}%
+     {Walter}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rabinoff}{R.}%
+     {Joseph}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Werner}{W.}%
+     {Annette}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Tropicalization, Skeleton, Berkovich space, Analytic geometry,
+  Non-Archimedean geometry}
+  \strng{namehash}{GWRJWA1}
+  \strng{fullhash}{GWRJWA1}
+  \field{labelalpha}{GRW16}
+  \field{sortinit}{G}
+  \verb{doi}
+  \verb https://doi.org/10.1016/j.aim.2016.02.022
+  \endverb
+  \field{issn}{0001-8708}
+  \field{number}{Supplement C}
+  \field{pages}{150 \bibrangedash  215}
+  \field{title}{Skeletons and tropicalizations}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/S0001870816000827
+  \endverb
+  \field{volume}{294}
+  \verb{file}
+  \verb :GublerRabinoffWerner - Skeletons and tropicalizations.pdf:PDF
+  \endverb
+  \field{journaltitle}{Advances in Mathematics}
+  \field{year}{2016}
 \endentry
 
 \entry{GulbrandsenHalleHulek2016}{article}{}
@@ -615,6 +690,35 @@
   \field{year}{2017}
 \endentry
 
+\entry{KollarMori}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Koll{\'a}r}{K.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mori}{M.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{KJMS1}
+  \strng{fullhash}{KJMS1}
+  \field{labelalpha}{KM08}
+  \field{sortinit}{K}
+  \field{isbn}{9780521060226}
+  \field{series}{Cambridge Tracts in Mathematics}
+  \field{title}{Birational Geometry of Algebraic Varieties}
+  \verb{url}
+  \verb https://books.google.com/books?id=YrysxvPbBLwC
+  \endverb
+  \field{year}{2008}
+\endentry
+
 \entry{KontsevichSoibelmana}{incollection}{}
   \name{author}{2}{}{%
     {{}%
@@ -807,6 +911,55 @@
   \verb :Liu2002 - Algebraic geometry and arithmetic curves.djvu:Djvu
   \endverb
   \field{year}{2002}
+\endentry
+
+\entry{Looijenga}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Looijenga}{L.}%
+     {Eduard}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LE1}
+  \strng{fullhash}{LE1}
+  \field{labelalpha}{Loo76}
+  \field{sortinit}{L}
+  \field{issn}{0020-9910}
+  \field{number}{1}
+  \field{pages}{17\bibrangedash 32}
+  \field{title}{Root systems and elliptic curves}
+  \verb{url}
+  \verb https://doi.org/10.1007/BF01390167
+  \endverb
+  \field{volume}{38}
+  \verb{file}
+  \verb :Looijenga - Root systems and elliptic curves.pdf:PDF
+  \endverb
+  \field{journaltitle}{Invent. Math.}
+  \field{year}{1976/77}
+\endentry
+
+\entry{Morton}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Morton}{M.}%
+     {H.~R.}{H.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MHR1}
+  \strng{fullhash}{MHR1}
+  \field{labelalpha}{Mor67}
+  \field{sortinit}{M}
+  \field{pages}{349\bibrangedash 352}
+  \field{title}{Symmetric products of the circle}
+  \field{volume}{63}
+  \verb{file}
+  \verb :Morton - Symmetric products of the circle.pdf:PDF
+  \endverb
+  \field{journaltitle}{Proc. Cambridge Philos. Soc.}
+  \field{year}{1967}
 \endentry
 
 \entry{MustataNicaise}{article}{}
@@ -1050,6 +1203,38 @@
   \field{journaltitle}{Nuclear Physics B}
   \field{month}{11}
   \field{year}{1996}
+\endentry
+
+\entry{Temkina}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Temkin}{T.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Baker}{B.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Payne}{P.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TM1}
+  \strng{fullhash}{TM1}
+  \field{labelalpha}{Tem16}
+  \field{sortinit}{T}
+  \field{booktitle}{Nonarchimedean and Tropical Geometry.}
+  \field{pages}{pages 195–285.}
+  \field{title}{Metrization of differential pluriforms on Berkovich analytic
+  spaces.}
+  \field{volume}{Simons Symposia}
+  \field{year}{2016}
 \endentry
 
 \entry{Ulirsch2013}{article}{}
