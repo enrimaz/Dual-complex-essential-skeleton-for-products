@@ -154,6 +154,49 @@
   \field{year}{1995}
 \endentry
 
+\entry{BirkarCasciniHaconEtAl}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Birkar}{B.}%
+     {Caucher}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cascini}{C.}%
+     {Paolo}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hacon}{H.}%
+     {Christopher~D.}{C.~D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {McKernan}{M.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BCCPHCDMJ1}
+  \strng{fullhash}{BCCPHCDMJ1}
+  \field{labelalpha}{BCHM10}
+  \field{sortinit}{B}
+  \field{issn}{0894-0347}
+  \field{number}{2}
+  \field{pages}{405\bibrangedash 468}
+  \field{title}{Existence of minimal models for varieties of log general type}
+  \verb{url}
+  \verb https://doi.org/10.1090/S0894-0347-09-00649-3
+  \endverb
+  \field{volume}{23}
+  \verb{file}
+  \verb :BirkarCasciniHaconEtAl - Existence of minimal models for varieties of
+  \verb log general type.pdf:PDF
+  \endverb
+  \field{journaltitle}{J. Amer. Math. Soc.}
+  \field{year}{2010}
+\endentry
+
 \entry{Bultot2015}{article}{}
   \name{author}{1}{}{%
     {{}%

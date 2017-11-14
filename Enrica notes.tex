@@ -274,6 +274,7 @@
 \newcommand{\cV}{\ensuremath{\mathscr{V}}}
 \newcommand{\cY}{\ensuremath{\mathscr{Y}}}
 \newcommand{\cZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\cW}{\ensuremath{\mathscr{W}}}
 
 
 %\renewcommand{\exp}{\ensuremath{\mathscr{E}\mathrm{xp}}}
@@ -299,7 +300,6 @@
 \renewcommand{\cU}{\ensuremath{\mathscr{U}}}
 \renewcommand{\cF}{\ensuremath{\mathscr{F}}}
 \renewcommand{\cJ}{\ensuremath{\mathscr{J}}}
-\renewcommand{\cZ}{\ensuremath{\mathscr{Z}}}
 \renewcommand{\cY}{\ensuremath{\mathscr{Y}}}
 \newcommand{\J}{\ensuremath{\mathscr{J}}}
 \newcommand{\K}{\ensuremath{\mathscr{K}}}
@@ -374,7 +374,12 @@
 
 
 \title{TITLE}
-\author{Morgan Brown and Enrica Mazzon}
+\author{Morgan V Brown}
+\email{mvbrown@math.miami.edu}
+\address{Department of Mathematics, University of Miami, Coral Gables, FL 33146 USA}
+\author{Enrica Mazzon}
+\email{e.mazzon15@imperial.ac.uk}
+\address{Department of Mathematics, Imperial College London, 180 Queen's Gate, London SW72AZ, UK}
 \date{}
 
 
@@ -441,11 +446,11 @@
 
 \subsection{Notation.}
 \spa{Let $R$ be a complete discrete valuation ring with maximal ideal $\mm$, residue field $k=R/\mm$ and quotient field $K$. We assume that the valuation $v_K$ is normalized, namely $v_K(\pi)=1$ for any uniformizer $\pi$ of $R$. We define by $|\cdot|_K= \exp(- v_K(\cdot))$ the absolute value on $K$ corresponding to $v_K$; this turns $K$ into a non-archimedean complete valued field.}
-\spa{ We write $S=\Spec R$ and we denote by $s$ the closed point of $S$. Let $\cX$ be an $R$-scheme of finite type. We will denote by $\cX_k$ the special fiber of $\cX$ and by $\cX_K$ the generic fibre. Moreover, we will denote by $\widehat{\cX}$ the $\mm$-adic completion of $\cX$ and by $\widehat{\cX}_\eta$ the generic fiber of $\widehat{\cX}$ in the category of $K$-analytic spaces.}
+\spa{ We write $S=\Spec R$ and we denote by $s$ the closed point of $S$. Let $\cX$ be an $R$-scheme of finite type. We will denote by $\cX_k$ the special fibre of $\cX$ and by $\cX_K$ the generic fibre. Moreover, we will denote by $\widehat{\cX}$ the $\mm$-adic completion of $\cX$ and by $\widehat{\cX}_\eta$ the generic fibre of $\widehat{\cX}$ in the category of $K$-analytic spaces.}
 
 \spa{Let $X$ be a proper $K$-scheme. A model for $X$ over $R$ is a flat separated $R$-scheme $\cX$ of finite type endowed with an isomorphism of $K$-schemes $\cX_K \rightarrow X$. If $X$ is smooth over $K$,
 we say that $\cX$ is an snc model for $X$ if it is regular over $R$, and the
-special fiber $\cX_k$ is a strict normal crossings divisor on $\cX$. In equicharacteristic $0$, such a model always exists, by Hironaka's resolution of singularities.}
+special fibre $\cX_k$ is a strict normal crossings divisor on $\cX$. In equicharacteristic $0$, such a model always exists, by Hironaka's resolution of singularities.}
 
 \spa{ \label{sss-log} All log schemes in this paper are  fine and saturated (\emph{fs}) log schemes and defined with respect to the Zariski topology. We denote a log scheme by $\cX^+=(\cX,\caM_{\cX})$, where $\caM_{\cX}$ is the structural sheaf of monoids. We denote by $$\mathcal{C}_{\cX}=\mathcal{M}_{\cX}/\mathcal{O}_{\cX}^{\times}$$
 the characteristic sheaf of $\cX^+$. The sheaf $\mathcal{C}_{\cX}$
@@ -463,7 +468,7 @@ If $\cX^+$ is a log-regular log scheme over $S^+$, then the locus where the log 
 
 \spa{Let $(X,\Delta_X)$ be a pair where $X$ is a proper $K$-scheme, $\Delta_X$ is an effective $\Q$-divisor such that $\Delta_X= \sum a_i \Delta_{X,i}$ with $0 \leqslant a_i \leqslant 1$, and $X^+=(X,\lceil \Delta_X \rceil)$ is a log-regular log scheme over $K$. A log-regular log scheme $\cX^+$ over $S^+$ is a model for $(X,\lceil \Delta_X \rceil)$ over $S^+$ if $\cX$ is a model of $X$ over $R$, the closure of any component of $\Delta_X$ in $\cX$ has non-empty intersection with $\cX_k$, and $D_\cX = \overline{\lceil \Delta_X \rceil} + \cX_{k,\redu}$. }
 
-\spa{We say that a log-regular log scheme $\cX^+$ over $S^+$ is semistable if the divisor $D_\cX$ is reduced. We say that a proper $K$-variety X has semistable reduction if it admits an $R$-model $\cX$ such that $\cX^+$ is log-smooth over $S^+$, with reduced special fiber; such a model is called a semistable model of $X$. This is a weaker notion than requiring the existence of an snc-model with reduced special fibre.}
+\spa{We say that a log-regular log scheme $\cX^+$ over $S^+$ is semistable if the divisor $D_\cX$ is reduced. We say that a proper $K$-variety X has semistable reduction if it admits an $R$-model $\cX$ such that $\cX^+$ is log-smooth over $S^+$, with reduced special fibre; such a model is called a semistable model of $X$. This is a weaker notion than requiring the existence of an snc-model with reduced special fibre.}
 
 \spa{We denote by $(\cdot)^{\an}$ the analytification functor from the category of $K$-schemes of finite type to Berkovich's category of $K$-analytic spaces. For every $K$-scheme of finite type $X$, as a set, $X^{\an}$ consists of the pairs $x=(\xi_x,|\cdot|_x)$ where $\xi_x$ is a point of $X$ and $|\cdot|_x$ is an absolute value on the residue field $\kappa(\xi_x)$ of $X$ at $\xi_x$ extending the absolute value $|\cdot|_K$ on $K$. We endow $X^{\an}$ with the Berkovich topology, i.e. the weakest one such that \begin{itemize}
 \item[(i)] the forgetful map $\phi: X^{\an} \rightarrow X$, defined as $(\xi_x,|\cdot|_x) \mapsto \xi_x$, is continuous,
@@ -496,7 +501,7 @@ The strategy of the proof of Proposition \ref{kato subdivision} goes back to \ci
 
 \subsection{Kato fans associated to log-regular log schemes.}
 \begin{thm}\label{kato fan associated} (\cite{Kato1994a}, Proposition 10.2)
-Let $\cX^+$ be a log-regular log scheme. Then there is an initial strict morphism $(\cX, \caC_{\cX}) \rightarrow F$ to a Kato fan in the category of monoidal spaces. Explicitly, there exist a Kato fan $F$ and a morphism $\pi: (\cX, \caC_{\cX}) \rightarrow F$ such that $\pi^{-1}(\caM_{F}) \simeq \caC_{\cX}$ and any other morphism to a Kato fan factors through $\pi$.
+Let $\cX^+$ be a log-regular log scheme. Then there is an initial strict morphism $(\cX, \caC_{\cX}) \rightarrow F$ to a Kato fan in the category of monoidal spaces. Explicitly, there exist a Kato fan $F$ and a morphism $\varrho: (\cX, \caC_{\cX}) \rightarrow F$ such that $\varrho^{-1}(\caM_{F}) \simeq \caC_{\cX}$ and any other morphism to a Kato fan factors through $\varrho$.
 \end{thm}
 The Kato fan $F$ in Theorem \ref{kato fan associated} is called the Kato fan associated to $\cX^+$; it is the topological subspace of
 $\cX$ consisting of the points $x$ such that the maximal ideal $\mathfrak{m}_x$ of
@@ -564,7 +569,7 @@ It follows that given any subdivision $F' \rightarrow F$ of the Kato fan F assoc
 
 \subsection {Fibred products and associated Kato fans.}\label{sect fs product}
 \spa{Given morphisms of \emph{fs} log schemes $f_1: \cX_1^+ \rightarrow \cY^+$ and $f_2: \cX_2^+ \rightarrow \cY^+$, their fibred product exists in the category of log schemes. It is obtained by endowing the usual fibred product of schemes
-\begin{equation} \label{fibered product diagram}
+\begin{equation} \label{fibreed product diagram}
 \begin{gathered}
 \xymatrixcolsep{3pc} \xymatrix{
   \cX_1\times_{\cY} \cX_2 \ar[r]^-{p_1} \ar[dr]^-{p_{\cY}} \ar[d]^-{p_2} & \cX_1 \ar[d]^{f_1}\\
@@ -665,7 +670,7 @@ We note that $\sigma_x$ is empty for any point $x$ that does not lie in the spec
 In other words, the skeleton associated to a log-regular scheme $\cX^+$, where $D_\cX$ allows horizontal components, generalizes Berkovich's skeleta by admitting unbounded faces in the direction of the horizontal components. It also generalizes the construction performed by Gubler, Rabinoff and Werner in \cite{GublerRabinoffWerner} of a skeleton associated to a strictly semistable pair.
 }
  
-\subsection{Embedding the skeleton in the non-archimedean generic fiber.}
+\subsection{Embedding the skeleton in the non-archimedean generic fibre.}
 \spa{Let $\cX^+$ be a log-regular log scheme over $S^+$. Let $x$ be a point of the associated Kato fan $F$. As the log structure on $\cX^+$ is of finite type, the characteristic monoid $\caC_{\cX,x}$ is of finite type too, and thus $\caC_{\cX,x}^\gp$ is a free abelian group of finite rank. Hence there exists a section $$\zeta: \caM_{\cX,x}^\gp / \caM_{\cX,x}^\times \rightarrow \caM_{\cX,x}^\gp.$$ The section $\zeta$ restricts to $\caC_{\cX,x} \rightarrow \caM_{\cX,x}$; indeed, if $x \in \caM_{\cX,x}$ then $\zeta(\overline{x})-x \in \caM_{\cX,x}^\times$. Therefore we may choose a section \begin{equation}\label{eq:sect}\mathcal{C}_{\cX,x}\to
 \mathcal{M}_{\cX,x}\end{equation} of the projection homomorphism
 $$\mathcal{M}_{\cX,x}\to \mathcal{C}_{\cX,x}$$ and use this section to view $\mathcal{C}_{\cX,x}$ as a submonoid of $\mathcal{M}_{\cX,x}$. Note that $\mathcal{C}_{\cX,x}\setminus \{0\}$ generates the ideal $\caI_{\cX,x}$ of $\mathcal{O}_{\cX,x}$.
@@ -890,7 +895,7 @@ Following the arguments of Lemma 4.2.8 and Proposition 4.3.4 in \cite{MustataNic
 The two following examples show that the generalization of the weight function to a variety with boundary may allow to construct Kontsevich-Soibelman skeleta for varieties with Kodaira dimension $-\infty$. Furthermore, we will notice that  only the components of $\Delta_X$ with coefficient $a_i=1$ determine strata that are contained in the Kontsevich-Soibelma skeleta.
 
 \begin{example}
-Let $X$ be the projective line $\mathbb{P}^1_K$ with affine coordinates $x$ and $y$, and $\Delta_X=(0:1) + (1:0)$. Then $a_i=1$ for any $i$ and there exist $\Delta_X$-logarithmic canonical forms. For example, we consider $$\omega =  \frac{dx}{x}= \frac{dy}{y}.$$ Let $\cX= \mathbb{P}_R^1$ and $D_\cX= (0:1) + (1:0)+ \mathbb{P}^1_k$. The log scheme $\cX^+=(\cX,D_\cX)$ is a log-regular model of $X^+=(X,\lceil \Delta_X \rceil)$ and the associated skeleton $\Sk(\cX^+)$ looks like this:
+Let $X$ be the projective line $\mathbb{P}^1_K$ with affine coordinates $x$ and $y$, and $\Delta_X=(0:1) + (1:0)$. Then $a_i=1$ for any $i$ and there exist $\Delta_X$-logarithmic canonical forms. For example, we consider $$\omega =  \frac{dx}{x}= -\frac{dy}{y}.$$ Let $\cX= \mathbb{P}_R^1$ and $D_\cX= (0:1) + (1:0)+ \mathbb{P}^1_k$. The log scheme $\cX^+=(\cX,D_\cX)$ is a log-regular model of $X^+=(X,\lceil \Delta_X \rceil)$ and the associated skeleton $\Sk(\cX^+)$ looks like this:
 \begin{center}
 \begin{tikzpicture}[scale=0.3]
 \draw[gray, thick] (-1,1) -- (-1,-3);
@@ -1021,28 +1026,28 @@ The reason to define the essential skeleton this way is that it behaves nicely u
 Under the identification of the birational points of $X$ with those of $X'$, $\Sk(X, \Delta_X)$ is identified with $\Sk(X', \Delta_{X'})$.
 \end{prop}
 \begin{proof}
-It suffices to check the proposition for divisorial valuations. By Lemma \ref{lemma characterization minimal points} a divisorial valuation $v$ is in the skeleton $\Sk(X,\Delta_X)$ if and only if there exists a log-regular model $\cX^+$ for $(X,\lceil\Delta_X\rceil)$ such that $v$ is a log canonical center of $(\cX, \Delta_X + \cX_{k,\redu})$, and there is a regular $\Delta_X$-logarithmic pluricanonical form $\omega$ whose divisor $D_{\min}(\cX,\omega)$ does not contain the center of $v$. As the essential skeleton $\Sk(X,\Delta_X)$ is a union of cells closed inside the skeleton associated to any log-regular model, we choose log-regular models $\cX^+$ and $\cX'^+$ so that $f$ extends to a log resolution $f_R \colon \cX' \to \cX$. We denote by $D = \overline{\Delta_X} + \cX_{k,\redu}$ and $D'=\overline{\Delta_{X'}} + \cX'_{k,\redu}$. 
+It suffices to check the proposition for divisorial valuations. By Lemma \ref{lemma characterization minimal points} a divisorial valuation $v$ is in the skeleton $\Sk(X,\Delta_X)$ if and only if there exists a log-regular model $\cX^+$ for $(X,\lceil\Delta_X\rceil)$ such that $v$ is a log canonical center of $(\cX, \Delta_X + \cX_{k,\redu})$, and there is a regular $\Delta_X$-logarithmic pluricanonical form $\omega$ whose divisor $D_{\min}(\cX,\omega)$ does not contain the center of $v$. As the essential skeleton $\Sk(X,\Delta_X)$ is a union of cells closed inside the skeleton associated to any log-regular model, we choose log-regular models $\cX^+$ and $\cX'^+$ so that $f$ extends to a log resolution $f_R \colon \cX' \to \cX$. We denote by $\Delta_\cX = \overline{\Delta_X} + \cX_{k,\redu}$ and $\Delta_{\cX'}=\overline{\Delta_{X'}} + \cX'_{k,\redu}$. 
 
-Suppose $v$ is a divisorial point in $\Sk(X, \Delta_X) \cap \Sk(\cX^+)$. Then let $\omega$ be a $\Delta_X$-logarithmic $m$-pluricanonical form on $(X,\Delta_X)$ whose associated divisor $\divisor_{\cX^+}(\omega)$ in $\cX^+$ does not contain the center of $v$. As $(\cX, D)$ is a dlt pair, we have that $$K_{\cX'}+D'= f_R^*(K_{\cX}+D)+M$$ where $M$ is effective. Thus there is a $\Delta_{X'}$-logarithmic $m$-pluricanonical form $\omega'$ on $\cX'$, whose associated divisor $\divisor_{\cX'^+}(\omega')=f^*_R(\divisor_{\cX^+}(\omega))+mM$. As $v$ is a log canonical center of $(\cX,D)$, $M$ does not vanish along $v$, so neither does $\divisor_{\cX'^+}(\omega')$. Likewise $v$ is a log canonical center of $(\cX', D')$. It follows that $v \in \Sk(X',\Delta_{X'},\omega')$.
+Suppose $v$ is a divisorial point in $\Sk(X, \Delta_X) \cap \Sk(\cX^+)$. Then let $\omega$ be a $\Delta_X$-logarithmic $m$-pluricanonical form on $(X,\Delta_X)$ whose associated divisor $\divisor_{\cX^+}(\omega)$ in $\cX^+$ does not contain the center of $v$. As $(\cX, \Delta_\cX)$ is a dlt pair, we have that $$K_{\cX'}+\Delta_{\cX'}= f_R^*(K_{\cX}+\Delta_\cX)+M$$ where $M$ is effective. Thus there is a $\Delta_{X'}$-logarithmic $m$-pluricanonical form $\omega'$ on $\cX'$, whose associated divisor $\divisor_{\cX'^+}(\omega')=f^*_R(\divisor_{\cX^+}(\omega))+mM$. As $v$ is a log canonical center of $(\cX,\Delta_\cX)$, $M$ does not vanish along $v$, so neither does $\divisor_{\cX'^+}(\omega')$. Likewise $v$ is a log canonical center of $(\cX', \Delta_{\cX'})$. It follows that $v \in \Sk(X',\Delta_{X'},\omega')$.
 
-Conversely, for any $m$, pullback along with multiplication by the divisor of discrepancies $M$ induces an isomorphism of vector spaces $$H^0(\cX, mK_{\cX}+mD) \cong H^0(\cX', mK_{\cX'}+mD').$$ So if $v$ is a divisorial point in $\Sk(X', \Delta_{X'})$, it is a log canonical center of $(\cX, D')$ and there is a regular $\Delta_{X'}$-logarithmic $m$-pluricanonical form $\omega'$ not containing the center of $v$, for some $m>0$. As a result $v$ is also a log canonical center of $(\cX, D)$, so we need only to check the existence of a regular $\Delta_X$-logarithmic pluricanonical form on $\cX$ not vanishing at the center of $v$. We take the preimage of $\omega'$ in $H^0(\cX, mK_{\cX}+mD)$, and the associated divisor in $\cX$ must not contain the center of $v$ because its pullback does not.
+Conversely, for any $m$, pullback along with multiplication by the divisor of discrepancies $M$ induces an isomorphism of vector spaces $$H^0(\cX, mK_{\cX}+m\Delta_\cX) \cong H^0(\cX', mK_{\cX'}+m\Delta_{\cX'}).$$ So if $v$ is a divisorial point in $\Sk(X', \Delta_{X'})$, it is a log canonical center of $(\cX', \Delta_{\cX'})$ and there is a regular $\Delta_{X'}$-logarithmic $m$-pluricanonical form $\omega'$ not containing the center of $v$, for some $m>0$. As a result $v$ is also a log canonical center of $(\cX, \Delta_\cX)$, so we need only to check the existence of a regular $\Delta_X$-logarithmic pluricanonical form on $\cX$ not vanishing at the center of $v$. We take the preimage of $\omega'$ in $H^0(\cX, mK_{\cX}+m\Delta_\cX)$, and the associated divisor in $\cX$ must not contain the center of $v$ because its pullback does not.
 \end{proof}
 
-\spa{Suppose that $(X,\Delta_X)$ is a dlt pair over $K$, such that $K_X + \Delta_X$ is semiample. Suppose thar $\cX$ is a good dlt minimal model of $(X,\Delta_X)$ over $R$ and let $D=\overline{\Delta_X} + \cX_{k,\redu}$. We consider a log resolution $f:X' \rightarrow X$ that extends to a log resolution of $(\cX,D)$. We write $K_{X'} + \Gamma' = f^*(K_X + \Delta_X)$. Let $\Delta_{X'}$ be the positive part of $\Gamma'$. We may embed the open dual complex $\mathcal{D}_0^{=1}(\cX, D)$ into the birational points of $X$.
+\spa{Suppose that $(X,\Delta_X)$ is a dlt pair over $K$, such that $K_X + \Delta_X$ is semiample. Suppose thar $\cX$ is a good dlt minimal model of $(X,\Delta_X)$ over $R$ and let $\Delta_\cX=\overline{\Delta_X} + \cX_{k,\redu}$. We consider a log resolution $f:X' \rightarrow X$ that extends to a log resolution of $(\cX,\Delta_\cX)$. We write $K_{X'} + \Gamma' = f^*(K_X + \Delta_X)$. Let $\Delta_{X'}$ be the positive part of $\Gamma'$. We may embed the open dual complex $\mathcal{D}_0^{=1}(\cX, \Delta_\cX)$ into the birational points of $X$.
 }
 \begin{prop} \label{prop dual complex minimal good dlt = essential skeleton any resolution}
-This embedding identifies $\mathcal{D}_0^{=1}(\cX, D)$ with $\Sk(X',\Delta_{X'})$.
+This embedding identifies $\mathcal{D}_0^{=1}(\cX, \Delta_\cX)$ with $\Sk(X',\Delta_{X'})$.
 \end{prop}
 \begin{proof}
-Choose a regular $R$-model $\cX'$ for $X'$ which is a log resolution of $(\cX, D)$ extending $f$ and let  $D'=\overline{\Delta_{X'}} + \cX'_{k,\redu}$, namely we have the log resolutions \begin{align*}
+Choose a regular $R$-model $\cX'$ for $X'$ which is a log resolution of $(\cX, \Delta_\cX)$ extending $f$ and let  $\Delta_{\cX'}=\overline{\Delta_{X'}} + \cX'_{k,\redu}$, namely we have the log resolutions \begin{align*}
 &(X', \Delta_{X'}) \rightarrow (X,\Delta_X) & \text{where }(X,\Delta_X) \text{ dlt and }\Delta_{X'} \text{ is the positive part of }\Gamma'\\
-&(\cX', D') \rightarrow (\cX,D) & \text{where }D=\overline{\Delta_X} + \cX_{k,\redu} \text{ and } D'=\overline{\Delta_{X'}} + \cX'_{k,\redu}.
-\end{align*} As in the previous proof, it suffices to check the proposition for divisorial valuations. Let $v$ be a divisorial valuation, and suppose $v \in \mathcal{D}_0^{=1}(\cX,D)$. Then $v$ is a log canonical center for $(\cX,D)$, so $v$ is also a log canonical center of $(\cX', D')$. For a sufficiently divisible index, we may find a $\Delta_X$-logarithmic pluricanonical form on $(X,\Delta_X)$ whose associated divisor in $\cX$ has vanishing locus $C$ such that $C$ is a divisor not containing the center of $v$. After pullback, we get a $\Delta_{X'}$-logarithmic pluricanonical form $\omega'$ whose associated divisor in $\cX'$ is supported on the strict transform of $C$ and the exceptional divisors of positive log discrepancy. But none of these contain $v$. Thus, $v \in \Sk(X',\Delta_{X'},\omega')$.
+&(\cX', \Delta_{\cX'}) \rightarrow (\cX,\Delta_\cX) & \text{where }\Delta_\cX=\overline{\Delta_X} + \cX_{k,\redu} \text{ and } \Delta_{\cX'}=\overline{\Delta_{X'}} + \cX'_{k,\redu}.
+\end{align*} As in the previous proof, it suffices to check the proposition for divisorial valuations. Let $v$ be a divisorial valuation, and suppose $v \in \mathcal{D}_0^{=1}(\cX,\Delta_\cX)$. Then $v$ is a log canonical center for $(\cX,\Delta_\cX)$, so $v$ is also a log canonical center of $(\cX', \Delta_{\cX'})$. For a sufficiently divisible index, we may find a $\Delta_X$-logarithmic pluricanonical form on $(X,\Delta_X)$ whose associated divisor in $\cX$ has vanishing locus $C$ such that $C$ is a divisor not containing the center of $v$. After pullback, we get a $\Delta_{X'}$-logarithmic pluricanonical form $\omega'$ whose associated divisor in $\cX'$ is supported on the strict transform of $C$ and the exceptional divisors of positive log discrepancy. But none of these contain $v$. Thus, $v \in \Sk(X',\Delta_{X'},\omega')$.
 
-Conversely, if $v$ is a divisorial point in $\Sk(X', \Delta_{X'})$, then $v$ is a log canonical center of $(\cX', D')$, so $v$ is a log canonical center of $(\cX, D)$, hence an element of the open dual complex $\mathcal{D}_0^{=1}(\cX, D)$.
+Conversely, if $v$ is a divisorial point in $\Sk(X', \Delta_{X'})$, then $v$ is a log canonical center of $(\cX', \Delta_{\cX'})$, so $v$ is a log canonical center of $(\cX, \Delta_\cX)$, hence an element of the open dual complex $\mathcal{D}_0^{=1}(\cX, \Delta_\cX)$.
 \end{proof}
 
-\spa{We define the essential skeleton $\Sk(X,\Delta_X)$ of a dlt pair $(X, \Delta_X)$ as the essential skeleton of any log-resolution of $(X,\Delta_X)$: Proposition \ref{prop birational invariance essential skeleton for pairs} guarantees that this is well-defined. Thus, Proposition \ref{prop dual complex minimal good dlt = essential skeleton any resolution} compares the essential skeleton to the skeleton of a good minimal dlt model of $(X,\Delta_X)$. the result can be restated as follows: if $(X,\Delta_X)$ is a dlt pair with $K_X+\Delta_X$ semiample and $(\cX,D)$ is a good dlt minimal model of $(X,\Delta_X)$ over $R$, then $\mathcal{D}_0^{=1}(\cX, D) = \Sk(X,\Delta_X)$. This generalizes \cite{NicaiseXu}, Theorem 3.3.3 to dlt pairs.
+\spa{We define the essential skeleton $\Sk(X,\Delta_X)$ of a dlt pair $(X, \Delta_X)$ as the essential skeleton of any log-resolution of $(X,\Delta_X)$: Proposition \ref{prop birational invariance essential skeleton for pairs} guarantees that this is well-defined. Thus, Proposition \ref{prop dual complex minimal good dlt = essential skeleton any resolution} compares the essential skeleton to the skeleton of a good minimal dlt model of $(X,\Delta_X)$. the result can be restated as follows: if $(X,\Delta_X)$ is a dlt pair with $K_X+\Delta_X$ semiample and $(\cX,\Delta_\cX)$ is a good dlt minimal model of $(X,\Delta_X)$ over $R$, then $\mathcal{D}_0^{=1}(\cX, \Delta_\cX) = \Sk(X,\Delta_X)$. This generalizes \cite{NicaiseXu}, Theorem 3.3.3 to dlt pairs.
 }
 
 
@@ -1085,7 +1090,7 @@ Any $\mathbb{Q}$-factorialization $\widetilde{W}$ corresponds to a simplicial su
 A maximal cone of $\widetilde{W}$ is spanned by $n=n_1+n_2-1$ independent rays of $C_W$. Each ray of $C_W$ corresponds to a choice of $x_{ij}$, and we can index these by edges of the complete bipartite graph $B$ on the $r_i$ and $s_j$. These $x_{ij}$ are independent if and only if the corresponding edges form a spanning tree. Let $w_1 \ldots w_{n}$ span a maximal cone of $\widetilde{W}$. On this affine chart, $\widetilde{W}$ is smooth if and only if the $w_i$ generate $N$ as a lattice. We have shown already that the $x_{ij}$ generate $N$. But every $x_{ij}$ is either one of the $w_i$, or it completes a cycle in $B$, so that it is a $\mathbb{Z}$-linear combination of the $w_i$.
 \end{proof}
 
-\begin{prop}
+\begin{prop} \label{prop product of dlt minimal pairs}
 Let $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ be semistable good projective dlt minimal pairs over the germ of a pointed curve $C$. The product $(\cZ,\Delta_{\cZ})$ is a log canonical pair, $K_\cZ+\Delta_{\cZ}$ is semiample, and the log canonical centers of $(\cZ,\Delta_{\cZ})$ are strata of the coefficient $1$ part of $\Delta_{\cZ}$.
 \end{prop}
 
@@ -1113,39 +1118,39 @@ v_{\Gamma}(\divisor_{\widetilde{\cZ}^+} (\omega_{\widetilde{\cZ}}))&  = \sum c_h
 \end{align*}
 From the formula \ref{equ valuations product},  $v_{\Gamma}(\divisor_{\widetilde{\cZ}^+} (\omega_{\widetilde{\cZ}}))= v_{\Gamma_{\widetilde{\cY}}}(\divisor_{\widetilde{\cY}^+} (\omega_{\widetilde{\cY}}))+ v_{\Gamma_{\widetilde{\cX}}}(\divisor_{\widetilde{\cX}^+} (\omega_{\widetilde{\cX}}))$, hence we obtain that the log discrepancy of $\Gamma$ with respect to the pair $(\cZ,\Delta_{\cZ})$ is non-negative. Moreover, it is zero if and only if the log discrepancies of $\Gamma_{\widetilde{\cX}}$ and $\Gamma_{\widetilde{\cY}}$ are both zero, namely if and only if $\Gamma_\cX$ and $\Gamma_{\cY}$ are log canonical centres of $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ respectively. Since for dlt pairs the log canonical centres are the strata of the coefficient $1$ part of the boundary, it follows that any log canonical centre of $(\cZ,\Delta_{\cZ})$ is a product of such strata, hence a stratum of the coefficient part $1$ of $(\cZ,\Delta_{\cZ})$.
 \end{proof}
-%
-%\begin{theorem}
-%$(Z, \Delta_Z)$ has a semistable good projective dlt minimal model $(Z', \Delta'_Z)$ and $\D^{=1}(\Delta'_Z) \cong \D^{=1}(\Delta_X) \times \D^{=1}(\Delta_Y)$.
-%
-%\end{theorem}
-%
-%\begin{proof}
-%
-%Let $\pi \colon W \to Z$ be a log resolution given by iterated blowups at centers of codimension $2$. Then there exists an effective divisor $D$ supported on all of the exceptional divisors such that $-D$ is $\pi$-ample. Let $B_X$ and $B_Y$ be effective Cartier divisors on $X$ and $Y$ whose respective supports are the boundary divisors of coefficient $1$. We may combine these to produce $B_Z$, an effective Cartier divisor on $Z$ whose support is the coefficient $1$ part of $\Delta_Z$.
-%
-%Choose $\epsilon$ small and rational. Then $\Gamma=\Delta_Z-B_Z$ is effective, and $(Z,\Gamma)$ is klt.
-%
-%There exists a divisor $\Gamma'$ on $W$ such that the difference between $\Gamma'$ and the pullback of $\Gamma$ is exceptional and 
-%\[
-%K_W+\Gamma' = \pi^*(K_Z+\Gamma).
-%\]
-%
-%Take $\Gamma_W$ to be the positive part of $\Gamma_W$. Since $(Z,\Gamma)$ was klt, so is $(W,\Gamma_W)$. For sufficiently small $\delta$, $(W, \Gamma_W+\delta D)$ is still klt. Let $a_i$ be arbitrary small rational coefficients, one for each divisor of $\Delta_Z$ with coefficient $1$.
-%
-%We will recover our dlt model by running an MMP with scaling on the pair $(W, \Gamma_W+\delta D - \sum a_i \Delta_i)$, scaling with respect to an ample divisor $A$ equivalent to $-D$. By **BCHM** this MMP terminates in a log terminal model $\phi \colon W \dashrightarrow Z'$. Moreover, as long as the $a_i$ are small relative to $\delta$, when the MMP terminates it must be the case that every exceptional divisor is contracted.  As running MMP induces birational contractions, the morphism $\psi \colon Z' \to Z$ is small. Hence $(Z', \psi^*\Delta_Z)$ is log canonical, and every log canonical center dominates a stratum of the coefficient $1$ part of $(Z,\Delta_Z)$.
-%
-%By construction of $Z'$, the divisor $-\sum a_i \Delta_i + \mu \phi_* A$ is $\psi$-ample, where $\mu$ is arbitrarily small. But for $\mu$ small enough, we can absorb $\mu \phi_* A$ into the term $\delta D$. Thus in fact $-\sum a_i \Delta_i$ is $\psi$-ample.
-%
-%As a result we can represent $Z' = \Proj_Z \bigoplus_{m \geq 0} \mathcal{O}(-m(\sum a_i \Delta_i))$. At this point we may take an arbitrarily large Veronese subring and assume the $a_i$ are all integers. We show that $(Z', \psi^*\Delta_Z)$ is dlt and compute its dual complex by looking at a formal toric model.
-%
-%It suffices to check near $z$, the generic point of a log canonical center, thus a stratum, of $(Z,\Delta_Z)$. Let $x$ and $y$ be the generic points of the corresponding strata of $(X,\Delta_X)$ and $(Y, \Delta_Y)$. Let $E_x$ and $E_y$ be the monoids of effective Cartier divisors supported on the strata near $x$ and $y$ respectively. Then the corresponding monoid for $z$ is $\langle E_x \oplus E_y \rangle /(t_x=t_y)$, where $t_x$ and $t_y$ are the respective sums of strata in the special fibers.
-%
-%This monoid has the form $E \oplus \mathbb{N}^l$, where $l$ is the number of horizontal divisors containing $z$, and $E$ is a monoid of the type considered in Lemma \ref{smalltoric}. The toric variety $T_{E,k}=\Spec k[E \oplus \mathbb{N}^l$ is a formal local model for $Z$ near $z$. so it suffices to consider $T=\Proj_{T_{E,k}} \bigoplus_{m \geq 0} \mathcal{O}(-m(\sum a_i \Delta_i))$, where the $\Delta_i$ range over the corresponding torus invariant Weil divisors.
-%
-%The divisors corresponding to the $l$ generators of $\mathbb{N}^l$ are Cartier, so their contribution to $T$ is trivial. Hence we reduce to the case $l=0$. For sufficiently general choices for the $a_i$, the toric variety $T$ is simplicial, its fan being induced by the simplicial subdivision of the fan of $T_{E,k}$ such that the $a_i$ induce a strictly convex piecewise linear function. By Lemma \ref{smalltoric}, for any such model, $T$ is a smooth toric variety, hence its invariant divisors are snc. Thus $(Z', \psi^*\Delta_Z)$ is dlt.
-%
-%Moreover, for any pair of monomial valuations $(v_x, v_y)$ centered at $x$ and $y$, there is a unique cone of the fan of $T_{E,k}$ containing the corresponding point. This corresponds to a unique stratum of $(Z', \psi^*\Delta_Z)$ and a unique monomial valuation on that stratum. Thus the valuation restriction map on dual complexes is one-to-one. We conclude it is an isomorphism.
-%\end{proof}
+
+\spa{Let $(X,\Delta_X)$ and $(Y,\Delta_Y)$ be dlt pairs over the germ of a punctured curve $C$. We denote bt $(Z,\Delta_Z)$ their product, where $\Delta_Z = X \times_C \Delta_Y + \Delta_X \times_C Y$. Let $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ be semistable good projective dlt minimal models over the pointed curve. }
+
+\begin{theorem} The product $(Z, \Delta_Z)$ has a semistable good projective dlt minimal model $(\cZ', \Delta_{\cZ'})$ and $\D^{=1}_0(\Delta_{\cZ'}) \simeq \D^{=1}_0(\Delta_\cX) \times \D^{=1}_0(\Delta_\cY)$.
+\end{theorem}
+\begin{proof}
+Let $(\cZ,\Delta_{\cZ})$ be the product of $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ as in Proposition \ref{prop product of dlt minimal pairs}. Let $\vartheta: \cW \rightarrow \cZ$ be a log resolution given by iterated blow-ups at centres of codimension at least $2$. Then there exists an effective divisor $D$ supported on all of the exceptional divisors such that $-D$ is $\vartheta$-ample.
+\\
+
+\emph{Claim:} there exist $B_\cX$ and $B_\cY$ effective divisors on $\cX$ and $\cY$ whose respective supports contain no log canonical centres of $\Delta_{\cX}$ and $\Delta_{\cY}$, and such that $B_\cX - \epsilon \Delta_{\cX}^{=1}$ and $B_\cY - \epsilon \Delta_{\cY}^{=1}$ are ample, for $\epsilon$ small and rational.
+\\
+
+Choose $\epsilon$ small and rational. Then $\Gamma_\cX=\Delta_\cX +B_\cX -\epsilon \Delta_{\cX}^{=1}$ and $\Gamma_\cY=\Delta_\cY +B_\cY -\epsilon \Delta_{\cY}^{=1}$ are effective, and $(\cX,\Gamma_\cX)$ and $(\cY,\Gamma_\cY)$ are klt. Let $\Gamma_{\cZ}'$ be the log pullback to $\cW$ of the product $\Gamma_\cZ$ of $\Gamma_\cX$ and $\Gamma_\cY$, namely $K_\cW + \Gamma_{\cZ}' = \vartheta^*(K_\cZ + \Gamma_{\cZ})$, we denote by $\Gamma_\cW$ the positive part of $\Gamma_{\cZ}'$. Since $(\cZ,\Gamma_\cZ)$ was klt, so is $(\cW,\Gamma_\cW)$. For sufficiently small $\delta$, $(\cW, \Gamma_\cW+\delta D)$ is still klt.
+
+Let $\alpha_i$ be arbitrary small rational coefficients, one for each divisor $\Delta_{\cZ,i}^{=1}$ of $\Delta_\cZ$ with coefficient $1$ and in the special fibre. We will recover the requested dlt model by running an MMP with scaling on the pair $(\cW, \Gamma_\cW+\delta D - \sum \alpha_i \Delta_{\cZ,i}^{=1})$, scaling with respect to an ample divisor $A$ equivalent to $-D$. By \cite{BirkarCasciniHaconEtAl} this MMP terminates in a log terminal model $\phi \colon \cW \dashrightarrow \cZ'$. Moreover, as long as the $\alpha_i$ are small relative to $\delta$, when the MMP terminates it must be the case that every exceptional divisor is contracted.  As running MMP induces birational contractions, the morphism $\psi \colon \cZ' \to \cZ$ is small. Hence $(\cZ', \psi^*\Delta_\cZ)$ is log canonical, and every log canonical centre dominates a stratum of the coefficient $1$ part of $(\cZ,\Delta_\cZ)$.
+
+By construction of $\cZ'$, the divisor $-\sum \alpha_i \Delta_{\cZ,i}^{=1} + \mu \phi_* A$ is $\psi$-ample, where $\mu$ is arbitrarily small. But for $\mu$ small enough, we can absorb $\mu \phi_* A$ into the term $\delta D$. Thus in fact $-\sum \alpha_i \Delta_{\cZ,i}^{=1}$ is $\psi$-ample. As a result we can represent $$\cZ' = \text{Proj}_\cZ \bigoplus_{m \geq 0} \mathcal{O}\big(-m(\sum \alpha_i \Delta_{\cZ,i}^{=1})\big).$$ At this point we may take an arbitrarily large Veronese subring and assume the $\alpha_i$ are all integers.
+
+Now, we show that $(\cZ', \psi^*\Delta_\cZ)$ is a dlt pair %and compute its dual complex 
+by looking at a formal toric model. Indeed, $(\cZ,\Delta_{\cZ})$ is formally locally toric at the log canonical centres, and the condition of being dlt is a formally local property. Moreover, we reduce to check this property at the log canonical centres of  $(\cZ', \psi^*\Delta_\cZ)$ that lie in the special fibre, as the components $\Delta_{\cZ,i}$ are Cartier divisor on the generic fibre.
+
+Let $z$ be the generic point of the image in $\cZ$ of a log canonical centre of $(\cZ', \psi^*\Delta_\cZ)$, hence $z$ is the generic point of a log canonical centre of $(\cZ,\Delta_{\cZ})$ and by Proposition \ref{prop product of dlt minimal pairs} it is a stratum of the coefficient $1$ part of $\Delta_{\cZ}$. Let $x$ and $y$ be the generic points of the corresponding strata of $(\cX,\Delta_\cX)$ and $(\cY, \Delta_\cY)$. Let $E_x$ and $E_y$ be the monoids of effective Cartier divisors supported on the strata near $x$ and $y$ respectively. Then the corresponding monoid for $z$ is $\langle E_x \oplus E_y \rangle /(t_x=t_y)$, where $t_x$ and $t_y$ are the respective sums of local equations of strata in the special fibres. This monoid has the form $M \oplus \mathbb{N}^l$, where $l$ is the number of horizontal divisors containing $z$, and $M$ is a monoid of the type considered in Lemma \ref{smalltoric}. The toric variety $T_{M,k}=\Spec k[M \oplus \mathbb{N}^l]$ is a formal local model for $\cZ$ near $z$, so it suffices to consider $$T'=\text{Proj}_{T_{M,k}} \bigoplus_{m \geq 0} \mathcal{O}\big(-m(\sum \alpha_i \Delta_{T,i})\big),$$ where the divisors $\Delta_{T,i}$ range over the torus invariant Weil divisors corresponding to the $\Delta_{\cZ,i}^{=1}$.
+
+The divisors corresponding to the $l$ generators of $\mathbb{N}^l$ are Cartier, so their contribution to $T$ is trivial and we can reduce to the case $l=0$. For sufficiently general choices for the $\alpha_i$, the toric variety $T'$ is simplicial, its fan being induced by the simplicial subdivision of the fan of $T_{M,k}$ such that the $\alpha_i$ induce a strictly convex piecewise linear function. Thus, $T'$ is a small $\Q$-factorialization of $T_{M,k}$. By Lemma \ref{smalltoric}, for any such model, $T'$ is a smooth toric variety, hence its invariant divisors are snc. Thus $(\cZ', \psi^*\Delta_\cZ)$ is dlt.
+
+Finally, we compute the dual complex of the coefficient 1 part of $(\cZ', \psi^*\Delta_\cZ)$ by looking at formal toric models again. Locally at the generic points of the log canonical centres, $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ are snc, hence log-regular, and semistable. By Proposition \ref{prop semistability and skeleta} there is a bijective correspondence between pairs of strata in $\Delta_{\cX}^{=1}$ and $\Delta_{\cY}^{=1}$, and strata of their product, namely between pairs of points in the Kato fans of $\cX$ and $\cY$ locally around the log canonical centres and the points in the Kato fan of the product. As the Kato fan of $\cZ$ at a log canonical centre $z$ corresponding to $(x,y)$ is described in terms of the monoid $E_z = \langle E_x \oplus E_y \rangle /(t_x=t_y)$, there is a one-to-one correspondence between the strata in the product and the strata in the formal toric model $T_{M,k}$. Hence, we reduce to study the strata of the coefficient 1 part of $(\cZ',\psi^*\Delta_\cZ )$ in the formal model $T'$. But $T'$ is obtained by a simplicial subdivision of $T$. Thus, we conclude that the dual complex $\D^{=1}_0(\psi^*\Delta_\cZ)$ is identified with the product of the dual complexes of the coefficient 1 part of $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$.
+\end{proof}
+
+\begin{proof}[Proof of Claim]
+Let $(\cX,\Delta_{\cX})$ be a good projective minimal dlt model of $(X,\Delta_X)$ and let $A_\cX$ be an ample divisor on $\cX$. Let $\mathcal{J}$ be the ideal sheaf of $\Delta_{\cX}^{=1}$ and let $$\chi: \cX' = \text{Bl}_\mathcal{J}\cX \rightarrow \cX$$ be the blow-up of $\cX$ with respect to $\mathcal{J}$. Then the trasform $- ((\Delta_{\cX}^{=1})'+ \text{Exc}(\chi))$ is a $\chi$-ample Cartier divisor, where $(\Delta_{\cX}^{=1})'$ denotes the strict trasform of $\Delta_{\cX}^{=1}$ and $\text{Exc}(\chi)$ the exceptional divisor of $\chi$. For $\varepsilon$ small positive rational $\chi^*(A_\cX) - \varepsilon (\Delta_{\cX}^{=1} + \text{Exc}(\chi)) $ is ample. We choose such an $\varepsilon$. For a sufficiently large integer $n$, we can find $$G_{\cX'} \sim n \chi^*(A_\cX) - n \varepsilon (\Delta_{\cX'}^{=1} + \text{Exc}(\chi))$$ such that $G_{\cX'}$ is effective and contains no log canonical centres. Then the push-forward $G_\cX \sim n A_\cX - n \varepsilon \Delta_{\cX}^{=1}$ of $G_{\cX'}$ is effective and contains no log canonical centres of $(\cX,\Delta_{\cX})$. In particular $G_\cX$ is Cartier at the log canonical centres of $(\cX,\Delta_{\cX})$.
+
+We can run the same construction for the ideal sheaf of the divisor $G_\cX$. Notice that the blow-up with respect to $G_\cX$ is an isomorphism at the log canonical centres of $(\cX,\Delta_{\cX})$ as there $G_\cX$ is Cartier. We obtain that, for sufficiently small positive rationals $\delta$ and then sufficiently large integers $m$, we can find $H_\cX \sim m A_\cX - m \delta G_\cX$ such that it is effective and not containing any log canonical centre of $(\cX,\Delta_{\cX})$. Then $$\frac{1}{\delta}A_\cX - \frac{1}{m \delta}H_\cX \sim G_\cX \sim n A_\cX - n \varepsilon \Delta_{\cX}^{=1} $$ implies that  $$ \Big(\frac{1}{\delta} - n\Big) A_\cX  \sim \frac{1}{m \delta} H_\cX - n \varepsilon  \Delta_{\cX}^{=1}.$$ For $\delta$ sufficiently small the term $\big(\frac{1}{\delta} - n\big)$ is positive, and then for $m$ sufficiently large $B_\cX = \frac{1}{m \delta} H_\cX$ concludes the proof.
+\end{proof}
 
 \section{Applications}
 \subsection{Weight functions and skeleta for finite quotients}
