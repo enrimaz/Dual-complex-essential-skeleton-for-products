@@ -113,7 +113,7 @@
   \field{sortinit}{B}
   \field{issn}{0022-040X}
   \field{number}{4}
-  \field{pages}{755\bibrangedash 782 (1984)}
+  \field{pages}{755\bibrangedash 782}
   \field{title}{Vari\'et\'es {K}\"ahleriennes dont la premi\`ere classe de
   {C}hern est nulle}
   \verb{url}
@@ -525,7 +525,8 @@
   \strng{fullhash}{GMGHLHHKZZ1}
   \field{labelalpha}{GHHZ17}
   \field{sortinit}{G}
-  \field{title}{The geometry of degenerations of Hilbert schemes of points}
+  \field{title}{The geometry of degenerations of Hilbert schemes of points,
+  preprint}
   \field{year}{2017}
 \endentry
 
@@ -667,6 +668,31 @@
   \field{year}{1998}
 \endentry
 
+\entry{Hartshorne1977}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hartshorne}{H.}%
+     {Robin}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag, New York-Heidelberg}%
+  }
+  \strng{namehash}{HR1}
+  \strng{fullhash}{HR1}
+  \field{labelalpha}{Har77}
+  \field{sortinit}{H}
+  \field{isbn}{0-387-90244-9}
+  \field{note}{Graduate Texts in Mathematics, No. 52}
+  \field{pages}{xvi+496}
+  \field{title}{Algebraic geometry}
+  \verb{file}
+  \verb :Hartshorne1977 - Algebraic geometry.djvu:Djvu
+  \endverb
+  \field{year}{1977}
+\endentry
+
 \entry{Hatcher}{book}{}
   \name{author}{1}{}{%
     {{}%
@@ -731,31 +757,6 @@
   \field{journaltitle}{Inventiones mathematicae}
   \field{year}{2008}
   \warn{\item Invalid format of field 'month'}
-\endentry
-
-\entry{Kato1989}{incollection}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Kato}{K.}%
-     {Kazuya}{K.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Johns Hopkins Univ. Press, Baltimore, MD}%
-  }
-  \strng{namehash}{KK1}
-  \strng{fullhash}{KK1}
-  \field{labelalpha}{Kat89}
-  \field{sortinit}{K}
-  \field{booktitle}{Algebraic analysis, geometry, and number theory
-  ({B}altimore, {MD}, 1988)}
-  \field{pages}{191\bibrangedash 224}
-  \field{title}{Logarithmic structures of {F}ontaine-{I}llusie}
-  \verb{file}
-  \verb :Kato1989 - Logarithmic structures of Fontaine-Illusie.pdf:PDF
-  \endverb
-  \field{year}{1989}
 \endentry
 
 \entry{Kato1994a}{article}{}
@@ -1047,15 +1048,8 @@
   }
   \field{booktitle}{The Unity of Mathematics: In Honor of the Ninetieth
   Birthday of I.M. Gelfand}
-  \verb{doi}
-  \verb 10.1007/0-8176-4467-9_9
-  \endverb
-  \field{isbn}{978-0-8176-4467-3}
   \field{pages}{321\bibrangedash 385}
   \field{title}{Affine Structures and Non-Archimedean Analytic Spaces}
-  \verb{url}
-  \verb https://doi.org/10.1007/0-8176-4467-9_9
-  \endverb
   \list{location}{1}{%
     {Boston, MA}%
   }
@@ -1128,34 +1122,6 @@
   \field{journaltitle}{J. Differential Geom.}
   \field{month}{03}
   \field{year}{2001}
-\endentry
-
-\entry{Liu2002}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Liu}{L.}%
-     {Qing}{Q.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Oxford University Press, Oxford}%
-  }
-  \strng{namehash}{LQ1}
-  \strng{fullhash}{LQ1}
-  \field{labelalpha}{Liu02}
-  \field{sortinit}{L}
-  \field{isbn}{0-19-850284-2}
-  \field{note}{Translated from the French by Reinie Ern{\'e}, Oxford Science
-  Publications}
-  \field{pages}{xvi+576}
-  \field{series}{Oxford Graduate Texts in Mathematics}
-  \field{title}{Algebraic geometry and arithmetic curves}
-  \field{volume}{6}
-  \verb{file}
-  \verb :Liu2002 - Algebraic geometry and arithmetic curves.djvu:Djvu
-  \endverb
-  \field{year}{2002}
 \endentry
 
 \entry{Looijenga}{article}{}
@@ -1310,29 +1276,6 @@
   \endverb
   \field{journaltitle}{J. Algebraic Geom.}
   \field{year}{2006}
-\endentry
-
-\entry{Nowak}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Nowak}{N.}%
-     {Krzysztof~Jan}{K.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{NKJ1}
-  \strng{fullhash}{NKJ1}
-  \field{labelalpha}{Now97}
-  \field{sortinit}{N}
-  \field{issn}{0083-4386}
-  \field{number}{35}
-  \field{pages}{243\bibrangedash 246}
-  \field{title}{Flat morphisms between regular varieties}
-  \verb{file}
-  \verb :Nowak - Flat morphisms between regular varieties.pdf:PDF
-  \endverb
-  \field{journaltitle}{Univ. Iagel. Acta Math.}
-  \field{year}{1997}
 \endentry
 
 \entry{OGradya}{article}{}
@@ -1633,11 +1576,42 @@
      {}{}%
      {}{}}%
   }
+  \name{editor}{5}{}{%
+    {{}%
+     {Adolphson}{A.}%
+     {Alan}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Baldassarri}{B.}%
+     {Francesco}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Berthelot}{B.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Katz}{K.}%
+     {Nicholas}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Loeser}{L.}%
+     {Fran\c{c}ois}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Walter de Gruyter GmbH \& Co. KG, Berlin}%
+  }
   \strng{namehash}{VI1}
   \strng{fullhash}{VI1}
   \field{labelalpha}{Vid04}
   \field{sortinit}{V}
   \field{booktitle}{Geometric aspects of {D}work theory. {V}ol. {I}, {II}}
+  \field{pages}{983–1038}
   \field{title}{Monodromie locale et fonctions zeta des log sch\'emas.}
   \field{year}{2004}
 \endentry
