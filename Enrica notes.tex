@@ -412,9 +412,9 @@ As an application, we compute the homeomorphism type of the dual complex of some
 
 \section{Introduction}
 
-Let $R$ be a discrete valuation ring with quotient field $K$ and residue field $k$, and let $X$ be a smooth proper variety over $K$. While there may be no way to extend $X$ to a smooth proper variety over $R$, resolution of singularities guarantees that we can always produce an $R$ model $\cX$ where the special fiber $\cX_k$ is a strict normal crossings (snc) divisor. Given such a model, we associate the dual complex $\D(\cX_k)$, which is the intersection complex of the components of the special fiber. 
+Let $R$ be a discrete valuation ring with quotient field $K$ and residue field $k$, and let $X$ be a smooth proper variety over $K$. While there may be no way to extend $X$ to a smooth proper variety over $R$, \textcolor{red}{in $\text{char}(k)=0$} resolution of singularities guarantees that we can always produce an $R$ model $\cX$ where the special fiber $\cX_k$ is a strict normal crossings (snc) divisor. Given such a model, we associate the dual complex $\D(\cX_k)$, which is the dual intersection complex of the components of the special fiber. 
 
-The dual complex of the special fiber of a such degeneration reflects the geometry of the generic fiber. If the generic fiber is rationally connected, then the special fiber is contractible \cite{deFernexKollarXu2012}. For Calabi-Yau varieties, degenerations are classified by the action of monodromy on the cohomology. The principle is that the degenerations with maximally unipotent actions have the most rich combinatorial structure in the dual complex. In this case, the dual complex is always a $\mathbb{Q}$-homology sphere, and Koll{\'a}r and Xu \cite{KollarXu} show that it is a sphere if $n\leqslant 3$ or $n \leqslant 4$ and the special fiber is snc. 
+The dual complex of the special fiber of a such degeneration reflects the geometry of the generic fiber. If the generic fiber is rationally connected, then the dual complex of the special fiber is contractible \cite{deFernexKollarXu2012}. For Calabi-Yau varieties, degenerations are classified by the action of monodromy on the cohomology. The principle is that the degenerations with maximally unipotent actions have the most rich combinatorial structure in the dual complex. In this case, the dual complex is always a $\mathbb{Q}$-homology sphere, and Koll{\'a}r and Xu \cite{KollarXu} show that it is a sphere if $n\leqslant 3$ or $n \leqslant 4$ and the special fiber \textcolor{red}{of a minimal dlt model} is snc. 
 
 The goal of this work is to understand the dual complex of a model for the product of two smooth proper varieties over $K$. We consider this problem from two perspectives.
 
@@ -425,17 +425,17 @@ The Berkovich skeleta turn out to be relevant in the study of the topology of $X
 
 \subsection{The dual complex of a dlt model.} The other approach to the study of the dual complexes comes from birational geometry. In this setting, we consider a pair $(\cX, \Delta_\cX)$ over the germ of a curve. In the log general type case, running the minimal model program distinguishes a canonical model for the degeneration $(\cX, \Delta_\cX)$ \cite{Alexeev, KollarShepherd-Barron, HaconMcKernanXu}, at the cost of possibly introducing worse singularities. If we are willing to tolerate some ambiguity in our choice of model, we can choose instead to produce a dlt minimal model. One advantage of dlt models is that they are expected to exist for all pairs admitting a log pluricanonical form. The singularities are mild enough that it is possible to define the dual complex as the intersection complex of divisors of coefficient $1$, denoted $\D^{=1}(\cX,\Delta_\cX)$. In \cite{deFernexKollarXu2012}, de Fernex, Koll{\'a}r, and Xu investigate how the dual complex is affected by the operations of the minimal model program. They show, under mild hypotheses, that every step of the MMP induces a homotopy equivalence between dual complexes. Moreover, $\D^{=1}(\cX,\Delta_\cX)$ is a PL invariant under log crepant birational maps.
 
-\subsection{The essential skeleton.} Recently there has been much interest in a synthesis of the two approaches. Kontsevich and Soibelmann \cite{KontsevichSoibelman} define a version of the skeleton of a K3 surface which detects the locus of simple poles along the special fiber of the distinguished canonical form. Musta{\c{t}}{\u{a}} and Nicaise \cite{MustataNicaise} extend their definition to any variety with non-negative Kodaira dimension. The key technical tool is the definition, for a rational pluricanonical form, of a weight function on the Berkovich space. The essential skeleton $\Sk(X)$ is the union over all regular pluricanonical forms of the minimality loci of the associated weight function.
+\subsection{The essential skeleton.} Recently there has been much interest in a synthesis of the two approaches. Kontsevich and Soibelmann \cite{KontsevichSoibelman} define a version of the skeleton of a \textcolor{red}{variety with trivial canonical bundle}, which detects the locus of simple poles along the special fiber of the distinguished canonical form. Musta{\c{t}}{\u{a}} and Nicaise \cite{MustataNicaise} extend their definition to any variety with non-negative Kodaira dimension. The key technical tool is the definition, for a rational pluricanonical form, of a weight function on the Berkovich space. The essential skeleton $\Sk(X)$ is the union over all regular pluricanonical forms of the minimality locus of the associated weight functions.
 
 Thus the essential skeleton has the advantage of being intrinsic to the variety $X$, with no dependence on a choice of model. As the weight function is closely related to the log discrepancy from birational geometry, it is natural to expect that the essential skeleton in some way encodes some of the minimal model theory of $X$. Nicaise and Xu \cite{NicaiseXu} show, when $X$ is a smooth projective variety with $K_X$ semiample, and $\cX$ is a good dlt minimal model, that the dual complex of $\cX_k$ can be identified with the essential skeleton of $X$.
 
-\subsection{Skeleta for log-regular models.} To produce nice models of the product, we work in the context of the logarithmic geometry. To any log-regular scheme $\cX^+$, in \cite{Kato1994a} Kato attaches a combinatorial structure $F_\cX$ called a \emph{fan}: if we denote by $D_\cX$ the locus where the log structure is non-trivial, then the fan $F_\cX$ consists of the set of the generic points of intersections of irreducible components of $D_\cX$, equipped with a sheaf of monoids. We define a logarithmic version of the Berkovich skeleton for a log-regular model $\cX^+$ of $X$ over $R$: it gives rise to a polyhedral complex in $X^\an$ whose faces correspond to the point of $F_\cX$.
+\subsection{Skeleta for log-regular models.} To produce nice models of the product, we work in the context of the logarithmic geometry. To any log-regular scheme $\cX^+$, in \cite{Kato1994a} Kato attaches a combinatorial structure $F_\cX$ called a \emph{fan}: if we denote by $D_\cX$ the locus where the log structure is non-trivial, then the fan $F_\cX$ consists of the set of the generic points of intersections of irreducible components of $D_\cX$, equipped with a sheaf of monoids. We define a logarithmic version of the Berkovich skeleton for a log-regular model $\cX^+$ of $X$ over $R$: it gives rise to a polyhedral complex in $X^\an$ whose faces correspond to the points of $F_\cX$.
 
-Given two log-regular log schemes $\cX^+$ and $\cY^+$ over $R$, their product $\cZ^+$ in the category of fine and saturated log schemes is naturally log-regular, hence $\cZ^+$ has an associated skeleton, and it is a model of the product $\cX_K \times_K \cY_K$ of the generic fibers. If one of the two underlying schemes $\cX$ or $\cY$ is semistable, which means it has reduced special fiber, then we show that the skeleton of the product $\cZ^+$ is the product of the skeleta, with the projection maps given by restricting the valuation to the corresponding function fields (Proposition \ref{prop semistability and skeleta}).
+Given two log-\textcolor{red}{smooth} log schemes $\cX^+$ and $\cY^+$ over $R$, their product $\cZ^+$ in the category of fine and saturated log schemes is naturally log-regular, hence $\cZ^+$ has an associated skeleton, and it is a model of the product $\cX_K \times_K \cY_K$ of the generic fibers. If one of the two underlying schemes $\cX$ or $\cY$ is semistable, which means it has reduced special fiber, then we show that the skeleton of the product $\cZ^+$ is the product of the skeleta, with the projection maps given by restricting the valuation to the corresponding function fields (Proposition \ref{prop semistability and skeleta}).
 
-\subsection{Skeleta for pairs.} Working in the logarithmic setting, we may also allow a non-trivial log structure over the generic fiber. Geometrically this corresponds to adding horizontal divisors to the special fiber and yields to the addition of some unbounded faces in the skeleton. In \cite{GublerRabinoffWerner} Gubler, Rabinoff, and Werner construct a skeleton for strictly semistable snc models with suitable horizontal divisors. Both the constructions recover the Berkovich skeleton when there is no horizontal component and the special fiber is snc.
+\subsection{Skeleta for pairs.} Working in the logarithmic setting, we may also allow a non-trivial log structure over the generic fiber. Geometrically this corresponds to adding horizontal divisors to the special fiber and yields the addition of some unbounded faces to the skeleton. In \cite{GublerRabinoffWerner} Gubler, Rabinoff, and Werner construct a skeleton for strictly semistable snc models with suitable horizontal divisors. Both constructions recover the Berkovich skeleton when there is no horizontal component and the special fiber is snc.
 
-Pairs arise frequently in the minimal model program. Taking advantage of a construction that admits horizontal components, the definition of essential skeleton extends to the case of a pair $(X,\Delta_X)$ over $K$, where $\Delta_X$ has $\mathbb{Q}$-coefficients in $[0,1]$, the support of $\Delta_X$ is snc, and to pluricanonical forms of some positive index $r$ with divisor of poles no worse than $r\Delta_X$. We extend to pairs the result of Musta{\c{t}}{\u{a}} and Nicaise \cite{MustataNicaise} on the birational invariance of the essential skeleton (Proposition \ref{prop birational invariance essential skeleton for pairs}), as well as Nicaise and Xu's result \cite{NicaiseXu} that the essential skeleton is homeomorphic to the dual complex of a good minimal dlt model (Proposition \ref{prop dual complex minimal good dlt = essential skeleton any resolution}). It follows from these results that we can define the notion of essential skeleton for a dlt pair.
+Pairs arise frequently in the minimal model program. Taking advantage of a construction that admits horizontal components, the definition of the essential skeleton extends to the case of a pair $(X,\Delta_X)$ over $K$, where $\Delta_X$ has $\mathbb{Q}$-coefficients in $[0,1]$, the support of $\Delta_X$ is snc, and to pluricanonical forms of some positive index $r$ with divisor of poles no worse than $r\Delta_X$. We extend to pairs the result of Musta{\c{t}}{\u{a}} and Nicaise \cite{MustataNicaise} on the birational invariance of the essential skeleton (Proposition \ref{prop birational invariance essential skeleton for pairs}), as well as Nicaise and Xu's result \cite{NicaiseXu} that the essential skeleton is homeomorphic to the dual complex of a good minimal dlt model (Proposition \ref{prop dual complex minimal good dlt = essential skeleton any resolution}). It follows from these results that we can define the notion of essential skeleton for a dlt pair.
 
 \subsection{Main Result.} Our main result establishes the behavior of essential skeleta under products.
 \begin{theorem}\label{main thm intro}Assume that the residue field $k$ is algebraically closed. Let $(X,\Delta_X)$ and $(Y,\Delta_Y)$ be pairs that induce log-regular structures. Suppose that both pair have non-negative Kodaira-Iitaka dimension and admit semistable log-regular models $\cX^+$ and $\cY^+$ over $S^+$. Then, the PL homeomorphism of skeleta induces a PL homeomorphism of essential skeleta $$\Sk(Z,\Delta_Z) \xrightarrow{\sim} \Sk(X,\Delta_X) \times \Sk(Y,\Delta_Y)$$ where $Z$ and $\Delta_Z$ are the respective products. 
@@ -446,7 +446,7 @@ Semistability is a key assumption; without it the projection map might fail to b
 
 As an application of Theorem \ref{main thm intro}, we study certain degenerations of hyper-K{\"a}hler varieties. One way to produce hyper-K{\"a}hler varieties is by taking the Hilbert scheme of points on a K3 surface. Another is to extend the Kummer construction to higher dimensional abelian varieties. Aside from two other examples found by O'Grady in dimensions 6 \cite{OGrady} and 10 \cite{OGradya} there are no other known examples, up to deformation equivalence.
 
-Just as for Calabi-Yau varieties, degenerations of hyper-K{\"a}hler varieties can be understood in terms of the monodromy operator on cohomology, with classification into types I, II, III. Type I is the case where the dual complex is just a single point, but types II and III have more interesting structure. Koll{\'a}r, Laza, Sacc{\`a} and Voisin \cite{KollarLazaSaccaEtAl2017} show that in the type II case the dual complex is contractible, and in the type III case it has the rational homology type of $\mathbb{C}\mathbb{P}^n$. Gulbrandsen, Halle, and Hulek  \cite{GulbrandsenHalleHulek} use GIT to construct a model of the degeneration of $n$th order Hilbert schemes arising from some type II degenerations of K3 surfaces, and show that the dual complex is an $n$-simplex. There are considerations from mirror symmetry that suggest that for a type III degeneration the dual complex should be homeomorphic to $\mathbb{C}\mathbb{P}^n$ \cite{Hwang, KontsevichSoibelman}.
+Just as for Calabi-Yau varieties, degenerations of hyper-K{\"a}hler varieties can be understood in terms of the monodromy operator on cohomology, with classification into types I, II, III. Type I is the case where the dual complex is just a single point, but types II and III have more interesting structure. Koll{\'a}r, Laza, Sacc{\`a} and Voisin \cite{KollarLazaSaccaEtAl2017} show that in the type II case the dual complex \textcolor{red}{has the rational homology type of a point}, and in the type III case of \textcolor{red}{a complex projective space}. Gulbrandsen, Halle, and Hulek  \cite{GulbrandsenHalleHulek, GulbrandsenHalleHulek2016, GulbrandsenHalleHulekEtAl} use GIT to construct a model of the degeneration of $n$-th order Hilbert schemes arising from some type II degenerations of K3 surfaces, and show that the dual complex is an $n$-simplex. There are considerations from mirror symmetry that suggest that for a type III degeneration the dual complex should be homeomorphic to $\mathbb{C}\mathbb{P}^n$ \cite{Hwang, KontsevichSoibelman}.
 
 \begin{theorem}
 Assume that the residue field $k$ is algebraically closed. Let $S$ be a $\text{K}3$ surface over $K$. If $S$ admits a semistable log-regular model or a semistable good dlt minimal model, then the essential skeleton of the Hilbert scheme of $n$ points on $S$ is isomorphic to the $n$-th symmetric product of the essential skeleton of $S$ $$\Sk(\Hilb^n(S)) \xrightarrow{\sim} \Sym^n(\Sk(S)).$$ 
@@ -576,7 +576,7 @@ Let $\cX^+$ be a log-regular log scheme over $S^+$ and $F$ its associated Kato f
 \end{enumerate}
 If this is the case, then the special fiber $\cX_k$ is a strict normal crossing divisor.
 \end{prop}
-\spa{The construction of the Kato fan of a log scheme defines a functor from the category of log-regular log schemes to the category of Kato fans. Indeed, given a morphism of log schemes $\cX^+ \rightarrow \cY^+$, we consider the embedding of the associated Kato fan $F_{\cX}$ in $\cX^+$ and the canonical morphism $\cY^+ \rightarrow F_{\cY}$: the composition $$F_{\cX} \hookrightarrow \cX^+ \rightarrow \cY^+ \rightarrow F_\cY$$ functorially induces a map between associated Kato fans. Moreover, this association preserves strict morphisms (\cite{Ulirsch2013}, Lemma 4.9).}
+\spa{The construction of the Kato fan of a log scheme defines a functor from the category of log-regular log schemes to the category of Kato fans. Indeed, given a morphism of log schemes $\cX^+ \rightarrow \cY^+$, we consider the embedding of the associated Kato fan $F_{\cX}$ in $\cX^+$ and the canonical morphism $\cY^+ \rightarrow F_{\cY}$: the composition $$F_{\cX} \hookrightarrow \cX^+ \rightarrow \cY^+ \rightarrow F_\cY$$ functorially induces a map between associated Kato fans. Moreover, this association preserves strict morphisms (\cite{Ulirsch}, Lemma 4.9).}
 \subsection{Resolutions of log schemes via Kato fan subdivisions.} \label{section resolution via kato subd}
 \begin{prop} (\cite{Kato1994a}, Proposition 9.9) \label{prop morphism induced by subdivision kato fan}
 Let $\cX^+$ be a log-regular log scheme and let $F$ be its associated Kato fan. Let $F' \rightarrow F$ be a subdivision of fans. Then there exist a log scheme ${\cX'}^+$, a morphism of log schemes ${\cX'}^+ \rightarrow \cX^+$ and a commutative diagram
@@ -880,14 +880,31 @@ The action of $\mathbb{Z}/2\Z$ fixes $E_1$ and $E_2$, while switching $p_A$ and 
 \section{The weight function}\label{sec weight}
 From now on we assume $\text{char}(K)=\text{char}(k)=0$.
 \subsection{Weight function associated to a logarithmic pluricanonical form.}
-\spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-regular model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in X^\an$ and for any divisor $D$ on $\cX^+$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that $D= \divisor(f)$ locally at $\redu_{\cX}(x)$.}
+\spa{Let $X$ be a connected, smooth and proper $K$-variety of dimension $n$. We introduce the following notation: for any log-regular model $\cX^+$ of $X$, for any point $x = (\xi_x,|\cdot|_x) \in X^\an$ and for any \textcolor{red}{$\Q$-Cartier} divisor $D$ on $\cX^+$ whose support does not contain $\xi_x$, we set $$v_x(D) = - \ln |f(x)|$$ where $f$ is any element of $K(X)^\times$ such that $D= \divisor(f)$ locally at $\redu_{\cX}(x)$.}
 
-\spa{Let $(X,\Delta_X)$ be a pair where $\Delta_X$ is an effective $\Q$-divisor such that $\Delta_X= \sum a_i \Delta_{X,i}$ has $0 \leqslant a_i \leqslant 1$, and  $X^+=(X,\lceil \Delta_X \rceil)$ is a log-regular log scheme over $K$. Let $\omega$ be a regular $m$-pluricanonical form on $X^+$ with poles of order at most $ma_i$ along $\Delta_{X,i}$, for some $m$ such that $ma_i \in \N$ for any $i$. We call such forms $\Delta_X$-logarithmic $m$-pluricanonical forms.
+\spa{Let $(X,\Delta_X)$ be an \textcolor{red}{snc} pair where $\Delta_X$ is an effective $\Q$-divisor such that $\Delta_X= \sum a_i \Delta_{X,i}$ has $0 \leqslant a_i \leqslant 1$. We denote $X^+=(X,\lceil \Delta_X \rceil)$. Let $\omega$ be a regular $m$-pluricanonical form on $X^+$ with poles of order at most $ma_i$ along $\Delta_{X,i}$, for some $m$ such that $ma_i \in \N$ for any $i$. We call such forms $\Delta_X$-logarithmic $m$-pluricanonical forms.
 
 Moreover, $\omega$ is a regular section of the logarithmic $m$-pluricanonical bundle of $X^+$ and for each log-regular model $\cX^+$ of $X^+$, the form $\omega$ defines a divisor $\divisor_{\cX^+}(\omega)$ on $\cX^+$. Note that the multiplicity in $\divisor_{\cX^+}(\omega)$ of the closure $\overline{\Delta_{X,i}}$ in $\cX$ of $\Delta_{X,i}$ is at least $m(1-a_i)$.
 }
 
-\spa{Given a $\Delta_X$-logarithmic $m$-pluricanonical form $\omega$, we can consider it as a rational section of $\omega_{X/K}^{\otimes m}$. Hence, we can associate to $\omega$ the weight function $\weight_{\omega}$ as in \cite{MustataNicaise}. If $\cX^+$ is a log-regular model of $X^+$, then $$\weight_{\omega}(x) = v_x(\divisor_{\cX^+}(\omega)) +m $$ for every point $x$ of $\Sk(\cX^+)$. This gives us an interpretation of the weight function in terms of logarithmic differentials, that we will use in the following. }
+\spa{Given a $\Delta_X$-logarithmic $m$-pluricanonical form $\omega$, we can consider it as a rational section of $\omega_{X/K}^{\otimes m}$. Hence, we can associate to $\omega$ the weight function $\weight_{\omega}$ as in \cite{MustataNicaise}. The following gives an interpretation of the weight function associated to $\omega$ in terms of logarithmic differentials, that we will use in the sequel.}
+%If $\cX^+$ is a log-regular model of $X^+$, then $$\weight_{\omega}(x) = v_x(\divisor_{\cX^+}(\omega)) +m $$ for every point $x$ of $\Sk(\cX^+)$. This gives us an interpretation of the weight function in terms of logarithmic differentials, that we will use in the following.
+\begin{lemma} \label{lemma log formula for weight function}
+\textcolor{red}{Let $\cX^+$ be a log-regular model of $X^+$. Then for every point $x$ of $\Sk(\cX^+)$} $$\weight_{\omega}(x) = v_x(\divisor_{\cX^+}(\omega)) +m.$$
+\end{lemma}
+\begin{proof}
+It suffices to prove the equality for the divisorial points in $\Sk(\cX^+)$, since they are dense in the skeleton, and both $\weight_{\omega}(\cdot)$ and $v_{\cdot}(\divisor_{\cX^+}(\omega))$ are continuous functions on the skeleton $\Sk(\cX^+)$.
+
+Let $x$ be a divisorial point in $\Sk(\cX^+)$. If $x$ corresponds to a component of the special fiber $\cX_k$, then the center $\redu_{\cX}(x)$ of $x$ does not contain the closure of any components of $\Delta_X$. Thus, locally around $\redu_{\cX}(x)$ the log schemes $\cX^+$ and $(\cX,\cX_{k,\redu})$ are isomorphic and in particular $\divisor_{\cX^+}(\omega)=\divisor_{(\cX,\cX_{k,\redu})}(\omega)$. The computation in \cite{NicaiseXu}, Section 3.2.2 shows that $\weight_{\omega}(x)= v_x(\divisor_{(\cX,\cX_{k,\redu})}(\omega)) +m$, so we obtain the required equality.
+
+Otherwise, we consider the blow-up $h: \cX'^+ \rightarrow \cX^+$ at the closure of the center $\redu_{\cX}(x)$ of $x$ in $\cX^+$. By \cite{KollarMori}, Lemma 2.45\footnote{The proof in \cite{KollarMori} considers the case of a variety over a field, but it generalizes to varieties of finite type over a discrete valuation ring.} iterating this procedure a finite number of times, we obtain a log-regular model $\cY^+$ such that the $x$ corresponds to a component $E$ of the special fiber $\cY_k$. By reduction to the previous case, it is enough to check that the value $v_x(\divisor_{\cX^+}(\omega))$ does not change under such a blow-up $h$.
+
+Let  $r=r_h +r_v$ be the codimension of $\redu_{\cX}(x)$ in $\cX$, where $r_h$ and $r_v$ are the number of irreducible components of $\overline{\lceil\Delta_X \rceil}$ and respectively of the special fiber $\cX_k$, containing $\redu_{\cX}(x)$. Let $E$ be the exceptional divisor of $h$. We denote the projections onto $S^+$ by $s_{\cX'}:\cX'^+\rightarrow S^+$ and $s_{\cX}:\cX^+ \rightarrow S^+$ and by $\pi$ a uniformizer in $R$. Then we have that
+\begin{align*}
+h^*(\omega^{\log}_{\cX'^+/S^+})& = h^* \big(\omega_{\cX'/R} \otimes \caO_{\cX'}(\overline{\lceil\Delta_X \rceil}_{\redu} + \cX'_{k,\redu} - s_{\cX'}^*\, \divisor(\pi)) \big) \\
+& = \omega_{\cX/R}\otimes \caO_{\cX}((1-r)E +\overline{\lceil\Delta_X \rceil}_{\redu} + r_hE+ \cX_{k,\redu} + (r_v-1)E - s_\cX^*\,\divisor(\pi))= \omega^{\log}_{\cZ^+/S^+}.
+\end{align*} It follows that $\divisor_{\cX'^+}(\omega)=h^*(\divisor_{\cX^+}(\omega))$ and this concludes the proof.
+\end{proof}
 
 \spa{We recall from \cite{MustataNicaise}, Section 4.5 that the Kontsevich-Soibelman skeleton $\Sk(X, \Delta_X, \omega)$ is the closure in $\text{Bir}(X)$ of the set $\text{Div}(X) $ of divisorial points of $X^\text{an}$ where the weight function $\weight_\omega$ reaches its minimal weight, namely $$\weight_{\omega}(X, \Delta_X) = \inf \{ \weight_{\omega}(x) \,| \, x \in \text{Div}(X) \} \in \R \cup \{ -\infty\}.$$
 
@@ -898,14 +915,14 @@ A priori the weight function associated to a rational pluricanonical form may ha
 Given a $\Delta_X$-logarithmic $m$-pluricanonical form $\omega$, for any log-regular model $\cX^+$ of $X^+$ the inclusion $\Sk(X,\Delta_X,\omega) \subseteq \Sk(\cX^+)$ holds.
 \end{prop}
 \begin{proof}
-Let $\cX^+$ be a log-regular model of $X^+$ and let $y$ be a divisorial point of $X^\an$. It suffices to prove that $$\weight_{\omega}(y) \geqslant \weight_{\omega}(\rho_\cX(y))$$ and that the equality holds if and only if $y$ is in $\Sk(\cX^+)$. We consider the blow-up of $\cX^+$ at the closure of $\redu_{\cX}(y)$. By \cite{KollarMori}, Lemma 2.45\footnote{The proof in \cite{KollarMori} considers the case of a variety over a field, but it generalizes to varieties of finite type over a discrete valuation ring.} iterating this procedure a finite number of times, we obtain a log-regular model $\cY^+$ such that $y \in \Sk(\cY^+)$.
+Let $\cX^+$ be a log-regular model of $X^+$ and let $y$ be a divisorial point of $X^\an$. It suffices to prove that $$\weight_{\omega}(y) \geqslant \weight_{\omega}(\rho_\cX(y))$$ and that the equality holds if and only if $y$ is in $\Sk(\cX^+)$. As in the proof of Lemma \ref{lemma log formula for weight function}, we consider the blow-up of $\cX^+$ at the closure of $\redu_{\cX}(y)$: iterating this procedure a finite number of times, we obtain a log-regular model $\cY^+$ such that $y \in \Sk(\cY^+)$.
 
 Let $h: \cZ^+ \rightarrow \cW^+$ be a morphism of this sequence. If $\overline{ \{\redu_{\cW}(y)\}}$ is a stratum of $D_\cW$, then the morphism $h$ induces a subdivision of the skeleton $\Sk(\cW^+)$, so $\rho_\cZ(y)= \rho_{\cW}(y)$.
 
 Otherwise, $\overline{ \{\redu_{\cW}(y)\}}$ is strictly contained in a stratum $V$ of $\D_\cW$. Let $E$ be the exceptional divisor of $h$, $r=r_h +r_v$ be the codimension of $V$ in $\cW$, where $r_h$ and $r_v$ are the number of irreducible components of $\overline{\lceil\Delta_X \rceil}$ and respectively of the special fiber $\cW_k$, containing $V$. Let $r+j$ be the codimension of $\overline{ \{\redu_{\cW}(y)\}}$, where $j \geqslant 1$. We denote the projections onto $S^+$ by $s_{\cW}:\cW^+\rightarrow S^+$ and $s_{\cZ}:\cZ^+ \rightarrow S^+$ and by $\pi$ a uniformizer in $R$. Then we have that
 \begin{align*}
-h^*&(\omega^{\log}_{\cW^+/S^+}) = h^* \big(\omega_{\cW/R} \otimes \caO_{\cW}(\overline{\lceil\Delta_X \rceil}_{,\redu} + \cW_{k,\redu} - s_\cW^*(\pi)) \big) \\
-& = \omega_{\cZ/R}\otimes \caO_{\cZ}((1-r-j)E +\overline{\lceil\Delta_X \rceil}_{,\redu} + r_hE+ \cZ_{k,\redu} + (r_v-1)E - s_\cZ^*(\pi))\\
+h^*&(\omega^{\log}_{\cW^+/S^+}) = h^* \big(\omega_{\cW/R} \otimes \caO_{\cW}(\overline{\lceil\Delta_X \rceil}_{,\redu} + \cW_{k,\redu} - s_\cW^*\, \divisor(\pi)) \big) \\
+& = \omega_{\cZ/R}\otimes \caO_{\cZ}((1-r-j)E +\overline{\lceil\Delta_X \rceil}_{,\redu} + r_hE+ \cZ_{k,\redu} + (r_v-1)E - s_\cZ^*\,\divisor(\pi))\\
 & = \omega^{\log}_{\cZ^+/S^+} \otimes \caO_{\cZ}(-j E).
 \end{align*} It follows that $\divisor_{\cZ^+}(\omega)= h^*(\divisor_{\cW^+}(\omega)) + mjE$, so
 \begin{align*}
@@ -965,32 +982,31 @@ Let $X$ be the projective line $\mathbb{P}^1_K$ with affine coordinates $x$ and 
 Since $\divisor_{\cX^+}(\omega)= 0$, the weight associated to $\omega$ is minimal at any point of the skeleton $\Sk(\cX^+)$. Thus $\Sk(X,\Delta_X,\omega)=\Sk(\cX^+) \simeq \R$.
 \end{example}
 \begin{example}
-Let $X=\mathbb{P}^1_K$ and $\Delta_X=\frac{1}{2}(0:1) + \frac{1}{2}(1:0)+\frac{1}{2}(1:1)+\frac{1}{2}(-1:1)$. So $a_i=\frac{1}{2}$ for any $i$ and there exist $\Delta_X$-logarithmic $2$-pluricanonical forms. We set $$\omega = \frac{1}{x+1} \cdot \frac{1}{x-1} \cdot \frac{1}{x} (dx)^2= \frac{1}{y+1} \cdot \frac{1}{1-y}\cdot \frac{1}{y} (dy)^2.$$ We consider $\cX= \mathbb{P}_R^1$ and $D_\cX= (0:1) + (1:0)+ (1:1)+(-1:1)+ \mathbb{P}^1_k$, then $\cX^+=(\cX,D_\cX)$ is a log-regular model of $X^+=(X,\lceil \Delta_X \rceil)$ and $\Sk(\cX^+)$ is \begin{center}
+\textcolor{red}{Let $X=\mathbb{P}^1_K$ and $\Delta_X=\frac{2}{3}(0:1) + \frac{2}{3}(1:0)+\frac{2}{3}(1:1)$. So $a_i=\frac{2}{3}$ for any $i$ and there exist $\Delta_X$-logarithmic $3$-pluricanonical forms. We set $$\omega =  \frac{1}{(x-1)^2} \cdot \frac{1}{x^2} (dx)^3= -\frac{1}{(1-y)^2}\cdot \frac{1}{y^2} (dy)^3.$$ We consider $\cX= \mathbb{P}_R^1$ and $D_\cX= (0:1) + (1:0)+ (1:1)+ \mathbb{P}^1_k$, then $\cX^+=(\cX,D_\cX)$ is a log-regular model of $X^+=(X,\lceil \Delta_X \rceil)$ and $\Sk(\cX^+)$ is \begin{center}
 \begin{tikzpicture}[scale=0.3]
-\draw[gray, thick] (-1,1) -- (-1,-6);
+\draw[gray, thick] (-1,1) -- (-1,-4);
 \draw[gray, thick] (-5,0) -- (0,0);
 \draw[gray, thick] (-5,-1.5) -- (0,-1.5);
 \draw[gray, thick] (-5,-3) -- (0,-3);
-\draw[gray, thick] (-5,-4.5) -- (0,-4.5);
+%\draw[gray, thick] (-5,-4.5) -- (0,-4.5);
 \node[above] at (-6.5,-0.5) {$(0:1)$};
 \node[above] at (-6.5,-2) {$(1:1)$};
-\node[above] at (-6.9,-3.5) {$(-1:1)$};
-\node[above] at (-6.5,-5) {$(1:0)$};
+\node[above] at (-6.7,-3.7) {$(1:0)$};
 \node[above] at (-0.2,0.5) {$\mathbb{P}{^1_k}$};
 \node[above] at (-3,2) {$\mathcal{D}(D_\cX)$};
 \draw[gray, thick] (8,1) -- (12,-1);
 \draw[gray, thick] (16,1) -- (12,-1);
-\draw[gray, thick] (8,-3) -- (12,-1);
-\draw[gray, thick] (16,-3) -- (12,-1);
+%\draw[gray, thick] (8,-3) -- (12,-1);
+\draw[gray, thick] (12,-4) -- (12,-1);
 \draw [gray, thick, dashed] (7,1.5) -- (8,1);
 \draw [gray, thick, dashed] (16,1) -- (17,1.5);
-\draw [gray, thick, dashed] (7,-3.5) -- (8,-3);
-\draw [gray, thick, dashed] (16,-3) -- (17,-3.5);
+%\draw [gray, thick, dashed] (7,-3.5) -- (8,-3);
+\draw [gray, thick, dashed] (12,-4) -- (12,-5);
 \filldraw[black] (12,-1) circle (4pt) node[above] {$v_{\mathbb{P}^1_k}$};
 \node[above] at (12,2) {$\Sk(\cX^+)$};
 \end{tikzpicture}
 \end{center}
-Since $\divisor_{\cX^+}(\omega)= (0:1) + (1:0)+ (1:1)+(-1:1)$, the weight associated to $\omega$ is minimal at the divisorial point $v_{\mathbb{P}_k^1}$ corresponding to $\mathbb{P}^1_k$ and is strictly increasing with slope $1$ along the unbounded edges, when we move away from the point $v_{\mathbb{P}^1_k}$. Therefore, $\Sk(X,\Delta_X,\omega)=\{v_{\mathbb{P}^1_k}\}$.
+Since $\divisor_{\cX^+}(\omega)= (0:1) + (1:0)+ (1:1)$, the weight associated to $\omega$ is minimal at the divisorial point $v_{\mathbb{P}_k^1}$ corresponding to $\mathbb{P}^1_k$ and is strictly increasing with slope $1$ along the unbounded edges, when we move away from the point $v_{\mathbb{P}^1_k}$. Therefore, $\Sk(X,\Delta_X,\omega)=\{v_{\mathbb{P}^1_k}\}$.}
 \end{example}
 
 %\subsection{Weight function for log-regular models.}
@@ -1007,7 +1023,7 @@ Since $\divisor_{\cX^+}(\omega)= (0:1) + (1:0)+ (1:1)+(-1:1)$, the weight associ
 %\end{proof}
 
 \subsection{Weight function and Kontsevich-Soibelman skeleton for products.} \label{paragraph weight function product}
-\spa{Let $\cX^+$ and $\cY^+$ be log-smooth models over $S^+$ of $X^+=(X,\lceil\Delta_X\rceil)$ and $Y^+=(Y,\lceil\Delta_Y\rceil)$ respectively. Then, the $fs$ fibred product $\cZ^+=\cX^+  \times^{\text{fs}}_{S^+} \cY^+$ is a log-regular model of $Z^+:=X^+ \times^{\text{fs}}_K Y^+$. Therefore, given $\omega_{X^+}$ and $\omega_{Y^+}$ $\Delta_X$-logarithmic and $\Delta_Y$-logarithmic $m$-pluricanonical forms on $(X,\Delta_X)$ and $(Y,\Delta_Y)$ respectively, the form $$\varpi=\pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+}$$ is a $\Delta_Z$-logarithmic $m$-pluricanonical form on $(Z,\Delta_Z)$, where $\Delta_Z= X \times_K \Delta_Y + \Delta_X \times_K Y$. Viewing these forms as rational sections of logarithmic $m$-pluricanonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\divisor_{\cZ^+}( \pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+})$ according to (\ref{equ log can bundles}).}
+\spa{Let $\cX^+$ and $\cY^+$ be log-smooth models over $S^+$ of $X^+=(X,\lceil\Delta_X\rceil)$ and $Y^+=(Y,\lceil\Delta_Y\rceil)$ respectively. Then, the $fs$ fibred product $\cZ^+=\cX^+  \times^{\text{fs}}_{S^+} \cY^+$ is a log-regular model of $Z^+:=X^+ \times^{\text{fs}}_K Y^+$. Therefore, given $\omega_{X^+}$ and $\omega_{Y^+}$ $\Delta_X$-logarithmic and $\Delta_Y$-logarithmic $m$-pluricanonical forms on $(X,\Delta_X)$ and $(Y,\Delta_Y)$ respectively, the form $$\varpi=\pr_{X^+}^* \,\omega_{X^+} \otimes \pr_{Y^+}^* \,\omega_{Y^+}$$ is a $\Delta_Z$-logarithmic $m$-pluricanonical form on $(Z,\Delta_Z)$, where $\Delta_Z= X \times_K \Delta_Y + \Delta_X \times_K Y$. Viewing these forms as rational sections of logarithmic $m$-pluricanonical bundles, we see that $\divisor_{\cZ^+}(\varpi)=\pr_{\cX^+}^* \big(\divisor_{\cX^+}(  \omega_{X^+})\big) +  \pr_{\cY^+}^* \big(\divisor_{\cY^+} (\omega_{Y^+})\big)$ according to (\ref{equ log can bundles}).}
 
 \spa{Let $z$ be a point of $F_{\cZ} \cap \cZ_k$; as before, we denote by $x$ and $y$ the images of $z$ under the local isomorphism $F_{\cZ} \rightarrow F_{\cX} \times_{F_S} F_{\cY}$. Any morphism $\varepsilon \in \sigma_z$ defines a point $v_{z,\varepsilon}$ in $\Sk(\cZ^+)$. For the sake of convenience, we simply denote the valuations by the corresponding morphism and we denote $\alpha= \pr_{\cX}(\varepsilon)$ and $\beta=\pr_{\cY}(\varepsilon)$. We aim to relate the valuation $v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)$ to the values $$v_{\alpha}\big(\divisor_{\cX^+}(\omega_{X^+}\big)) \text{ , } v_{\beta}\big(\divisor_{\cY^+}(\omega_{Y^+})\big).$$}
 
@@ -1015,7 +1031,7 @@ Since $\divisor_{\cX^+}(\omega)= (0:1) + (1:0)+ (1:1)+(-1:1)$, the weight associ
 $$f_y=\sum_{\delta\in \caC_{\cY,y}}d_\delta \delta.$$}
 
 \spa{A local equation of $\varpi$ around $z$ is determined by $\pr_{\cX}^*(f_x)\,\,\pr_{\cY}^*(f_y)$. Thus $$v_{\varepsilon}(\divisor_{\cZ^+}(\varpi))
-= v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big)$$ and by multiplicativity of the valuation $v_{\varepsilon}$ $$v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big) = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big).$$ Recalling Remark \ref{rem def-val}, the valuation can be computed as follows $$ v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) = \min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\};$$ as the elements $\gamma$ belong to $\caC_{\cX,x}$ and $\alpha$ is defined to be $\pr_{\cX}(\varepsilon)$ $$\min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\} = \min\{\alpha(\gamma)\,|\,c_\gamma \neq 0\} =  v_{x,\alpha}(f_x).$$ Hence, we conclude that \begin{align} \label{equ valuations product}
+= v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big)$$ and by multiplicativity of the valuation $v_{\varepsilon}$ $$v_{\varepsilon}\big(\pr_{\cX}^*(f_x) \,\,\pr_{\cY}^*(f_y)\big) = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big).$$ Recalling Remark \ref{rem def-val}, the valuation can be computed as follows $$ v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) = \min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\};$$ as the elements $\gamma$ belong to $\caC_{\cX,x}$ and $\alpha$ is defined to be $\pr_{\cX}(\varepsilon)$, we have $$\min\{\varepsilon(\gamma)\,|\,c_\gamma \neq 0\} = \min\{\alpha(\gamma)\,|\,c_\gamma \neq 0\} =  v_{x,\alpha}(f_x).$$ Hence, we conclude that \begin{align} \label{equ valuations product}
 \begin{split}
 v_{\varepsilon}\big(\divisor_{\cZ^+}(\varpi)\big)
 & = v_{\varepsilon}\big(\pr_{\cX}^*(f_x)\big) + v_{\varepsilon}\big(\pr_{\cY}^*(f_y)\big)\\
@@ -1047,7 +1063,7 @@ This follows immediately from the equality (\ref{equ weight function product}) t
 }
 
 \section{The essential skeleton of a product}\label{sec birational}
-We will need a few notions from birational geometry, see \cite{KollarMori}. Let $(X,\Delta_X)$ be a pair such that $X$ is normal, $\Delta_X$ is effective, and $K_X+\Delta_X$ is $\mathbb{Q}$-Cartier. Then we say that $(X,\Delta_X)$ is \emph{log canonical} if for every log resolution $f \colon Z \to X$, in the formula
+We will need a few notions from birational geometry, see \cite{KollarMori}. Let $(X,\Delta_X)$ be a pair over $K$ such that $X$ is normal, $\Delta_X$ is an effective divisor, and $K_X+\Delta_X$ is $\mathbb{Q}$-Cartier. Then we say that $(X,\Delta_X)$ is \emph{log canonical} if for every log resolution $f \colon Z \to X$, in the formula
 
 \[
 K_Z+\Delta_Z = f^*(K_X+\Delta_X)+\sum a_D D,
@@ -1059,7 +1075,7 @@ We will be most interested in the case where $(X,\Delta_X)$ satisfies the strong
 We say that a pair $(X,\Delta)$ is \emph{Kawamata log terminal}, or klt, if it is dlt and the coefficients of $\Delta$ are all strictly less than $1$.
 
 \subsection{Essential skeleton of a pair.}
-\spa{Let $(X,\Delta_X)$ be a pair such that $X^+=(X,\lceil \Delta_X \rceil)$ is a log-regular log scheme. Let $\omega$ be a non-zero regular $\Delta_X$-logarithmic $m$-pluricanonical form on $(X,\Delta_X)$. Let $\cX^+$ be a log-smooth model of $X^+$ over $S^+$. Then, the associated divisor $\divisor_{\cX^+}(\omega)$ is effective. There exist minimal positive integers $d$ and $n$ such that the divisor $\divisor_{\cX^+}(\omega^{\otimes d} \pi^{-n})$ is effective and the multiplicity of some component of the special fiber is zero: we denote this divisor by $D_{\min}(\cX,\omega)$. It follows from the properties of the weight function (see \cite{MustataNicaise}, Proposition 4.4.5) that for any $x \in \Sk(\cX^+)$ $$v_x(D_{\min}(\cX,\omega)) + dm = \weight_{\omega^{\otimes d}\pi^{-n}}(x)= d \cdot \weight_{\omega} + v_x(\pi^{-n}) = d \cdot \weight_{\omega}(x) -n.$$
+\spa{Let $(X,\Delta_X)$ be a pair such that $X^+=(X,\lceil \Delta_X \rceil)$ is a log-regular log scheme. Let $\omega$ be a non-zero regular $\Delta_X$-logarithmic $m$-pluricanonical form on $(X,\Delta_X)$. Let $\cX^+$ be a log-smooth model of $X^+$ over $S^+$. There exist minimal positive integers $d$ and $n$ such that the divisor $\divisor_{\cX^+}(\omega^{\otimes d} \pi^{-n})$ is effective and the multiplicity of some component of the special fiber is zero: we denote this divisor by $D_{\min}(\cX,\omega)$. It follows from the properties of the weight function (see \cite{MustataNicaise}, Proposition 4.4.5) that for any $x \in \Sk(\cX^+)$ $$v_x(D_{\min}(\cX,\omega)) + dm = \weight_{\omega^{\otimes d}\pi^{-n}}(x)= d \cdot \weight_{\omega}(x) + v_x(\pi^{-n}) = d \cdot \weight_{\omega}(x) -n.$$
 }
 \begin{lemma} \label{lemma characterization minimal points}
 Let $v_{x,\alpha}$ be a divisorial point in $\Sk(\cX^+)$, then $v_{x,\alpha} \in \Sk(X,\Delta_X, \omega)$ if and only if $D_{\min}(\cX,\omega)$ does not contain $x$.
@@ -1072,7 +1088,7 @@ Let $h: \cY^+ \rightarrow \cX^+$ be a sequence of blow-up morphisms of strata of
 
 \spa{We define the essential skeleton $\Sk(X,\Delta_X)$ of $(X,\Delta_X)$ as the union of all Kontsevich-Soibelman skeleta $\Sk(X, \Delta_X,\omega)$, where $\omega$ ranges over all regular $\Delta_X$-logarithmic pluricanonical forms. In the case of an empty boundary, this recovers the notions introduced in \cite{MustataNicaise}.
 
-The reason to define the essential skeleton this way is that it behaves nicely under birational morphisms. Let $f \colon X'\to X$ be a log resolution. Then there is a $\mathbb{Q}$-divisor $\Gamma$ with snc support, and no coefficient exceeding $1$, such that $K_{X'}+\Gamma' = f^*(K_X+\Delta_X)$. Take $\Delta_{X'}$ to be the positive part of $\Gamma'$ and write $$K_{X'}+\Delta_{X'}= f^*(K_{X}+\Delta_X)+N.$$ for any $m$, pullback along with multiplication by the divisor of discrepancies $N$ induces an isomorphism of vector spaces \begin{equation} \label{equ isomo forms log resolution}
+The further reason to define the essential skeleton this way is that it behaves nicely under birational morphisms. Let $f \colon X'\to X$ be a log resolution. Then there is a $\mathbb{Q}$-divisor $\Gamma'$ with snc support, and no coefficient exceeding $1$, such that $K_{X'}+\Gamma' = f^*(K_X+\Delta_X)$. Take $\Delta_{X'}$ to be the positive part of $\Gamma'$ and write $$K_{X'}+\Delta_{X'}= f^*(K_{X}+\Delta_X)+N.$$ For any $m$, pullback along with multiplication by the divisor of discrepancies $N$ induces an isomorphism of vector spaces \begin{equation} \label{equ isomo forms log resolution}
 H^0(X, mK_{X}+m\Delta_X) \cong H^0(X', mK_{X'}+m\Delta_{X'}).
 \end{equation} Let $\omega$ and $\omega'$ be corresponding forms via this isomorphism.}
 \begin{prop} \label{prop birational invariance essential skeleton for pairs}
@@ -1105,7 +1121,9 @@ Choose a regular $R$-model $\cX'$ for $X'$ which is a log resolution of $(\cX, \
 Conversely, if $v$ is a divisorial point in $\Sk(X', \Delta_{X'})$, then $v$ is a log canonical center of $(\cX', \Delta_{\cX'})$, so $v$ is a log canonical center of $(\cX, \Delta_\cX)$, hence an element of the open dual complex $\mathcal{D}_0^{=1}(\cX, \Delta_\cX)$.
 \end{proof}
 
+\begin{rem}
 Proposition \ref{prop dual complex minimal good dlt = essential skeleton any resolution} compares the essential skeleton of $(X,\Delta_X)$ to the skeleton of a good minimal dlt model of $(X,\Delta_X)$. Thus, the result can be restated as follows: if $(X,\Delta_X)$ is a dlt pair with $K_X+\Delta_X$ semiample and $(\cX,\Delta_\cX)$ is a good dlt minimal model of $(X,\Delta_X)$ over $R$, then $\mathcal{D}_0^{=1}(\cX, \Delta_\cX) = \Sk(X,\Delta_X)$. This generalizes \cite{NicaiseXu}, Theorem 3.3.3 to dlt pairs.
+\end{rem}
 
 \subsection{Essential skeleta and products of log-regular models.}
 
@@ -1120,12 +1138,12 @@ Assume that $v_{z,\varepsilon}$ lies in the essential skeleton $\Sk(Z,\Delta_Z)$
 
 Let $E$ be an irreducible component of $\cY_k$ containing $y$ and denote by $\xi_E$ the generic point of $E$. Then the point in the Kato fan of $\cZ^+$ corresponding to $(x,\xi_E)$ is not contained in $D_{\min}(\cZ,\omega)$, as otherwise $z$ would be contained in it.
 
-As $k$ is algebraically closed, we can choose a $k$-rational point $p$ in $E$ such that $p$ is contained in no other components of $D_\cY$ and $D_{\min}(\cZ,\omega)$ does not contained the locus $\overline{\{x\}} \times_R \{p\}$. By Hensel's Lemma and the assumption of semistability, $p$ can be lifted to an $R$-rational point of $\cY$. The pull-back of $\cZ^+$ along this $R$-rational point is an embedding $i: \cX^+ \rightarrow \cZ^+$, so we have the diagram
+As $k$ is algebraically closed, we can choose a $k$-rational point $p$ in $E$ such that $p$ is contained in no other components of $D_\cY$ and $D_{\min}(\cZ,\omega)$ does not contained the locus $\overline{\{x\}} \times_R \{p\}$. By Hensel's Lemma and the assumption of semistability, $p$ can be lifted to an $R$-rational point of $\cY$. The pullback of $\cZ^+$ along this $R$-rational point is an embedding $i: \cX^+ \rightarrow \cZ^+$, so we have the diagram
 \[
 \xymatrix{ \cX^+ \ar[r]^i\ar[d] & \cZ^+ \ar[r]^{\pr_\cX}\ar[d]^{\pr_\cY} & \cX^+ \ar[d] \\
 S \ar[r] & \cY^+\ar[r] & S.
 }
-\] Since $S$ has trivial normal bundle in $\cY$, we  have that $$\omega_{X^+/K}^{\log} = i^*\big(\omega_{Z^+/K}^{\log}\big),$$ so $i^*(\omega)$ is a non-zero regular logarithmic $m$-pluricanonical form on $X^+$ and in particular is a regular $\Delta_X$-logarithmic $m$-pluricanonical form. Moreover, $D_{\min}(\cX,i^*(\omega)) = i^*(D_{\min}(\cZ,\omega))$. Finally, $x$ is not contained in $D_{\min}(\cX, i^*(\omega))$, as otherwise $i(x)= \{x\} \times_R \{p\}$ would be contained in $D_{\min}(\cZ,\omega)$. By Lemma \ref{lemma characterization minimal points}, $x$ is a point of $\Sk(X,\Delta_X, i^*(\omega))$ and this concludes the proof.
+\] Since $S$ has trivial normal bundle in $\cY$, we  have that $$\omega_{X^+/K}^{\log} = i^*\big(\omega_{Z^+/K}^{\log}\big),$$ so $i^*(\omega)$ is a non-zero pluricanonical form on $X$ and in particular is a regular $\Delta_X$-logarithmic $m$-pluricanonical form. Moreover, $D_{\min}(\cX,i^*(\omega)) = i^*(D_{\min}(\cZ,\omega))$. Finally, $x$ is not contained in $D_{\min}(\cX, i^*(\omega))$, as otherwise $i(x)= \{x\} \times_R \{p\}$ would be contained in $D_{\min}(\cZ,\omega)$. By Lemma \ref{lemma characterization minimal points}, $x$ is a point of $\Sk(X,\Delta_X, i^*(\omega))$ and this concludes the proof.
 \end{proof}
 \begin{rem}
 Consider the case where the line bundles $K_X + \Delta_X$ and $K_Y + \Delta_Y$ are semi-ample, i.e. some multiple of them is base point free. It follows from the arguments of \cite{NicaiseXu}, Theorem 3.3.3 that the essential skeleton of $(Z,\Delta_Z)$ is a finite union of Kontsevich-Soibelman skeleta where the union runs through a generating set of global sections of a sufficiently large multiple of $K_Z+\Delta_Z$. We can construct such a set from generating sets of global sections of multiples of $K_X + \Delta_X$ and $K_Y+ \Delta_Y$ respectively, via tensor product. Then, in this case, the result of Theorem \ref{thm essential skeleton of product via log-reg} follows directly from Theorem \ref{thm semistability and KS skeleta}.
@@ -1147,7 +1165,7 @@ A maximal cone of $\widetilde{W}$ is spanned by $n=n_1+n_2-1$ independent rays o
 \end{proof}
 
 \begin{prop} \label{prop product of dlt minimal pairs}
-Let $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ be semistable good projective dlt minimal pairs over the germ of a pointed curve $C$. The product $(\cZ,\Delta_{\cZ})$ is a log canonical pair, $K_\cZ+\Delta_{\cZ}$ is semiample, and the log canonical centers of $(\cZ,\Delta_{\cZ})$ are strata of the coefficient $1$ part of $\Delta_{\cZ}$.
+Let $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ be semistable good projective dlt minimal pairs over the germ of a pointed curve $\cC$. The product $(\cZ,\Delta_{\cZ})$ is a log canonical pair, $K_\cZ+\Delta_{\cZ}$ is semiample, and the log canonical centers of $(\cZ,\Delta_{\cZ})$ are strata of the coefficient $1$ part of $\Delta_{\cZ}$.
 \end{prop}
 
 \begin{proof}
@@ -1157,7 +1175,7 @@ Let $\widetilde{\cX}$ and $\widetilde{\cY}$ be log resolutions of $\cX$ and $\cY
 \begin{align*}
 K_{\widetilde{\cX}}+ \Delta_{\widetilde{\cX}}&= f_\cX^*(K_\cX + \Delta_{\cX}) + \sum a_i E_{\cX,i} \\
 K_{\widetilde{\cY}}+ \Delta_{\widetilde{\cY}}&= f_\cY^*(K_\cY + \Delta_{\cY}) + \sum b_j E_{\cY,j}
-\end{align*} where the coefficients $a_i$ and $b_j$ are non-negative. Let $\widetilde{\cZ}$ be a toroidal log resolution of the fs product $\widetilde{\cX} \times^{\text{fs}} \widetilde{\cY}$. In particular, $\widetilde{\cZ}$ is a log resolution of $\cZ$ and we can write $$K_{\widetilde{\cZ}}+ \Delta_{\widetilde{\cZ}}= f_\cZ^*(K_\cZ + \Delta_{\cZ}) + \sum c_h E_{\cZ,h}$$ where $\Delta_{\widetilde{\cZ}}$ is effective. Over the generic fiber, $(\cZ,\Delta_{\cZ})$ is dlt, so we need only compute discrepancies over the special fiber, namely study the positivity of the coefficients $c_h$. 
+\end{align*} where the coefficients $a_i$ and $b_j$ are non-negative. Let $\widetilde{\cZ}$ be a toroidal log resolution of the fs product $\widetilde{\cX} \times^{\text{fs}}_\cC \widetilde{\cY}$. In particular, $\widetilde{\cZ}$ is a log resolution of $\cZ$ and we can write $$K_{\widetilde{\cZ}}+ \Delta_{\widetilde{\cZ}}= f_\cZ^*(K_\cZ + \Delta_{\cZ}) + \sum c_h E_{\cZ,h}$$ where $\Delta_{\widetilde{\cZ}}$ is effective. Over the generic fiber, $(\cZ,\Delta_{\cZ})$ is dlt, so we need only compute discrepancies over the special fiber, namely study the positivity of the coefficients $c_h$. 
 
 Let $\Gamma$ be a divisor of $\widetilde{\cZ}$ over the special fiber, denote by $v_\Gamma$ the corresponding divisorial valuation in $\Sk(\widetilde{\cZ}^+)$, by $\Gamma_\cX$, $\Gamma_\cY$ and $\Gamma_{\cZ}$ its images in $\cX$, $\cY$ and $\cZ$. The projections of $v_\Gamma$ in $\Sk(\widetilde{\cX}^+)$ and $\Sk(\widetilde{\cY}^+)$ are divisorial valuations. Up to subdivisions of the skeleta, we can assume without loss of generality that the projections correspond to divisors $\Gamma_{\widetilde{\cX}}$ and $\Gamma_{\widetilde{\cY}}$.
 
@@ -1195,13 +1213,13 @@ Let $\alpha_i$ be arbitrary small rational coefficients, one for each divisor $\
 By construction of $\cZ'$, the divisor $-\sum \alpha_i \Delta_{\cZ,i}^{=1} + \mu \phi_* A$ is $\psi$-ample, where $\mu$ is arbitrarily small. But for $\mu$ small enough, we can absorb $\mu \phi_* A$ into the term $\delta D$. Thus in fact $-\sum \alpha_i \Delta_{\cZ,i}^{=1}$ is $\psi$-ample. As a result we can represent $$\cZ' = \text{Proj}_\cZ \bigoplus_{m \geqslant 0} \mathcal{O}\big(-m(\sum \alpha_i \Delta_{\cZ,i}^{=1})\big).$$ At this point we may take an arbitrarily large Veronese subring and assume the $\alpha_i$ are all integers.
 
 Now, we show that $(\cZ', \psi^*\Delta_\cZ)$ is a dlt pair %and compute its dual complex 
-by looking at a formal toric model. Indeed, $(\cZ,\Delta_{\cZ})$ is formally locally toric at the log canonical centers, and the condition of being dlt is a formally local property. Moreover, we reduce to check this property at the log canonical centers of  $(\cZ', \psi^*\Delta_\cZ)$ that lie in the special fiber, as \textcolor{red}{the generic fibers of $\cZ'$ and $\cZ$ are isomorphic and the latter is dlt. } %the components $\Delta_{\cZ,i}$ are Cartier divisor on the generic fiber.
+by looking at a formal toric model. Indeed, $(\cZ,\Delta_{\cZ})$ is formally locally toric at the log canonical centers, and the condition of being dlt is a formally local property. Moreover, we reduce to check this property at the log canonical centers of  $(\cZ', \psi^*\Delta_\cZ)$ that lie in the special fiber, as the generic fibers of $\cZ'$ and $\cZ$ are isomorphic and the latter is dlt.
 
 Let $z$ be the generic point of the image in $\cZ$ of a log canonical center of $(\cZ', \psi^*\Delta_\cZ)$, hence $z$ is the generic point of a log canonical center of $(\cZ,\Delta_{\cZ})$ and by Proposition \ref{prop product of dlt minimal pairs} it is a stratum of the coefficient $1$ part of $\Delta_{\cZ}$. Let $x$ and $y$ be the generic points of the corresponding strata of $(\cX,\Delta_\cX)$ and $(\cY, \Delta_\cY)$. Let $E_x$ and $E_y$ be the monoids of effective Cartier divisors supported on the strata near $x$ and $y$ respectively. Then the corresponding monoid for $z$ is $\langle E_x \oplus E_y \rangle /(t_x=t_y)$, where $t_x$ and $t_y$ are the respective sums of local equations of strata in the special fibers. This monoid has the form $M \oplus \mathbb{N}^l$, where $l$ is the number of horizontal divisors containing $z$, and $M$ is a monoid of the type considered in Lemma \ref{smalltoric}. The toric variety $T_{M,k}=\Spec k[M \oplus \mathbb{N}^l]$ is a formal local model for $\cZ$ near $z$, so it suffices to consider $$T'=\text{Proj}_{T_{M,k}} \bigoplus_{m \geqslant 0} \mathcal{O}\big(-m(\sum \alpha_i \Delta_{T,i})\big),$$ where the divisors $\Delta_{T,i}$ range over the torus invariant Weil divisors corresponding to the $\Delta_{\cZ,i}^{=1}$.
 
 The divisors corresponding to the $l$ generators of $\mathbb{N}^l$ are Cartier, so their contribution to $T$ is trivial and we can reduce to the case $l=0$. For sufficiently general choices for the $\alpha_i$, the toric variety $T'$ is simplicial, its fan being induced by the simplicial subdivision of the fan of $T_{M,k}$ such that the $\alpha_i$ induce a strictly convex piecewise linear function. Thus, $T'$ is a small $\Q$-factorialization of $T_{M,k}$. By Lemma \ref{smalltoric}, for any such model, $T'$ is a smooth toric variety, hence its invariant divisors are snc. Thus $(\cZ', \psi^*\Delta_\cZ)$ is dlt.
 
-Finally, we compute the dual complex of the coefficient 1 part of $(\cZ', \psi^*\Delta_\cZ)$ by looking at formal toric models again. Locally at the generic points of the log canonical centers, $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ are snc, hence log-regular, and are also semistable. By Proposition \ref{prop semistability and iso Kato fans} there is a bijective correspondence between pairs of strata in $\Delta_{\cX}^{=1}$ and $\Delta_{\cY}^{=1}$, and strata of their product, namely between pairs of points in the Kato fans of $\cX$ and $\cY$ locally around the log canonical centers and the points in the Kato fan of the product. Consider a log canonical center $z$ corresponding to $(x,y)$ with associated monoid $E_z = \langle E_x \oplus E_y \rangle /(t_x=t_y)$. As the points of the Kato fan of $\cZ$ corresponding to strata containing $z$ are in one to one correspondence with prime ideals of $E_z$, there is a one-to-one correspondence between these strata in $\cZ$ and the strata in the formal toric model $T_{M,k}$. \textcolor{red}{rephrase more clearly} Hence, we reduce to study the strata of the coefficient 1 part of $(\cZ',\psi^*\Delta_\cZ )$ in the formal model $T'$. But $T'$ is obtained by a simplicial subdivision of $T$. Thus, we conclude that the dual complex $\D^{=1}_0(\psi^*\Delta_\cZ)$ is identified with the product of the dual complexes of the coefficient 1 part of $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$.
+Finally, we compute the dual complex of the coefficient 1 part of $(\cZ', \psi^*\Delta_\cZ)$ by looking at formal toric models again. Locally at the generic points of the log canonical centers, $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$ are snc, hence log-regular, and are also semistable. By Proposition \ref{prop semistability and iso Kato fans} there is a bijective correspondence between pairs of points in the Kato fans of $\cX$ and $\cY$ locally around the log canonical centers and the points in the Kato fan of their product. This induces, by Proposition \ref{prop semistability and skeleta}, a PL homeomorphism between the product of skeleta around the log canonical centres and the skeleton of their product, namely a bijective correspondence between pairs of points in the dual complexes $\Delta_{\cX}^{=1}$ and $\Delta_{\cY}^{=1}$, and points in the skeleton of $(\cZ,\Delta_{\cZ})$ whose projections map to $\Delta_{\cX}^{=1}$ and $\Delta_{\cY}^{=1}$. A face $\sigma_z$ of the skeleton of $\cZ$, where $z$ is a  log canonical centre corresponding to $(x,y)$, corresponds to a prime ideal of the monoid $E_z = \langle E_x \oplus E_y \rangle /(t_x=t_y)$. Thus, we may reduce to consider such faces in the formal toric model $T_{M,k}$, and to study the dual complex of the coefficient 1 part of $(\cZ',\psi^*\Delta_\cZ )$ in the formal model $T'$. But $T'$ is obtained by a simplicial subdivision of $T$. Thus, we conclude that the dual complex $\D^{=1}_0(\psi^*\Delta_\cZ)$ is identified with the product of the dual complexes of the coefficient 1 part of $(\cX,\Delta_{\cX})$ and $(\cY,\Delta_{\cY})$.
 \end{proof}
 
 \begin{proof}[Proof of Claim]
@@ -1213,7 +1231,7 @@ We can run the same construction for the ideal sheaf of the divisor $G_\cX$. Not
 \section{Applications}\label{sec hkahler}
 \subsection{Weight functions and skeleta for finite quotients}
 
-\spa{Let $X$ be a connected, smooth  and proper $K$-variety and let $G$ be a finite group acting on $X$. Let $X^{\an}$ be the analytification of $X$. We recall that any point of $X^{\an}$ is a pair $(x,|\cdot|_x)$ with $x \in X$ and $|\cdot|_x$ an absolute value on the residue field $\kappa(x)$ that extends the absolute value on $K$. For any point $x$ of $X$, an element $g$ of the group $G$ induces an isomorphism between the residue fields $\kappa(x)$ and $\kappa(g \ldotp x)$, that we still denote by $g$. Then, the action of $G$ extends to $X^\an$ in the following way $$g \ldotp (x,|\cdot|_x) = ( g \ldotp x,  |\cdot|_x \circ g^{-1}).$$ In particular the action preserves the sets of divisorial and birational points of $X$.
+\spa{Let $X$ be a connected, smooth  and proper $K$-variety and let $G$ be a finite group acting on $X$. Let $X^{\an}$ be the analytification of $X$. We recall that any point of $X^{\an}$ is a pair $x=(\xi_x,|\cdot|_x)$ with $\xi_x \in X$ and $|\cdot|_x$ an absolute value on the residue field $\kappa(\xi_x)$ that extends the absolute value on $K$. For any point $\xi_x$ of $X$, an element $g$ of the group $G$ induces an isomorphism between the residue fields $\kappa(\xi_x)$ and $\kappa(g \ldotp \xi_x)$, that we still denote by $g$. Then, the action of $G$ extends to $X^\an$ in the following way $$g \ldotp (\xi_x,|\cdot|_x) = ( g \ldotp \xi_x,  |\cdot|_x \circ g^{-1}).$$ In particular the action preserves the sets of divisorial and birational points of $X$.
 
 Let $f: X \rightarrow Y=X/G$ be the quotient map of $K$-schemes, let $f^\an: X^\an \rightarrow Y^\an$ be the map of Berkovich spaces induced by functoriality and let $\tilde{f}: X^\an \rightarrow X^\an/G$ be the quotient map of topological spaces.
 \begin{prop} (\cite{Berkovich}, Corollary 5) \label{prop Berk identification of quotient}
@@ -1221,33 +1239,7 @@ Under the above notations, there is a canonical homeomorphism between $X^\an/G $
 \end{prop}
 }
 
-\spa{Let $y$ be a divisorial point of $Y^\an$ and consider a regular snc $R$-model $\cY$ of $Y$ adapted to $y$, i.e. such that $y$ is the divisorial point associated to $(\cY, E)$ for some irreducible component $E$ of $\cY_k$. We denote by $\cX$ the normalization of $\cY$ inside $K(X) $, where $K(\cY)=K(Y)=K(X)^{G} \hookrightarrow K(X)$.
 
-We check that $\cX$ is an $R$-model of $X$; it is enough to show that the base change $\cX_K$ is isomorphic to $X$. We consider the following commutative diagram
-\begin{center}$
-\begin{gathered}
-\xymatrixrowsep{1pc}
-\xymatrixcolsep{1pc}\xymatrix{ 
-\cX_K \ar[drr] \ar[dddr] & & \\
-& X \ar@{.>}[r] \ar@{.>}[ul]\ar[d]^{f} & \cX \ar[d] \\
-& Y \ar[r] \ar[d] & \cY  \ar[d]\\
-& \Spec K \ar[r] & S \\
-}
-\end{gathered}$
-\end{center} As the $X$ is a normal variety endowed with a morphism $X \rightarrow \cY$, by universal property of normalization, it factors uniquely through $\cX$ and the diagram is still commutative. Then by universal property of fibred product, there exists a morphism $X \rightarrow \cX_K$. Therefore, it suffices to prove that $$[K(X):K(\cX_K)]=1.$$ Indeed, if this is the case, then $X \rightarrow \cX_K$ is a finite birational morphism between normal varietes, hence an isomorphism.
-
-The degree of the extension $[K(X):K(\cX_K)]$ may be computed on an affine open, so we assume that $\cY$ is an affine scheme with associated ring $K[\cY]$. Then we consider the diagram of inclusions
-\begin{center} 
-$ \xymatrixcolsep{-1.5pc} \xymatrixrowsep{0.7pc}\xymatrix{ 
-& K(\cX)=K(\cX_K) \ar[dr] & \\
-\widehat{K[\cY]}=K[\cX] \ar[rr] \ar[ru] & & K(X)\\
-K[\cY] \ar[u] \ar[rr]& & K(\cY)=K(Y)=K(X)^{G} \ar[u]_{\text{finite} \deg} \\
-}$
-\end{center} As $K(X)$ is finite field extension of $K(\cY)$ and $K[\cX]$ the integral closure of $K[\cY]$ in $K(X)$, then $K(X)$ is the fraction field of $K[\cX]$. Thus, $K(\cX) = \text{Frac}(K[\cX])=K(X)$ and in particular we conclude that $[K(X):K(\cX_K)]=1.$
-}
-\begin{rem} \label{rem divisorial repre quotient}
-This procedure of normalization illustrates a way to start with a regular snc $R$-model $\cY$ of $Y$ adapted to a point $y \in \text{Div}(Y)$ and construct an $R$-model $\cX$ of $X$ that, by normality, is regular at generic points of the special fiber $\cX_k$. 
-\end{rem}
 
 \begin{lemma} \label{lemma G invariant forms and weight function}
 Let $\omega$ be a $m$-pluricanonical rational form on $X$. If $\omega$ is $G$-invariant, then the weight function associated to $\omega$ on the set of birational points is stable under the action of $G$. 
@@ -1263,7 +1255,35 @@ Let $\omega$ be a $G$-invariant pluricanonical rational form on $X$. Then the Ko
 This follows immediately from Lemma \ref{lemma G invariant forms and weight function}.
 \end{proof}
 
-\spa{We denote respectively by $R$ and by $B$ the codimension $1$ components of the ramification locus and of the branch locus of $f:X \rightarrow Y$. We set $X^+=(X,R_\redu)$ and $Y^+=(Y,B_\redu)$. Then $f$ extends to a morphism of log schemes $f^+:X^+ \rightarrow Y^+$.
+\spa{\label{par divisorial repre quotient} \textcolor{red}{Let $y$ be a divisorial point of $Y^\an$ and consider a regular snc $R$-model $\cY$ of $Y$ adapted to $y$, i.e. such that $y$ is the divisorial point associated to $(\cY, E)$ for some irreducible component $E$ of $\cY_k$. We denote by $\cX$ the normalization of $\cY$ inside $K(X) $, where $K(\cY)=K(Y)=K(X)^{G} \hookrightarrow K(X)$. As $X$ is normal and the quotient map $f:X \rightarrow Y$ is finite, we obtain that $\cX$ is an $R$-model of $X$. Moreover, by normality $\cX$ is regular at the generic points of the special fiber $\cX_k$.}}
+
+%We check that $\cX$ is an $R$-model of $X$; it is enough to show that the base change $\cX_K$ is isomorphic to $X$. We consider the following commutative diagram
+%\begin{center}$
+%\begin{gathered}
+%\xymatrixrowsep{1pc}
+%\xymatrixcolsep{1pc}\xymatrix{ 
+%\cX_K \ar[drr] \ar[dddr] & & \\
+%& X \ar@{.>}[r] \ar@{.>}[ul]\ar[d]^{f} & \cX \ar[d] \\
+%& Y \ar[r] \ar[d] & \cY  \ar[d]\\
+%& \Spec K \ar[r] & S \\
+%}
+%\end{gathered}$
+%\end{center} As the $X$ is a normal variety endowed with a morphism $X \rightarrow \cY$, by universal property of normalization, it factors uniquely through $\cX$ and the diagram is still commutative. Then by universal property of fibred product, there exists a morphism $X \rightarrow \cX_K$. Therefore, it suffices to prove that $$[K(X):K(\cX_K)]=1.$$ Indeed, if this is the case, then $X \rightarrow \cX_K$ is a finite birational morphism between normal varietes, hence an isomorphism.
+%
+%The degree of the extension $[K(X):K(\cX_K)]$ may be computed on an affine open, so we assume that $\cY$ is an affine scheme with associated ring $K[\cY]$. Then we consider the diagram of inclusions
+%\begin{center} 
+%$ \xymatrixcolsep{-1.5pc} \xymatrixrowsep{0.7pc}\xymatrix{ 
+%& K(\cX)=K(\cX_K) \ar[dr] & \\
+%\widehat{K[\cY]}=K[\cX] \ar[rr] \ar[ru] & & K(X)\\
+%K[\cY] \ar[u] \ar[rr]& & K(\cY)=K(Y)=K(X)^{G} \ar[u]_{\text{finite} \deg} \\
+%}$
+%\end{center} As $K(X)$ is finite field extension of $K(\cY)$ and $K[\cX]$ the integral closure of $K[\cY]$ in $K(X)$, then $K(X)$ is the fraction field of $K[\cX]$. Thus, $K(\cX) = \text{Frac}(K[\cX])=K(X)$ and in particular we conclude that $[K(X):K(\cX_K)]=1.$
+%}
+%\begin{rem} \label{rem divisorial repre quotient}
+%This procedure of normalization illustrates a way to start with a regular snc $R$-model $\cY$ of $Y$ adapted to a point $y \in \text{Div}(Y)$ and construct an $R$-model $\cX$ of $X$ that, by normality, is regular at the generic points of the special fiber $\cX_k$. 
+%\end{rem}
+
+\spa{\textcolor{red}{We assume $\text{char}(k)=0$.} We denote respectively by $R$ and by $B$ the codimension $1$ components of the ramification locus and of the branch locus of $f:X \rightarrow Y$. We set $X^+=(X,R_\redu)$ and $Y^+=(Y,B_\redu)$. Then $f$ extends to a morphism of log schemes $f^+:X^+ \rightarrow Y^+$.
 }
 
 \begin{lemma} \label{lemma quotient map is log etale}
@@ -1275,21 +1295,24 @@ $$\omega_{X^+/K}^{\log} = \omega_{X/K} \otimes\mathcal{O}_{X}(R_\redu) = f^*(\om
 In order to study the divisor $R + R_\redu$, we consider one irreducible component of $B$. Let $D_B$ be an irreducible component of $B$, denote by $e$ the ramification index of $f$ at $D_B$, and by $D_R$ the support of the preimage of $D_B$. As $\text{mult}_{D_R}(R)=e-1$, $\text{mult}_{D_R}(f^*(D_B))= e$ and $\text{mult}_{D_R}(R_\redu)=1$, we conclude that $R + R_\redu= f^*(B)$ and finally $\omega_{X^+/K}^{\log} = (f^+)^*(\omega_{Y^+/K}^{\log})$.
 \end{proof}
 \begin{prop} \label{prop:G inv form and corresponding weights}
-Let $\omega$ be a $G$-invariant $R_\redu$-logarithmic $m$-pluricanonical form on $X^+$ and let $\overline{\omega}$ be the corresponding $B_\redu$-logarithmic form on $Y^+$. Let $y$ be a divisorial point of $Y^\an$. Then, for any divisorial point $x \in (f^\an)^{-1}(y)$, the weights of $\omega$ at $x$ and of $\overline{\omega}$ at $y$ coincide.
+Let $\omega$ be a $G$-invariant $R_\redu$-logarithmic $m$-pluricanonical form on $X^+$ and let $\overline{\omega}$ be the corresponding $B_\redu$-logarithmic form on $Y^+$ via pullback. Let $y$ be a divisorial point of $Y^\an$. Then, for any divisorial point $x \in (f^\an)^{-1}(y)$, the weights of $\omega$ at $x$ and of $\overline{\omega}$ at $y$ coincide.
 \end{prop}
 \begin{proof}
-Let $\cY$ be a regular snc $R$-model such that $y$ has divisorial representation $(\cY,E)$. Let $\cX$ be the normalization of $\cY$ in $K(X)$: as we observed in Remark \ref{rem divisorial repre quotient}, it is an $R$-model of $X$, regular at generic points of the special fiber $\cX_k$. The preimage of $E$ coincides with the pull-back of the Cartier divisor $E$ on $\cX$, hence $f^{-1}(E)$ still defines a codimension one subset on $\cX$. We denote by $F_i$ the irreducible components of $f^{-1}(E)$ and we associate to $F_i$'s their corresponding divisorial valuations $x_i=(\cX,F_i)$. By Lemma \ref{lemma G invariant forms and weight function}, it is enough to prove the result for one of the $x_i$'s. We denote it by $x = (\cX,F)$ and we compare the weights at $y$ and $x$. As by Lemma \ref{lemma quotient map is log etale} the sheaves of logarithmic differentials are stable under the pull-back along $f$, we have
-$$\divisor_{\cY^+}(\overline{\omega})= f^*(\divisor_{\cX^+}(\omega))$$
-and so $\weight_{\overline{\omega}}(y)= v_y(\divisor_{\cY^+}(\overline{\omega})) + m = v_{x}(\divisor_{\cX^+}(\omega))+ m= \weight_{\omega}(x)$.
-%We recall that for log-\'{e}tale morphisms  (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F_i,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log-\'{e}tale morphism of divisorial log structures, to conclude that the weights coincide. To this purpose, we will apply Kato's criterion for log \'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.
-%
-%We denote by $\xi_{F}$ the generic point of $F$ and by $\xi_E$ the generic point of $E$. The divisorial log structures on $\cX^+$ and $\cY^+$ have charts $\N$ at $\xi_{F}$ and $\xi_E$. In the \'{e}tale topology, the normalization morphism $\cX^+ \rightarrow \cY^+$ admits a chart induced by $t:\N \rightarrow \N$ where $1 \mapsto m$ for some positive integer $m$:
-%\begin{center}
-%$\xymatrix{
-%\Spec \caO_{\cX, \xi_{F}} \ar[d] \ar[r] & \Spec \Z[\N] \ar[d] \\
-%\Spec \caO_{\cY, \xi_{E}}  \ar[r] & \Spec \Z[\N] 
-%}$
-%\end{center} Firstly, by the universal property of the fiber product, we have a morphism $$\Spec \caO_{\cX, \xi_{F}} \rightarrow \Spec \caO_{\cY, \xi_{E}} \times_{\Spec \Z[\N] } \Spec \Z[\N]$$ and it corresponds to $$ \caO_{\cY, \xi_{E}}  \otimes_{\Z[\N]} \Z[\N] \rightarrow\caO_{\cX, \xi_{F}}.$$ This is a morphism of finite type with finite fibers between regular rings and by \cite{Liu2002}, Lemma 4.3.20 and \cite{Nowak} it is flat and unramified, hence \'{e}tale. One of the two conditions in Kato's criterion for log \'{e}taleness is then fulfilled. Secondly, the chart $t:\N \mapsto \N$ induces a group homomorphism $t^{\text{gp}}: \Z \mapsto \Z$; in particular, it is injective and it has finite cokernel. Then $t$ satisfies the second condition of Kato's criterion for log \'{e}taleness. Therefore we conclude that $\weight_\omega(y)=\weight_\omega(x)$.
+Let $\cY$ be a model of $Y$ over $R$ such that $y$ has divisorial representation $(\cY,E)$ and the model is regular at the generic point of $E$. Let $\cX$ be the normalization of $\cY$ in $K(X)$: as we observed in Section \ref{par divisorial repre quotient}, it is a model of $X$, regular at generic points of the special fiber $\cX_k$. We denote as well by $f:\cX \rightarrow \cY$ the extension of $f$. The preimage of $E$ coincides with the pullback of the Cartier divisor $E$ on $\cX$, hence $f^{-1}(E)$ still defines a codimension one subset on $\cX$. We denote by $F_i$ the irreducible components of $f^{-1}(E)$ and we associate to $F_i$'s their corresponding divisorial valuations $x_i=(\cX,F_i)$. By Lemma \ref{lemma G invariant forms and weight function}, it is enough to prove the result for one of the $x_i$'s. We denote it by $x = (\cX,F)$ and we compare the weights at $y$ and $x$.
+
+%As by Lemma \ref{lemma quotient map is log etale} the sheaves of logarithmic differentials are stable under the pullback along $f$, we have
+%$$\divisor_{\cY^+}(\overline{\omega})= f^*(\divisor_{\cX^+}(\omega))$$
+%and so $\weight_{\overline{\omega}}(y)= v_y(\divisor_{\cY^+}(\overline{\omega})) + m = v_{x}(\divisor_{\cX^+}(\omega))+ m= \weight_{\omega}(x)$.
+
+\textcolor{red}{We recall that for log-\'{e}tale morphisms the sheaves of logarithmic differentials are stable under pullback (\cite{Kato1994a}, Proposition 3.12). Furthermore, it suffices to check that, locally around the generic point of $F,$ the morphism $\cX^+ \rightarrow \cY^+$ is a log-\'{e}tale morphism of divisorial log structures, to conclude that the weights coincide. To this purpose, we will apply Kato's criterion for log-\'{e}taleness (\cite{Kato1989}, Theorem 3.5) to log schemes with respect to the \'{e}tale topology.}
+
+\textcolor{red}{We denote by $\xi_{F}$ the generic point of $F$ and by $\xi_E$ the generic point of $E$. The divisorial log structures on $\cX^+$ and $\cY^+$ have charts $\N$ at $\xi_{F}$ and $\xi_E$. In the \'{e}tale topology, the normalization morphism $\cX^+ \rightarrow \cY^+$ admits a chart induced by $u:\N \rightarrow \N$ where $1 \mapsto m$ for some positive integer $m$:
+\begin{center}
+$\xymatrix{
+\Spec \caO_{\cX, \xi_{F}} \ar[d] \ar[r] & \Spec \Z[\N] \ar[d] \\
+\Spec \caO_{\cY, \xi_{E}}  \ar[r] & \Spec \Z[\N] 
+}$
+\end{center} Firstly, by the universal property of the fiber product, we have a morphism $$\Spec \caO_{\cX, \xi_{F}} \rightarrow \Spec \caO_{\cY, \xi_{E}} \times_{\Spec \Z[\N] } \Spec \Z[\N]$$ and it corresponds to $$ \caO_{\cY, \xi_{E}}  \otimes_{\Z[\N]} \Z[\N] \rightarrow\caO_{\cX, \xi_{F}}.$$ This is a morphism of finite type with finite fibers between regular rings and by \cite{Liu2002}, Lemma 4.3.20 and \cite{Nowak} it is flat and unramified, hence \'{e}tale. One of the two conditions in Kato's criterion for log-\'{e}taleness is then fulfilled. Secondly, the chart $u:\N \mapsto \N$ induces a group homomorphism $u^{\text{gp}}: \Z \mapsto \Z$; in particular, it is injective and it has finite cokernel. Then $u$ satisfies the second condition of Kato's criterion for log-\'{e}taleness. Therefore we conclude that $\weight_{\overline{\omega}}(y)=\weight_\omega(x)$.}
 \end{proof}
 
 \begin{prop} \label{prop:G inv and homeo KS of quotient}
@@ -1332,7 +1355,7 @@ This follows immediately from Corollary \ref{prop semistability and KS symm quot
 \begin{prop} \label{prop top essential skeleton Hilb}
 If the essential skeleton of $S$ is PL homeomorphic to a point, a closed interval or the $2$-dimensional sphere, then the essential skeleton of $\Hilb^n(S)$ is PL homeomorphic to a point, the standard $n$-simplex or $\CP^n$ respectively. 
 \end{prop}
-\begin{proof} Applying Corollary \ref{cor essential skeleton hilb}, we reduce to the computation of the symmetric product of a point, a closed interval or the sphere $S^2$. Then, the result follows from \cite{Hatcher}, Section 4K.
+\begin{proof} Applying Corollary \ref{cor essential skeleton hilb}, we reduce to the computation of the symmetric product of a point, a closed interval or the sphere $S^2$. Then, the result is trivially true in the first two cases, and follows from \cite{Hatcher}, Section 4K in the third case.
 \end{proof}
 
 }
@@ -1385,7 +1408,7 @@ $\xymatrix{
 \mathfrak{S}_n'' \circlearrowleft\Sk(A)^n  \ar[rr]^{\overline{\psi}}& & \Sk(A)^n\circlearrowright \mathfrak{S}_n' \\
 & \Lambda\ar[lu]^{g_{n+1}}\ar[ru]_{g_n} &
 }$
-\end{center} and we conclude that the quotients $\Sk(Z)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$ are homeomorphic.
+\end{center} and we conclude that the quotients $\Sk(L)/\mathfrak{S}_{n+1}$ and $\Lambda/\mathfrak{S}_{n+1}$ are homeomorphic.
 \end{proof}
 
 \begin{prop} \label{prop top essential skeleton Kummer}

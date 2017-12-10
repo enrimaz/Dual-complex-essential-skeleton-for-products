@@ -251,41 +251,43 @@
   \field{year}{2015}
 \endentry
 
-\entry{deFernexKollarXu2012}{article}{}
+\entry{deFernexKollarXu2012}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
-     {{de Fernex}}{d.}%
-     {T.}{T.}%
+     {{de}~{Fernex}}{d.~F.}%
+     {Tommaso}{T.}%
      {}{}%
      {}{}}%
     {{}%
-     {{Koll{\'a}r}}{K.}%
+     {Koll{\'a}r}{K.}%
      {J.}{J.}%
      {}{}%
      {}{}}%
     {{}%
-     {{Xu}}{X.}%
+     {Xu}{X.}%
      {C.}{C.}%
      {}{}%
      {}{}}%
   }
+  \list{publisher}{1}{%
+    {Adv. Stud. Pure Math.}%
+  }
   \keyw{Mathematics - Algebraic Geometry}
-  \strng{namehash}{dTKJXC1}
-  \strng{fullhash}{dTKJXC1}
-  \field{labelalpha}{dKX12}
+  \strng{namehash}{dFTKJXC1}
+  \strng{fullhash}{dFTKJXC1}
+  \field{labelalpha}{dFKX17}
   \field{sortinit}{D}
-  \verb{eprint}
-  \verb 1212.1675
-  \endverb
+  \field{booktitle}{Higher dimensional algebraic geometry, in honour of
+  Professor Yujiro Kawamatas 60th birthday}
+  \field{pages}{103–130}
   \field{title}{The dual complex of singularities}
+  \field{volume}{74}
   \verb{file}
   \verb :deFernexKollarXu2012 - The dual complex of singularities.pdf:PDF
   \endverb
-  \field{journaltitle}{ArXiv e-prints}
-  \field{eprinttype}{arXiv}
-  \field{eprintclass}{math.AG}
+  \field{journaltitle}{Adv. Stud. Pure Math.}
   \field{month}{12}
-  \field{year}{2012}
+  \field{year}{2017}
 \endentry
 
 \entry{Fogarty}{article}{}
@@ -759,6 +761,31 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{Kato1989}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kato}{K.}%
+     {Kazuya}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Johns Hopkins Univ. Press, Baltimore, MD}%
+  }
+  \strng{namehash}{KK1}
+  \strng{fullhash}{KK1}
+  \field{labelalpha}{Kat89}
+  \field{sortinit}{K}
+  \field{booktitle}{Algebraic analysis, geometry, and number theory
+  ({B}altimore, {MD}, 1988)}
+  \field{pages}{191\bibrangedash 224}
+  \field{title}{Logarithmic structures of {F}ontaine-{I}llusie}
+  \verb{file}
+  \verb :Kato1989 - Logarithmic structures of Fontaine-Illusie.pdf:PDF
+  \endverb
+  \field{year}{1989}
+\endentry
+
 \entry{Kato1994a}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -1124,6 +1151,34 @@
   \field{year}{2001}
 \endentry
 
+\entry{Liu2002}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Liu}{L.}%
+     {Qing}{Q.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oxford University Press, Oxford}%
+  }
+  \strng{namehash}{LQ1}
+  \strng{fullhash}{LQ1}
+  \field{labelalpha}{Liu02}
+  \field{sortinit}{L}
+  \field{isbn}{0-19-850284-2}
+  \field{note}{Translated from the French by Reinie Ern{\'e}, Oxford Science
+  Publications}
+  \field{pages}{xvi+576}
+  \field{series}{Oxford Graduate Texts in Mathematics}
+  \field{title}{Algebraic geometry and arithmetic curves}
+  \field{volume}{6}
+  \verb{file}
+  \verb :Liu2002 - Algebraic geometry and arithmetic curves.djvu:Djvu
+  \endverb
+  \field{year}{2002}
+\endentry
+
 \entry{Looijenga}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -1276,6 +1331,29 @@
   \endverb
   \field{journaltitle}{J. Algebraic Geom.}
   \field{year}{2006}
+\endentry
+
+\entry{Nowak}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nowak}{N.}%
+     {Krzysztof~Jan}{K.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NKJ1}
+  \strng{fullhash}{NKJ1}
+  \field{labelalpha}{Now97}
+  \field{sortinit}{N}
+  \field{issn}{0083-4386}
+  \field{number}{35}
+  \field{pages}{243\bibrangedash 246}
+  \field{title}{Flat morphisms between regular varieties}
+  \verb{file}
+  \verb :Nowak - Flat morphisms between regular varieties.pdf:PDF
+  \endverb
+  \field{journaltitle}{Univ. Iagel. Acta Math.}
+  \field{year}{1997}
 \endentry
 
 \entry{OGradya}{article}{}
@@ -1512,35 +1590,6 @@
   \field{year}{2007}
 \endentry
 
-\entry{Ulirsch2013}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {{Ulirsch}}{U.}%
-     {M.}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Mathematics - Algebraic Geometry, 14T05, 32P05, 20M14}
-  \strng{namehash}{UM1}
-  \strng{fullhash}{UM1}
-  \field{labelalpha}{{Uli}13}
-  \field{sortinit}{U}
-  \verb{eprint}
-  \verb 1310.6269
-  \endverb
-  \field{title}{Functorial tropicalization of logarithmic schemes: The case of
-  constant coefficients}
-  \verb{file}
-  \verb :Ulirsch2013 - Functorial tropicalization of logarithmic schemes_ The c
-  \verb ase of constant coefficients.pdf:PDF
-  \endverb
-  \field{journaltitle}{ArXiv e-prints}
-  \field{eprinttype}{arXiv}
-  \field{eprintclass}{math.AG}
-  \field{month}{10}
-  \field{year}{2013}
-\endentry
-
 \entry{Ulirsch2016}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -1566,6 +1615,39 @@
   \field{eprintclass}{math.AG}
   \field{month}{03}
   \field{year}{2016}
+\endentry
+
+\entry{Ulirsch}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ulirsch}{U.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{14T05 (primary), 14G22, 20M14 (secondary)}
+  \strng{namehash}{UM2}
+  \strng{fullhash}{UM2}
+  \field{labelalpha}{Uli17}
+  \field{sortinit}{U}
+  \verb{doi}
+  \verb 10.1112/plms.12031
+  \endverb
+  \field{issn}{1460-244X}
+  \field{number}{6}
+  \field{pages}{1081\bibrangedash 1113}
+  \field{title}{Functorial tropicalization of logarithmic schemes: the case of
+  constant coefficients}
+  \verb{url}
+  \verb http://dx.doi.org/10.1112/plms.12031
+  \endverb
+  \field{volume}{114}
+  \verb{file}
+  \verb :Ulirsch - Functorial tropicalization of logarithmic schemes_ the case
+  \verb of constant coefficients.pdf:PDF
+  \endverb
+  \field{journaltitle}{Proceedings of the London Mathematical Society}
+  \field{year}{2017}
 \endentry
 
 \entry{Vidal}{inproceedings}{}
